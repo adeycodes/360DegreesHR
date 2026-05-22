@@ -1,0 +1,15 @@
+/**
+ * 360DegreesHR — Icon stroke tokens (thin · regular · bold)
+ */
+
+:root {
+  --icon-stroke-thin: 1;
+  --icon-stroke-regular: 1.5;
+  --icon-stroke-bold: 2.5;
+
+  --icon-size-xs: 16px;
+  --icon-size-sm: 20px;
+  --icon-size-md: 24px;
+  --icon-size-lg: 32px;
+  --icon-size-xl: 40px;
+}

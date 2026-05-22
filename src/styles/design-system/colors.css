@@ -1,0 +1,63 @@
+/**
+ * 360DegreesHR — Color tokens
+ * Main · Alerts · Greyscale · Additional
+ * (--ds-* raw tokens → mapped in globals @theme as --color-*)
+ */
+
+:root {
+  /* ─── Main: Primary (#274376) ─── */
+  --ds-primary-500: #274376;
+  --ds-primary-50: color-mix(in srgb, var(--ds-primary-500) 8%, white);
+  --ds-primary-100: color-mix(in srgb, var(--ds-primary-500) 16%, white);
+  --ds-primary-200: color-mix(in srgb, var(--ds-primary-500) 32%, white);
+  --ds-primary-300: color-mix(in srgb, var(--ds-primary-500) 48%, white);
+  --ds-primary-400: color-mix(in srgb, var(--ds-primary-500) 64%, white);
+
+  /* ─── Main: Secondary (#F7A316) ─── */
+  --ds-secondary-500: #f7a316;
+  --ds-secondary-50: color-mix(in srgb, var(--ds-secondary-500) 8%, white);
+  --ds-secondary-100: color-mix(in srgb, var(--ds-secondary-500) 16%, white);
+  --ds-secondary-200: color-mix(in srgb, var(--ds-secondary-500) 32%, white);
+  --ds-secondary-300: color-mix(in srgb, var(--ds-secondary-500) 48%, white);
+  --ds-secondary-400: color-mix(in srgb, var(--ds-secondary-500) 64%, white);
+
+  /* ─── Alerts ─── */
+  --ds-success-500: #0caf60;
+  --ds-success-50: color-mix(in srgb, var(--ds-success-500) 8%, white);
+  --ds-success-100: color-mix(in srgb, var(--ds-success-500) 16%, white);
+  --ds-success-200: color-mix(in srgb, var(--ds-success-500) 32%, white);
+  --ds-success-300: color-mix(in srgb, var(--ds-success-500) 48%, white);
+  --ds-success-400: color-mix(in srgb, var(--ds-success-500) 64%, white);
+
+  --ds-warning-500: #ffd023;
+  --ds-warning-50: color-mix(in srgb, var(--ds-warning-500) 8%, white);
+  --ds-warning-100: color-mix(in srgb, var(--ds-warning-500) 16%, white);
+  --ds-warning-200: color-mix(in srgb, var(--ds-warning-500) 32%, white);
+  --ds-warning-300: color-mix(in srgb, var(--ds-warning-500) 48%, white);
+  --ds-warning-400: color-mix(in srgb, var(--ds-warning-500) 64%, white);
+
+  --ds-error-500: #e03137;
+  --ds-error-50: color-mix(in srgb, var(--ds-error-500) 8%, white);
+  --ds-error-100: color-mix(in srgb, var(--ds-error-500) 16%, white);
+  --ds-error-200: color-mix(in srgb, var(--ds-error-500) 32%, white);
+  --ds-error-300: color-mix(in srgb, var(--ds-error-500) 48%, white);
+  --ds-error-400: color-mix(in srgb, var(--ds-error-500) 64%, white);
+
+  /* ─── Greyscale (700–900 corrected) ─── */
+  --ds-grey-50: #fafafa;
+  --ds-grey-100: #fbfbfb;
+  --ds-grey-200: #f1f2f4;
+  --ds-grey-300: #e9eaec;
+  --ds-grey-400: #cbd5e0;
+  --ds-grey-500: #a0aec0;
+  --ds-grey-600: #6b7588;
+  --ds-grey-700: #525b6e;
+  --ds-grey-800: #3d4556;
+  --ds-grey-900: #282e3c;
+
+  /* ─── Additional ─── */
+  --ds-white: #ffffff;
+  --ds-orange: #fe984a;
+  --ds-blue: #2f7bee;
+  --ds-purple: #8c62ff;
+}

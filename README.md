@@ -1,6 +1,26 @@
 # 360DegreesHR
 
-Next.js HRMS frontend with a complete design system and Figma-aligned auth + dashboard UI.
+A comprehensive Next.js HRMS (Human Resource Management System) frontend with complete authentication, dashboard, and design system. Built with Figma-aligned components and modern web technologies.
+
+## ✨ Features
+
+- **🔐 Authentication**
+  - User sign up with email verification
+  - Secure login with session management
+  - Password reset flow
+  - SSO integration ready
+
+- **📊 Dashboard**
+  - Analytics overview
+  - Employee management
+  - HRIS module access
+  - User settings
+
+- **🎨 Design System**
+  - Complete UI component library
+  - Color scales and typography system
+  - Icon system with multiple weights
+  - Figma-aligned design tokens
 
 ## Stack
 
@@ -8,6 +28,8 @@ Next.js HRMS frontend with a complete design system and Figma-aligned auth + das
 - **UI:** shadcn/ui + design-system components
 - **Typography:** Manrope (brand) + Open Sans (UI)
 - **Styling:** Tailwind CSS v4 tokens
+- **State Management:** Zustand stores
+- **Validation:** Zod schemas
 
 ## Design system
 
@@ -40,18 +62,78 @@ import { Icon } from "@/components/design-system/icon";
 
 Weights: `thin` (1px) · `regular` (1.5px) · `bold` (2.5px)
 
-## Getting started
+## Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
-cp .env.example .env.local
+# Clone the repository
+git clone https://github.com/adeycodes/360DegreesHR.git
+cd 360DegreesHR
+
+# Install dependencies
 npm install
+
+# Set up environment variables
+cp .env.example .env.local
+
+# Start development server
 npm run dev
 ```
 
-## MVP status
+Open [http://localhost:3000](http://localhost:3000) to see the application.
 
-**Active:** Module 1 (HRIS) + auth + dashboard API layer.  
-**Docs:** [docs/MVP.md](docs/MVP.md) · [docs/API.md](docs/API.md) · [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+### Available Scripts
+
+- `npm run dev` — Start development server
+- `npm run build` — Build for production
+- `npm start` — Start production server
+- `npm run lint` — Run ESLint
+- `npm run format` — Format code with Prettier
+
+## Project Structure
+
+```
+src/
+├── app/                 # Next.js app router pages
+│   ├── (auth)/         # Authentication routes
+│   ├── (protected)/    # Protected/authenticated routes
+│   └── (marketing)/    # Marketing pages
+├── components/         # React components
+│   ├── design-system/  # Design system components
+│   ├── features/       # Feature-specific components
+│   ├── ui/            # Base UI components
+│   ├── shared/        # Shared components
+│   └── providers/     # Context providers
+├── config/            # Configuration files
+├── hooks/             # Custom React hooks
+├── lib/               # Utility functions & libraries
+├── stores/            # Zustand state stores
+├── styles/            # Global styles
+└── types/             # TypeScript type definitions
+```
+
+## MVP Status
+
+**Completed:**
+- ✅ Authentication module (Sign Up, Login, Password Reset)
+- ✅ Dashboard with analytics overview
+- ✅ Design system with components and tokens
+- ✅ API layer structure and endpoints
+- ✅ Form validation with Zod
+
+**In Progress:** HRIS module (Employees, Departments, Documents, Disciplinary)
+
+**Docs:** 
+- [docs/MVP.md](docs/MVP.md) — Feature checklist
+- [docs/API.md](docs/API.md) — API endpoints reference
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — Architecture decisions
+
+### Routes
 
 | Flow | Route |
 |------|-------|
@@ -65,16 +147,46 @@ npm run dev
 
 Update backend paths in **`src/config/api-paths.ts`** when you share the real API contract.
 
-## Architecture
+## Key Conventions
 
-See **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** for folder rules, Zod, Zustand, and API conventions.
+### Zod Validation
 
-| Concern | Location |
-|---------|----------|
-| **Zod** | `src/lib/validations/` — schemas + `parseApiResponse` |
-| **Zustand** | `src/stores/` — client UI state |
-| **API (later)** | `src/lib/api/` — `client.ts` + `endpoints/` |
-| **Features (MVP)** | `src/components/features/` — one folder per screen/flow |
+All API requests and responses are validated using Zod schemas located in `src/lib/validations/`:
+
+```typescript
+import { authSchema } from "@/lib/validations/auth";
+
+const validated = authSchema.parse(data);
+```
+
+### State Management
+
+Zustand stores in `src/stores/` handle client-side UI state:
+
+```typescript
+import { useAuthStore } from "@/stores/auth-store";
+
+const { user, login, logout } = useAuthStore();
+```
+
+### API Integration
+
+API calls are centralized in `src/lib/api/`:
+- `client.ts` — HTTP client with interceptors
+- `endpoints/` — API endpoint definitions
+- `errors.ts` — Error handling
+
+## Contributing
+
+1. Follow the architecture patterns in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+2. Keep components in feature-specific folders
+3. Add validations for all API calls using Zod
+4. Use Zustand for shared state
+5. Run `npm run lint` before committing
+
+## License
+
+This project is proprietary. All rights reserved.
 
 ## Project structure
 

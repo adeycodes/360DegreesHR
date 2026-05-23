@@ -10,7 +10,7 @@ export default function AppRouteLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): import("react/jsx-runtime").JSX.Element {
   const { showSplash, setShowSplash } = useAuthStore();
 
   const handleSplashComplete = () => {
@@ -18,11 +18,12 @@ export default function AppRouteLayout({
   };
 
   return (
-    <>
+    <div>
       {showSplash && (
         <AnimatedSplashScreen onComplete={handleSplashComplete} />
       )}
       <DashboardShell>{children}</DashboardShell>
-    </>
+    </div>
   );
 }
+  

@@ -13,11 +13,15 @@ type AuthState = {
   isAuthenticated: boolean;
   isHydrated: boolean;
   showSplash: boolean;
+  isLoading: boolean;
+  error: string | null;
   setSession: (session: AuthSession) => void;
   setUser: (user: AuthUser) => void;
   clearSession: () => void;
   setHydrated: (value: boolean) => void;
   setShowSplash: (value: boolean) => void;
+  setIsLoading: (value: boolean) => void;
+  setError: (error: string | null) => void;
 };
 
 export const useAuthStore = create<AuthState>()(
@@ -27,6 +31,8 @@ export const useAuthStore = create<AuthState>()(
       isAuthenticated: false,
       isHydrated: false,
       showSplash: false,
+      isLoading: false,
+      error: null,
 
       setSession: (session) => {
         setAccessToken(session.token);
@@ -35,6 +41,8 @@ export const useAuthStore = create<AuthState>()(
           isAuthenticated: true,
           isHydrated: true,
           showSplash: true,
+          isLoading: false,
+          error: null,
         });
       },
 
@@ -42,12 +50,22 @@ export const useAuthStore = create<AuthState>()(
 
       clearSession: () => {
         clearAccessToken();
-        set({ user: null, isAuthenticated: false, showSplash: false });
+        set({
+          user: null,
+          isAuthenticated: false,
+          showSplash: false,
+          isLoading: false,
+          error: null,
+        });
       },
 
       setHydrated: (isHydrated) => set({ isHydrated }),
 
       setShowSplash: (showSplash) => set({ showSplash }),
+
+      setIsLoading: (isLoading) => set({ isLoading }),
+
+      setError: (error) => set({ error }),
     }),
     {
       name: "360-auth",

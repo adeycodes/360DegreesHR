@@ -73,7 +73,7 @@ export function LoginPasswordScreen() {
     >
       <div className="space-y-8">
         <div>
-          <h2 className="text-[32px] font-semibold tracking-tight text-[#111827]">
+          <h2 className="text-[32px] font-semibold tracking-tight text-grey-900">
             Welcome back
           </h2>
           <p className="mt-2 text-[15px] text-grey-600">
@@ -101,7 +101,7 @@ export function LoginPasswordScreen() {
             labelAction={
               <Link
                 href={routes.auth.forgotPassword}
-                className="text-[13px] font-medium text-[#3B82F6] normal-case hover:underline"
+                className="text-[13px] font-medium text-blue-500 normal-case hover:underline"
               >
                 Forgot password?
               </Link>
@@ -143,7 +143,7 @@ export function LoginPasswordScreen() {
           <button
             type="submit"
             disabled={isLoading}
-            className="h-[48px] w-full rounded-lg bg-[#274376] text-[15px] font-medium text-white transition-colors hover:bg-[#1e3559] disabled:opacity-70"
+            className="h-[48px] w-full rounded-lg bg-primary-500 text-[15px] font-medium text-white transition-colors hover:bg-primary-600 disabled:opacity-70"
           >
             {isLoading ? "Signing in…" : "Sign In"}
           </button>
@@ -153,7 +153,7 @@ export function LoginPasswordScreen() {
           New to 360DegreesHR?{" "}
           <Link
             href={routes.auth.register}
-            className="font-medium text-[#3B82F6] hover:underline"
+            className="font-medium text-blue-500 hover:underline"
           >
             Create a company account
           </Link>
@@ -174,7 +174,7 @@ export function LoginPasswordScreen() {
             <div>
               <p className="text-[14px] font-semibold text-grey-900">Employee?</p>
               <p className="mt-0.5 text-[13px] leading-relaxed text-grey-600">
-                <Link href={routes.auth.login} className="text-[#3B82F6] hover:underline">
+                <Link href={routes.auth.login} className="text-blue-500 hover:underline">
                   Use your SSO credentials
                 </Link>{" "}
                 for a seamless, secure login experience.

@@ -60,6 +60,11 @@ export async function parseApiResponse<T>(
 export function parseData<T>(schema: ZodType<T>, data: unknown): T {
   const result = schema.safeParse(data);
   if (!result.success) {
+    // Log validation errors in development
+    if (typeof window !== "undefined") {
+      console.error("Validation Error - Data received:", data);
+      console.error("Validation Error - Issues:", result.error.issues);
+    }
     throw new ValidationError(result.error);
   }
   return result.data;

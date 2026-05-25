@@ -68,10 +68,15 @@ export const registerCompanySchema = z.object({
 export const registerResponseSchema = z.object({
   token: z.string(),
   user: z.object({
-    userId: z.string(),
+    id: z.string(),
+    name: z.string().optional(),
+    email: z.string().email().optional(),
     role: userRoleSchema,
-    companyId: z.string().optional(),
   }),
+  company: z.object({
+    id: z.string(),
+    name: z.string(),
+  }).optional(),
 });
 
 export type RegisterCompanyInput = z.infer<typeof registerCompanySchema>;

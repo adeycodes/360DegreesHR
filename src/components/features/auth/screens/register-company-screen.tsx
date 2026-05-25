@@ -65,15 +65,10 @@ export function RegisterCompanyScreen() {
       const registerResult = await authApi.registerCompany(parsed.data);
       const { token, user } = registerResult;
 
-      // 2. Build the session object with token + registered user
-      // (userId will be resolved by auth store/hydration)
+      // 2. Build the session object (user from response already matches AuthUser type)
       const session = {
         token,
-        user: {
-          id: user.userId,
-          role: user.role,
-          companyId: user.companyId,
-        },
+        user,
       };
 
       // 3. Store token and session (auth hydration will refresh full profile on load)
@@ -81,6 +76,8 @@ export function RegisterCompanyScreen() {
       toast.success("Registration successful! Welcome to your dashboard.");
       router.push(routes.app.dashboard);
     } catch (err) {
+      // Log full error for debugging
+      console.error("Registration error:", err);
       const msg = toUserMessage(err);
       setError(msg);
       toast.error(msg);

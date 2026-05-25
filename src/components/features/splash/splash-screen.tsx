@@ -19,7 +19,7 @@ export function SplashScreen() {
 
   return (
     <div className="flex min-h-screen min-h-[100dvh] items-center justify-center bg-white">
-      <BrandLogo size="splash" />
+      <BrandLogo context="splash" />
     </div>
   );
 }

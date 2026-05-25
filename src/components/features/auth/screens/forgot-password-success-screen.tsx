@@ -42,12 +42,12 @@ export function ForgotPasswordSuccessScreen() {
   return (
     <AuthSplitLayout
       variant="forgot-success-blue"
-      rightClassName="bg-[#F9FAFB]"
+      rightClassName="bg-grey-50"
       hero={
         <div className="flex h-full flex-col">
           <span className="font-brand text-lg font-semibold text-white">
             <span>360</span>
-            <span className="text-[#7DD3FC]">Degrees</span>
+            <span className="text-blue-200">Degrees</span>
             <span>HR</span>
           </span>
           <div className="mt-auto max-w-md pb-6">
@@ -64,10 +64,10 @@ export function ForgotPasswordSuccessScreen() {
       }
     >
       <div className="rounded-2xl border border-grey-200 bg-white px-8 py-10 shadow-[0_4px_24px_rgba(0,0,0,0.06)] sm:px-10">
-        <div className="mx-auto flex size-14 items-center justify-center rounded-full bg-[#0CAF60]/15">
-          <Check className="size-7 text-[#0CAF60]" strokeWidth={2.5} />
+        <div className="mx-auto flex size-14 items-center justify-center rounded-full bg-success-500/15">
+          <Check className="size-7 text-success-500" strokeWidth={2.5} />
         </div>
-        <h2 className="mt-6 text-center text-[24px] font-semibold text-[#111827]">
+        <h2 className="mt-6 text-center text-[24px] font-semibold text-grey-900">
           Check your email
         </h2>
         <p className="mt-3 text-center text-[15px] leading-relaxed text-grey-600">
@@ -87,14 +87,14 @@ export function ForgotPasswordSuccessScreen() {
           type="button"
           onClick={handleResend}
           disabled={isLoading}
-          className="mt-8 h-[48px] w-full rounded-lg bg-[#3B82F6] text-[15px] font-medium text-white hover:bg-[#2563EB] disabled:opacity-70"
+          className="mt-8 h-[48px] w-full rounded-lg bg-blue-500 text-[15px] font-medium text-white hover:bg-blue-600 disabled:opacity-70"
         >
           {isLoading ? "Sending…" : "Resend link"}
         </button>
 
         <Link
           href={routes.auth.loginPassword}
-          className="mt-6 flex items-center justify-center gap-2 text-[15px] font-medium text-[#3B82F6] hover:underline"
+          className="mt-6 flex items-center justify-center gap-2 text-[15px] font-medium text-blue-500 hover:underline"
         >
           <ArrowLeft className="size-4" />
           Back to Sign in
@@ -102,7 +102,7 @@ export function ForgotPasswordSuccessScreen() {
 
         <p className="mt-8 text-center text-[13px] text-grey-500">
           Didn&apos;t receive an email? Check your spam folder or{" "}
-          <Link href="#" className="text-[#3B82F6] hover:underline">
+          <Link href="#" className="text-blue-500 hover:underline">
             contact support
           </Link>
           .

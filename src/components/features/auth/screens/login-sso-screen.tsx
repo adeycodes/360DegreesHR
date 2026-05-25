@@ -17,13 +17,13 @@ export function LoginSsoScreen() {
         <>
           <BrandLogo className="lg:[&_tspan]:fill-white lg:[&_text]:fill-white" />
           <div className="mt-auto max-w-xl pb-4">
-            <h1 className="text-[2.75rem] leading-[1.15] font-light tracking-tight text-[#111827] lg:text-white">
+            <h1 className="text-[2.75rem] leading-[1.15] font-light tracking-tight text-grey-900 lg:text-white">
               Architecting the future of{" "}
-              <span className="font-normal text-[#3B82F6] lg:text-[#93C5FD]">
+              <span className="font-normal text-blue-500 lg:text-blue-200">
                 human potential.
               </span>
             </h1>
-            <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-[#6B7280] lg:text-white/85">
+            <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-grey-600 lg:text-white/85">
               Experience a refined approach to organizational intelligence. Our
               platform harmonizes workforce data with editorial precision,
               allowing you to curate talent with institutional trust.
@@ -34,7 +34,7 @@ export function LoginSsoScreen() {
                   System Status
                 </p>
                 <p className="mt-1.5 flex items-center gap-2 text-sm font-medium text-grey-900">
-                  <span className="size-2 rounded-full bg-[#0CAF60]" />
+                  <span className="size-2 rounded-full bg-success-500" />
                   Operational
                 </p>
               </div>
@@ -55,7 +55,7 @@ export function LoginSsoScreen() {
     >
       <div className="space-y-8">
         <div>
-          <h2 className="text-[26px] font-semibold tracking-tight text-[#111827]">
+          <h2 className="text-[26px] font-semibold tracking-tight text-grey-900">
             Sign In with SSO
           </h2>
           <p className="mt-2 text-[15px] leading-relaxed text-grey-600">
@@ -78,7 +78,7 @@ export function LoginSsoScreen() {
               className={authInputClassName("pr-10")}
             />
             <Check
-              className="absolute top-1/2 right-3 size-5 -translate-y-1/2 text-[#3B82F6]"
+              className="absolute top-1/2 right-3 size-5 -translate-y-1/2 text-blue-500"
               strokeWidth={2.5}
             />
           </div>
@@ -87,7 +87,7 @@ export function LoginSsoScreen() {
         <div className="space-y-3">
           <button
             type="button"
-            className="flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-[#3B82F6] text-[15px] font-medium text-white transition-colors hover:bg-[#2563EB]"
+            className="flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-blue-500 text-[15px] font-medium text-white transition-colors hover:bg-blue-600"
           >
             <Menu className="size-4" />
             Sign In with Okta
@@ -110,7 +110,7 @@ export function LoginSsoScreen() {
           </div>
           <Link
             href={routes.auth.loginPassword}
-            className="block text-center text-[15px] font-medium text-[#3B82F6] hover:underline"
+            className="block text-center text-[15px] font-medium text-blue-500 hover:underline"
           >
             Sign in with password →
           </Link>

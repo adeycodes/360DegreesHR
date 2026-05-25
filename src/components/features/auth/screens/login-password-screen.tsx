@@ -57,13 +57,12 @@ export function LoginPasswordScreen() {
   return (
     <AuthSplitLayout
   variant="login-building"
-  hideFooter
   hero={
     <div
       
     >
       {/* Hero content sits on top of the background */}
-      <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: 1 }}>
+      <div style={{ position: "absolute", top:50, bottom: 50, zIndex: 1, height: "100%" }}>
         <LoginBuildingHero
           title="Excellence in Human Capital."
           description="The architectural curator of workforce intelligence. Managing your global talent with precision, clarity, and institutional trust."

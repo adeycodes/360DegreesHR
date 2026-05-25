@@ -12,7 +12,7 @@ export const userRoleSchema = z.preprocess(
 /** Strong password — reused in register + reset-password */
 const strongPassword = z
   .string()
-  .min(12, "Password must be at least 12 characters")
+  .min(8, "Password must be at least 8 characters")
   .regex(
     /(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/,
     "Must include uppercase, lowercase, number, and special character",
@@ -49,8 +49,9 @@ export const authSessionSchema = z.object({
 export type AuthSession = z.infer<typeof authSessionSchema>;
 
 export const messageResponseSchema = z.object({
+  success: z.boolean(),
   message: z.string(),
-});
+})
 
 // ─── Input schemas (what the frontend sends) ────────────────────────
 
@@ -64,19 +65,31 @@ export const registerCompanySchema = z.object({
   password: strongPassword,
 });
 
+export const registerResponseSchema = z.object({
+  token: z.string(),
+  user: z.object({
+    userId: z.string(),
+    role: userRoleSchema,
+    companyId: z.string().optional(),
+  }),
+});
+
 export type RegisterCompanyInput = z.infer<typeof registerCompanySchema>;
 
 export const loginSchema = z.object({
   email: z.string().email("Enter a valid email"),
-  password: z.string().min(1, "Password is required"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
 });
 
+export const meResponseSchema = authUserSchema;
+
 export type LoginInput = z.infer<typeof loginSchema>;
+
 
 export const forgotPasswordSchema = z.object({
   email: z.string().email("Enter a valid email"),
 });
-
+  
 export type ForgotPasswordInput = z.infer<typeof forgotPasswordSchema>;
 
 export const resetPasswordSchema = z

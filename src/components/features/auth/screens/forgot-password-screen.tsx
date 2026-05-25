@@ -91,7 +91,7 @@ export function ForgotPasswordScreen() {
       <div className="space-y-8">
         {/* Header Section */}
         <div>
-          <h2 className="text-[32px] font-semibold tracking-tight text-[#111827]">
+          <h2 className="text-[32px] font-semibold tracking-tight text-grey-900">
             Forgot Password
           </h2>
           <p className="mt-3 text-[15px] leading-relaxed text-grey-600">
@@ -141,7 +141,7 @@ export function ForgotPasswordScreen() {
           <button
             type="submit"
             disabled={isLoading}
-            className="h-[48px] w-full rounded-lg bg-[#3B82F6] text-[13px] font-semibold tracking-[0.08em] text-white uppercase transition-colors hover:bg-[#2563EB] focus:outline-none focus:ring-2 focus:ring-[#3B82F6] focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="h-[48px] w-full rounded-lg bg-blue-500 text-[13px] font-semibold tracking-[0.08em] text-white uppercase transition-colors hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed"
             aria-busy={isLoading}
           >
             {isLoading ? "Sending…" : "Send reset link"}
@@ -151,7 +151,7 @@ export function ForgotPasswordScreen() {
         {/* Back Link */}
         <Link
           href={routes.auth.loginPassword}
-          className="flex items-center justify-center gap-2 text-[15px] font-medium text-[#3B82F6] transition-colors hover:text-[#2563EB] focus:outline-none focus:ring-2 focus:ring-[#3B82F6] focus:ring-offset-2 rounded-md"
+          className="flex items-center justify-center gap-2 text-[15px] font-medium text-blue-500 transition-colors hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md"
         >
           <ArrowLeft className="size-4" aria-hidden="true" />
           <span>Back to Sign In</span>

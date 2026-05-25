@@ -38,7 +38,7 @@ export function AuthField({
 
 export function authInputClassName(className?: string) {
   return cn(
-    "h-[48px] w-full rounded-lg border border-transparent bg-[#F3F4F6] px-4 text-[15px] text-grey-900 outline-none transition-[box-shadow,border-color,background] placeholder:text-grey-500 focus:border-primary-300 focus:bg-white focus:ring-2 focus:ring-primary-400/25",
+    "h-[48px] w-full rounded-lg border border-transparent bg-grey-100 px-4 text-[15px] text-grey-900 outline-none transition-[box-shadow,border-color,background] placeholder:text-grey-500 focus:border-primary-300 focus:bg-white focus:ring-2 focus:ring-primary-400/25",
     className,
   );
 }

@@ -75,6 +75,11 @@ export function DashboardShell({ children }: DashboardShellProps) {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
+  const handleLogout = () => {
+    clearSession();
+    window.location.href = routes.auth.login;
+  };
+
   const navLinks = (
     <nav className="space-y-0.5 px-3 py-2">
       {navItems.map((item) => {
@@ -101,7 +106,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
                   className={cn("size-4 text-grey-400 transition-transform", isOpen && "rotate-180")}
                 />
               </button>
-              {isOpen ? (
+              {isOpen && (
                 <div className="ml-2 space-y-0.5 border-l border-grey-200 pl-2">
                   {item.children?.map((child) => (
                     <Link
@@ -109,14 +114,14 @@ export function DashboardShell({ children }: DashboardShellProps) {
                       href={child.href}
                       className={cn(
                         "block rounded-lg py-2 pr-3 pl-6 text-[13px] text-grey-600 hover:bg-grey-50 hover:text-grey-900",
-                        pathname === child.href && "bg-grey-100 font-medium text-grey-900",
+                        pathname === child.href && "bg-grey-100 font-medium text-grey-900"
                       )}
                     >
                       {child.title}
                     </Link>
                   ))}
                 </div>
-              ) : null}
+              )}
             </div>
           );
         }
@@ -128,15 +133,15 @@ export function DashboardShell({ children }: DashboardShellProps) {
             className={cn(
               "relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-[14px] font-medium",
               isActive
-                ? "bg-[#F3F4F6] text-grey-900"
+                ? "bg-grey-100 text-grey-900"
                 : "text-grey-700 hover:bg-grey-50",
-              item.comingSoon && "pointer-events-none opacity-50",
+              item.comingSoon && "pointer-events-none opacity-50"
             )}
           >
-            {isActive ? (
+            {isActive && (
               <span className="absolute top-1/2 left-0 h-7 w-[3px] -translate-y-1/2 rounded-r-full bg-grey-800" />
-            ) : null}
-            {Icon ? <Icon className="size-[18px] text-grey-500" strokeWidth={1.75} /> : null}
+            )}
+            {Icon && <Icon className="size-[18px] text-grey-500" strokeWidth={1.75} />}
             {item.title}
           </Link>
         );
@@ -145,7 +150,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   );
 
   return (
-    <div className="flex min-h-screen bg-[#F9FAFB]">
+    <div className="flex min-h-screen bg-grey-50">
       <aside className="hidden w-[248px] shrink-0 flex-col border-r border-grey-200 bg-white lg:flex">
         <div className="flex h-16 items-center px-5">
           <BrandLogo href={routes.app.dashboard} />
@@ -167,7 +172,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
               <input
                 type="search"
                 placeholder="Search employees, documents, or tasks..."
-                className="h-10 w-full rounded-lg border border-grey-200 bg-[#F9FAFB] pr-14 pl-10 text-[14px] outline-none focus:border-[#93C5FD] focus:ring-2 focus:ring-[#3B82F6]/20"
+                className="h-10 w-full rounded-lg border border-grey-200 bg-grey-50 pr-14 pl-10 text-[14px] outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-500/20"
               />
               <kbd className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 rounded border border-grey-200 bg-white px-1.5 py-0.5 font-sans text-[11px] text-grey-500">
                 ⌘ /
@@ -196,7 +201,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
               aria-label="Notifications"
             >
               <Bell className="size-[18px]" />
-              <span className="absolute top-2 right-2 size-2 rounded-full bg-[#EF4444]" />
+              <span className="absolute top-2 right-2 size-2 rounded-full bg-error-500" />
             </button>
 
             <div className="relative" ref={profileRef}>
@@ -205,7 +210,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
                 onClick={() => setProfileOpen((o) => !o)}
                 className="flex items-center gap-2 rounded-lg py-1 pr-1 pl-1 hover:bg-grey-100"
               >
-                <span className="flex size-9 items-center justify-center overflow-hidden rounded-full bg-[#E0E7FF] text-[13px] font-semibold text-[#4F46E5]">
+                <span className="flex size-9 items-center justify-center overflow-hidden rounded-full bg-indigo-50 text-[13px] font-semibold text-indigo-600">
                   {user?.name?.[0] ?? "AB"}
                 </span>
                 <span className="hidden max-w-[120px] truncate text-[14px] font-medium text-grey-900 sm:inline">
@@ -214,7 +219,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
                 <ChevronDown className="size-4 text-grey-500" />
               </button>
 
-              {profileOpen ? (
+              {profileOpen && (
                 <div className="absolute top-full right-0 z-50 mt-2 w-56 overflow-hidden rounded-xl border border-grey-200 bg-white py-2 shadow-lg">
                   <div className="border-b border-grey-100 px-4 py-3">
                     <p className="text-[14px] font-semibold text-grey-900">{displayName}</p>
@@ -236,17 +241,14 @@ export function DashboardShell({ children }: DashboardShellProps) {
                   </button>
                   <button
                     type="button"
-                    onClick={() => {
-                      clearSession();
-                      window.location.href = routes.auth.login;
-                    }}
-                    className="flex w-full items-center gap-3 px-4 py-2.5 text-[14px] text-[#EF4444] hover:bg-red-50"
+                    onClick={handleLogout}
+                    className="flex w-full items-center gap-3 px-4 py-2.5 text-[14px] text-error-500 hover:bg-red-50"
                   >
                     <LogOut className="size-4" />
                     Logout
                   </button>
                 </div>
-              ) : null}
+              )}
             </div>
           </div>
         </header>

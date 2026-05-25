@@ -21,15 +21,15 @@ export function GlassBrandCard({
         className,
       )}
     >
-      <BrandLogo showArc className="[&_svg]:h-9" />
-      <h2 className="mt-6 text-[22px] leading-snug font-semibold tracking-tight text-[#111827]">
+      <BrandLogo className="[&_svg]:h-9" />
+      <h2 className="mt-6 text-[22px] leading-snug font-semibold tracking-tight text-grey-900">
         {title}
       </h2>
       {description ? (
-        <p className="mt-3 text-[15px] leading-relaxed text-[#6B7280]">{description}</p>
+        <p className="mt-3 text-[15px] leading-relaxed text-grey-500">{description}</p>
       ) : null}
       {footerLabel ? (
-        <p className="mt-8 text-[10px] font-medium tracking-[0.22em] text-[#9CA3AF] uppercase">
+        <p className="mt-8 text-[10px] font-medium tracking-[0.22em] text-grey-400 uppercase">
           {footerLabel}
         </p>
       ) : null}

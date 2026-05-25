@@ -64,7 +64,7 @@ export function ResetPasswordScreen() {
       <AuthSplitLayout variant="forgot-building" hero={heroCard}>
         <p className="text-body-2 text-error-500">
           Invalid reset link.{" "}
-          <Link href={routes.auth.forgotPassword} className="text-[#3B82F6] underline">
+          <Link href={routes.auth.forgotPassword} className="text-blue-500 underline">
             Request a new one
           </Link>
         </p>
@@ -76,7 +76,7 @@ export function ResetPasswordScreen() {
     <AuthSplitLayout variant="forgot-building" hero={heroCard}>
       <div className="space-y-8">
         <div>
-          <h2 className="text-[32px] font-semibold text-[#111827]">Reset password</h2>
+          <h2 className="text-[32px] font-semibold text-grey-900">Reset password</h2>
           <p className="mt-2 text-[15px] text-grey-600">Choose a new password for your account.</p>
         </div>
         <form onSubmit={handleSubmit} className="space-y-5">
@@ -111,14 +111,14 @@ export function ResetPasswordScreen() {
           <button
             type="submit"
             disabled={isLoading}
-            className="h-[48px] w-full rounded-lg bg-[#274376] text-[15px] font-medium text-white hover:bg-[#1e3559]"
+            className="h-[48px] w-full rounded-lg bg-primary-500 text-[15px] font-medium text-white hover:bg-primary-600"
           >
             {isLoading ? "Updating…" : "Update password"}
           </button>
         </form>
         <Link
           href={routes.auth.loginPassword}
-          className="flex items-center justify-center gap-2 text-[15px] font-medium text-[#3B82F6]"
+          className="flex items-center justify-center gap-2 text-[15px] font-medium text-blue-500"
         >
           <ArrowLeft className="size-4" />
           Back to Sign In

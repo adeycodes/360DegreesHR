@@ -12,6 +12,7 @@ import { routes } from "@/config/routes";
 import { toUserMessage } from "@/lib/api/errors";
 import { authApi } from "@/lib/api/endpoints/auth";
 import { fieldErrorsFromZod } from "@/lib/forms/zod-field-errors";
+import { setAccessToken, clearAccessToken } from "@/lib/auth/session"; // ✅ import token helpers
 import {
   registerCompanySchema,
   type RegisterCompanyInput,
@@ -60,7 +61,22 @@ export function RegisterCompanyScreen() {
     setFieldErrors({});
     setIsLoading(true);
     try {
-      const session = await authApi.registerCompany(parsed.data);
+      // 1. Register the company (returns token + user data)
+      const registerResult = await authApi.registerCompany(parsed.data);
+      const { token, user } = registerResult;
+
+      // 2. Build the session object with token + registered user
+      // (userId will be resolved by auth store/hydration)
+      const session = {
+        token,
+        user: {
+          id: user.userId,
+          role: user.role,
+          companyId: user.companyId,
+        },
+      };
+
+      // 3. Store token and session (auth hydration will refresh full profile on load)
       setSession(session);
       toast.success("Registration successful! Welcome to your dashboard.");
       router.push(routes.app.dashboard);
@@ -68,6 +84,8 @@ export function RegisterCompanyScreen() {
       const msg = toUserMessage(err);
       setError(msg);
       toast.error(msg);
+      // Clear any partial token if registration failed
+      clearAccessToken();
     } finally {
       setIsLoading(false);
     }
@@ -75,7 +93,6 @@ export function RegisterCompanyScreen() {
 
   return (
     <AuthSplitLayout
-      
       variant="login-building"
       hero={
         <LoginBuildingHero
@@ -86,7 +103,7 @@ export function RegisterCompanyScreen() {
     >
       <div className="space-y-6">
         <div>
-          <h2 className="text-[32px] font-semibold tracking-tight text-[#111827]">
+          <h2 className="text-[32px] font-semibold tracking-tight text-grey-900">
             Create your account
           </h2>
           <p className="mt-2 text-[15px] text-grey-600">
@@ -95,6 +112,7 @@ export function RegisterCompanyScreen() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Company details section */}
           <section className="space-y-4">
             <div className="flex items-center gap-2 text-[13px] font-semibold tracking-wide text-grey-700 uppercase">
               <Building2 className="size-4 text-grey-500" />
@@ -166,9 +184,8 @@ export function RegisterCompanyScreen() {
             </AuthField>
           </section>
 
+          {/* Administrator section */}
           <section className="space-y-4 border-t border-grey-200 pt-6">
-            
-
             <AuthField
               label="Administrator name"
               htmlFor="adminName"
@@ -229,7 +246,7 @@ export function RegisterCompanyScreen() {
           <button
             type="submit"
             disabled={isLoading}
-            className="h-[48px] w-full rounded-lg bg-[#274376] text-[15px] font-medium text-white transition-colors hover:bg-[#1e3559] disabled:opacity-70"
+            className="h-[48px] w-full rounded-lg bg-primary-500 text-[15px] font-medium text-white transition-colors hover:bg-primary-600 disabled:opacity-70"
           >
             {isLoading ? "Creating account…" : "Create company account"}
           </button>
@@ -239,7 +256,7 @@ export function RegisterCompanyScreen() {
           Already have an account?{" "}
           <Link
             href={routes.auth.loginPassword}
-            className="font-medium text-[#3B82F6] hover:underline"
+            className="font-medium text-blue-500 hover:underline"
           >
             Sign in
           </Link>

@@ -47,7 +47,7 @@ export function AuthSplitLayout({
             className={cn(
               "absolute inset-0",
               variant === "forgot-success-blue"
-                ? "bg-[#274376]/88"
+                ? "bg-primary-500/88"
                 : variant === "sso-office"
                   ? "bg-white/30"
                   : "bg-black/15",

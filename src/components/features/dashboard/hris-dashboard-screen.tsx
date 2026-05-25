@@ -35,9 +35,9 @@ const attendanceData = [
 ];
 
 const departmentData = [
-  { name: "Engineering", value: 37, color: "#14B8A6" },
-  { name: "Operations", value: 24, color: "#9CA3AF" },
-  { name: "Designs", value: 22, color: "#D1D5DB" },
+  { name: "Engineering", value: 37, color: "bg-teal-500" },
+  { name: "Operations", value: 24, color: "bg-grey-400" },
+  { name: "Designs", value: 22, color: "bg-grey-300" },
 ];
 
 const retentionData = [
@@ -87,17 +87,17 @@ const recentActivity = [
   {
     text: "Aria Montgomery signed her offer...",
     meta: "2 hours ago • HR Operations",
-    color: "bg-[#3B82F6]",
+    color: "bg-blue-500",
   },
   {
     text: "Marcus Chen requested sick leave...",
     meta: "5 hours ago • Engineering",
-    color: "bg-[#EF4444]",
+    color: "bg-error-500",
   },
   {
     text: "Monthly payroll finalized...",
     meta: "Yesterday • Finance",
-    color: "bg-[#14B8A6]",
+    color: "bg-teal-500",
   },
 ];
 
@@ -116,8 +116,8 @@ function StatCard({
 }) {
   return (
     <div className="rounded-xl border border-grey-200 bg-white p-5">
-      <div className="mb-4 flex size-9 items-center justify-center rounded-lg bg-[#EFF6FF]">
-        <Icon className="size-[18px] text-[#3B82F6]" strokeWidth={1.75} />
+      <div className="mb-4 flex size-9 items-center justify-center rounded-lg bg-blue-50">
+        <Icon className="size-[18px] text-blue-500" strokeWidth={1.75} />
       </div>
       <p className="text-[13px] font-medium text-grey-500">{title}</p>
       <p className="mt-1 font-heading text-[28px] font-bold tracking-tight text-grey-900">
@@ -127,8 +127,8 @@ function StatCard({
         className={cn(
           "mt-2 inline-block rounded-full px-2.5 py-0.5 text-[12px] font-medium",
           badgeVariant === "blue"
-            ? "bg-[#EFF6FF] text-[#2563EB]"
-            : "bg-[#FEF2F2] text-[#DC2626]",
+            ? "bg-blue-50 text-blue-600"
+            : "bg-grey-100 text-grey-700",
         )}
       >
         {badge}
@@ -143,8 +143,8 @@ function StatusBadge({ status }: { status: "Approved" | "Pending" }) {
       className={cn(
         "inline-flex rounded-full px-2.5 py-0.5 text-[12px] font-medium",
         status === "Approved"
-          ? "bg-[#EFF6FF] text-[#2563EB]"
-          : "bg-[#F3F4F6] text-[#4B5563]",
+          ? "bg-blue-50 text-blue-600"
+          : "bg-grey-100 text-grey-700",
       )}
     >
       {status}
@@ -169,8 +169,8 @@ export function HrisDashboardScreen() {
             href="#"
             className="flex items-center gap-3 rounded-xl border border-grey-200 bg-white px-4 py-3 shadow-sm transition-shadow hover:shadow-md"
           >
-            <span className="flex size-10 items-center justify-center rounded-lg bg-[#EFF6FF]">
-              <UserPlus className="size-5 text-[#3B82F6]" />
+            <span className="flex size-10 items-center justify-center rounded-lg bg-blue-50">
+              <UserPlus className="size-5 text-blue-500" />
             </span>
             <span>
               <span className="block text-[14px] font-semibold text-grey-900">Add Employee</span>
@@ -181,8 +181,8 @@ export function HrisDashboardScreen() {
             href="#"
             className="flex items-center gap-3 rounded-xl border border-grey-200 bg-white px-4 py-3 shadow-sm transition-shadow hover:shadow-md"
           >
-            <span className="flex size-10 items-center justify-center rounded-lg bg-[#1E3A8A]/10">
-              <Briefcase className="size-5 text-[#1E40AF]" />
+            <span className="flex size-10 items-center justify-center rounded-lg bg-blue-50">
+              <Briefcase className="size-5 text-blue-700" />
             </span>
             <span>
               <span className="block text-[14px] font-semibold text-grey-900">Post Job</span>
@@ -239,19 +239,19 @@ export function HrisDashboardScreen() {
                 <YAxis
                   axisLine={false}
                   tickLine={false}
-                  tick={{ fill: "#9CA3AF", fontSize: 12 }}
+                  tick={{ fill: "#cbd5e0", fontSize: 12 }}
                   domain={[0, 260]}
                 />
                 <XAxis
                   dataKey="day"
                   axisLine={false}
                   tickLine={false}
-                  tick={{ fill: "#6B7280", fontSize: 12 }}
+                  tick={{ fill: "#6b7588", fontSize: 12 }}
                 />
                 <Tooltip
                   contentStyle={{
                     borderRadius: 8,
-                    border: "1px solid #E5E7EB",
+                    border: "1px solid #f1f2f4",
                     fontSize: 13,
                   }}
                 />
@@ -259,7 +259,7 @@ export function HrisDashboardScreen() {
                   {attendanceData.map((entry) => (
                     <Cell
                       key={entry.day}
-                      fill={entry.highlight ? "#1E40AF" : "#93C5FD"}
+                      fill={entry.highlight ? "#274376" : "#a0aec0"}
                     />
                   ))}
                 </Bar>

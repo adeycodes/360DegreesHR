@@ -11,10 +11,11 @@ import { routes } from "@/config/routes";
 export function LoginSsoScreen() {
   return (
     <AuthSplitLayout
+      hideFooter
       variant="sso-office"
       hero={
         <>
-          <BrandLogo showArc className="lg:[&_tspan]:fill-white lg:[&_text]:fill-white" />
+          <BrandLogo className="lg:[&_tspan]:fill-white lg:[&_text]:fill-white" />
           <div className="mt-auto max-w-xl pb-4">
             <h1 className="text-[2.75rem] leading-[1.15] font-light tracking-tight text-[#111827] lg:text-white">
               Architecting the future of{" "}

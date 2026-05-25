@@ -75,6 +75,7 @@ export function RegisterCompanyScreen() {
 
   return (
     <AuthSplitLayout
+      
       variant="login-building"
       hero={
         <LoginBuildingHero
@@ -166,10 +167,7 @@ export function RegisterCompanyScreen() {
           </section>
 
           <section className="space-y-4 border-t border-grey-200 pt-6">
-            <div className="flex items-center gap-2 text-[13px] font-semibold tracking-wide text-grey-700 uppercase">
-              <UserRound className="size-4 text-grey-500" />
-              Administrator
-            </div>
+            
 
             <AuthField
               label="Administrator name"

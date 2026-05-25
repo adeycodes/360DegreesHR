@@ -10,8 +10,8 @@ export type AuthHeroVariant =
   | "forgot-success-blue";
 
 const heroImages: Record<AuthHeroVariant, string> = {
-  "sso-office": "/images/figma/auth/sso-hero.png",
-  "login-building": "/images/figma/auth/login-hero.png",
+  "sso-office": "/images/sso_hero_image.png",
+  "login-building": "/images/login_hero_image.png",
   "forgot-building": "/images/figma/auth/forgot-hero.png",
   "forgot-success-blue": "/images/figma/auth/forgot-success-hero.png",
 };
@@ -21,6 +21,7 @@ type AuthSplitLayoutProps = {
   hero: React.ReactNode;
   variant: AuthHeroVariant;
   rightClassName?: string;
+  hideFooter?: boolean;
 };
 
 export function AuthSplitLayout({
@@ -28,6 +29,7 @@ export function AuthSplitLayout({
   hero,
   variant,
   rightClassName,
+  hideFooter,
 }: AuthSplitLayoutProps) {
   return (
     <div className="flex min-h-screen min-h-[100dvh] flex-col bg-white">
@@ -65,7 +67,7 @@ export function AuthSplitLayout({
           <div className="mx-auto w-full max-w-[400px]">{children}</div>
         </main>
       </div>
-      <AuthFooter />
+      {!hideFooter && <AuthFooter />}
     </div>
   );
 }

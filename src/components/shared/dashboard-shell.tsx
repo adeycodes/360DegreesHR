@@ -148,7 +148,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
     <div className="flex min-h-screen bg-[#F9FAFB]">
       <aside className="hidden w-[248px] shrink-0 flex-col border-r border-grey-200 bg-white lg:flex">
         <div className="flex h-16 items-center px-5">
-          <BrandLogo href={routes.app.dashboard} showArc />
+          <BrandLogo href={routes.app.dashboard} />
         </div>
         <div className="flex-1 overflow-y-auto">{navLinks}</div>
       </aside>

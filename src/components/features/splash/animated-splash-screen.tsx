@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 import { BrandLogo } from "@/components/shared/brand-logo";
 
@@ -9,34 +9,67 @@ interface AnimatedSplashScreenProps {
   duration?: number;
 }
 
+const DEFAULT_DURATION = 2500;
+const FADE_OUT_DURATION = 500;
+
 /**
  * Animated splash screen that shows after login before dashboard.
  * Features fade-in and scale animation for the logo.
  */
-export function AnimatedSplashScreen({
-  onComplete,
-  duration = 2500,
+export function AnimatedSplashScreen({ 
+  onComplete, 
+  duration = DEFAULT_DURATION 
 }: AnimatedSplashScreenProps) {
   const [isVisible, setIsVisible] = useState(true);
+  const [shouldRender, setShouldRender] = useState(true);
+
+  const handleAnimationEnd = useCallback(() => {
+    if (!isVisible) {
+      setShouldRender(false);
+      onComplete?.();
+    }
+  }, [isVisible, onComplete]);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const fadeOutTimer = setTimeout(() => {
       setIsVisible(false);
-      onComplete?.();
+    }, duration - FADE_OUT_DURATION);
+
+    const cleanupTimer = setTimeout(() => {
+      if (!isVisible) {
+        setShouldRender(false);
+        onComplete?.();
+      }
     }, duration);
 
-    return () => clearTimeout(timer);
-  }, [duration, onComplete]);
+    return () => {
+      clearTimeout(fadeOutTimer);
+      clearTimeout(cleanupTimer);
+    };
+  }, [duration, isVisible, onComplete]);
 
-  if (!isVisible) return null;
+  if (!shouldRender) return null;
 
   return (
     <div
       className={`fixed inset-0 z-50 flex items-center justify-center bg-white transition-opacity duration-500 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
+      aria-hidden="true"
+      role="presentation"
     >
-      <style>{`
+      <div
+        className={`will-change-transform ${
+          isVisible 
+            ? "animate-[scaleIn_0.8s_ease-out_forwards]" 
+            : "animate-[fadeOut_0.5s_ease-in_forwards]"
+        }`}
+        onAnimationEnd={handleAnimationEnd}
+      >
+        <BrandLogo />
+      </div>
+
+      <style jsx>{`
         @keyframes scaleIn {
           from {
             opacity: 0;
@@ -56,20 +89,7 @@ export function AnimatedSplashScreen({
             opacity: 0;
           }
         }
-
-        .animate-scale-in {
-          animation: scaleIn 0.8s ease-out forwards;
-        }
-
-        .animate-fade-out {
-          animation: fadeOut 0.5s ease-in forwards;
-          animation-delay: 1.8s;
-        }
       `}</style>
-
-      <div className={`animate-scale-in ${!isVisible && "animate-fade-out"}`}>
-        <BrandLogo size="splash" />
-      </div>
     </div>
   );
 }

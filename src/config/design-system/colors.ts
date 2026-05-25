@@ -1,24 +1,24 @@
-import {
-  createColorScale,
-  type ColorScale,
-  type ColorScaleKey,
-} from "@/lib/design-system/color-utils";
-
-/** Main — Primary deep blue */
-export const primary = createColorScale("#274376");
-
-/** Main — Secondary golden yellow */
-export const secondary = createColorScale("#F7A316");
-
-/** Alerts */
-export const success = createColorScale("#0CAF60");
-export const warning = createColorScale("#FFD023");
-export const error = createColorScale("#E03137");
-
 /**
- * Greyscale — steps 700–900 use corrected darker values
- * (source labels for 700–900 were duplicated; swatches are darker greys).
+ * Color Reference — For Design System Display Page Only
+ * 
+ * ⚠️ SOURCE OF TRUTH: src/styles/design-system/colors.css
+ * 
+ * This file is ONLY used to render the design system reference page.
+ * All color values come from the CSS variables defined in colors.css.
+ * 
+ * Components use CSS variable classes: text-primary-500, bg-secondary-50, etc.
  */
+
+/** Main colors */
+export const primaryBase = "#274376" as const;
+export const secondaryBase = "#F7A316" as const;
+
+/** Alert colors */
+export const successBase = "#0CAF60" as const;
+export const warningBase = "#FFD023" as const;
+export const errorBase = "#E03137" as const;
+
+/** Greyscale - matches CSS variables */
 export const greyscale = {
   50: "#FAFAFA",
   100: "#FBFBFB",
@@ -44,25 +44,71 @@ export const additional = {
 
 export type AdditionalColorKey = keyof typeof additional;
 
-export const colorScales = {
-  primary,
-  secondary,
-  success,
-  warning,
-  error,
-} as const;
-
-export type SemanticColorScale = keyof typeof colorScales;
-
+/** Display data for design system page */
 export const mainColors = [
-  { name: "Primary", scale: primary, tokenPrefix: "primary" },
-  { name: "Secondary", scale: secondary, tokenPrefix: "secondary" },
+  {
+    name: "Primary",
+    scale: {
+      50: "color-mix(in srgb, #274376 8%, white)",
+      100: "color-mix(in srgb, #274376 16%, white)",
+      200: "color-mix(in srgb, #274376 32%, white)",
+      300: "color-mix(in srgb, #274376 48%, white)",
+      400: "color-mix(in srgb, #274376 64%, white)",
+      500: primaryBase,
+    },
+    tokenPrefix: "primary",
+  },
+  {
+    name: "Secondary",
+    scale: {
+      50: "color-mix(in srgb, #F7A316 8%, white)",
+      100: "color-mix(in srgb, #F7A316 16%, white)",
+      200: "color-mix(in srgb, #F7A316 32%, white)",
+      300: "color-mix(in srgb, #F7A316 48%, white)",
+      400: "color-mix(in srgb, #F7A316 64%, white)",
+      500: secondaryBase,
+    },
+    tokenPrefix: "secondary",
+  },
 ] as const;
 
 export const alertColors = [
-  { name: "Success", scale: success, tokenPrefix: "success" },
-  { name: "Warning", scale: warning, tokenPrefix: "warning" },
-  { name: "Error", scale: error, tokenPrefix: "error" },
+  {
+    name: "Success",
+    scale: {
+      50: "color-mix(in srgb, #0CAF60 8%, white)",
+      100: "color-mix(in srgb, #0CAF60 16%, white)",
+      200: "color-mix(in srgb, #0CAF60 32%, white)",
+      300: "color-mix(in srgb, #0CAF60 48%, white)",
+      400: "color-mix(in srgb, #0CAF60 64%, white)",
+      500: successBase,
+    },
+    tokenPrefix: "success",
+  },
+  {
+    name: "Warning",
+    scale: {
+      50: "color-mix(in srgb, #FFD023 8%, white)",
+      100: "color-mix(in srgb, #FFD023 16%, white)",
+      200: "color-mix(in srgb, #FFD023 32%, white)",
+      300: "color-mix(in srgb, #FFD023 48%, white)",
+      400: "color-mix(in srgb, #FFD023 64%, white)",
+      500: warningBase,
+    },
+    tokenPrefix: "warning",
+  },
+  {
+    name: "Error",
+    scale: {
+      50: "color-mix(in srgb, #E03137 8%, white)",
+      100: "color-mix(in srgb, #E03137 16%, white)",
+      200: "color-mix(in srgb, #E03137 32%, white)",
+      300: "color-mix(in srgb, #E03137 48%, white)",
+      400: "color-mix(in srgb, #E03137 64%, white)",
+      500: errorBase,
+    },
+    tokenPrefix: "error",
+  },
 ] as const;
 
 export const greyscaleSteps = Object.entries(greyscale).map(([step, hex]) => ({
@@ -76,17 +122,3 @@ export const additionalColors = Object.entries(additional).map(([name, hex]) => 
   hex,
   token: name,
 }));
-
-export function getScaleCssVars(
-  prefix: string,
-  scale: ColorScale,
-): Record<string, string> {
-  const keys: ColorScaleKey[] = [50, 100, 200, 300, 400, 500];
-  return keys.reduce(
-    (acc, key: ColorScaleKey) => {
-      acc[`--color-${prefix}-${key}`] = scale[key];
-      return acc;
-    },
-    {} as Record<string, string>,
-  );
-}

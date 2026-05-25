@@ -1,52 +1,79 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, Mail } from "lucide-react";
-import { useState } from "react";
 
 import { AuthSplitLayout } from "@/components/shared/auth/auth-split-layout";
 import { AuthField, authInputClassName } from "@/components/shared/auth/auth-field";
 import { routes } from "@/config/routes";
 import { toUserMessage } from "@/lib/api/errors";
 import { authApi } from "@/lib/api/endpoints/auth";
-import {
-  forgotPasswordSchema,
-  type ForgotPasswordInput,
-} from "@/lib/validations/auth";
+import { forgotPasswordSchema, type ForgotPasswordInput } from "@/lib/validations/auth";
 import { toast } from "@/stores/toast-store";
+
+interface FormState {
+  email: string;
+  fieldError: string | undefined;
+  error: string | null;
+  isLoading: boolean;
+}
+
+const INITIAL_FORM_STATE: FormState = {
+  email: "",
+  fieldError: undefined,
+  error: null,
+  isLoading: false,
+};
 
 export function ForgotPasswordScreen() {
   const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [fieldError, setFieldError] = useState<string | undefined>();
-  const [error, setError] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [formState, setFormState] = useState<FormState>(INITIAL_FORM_STATE);
+  const { email, fieldError, error, isLoading } = formState;
 
-  async function handleSubmit(e: React.FormEvent) {
+  const updateFormState = useCallback((updates: Partial<FormState>) => {
+    setFormState((prev) => ({ ...prev, ...updates }));
+  }, []);
+
+  const handleEmailChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    updateFormState({ email: e.target.value, error: null, fieldError: undefined });
+  }, [updateFormState]);
+
+  const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError(null);
-    const parsed = forgotPasswordSchema.safeParse({ email } satisfies ForgotPasswordInput);
-    if (!parsed.success) {
-      setFieldError(parsed.error.issues[0]?.message);
+    
+    // Reset errors
+    updateFormState({ error: null, fieldError: undefined });
+    
+    // Validate email
+    const validationResult = forgotPasswordSchema.safeParse({ email } satisfies ForgotPasswordInput);
+    
+    if (!validationResult.success) {
+      const firstErrorMessage = validationResult.error.issues[0]?.message;
+      updateFormState({ fieldError: firstErrorMessage });
       return;
     }
-    setFieldError(undefined);
-    setIsLoading(true);
+    
+    // Start loading
+    updateFormState({ isLoading: true });
+    
     try {
-      const res = await authApi.forgotPassword(parsed.data);
-      toast.success(res.message || "Password reset link sent successfully!");
+      const response = await authApi.forgotPassword(validationResult.data);
+      
+      toast.success(response.message || "Password reset link sent successfully!");
+      
       router.push(
-        `${routes.auth.forgotPasswordSent}?email=${encodeURIComponent(parsed.data.email)}`,
+        `${routes.auth.forgotPasswordSent}?email=${encodeURIComponent(validationResult.data.email)}`
       );
-    } catch (err) {
-      const msg = toUserMessage(err);
-      setError(msg);
-      toast.error(msg);
+    } catch (error) {
+      const userMessage = toUserMessage(error);
+      updateFormState({ error: userMessage });
+      toast.error(userMessage);
     } finally {
-      setIsLoading(false);
+      updateFormState({ isLoading: false });
     }
-  }
+  }, [email, router, updateFormState]);
 
   return (
     <AuthSplitLayout
@@ -62,6 +89,7 @@ export function ForgotPasswordScreen() {
       }
     >
       <div className="space-y-8">
+        {/* Header Section */}
         <div>
           <h2 className="text-[32px] font-semibold tracking-tight text-[#111827]">
             Forgot Password
@@ -72,8 +100,13 @@ export function ForgotPasswordScreen() {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <AuthField label="Corporate email" htmlFor="email" error={fieldError}>
+        {/* Form Section */}
+        <form onSubmit={handleSubmit} noValidate className="space-y-6">
+          <AuthField 
+            label="Corporate email" 
+            htmlFor="email" 
+            error={fieldError}
+          >
             <div className="relative">
               <input
                 id="email"
@@ -81,30 +114,47 @@ export function ForgotPasswordScreen() {
                 autoComplete="email"
                 placeholder="name@company.com"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleEmailChange}
+                disabled={isLoading}
                 className={authInputClassName("pr-11")}
+                aria-invalid={!!fieldError}
+                aria-describedby={fieldError ? "email-error" : undefined}
               />
-              <Mail className="pointer-events-none absolute top-1/2 right-4 size-5 -translate-y-1/2 text-grey-500" />
+              <Mail 
+                className="pointer-events-none absolute top-1/2 right-4 size-5 -translate-y-1/2 text-grey-500" 
+                aria-hidden="true"
+              />
             </div>
           </AuthField>
 
-          {error ? <p className="text-body-3 text-error-500">{error}</p> : null}
+          {/* Error Message */}
+          {error && (
+            <p 
+              className="text-body-3 text-error-500" 
+              role="alert"
+            >
+              {error}
+            </p>
+          )}
 
+          {/* Submit Button */}
           <button
             type="submit"
             disabled={isLoading}
-            className="h-[48px] w-full rounded-lg bg-[#3B82F6] text-[13px] font-semibold tracking-[0.08em] text-white uppercase transition-colors hover:bg-[#2563EB] disabled:opacity-70"
+            className="h-[48px] w-full rounded-lg bg-[#3B82F6] text-[13px] font-semibold tracking-[0.08em] text-white uppercase transition-colors hover:bg-[#2563EB] focus:outline-none focus:ring-2 focus:ring-[#3B82F6] focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed"
+            aria-busy={isLoading}
           >
             {isLoading ? "Sending…" : "Send reset link"}
           </button>
         </form>
 
+        {/* Back Link */}
         <Link
           href={routes.auth.loginPassword}
-          className="flex items-center justify-center gap-2 text-[15px] font-medium text-[#3B82F6] hover:underline"
+          className="flex items-center justify-center gap-2 text-[15px] font-medium text-[#3B82F6] transition-colors hover:text-[#2563EB] focus:outline-none focus:ring-2 focus:ring-[#3B82F6] focus:ring-offset-2 rounded-md"
         >
-          <ArrowLeft className="size-4" />
-          Back to Sign In
+          <ArrowLeft className="size-4" aria-hidden="true" />
+          <span>Back to Sign In</span>
         </Link>
       </div>
     </AuthSplitLayout>

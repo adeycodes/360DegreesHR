@@ -1,24 +1,11 @@
-/**
- * Color Reference — For Design System Display Page Only
- * 
- * ⚠️ SOURCE OF TRUTH: src/styles/design-system/colors.css
- * 
- * This file is ONLY used to render the design system reference page.
- * All color values come from the CSS variables defined in colors.css.
- * 
- * Components use CSS variable classes: text-primary-500, bg-secondary-50, etc.
- */
+/** Color Reference — For Design System Display Page Only */
 
-/** Main colors */
 export const primaryBase = "#274376" as const;
 export const secondaryBase = "#F7A316" as const;
-
-/** Alert colors */
 export const successBase = "#0CAF60" as const;
 export const warningBase = "#FFD023" as const;
 export const errorBase = "#E03137" as const;
 
-/** Greyscale - matches CSS variables */
 export const greyscale = {
   50: "#FAFAFA",
   100: "#FBFBFB",
@@ -34,7 +21,6 @@ export const greyscale = {
 
 export type GreyscaleKey = keyof typeof greyscale;
 
-/** Additional accent colors */
 export const additional = {
   white: "#FFFFFF",
   orange: "#FE984A",
@@ -44,7 +30,6 @@ export const additional = {
 
 export type AdditionalColorKey = keyof typeof additional;
 
-/** Display data for design system page */
 export const mainColors = [
   {
     name: "Primary",

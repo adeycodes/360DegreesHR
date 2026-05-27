@@ -141,4 +141,68 @@ export const messageResponseSchema = z.object({
   message: z.string(),
 });
 
-export const registerCompanySchema
+// ============================================================================
+// INPUT TYPES FOR API CALLS
+// ============================================================================
+
+export type LoginInput = {
+  email: string;
+  password: string;
+};
+
+export type RegisterCompanyInput = {
+  companyName: string;
+  email: string;
+  password: string;
+  firstName?: string;
+  lastName?: string;
+};
+
+export type ForgotPasswordInput = {
+  email: string;
+};
+
+export type ResetPasswordInput = {
+  token: string;
+  newPassword: string;
+};
+
+// ============================================================================
+// SCHEMAS (continued)
+// ============================================================================
+
+export const registerCompanySchema = z.object({
+  success: z.boolean(),
+  message: z.string(),
+  data: z.object({
+    token: z.string(),
+    user: authUserSchema,
+    company: z.object({ id: z.string(), name: z.string() }),
+  }).optional(),
+});
+
+export type RegisterCompanyResponse = z.infer<typeof registerCompanySchema>;
+
+export const meResponseSchema = z.object({
+  success: z.boolean(),
+  message: z.string().optional(),
+  data: authUserSchema.optional(),
+});
+
+export type MeResponse = z.infer<typeof meResponseSchema>;
+
+export const dashboardOverviewSchema = z.object({
+  stats: z.array(z.object({
+    label: z.string(),
+    value: z.union([z.string(), z.number()]),
+    change: z.string().optional(),
+  })),
+  pendingApprovals: z.number().optional(),
+  recentActivity: z.array(z.object({
+    id: z.string(),
+    title: z.string(),
+    timestamp: z.string(),
+  })).optional(),
+});
+
+export type DashboardOverview = z.infer<typeof dashboardOverviewSchema>;

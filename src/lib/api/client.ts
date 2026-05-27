@@ -35,9 +35,10 @@ async function send<T>(
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), options.timeoutMs ?? TIMEOUT);
+  const url = `${base}${path}`;
 
   try {
-    const response = await fetch(`${base}${path}`, {
+    const response = await fetch(url, {
       method,
       headers: {
         "Content-Type": "application/json",

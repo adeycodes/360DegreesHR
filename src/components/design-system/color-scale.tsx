@@ -1,4 +1,4 @@
-import type { ColorScale, ColorScaleKey } from "@/lib/design-system/color-utils";
+import type { ColorScale, ColorScaleKey } from "@/lib/utilities";
 import { cn } from "@/lib/utils";
 
 const scaleOrder: ColorScaleKey[] = [500, 400, 300, 200, 100, 50];

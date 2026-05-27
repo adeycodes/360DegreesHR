@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 import { authApi } from "@/lib/api/endpoints/auth";
-import { getAccessToken } from "@/lib/auth/session";
+import { getAccessToken } from "@/lib/utilities";
 import { useAuthStore } from "@/stores/auth-store";
 
 /**

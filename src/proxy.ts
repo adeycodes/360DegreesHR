@@ -6,7 +6,7 @@ import {
   isAuthEntryPath,
   isProtectedAppPath,
   isPublicPath,
-} from "@/lib/routing/proxy-routes";
+} from "@/lib/utilities";
 
 const AUTH_COOKIE = "auth_token";
 

@@ -1,7 +1,7 @@
 import type { ZodType } from "zod";
 
 import { env } from "@/lib/env";
-import { parseApiResponse } from "@/lib/validations/parse";
+import { parseApiResponse } from "@/lib/validations/parser";
 
 import { ApiError } from "./errors";
 

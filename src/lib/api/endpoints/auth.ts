@@ -1,6 +1,6 @@
 import { apiPaths } from "@/config/api-paths";
 import { get, post } from "@/lib/api/client";
-import { getAuthHeader } from "@/lib/auth/session";
+import { getAuthHeader } from "@/lib/utilities";
 import {
   authSessionSchema,
   registerResponseSchema,
@@ -12,6 +12,11 @@ import {
   type RegisterCompanyInput,
   type ResetPasswordInput,
 } from "@/lib/validations/auth";
+import { dashboardOverviewSchema } from "@/lib/validations/dashboard";
+
+// ============================================================================
+// AUTH ENDPOINTS
+// ============================================================================
 
 export const authApi = {
   /** Register a new company + admin account → returns session */
@@ -36,4 +41,16 @@ export const authApi = {
   /** Set new password using the reset token */
   resetPassword: (input: ResetPasswordInput) =>
     post(apiPaths.auth.resetPassword, messageResponseSchema, input),
+};
+
+// ============================================================================
+// DASHBOARD ENDPOINTS
+// ============================================================================
+
+export const dashboardApi = {
+  /** Fetch the admin dashboard overview */
+  getOverview: () =>
+    get(apiPaths.dashboard.overview, dashboardOverviewSchema, {
+      headers: getAuthHeader(),
+    }),
 };

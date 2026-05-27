@@ -58,8 +58,10 @@ export function fieldErrorsFromZod<T extends Record<string, string>>(error: ZodE
 }
 
 // ============================================================================
-// ROUTING UTILITIES - Proxy HRIS pages
+// ROUTING UTILITIES - Path checkers for middleware
 // ============================================================================
+
+import { publicPaths } from "@/config/routes";
 
 export const PROXY_HRIS_PAGES = [
   "recruitment",
@@ -79,6 +81,42 @@ export type ProxyHrisPage = typeof PROXY_HRIS_PAGES[number];
 
 export function isProxyHrisPage(section: string): section is ProxyHrisPage {
   return PROXY_HRIS_PAGES.includes(section as ProxyHrisPage);
+}
+
+/**
+ * Check if a path is public (unauthenticated access allowed)
+ */
+export function isPublicPath(pathname: string): boolean {
+  return publicPaths.some(path => {
+    if (path === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(path);
+  });
+}
+
+/**
+ * Check if a path is an auth entry point (login, register, etc.)
+ * These redirect authenticated users to dashboard
+ */
+export function isAuthEntryPath(pathname: string): boolean {
+  return [
+    "/login",
+    "/login/password",
+    "/register",
+    "/forgot-password",
+    "/forgot-password/sent",
+    "/reset-password",
+  ].some(path => pathname.startsWith(path));
+}
+
+/**
+ * Check if a path requires authentication (protected app routes)
+ */
+export function isProtectedAppPath(pathname: string): boolean {
+  return pathname.startsWith("/dashboard") || 
+         pathname.startsWith("/hris") ||
+         pathname.startsWith("/app");
 }
 
 // ============================================================================

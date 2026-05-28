@@ -1,25 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Open_Sans } from "next/font/google";
+import localFont from "next/font/local"; // ✅ Replaced next/font/google with local font loader
 
 import { AuthHydration } from "@/components/providers/auth-hydration";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ToastProvider } from "@/components/providers/toast-provider";
-import { QueryProvider } from "@/components/providers/query-provider"; // Ensure this is created in your providers folder
+import { QueryProvider } from "@/components/providers/query-provider";
 import { siteConfig } from "@/config/site";
 
 import "./globals.css";
 
-const manrope = Manrope({
+// ✅ 1. Load Local Manrope Variable Font
+const manrope = localFont({
+  src: "../../public/fonts/Manrope-VariableFont_wght.ttf", // Adjust relative directory path if your layout file is structured differently
   variable: "--font-manrope",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  weight: "100 800", // Automatically supports thin (100) all the way to extra bold (800) from your single variable file
 });
 
-const openSans = Open_Sans({
+// ✅ 2. Load Local Open Sans Variable Font
+const openSans = localFont({
+  src: "../../public/fonts/OpenSans-VariableFont_wdth,wght.ttf",
   variable: "--font-open-sans",
-  subsets: ["latin"],
-  weight: ["300", "400", "600"],
-  style: ["normal", "italic"],
+  display: "swap",
+  weight: "300 800",
 });
 
 export const metadata: Metadata = {
@@ -59,6 +62,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
+      // Keeps the tailwind font utility mappings active
       className={`${manrope.variable} ${openSans.variable} h-full antialiased`}
     >
       <body className="min-h-full font-sans">

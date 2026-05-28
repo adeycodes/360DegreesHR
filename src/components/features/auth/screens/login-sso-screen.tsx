@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { Check, Lock, Menu } from "lucide-react";
 
@@ -9,13 +10,20 @@ import { BrandLogo } from "@/components/shared/brand-logo";
 import { routes } from "@/config/routes";
 
 export function LoginSsoScreen() {
+  const [orgEmail, setOrgEmail] = useState("");
+
+  const handleSsoLogin = (provider: string) => {
+    console.log(`Initiating SSO login with ${provider} for: ${orgEmail}`);
+    // Add your actual SSO logic here
+  };
+
   return (
     <AuthSplitLayout
       hideFooter
       variant="sso-office"
       hero={
         <>
-          <BrandLogo className="lg:[&_tspan]:fill-white lg:[&_text]:fill-white" />
+          <BrandLogo className="lg:[&_tspan]:fill-white w-2 lg:[&_text]:fill-white" />
           <div className="mt-auto max-w-xl pb-4">
             <h1 className="text-[2.75rem] leading-[1.15] font-light tracking-tight text-grey-900 lg:text-white">
               Architecting the future of{" "}
@@ -73,9 +81,10 @@ export function LoginSsoScreen() {
             <input
               id="org-email"
               type="email"
-              readOnly
-              defaultValue="marcus.v@acme-global.com"
               className={authInputClassName("pr-10")}
+              placeholder="name@organization.com"
+              value={orgEmail}
+              onChange={(e) => setOrgEmail(e.target.value)}
             />
             <Check
               className="absolute top-1/2 right-3 size-5 -translate-y-1/2 text-blue-500"
@@ -87,6 +96,7 @@ export function LoginSsoScreen() {
         <div className="space-y-3">
           <button
             type="button"
+            onClick={() => handleSsoLogin("Okta")}
             className="flex h-[48px] w-full items-center justify-center gap-2 rounded-lg bg-blue-500 text-[15px] font-medium text-white transition-colors hover:bg-blue-600"
           >
             <Menu className="size-4" />
@@ -94,6 +104,7 @@ export function LoginSsoScreen() {
           </button>
           <button
             type="button"
+            onClick={() => handleSsoLogin("Google")}
             className="flex h-[48px] w-full items-center justify-center rounded-lg border border-grey-300 bg-white text-[15px] font-medium text-grey-900 transition-colors hover:bg-grey-50"
           >
             Continue with Google Workspace

@@ -6,6 +6,7 @@ export const routes = {
   designSystem: "/design-system",
 
   auth: {
+
     login: "/login",
     loginPassword: "/login/password",
     register: "/register",

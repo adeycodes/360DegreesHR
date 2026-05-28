@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useState } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   ChevronDown,
   Download,
@@ -16,57 +16,50 @@ import {
   Trash2,
   X,
   AlertTriangle,
-  Clock,
   User,
   Briefcase,
-  DollarSign,
-  Users as UsersIcon,
-  Calendar,
   ArrowLeft,
   ArrowRight,
-  Info,
-  Hourglass,
-  Rocket,
 } from "lucide-react";
 
 import { employeeApi } from "@/lib/api/endpoints/employee";
 
-// Simple custom utility fallback to replace local dependency lib if needed
 const cn = (...classes: any[]) => classes.filter(Boolean).join(" ");
-
-// ---------- Real Avatar Mappings for Data UI ----------
-const avatarUrls = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80", // Female
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80", // Male
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
-];
 
 const businessUnits = ["Product & Eng", "Growth & Mktg", "Operations", "Human Resources", "Finance & Legal"];
 const departments = ["Engineering", "Design & UX", "Product Mgmt", "Data Science", "DevOps", "Security"];
 
-// ---------- main screen ----------
-export function EmployeeDirectoryScreen() {
+// FIXED: Defined the exact TypeScript Interface for the screen props
+interface EmployeeDirectoryScreenProps {
+  employees: any[];
+  pagination: any;
+  isLoading: boolean;
+  error: string | null;
+  onPageChange: (page: number) => void;
+  onSearch: (search: string) => void;
+  onRefresh: () => void;
+}
+
+// FIXED: Added the props to the function argument block
+export function EmployeeDirectoryScreen({
+  employees,
+  pagination,
+  isLoading,
+  error,
+  onPageChange,
+  onSearch,
+  onRefresh
+}: EmployeeDirectoryScreenProps) {
   const [openFilter, setOpenFilter] = useState(false);
   const [openDeptPopover, setOpenDeptPopover] = useState(false);
   const [openAddWizard, setOpenAddWizard] = useState(false);
 
-  // States to hold the specific employee selected for actions
   const [viewEmployee, setViewEmployee] = useState<any>(null);
   const [editEmployee, setEditEmployee] = useState<any>(null);
   const [deleteEmployee, setDeleteEmployee] = useState<any>(null);
 
-  // API Integration States
-  const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
-
-  // 1. Fetch Real Data
-  const { data, isLoading } = useQuery({
-    queryKey: ["employees", page, search],
-    queryFn: () => employeeApi.getAll(page, 10, search),
-  });
-
-  const apiEmployees = data?.employees || [];
-  const totalRecords = data?.pagination?.total || 0;
+  const totalRecords = pagination?.total || 0;
+  const currentPage = pagination?.page || 1;
 
   return (
     <div className="p-8 space-y-6">
@@ -89,8 +82,13 @@ export function EmployeeDirectoryScreen() {
         </div>
       </div>
 
+      {error && (
+        <div className="p-4 bg-red-50 border border-red-100 rounded-xl text-sm text-red-600">
+          {error}
+        </div>
+      )}
+
       <div className="grid grid-cols-12 gap-6">
-        {/* Main column */}
         <div className="col-span-12 lg:col-span-9 space-y-4">
           {/* Search + filters bar */}
           <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-4">
@@ -99,8 +97,7 @@ export function EmployeeDirectoryScreen() {
                 <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
                 <input
                   placeholder="Search by name, ID, or email..."
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
+                  onChange={(e) => onSearch(e.target.value)}
                   className="w-full pl-10 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-500"
                 />
               </div>
@@ -155,10 +152,10 @@ export function EmployeeDirectoryScreen() {
               <tbody className="divide-y divide-slate-100">
                 {isLoading ? (
                   <tr><td colSpan={5} className="p-8 text-center text-slate-500">Loading directory...</td></tr>
-                ) : apiEmployees.length === 0 ? (
+                ) : employees.length === 0 ? (
                   <tr><td colSpan={5} className="p-8 text-center text-slate-500">No employees found.</td></tr>
                 ) : (
-                  apiEmployees.map((e: any) => {
+                  employees.map((e: any) => {
                     const isActive = e.employmentStatus === "ACTIVE";
                     return (
                       <tr key={e.id} className="hover:bg-slate-50/50">
@@ -209,19 +206,20 @@ export function EmployeeDirectoryScreen() {
             {/* Pagination Controls */}
             <div className="flex items-center justify-between px-6 py-4 border-t border-slate-100">
               <span className="text-sm text-slate-500">
-                Page <span className="font-medium text-slate-700">{page}</span>
+                Page <span className="font-medium text-slate-700">{currentPage}</span>
               </span>
               <div className="flex items-center gap-1">
                 <button
-                  onClick={() => setPage(p => Math.max(1, p - 1))}
-                  disabled={page === 1}
+                  onClick={() => onPageChange(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1 || isLoading}
                   className="px-3 py-1.5 text-sm text-slate-500 hover:bg-slate-100 rounded-md disabled:opacity-50"
                 >
                   ‹ Prev
                 </button>
                 <button
-                  onClick={() => setPage(p => p + 1)}
-                  className="px-3 py-1.5 text-sm text-slate-500 hover:bg-slate-100 rounded-md"
+                  onClick={() => onPageChange(currentPage + 1)}
+                  disabled={isLoading || (pagination && currentPage >= pagination.totalPages)}
+                  className="px-3 py-1.5 text-sm text-slate-500 hover:bg-slate-100 rounded-md disabled:opacity-50"
                 >
                   Next ›
                 </button>
@@ -244,7 +242,6 @@ export function EmployeeDirectoryScreen() {
         </aside>
       </div>
 
-      {/* Overlays / Modals connected to API state */}
       {openFilter && <FilterDrawer onClose={() => setOpenFilter(false)} />}
 
       {viewEmployee && (
@@ -259,6 +256,7 @@ export function EmployeeDirectoryScreen() {
         <EditEmployeeModal
           employee={editEmployee}
           onClose={() => setEditEmployee(null)}
+          onSuccess={onRefresh}
         />
       )}
 
@@ -266,22 +264,26 @@ export function EmployeeDirectoryScreen() {
         <DeleteConfirmModal
           employee={deleteEmployee}
           onClose={() => setDeleteEmployee(null)}
+          onSuccess={onRefresh}
         />
       )}
 
-      {/* Interactive Multi-Step Onboarding Form Wizard Component */}
-      <AddEmployeeModal isOpen={openAddWizard} onClose={() => setOpenAddWizard(false)} />
+      <AddEmployeeModal isOpen={openAddWizard} onClose={() => setOpenAddWizard(false)} onSuccess={onRefresh} />
     </div>
   );
 }
 
-// ---------- MULTI-STEP ADD EMPLOYEE WIZARD (CONNECTED) ----------
+// =========================================================================
+// DECOUPLED SUB-COMPONENTS
+// =========================================================================
+
 interface AddEmployeeModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onSuccess: () => void;
 }
 
-function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
+function AddEmployeeModal({ isOpen, onClose, onSuccess }: AddEmployeeModalProps) {
   const [currentStep, setCurrentStep] = useState<1 | 2 | 3>(1);
   const [formData, setFormData] = useState({
     firstName: "", lastName: "", email: "", phone: "", gender: "MALE",
@@ -294,7 +296,7 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
     mutationFn: (data: any) => employeeApi.create(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["employees"] });
-      alert("Employee Provisioned Successfully.");
+      onSuccess();
       handleClose();
     }
   });
@@ -307,7 +309,6 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
     onClose();
   };
 
-
   const handleNext = () => {
     if (currentStep < 3) {
       setCurrentStep((prev) => (prev + 1) as 1 | 2 | 3);
@@ -318,31 +319,21 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
         dateOfBirth: new Date("1990-01-01").toISOString(),
         hireDate: new Date().toISOString(),
       });
-      // No headers needed here, they are injected by the service!
     }
-  };
-
-  const handleBack = () => {
-    if (currentStep > 1) setCurrentStep((prev) => (prev - 1) as 1 | 2 | 3);
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
       <div className="absolute inset-0" onClick={handleClose} />
-
       <div className="relative w-full max-w-[860px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px] border border-slate-100 z-10">
-
-        {/* Left Track Panel */}
         <div className="w-full md:w-[260px] bg-[#F8FAFC] border-r border-slate-100 p-6 flex flex-col justify-between shrink-0">
           <div className="space-y-8">
             <div>
               <h2 className="text-lg font-bold text-[#1E3A8A] tracking-tight">360DegreesHR</h2>
               <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mt-0.5">Onboarding System</p>
             </div>
-
             <div className="relative flex flex-col gap-6 pl-2">
               <div className="absolute left-[15px] top-2 bottom-2 w-[2px] bg-slate-200" />
-              {/* Steps indicators kept identical to your UI */}
               {[1, 2, 3].map((step) => (
                 <div key={step} className="relative flex items-center gap-3">
                   <div className={cn("w-4 h-4 rounded-full flex items-center justify-center z-10 transition-all", currentStep === step ? "bg-white border-2 border-blue-600 ring-4 ring-blue-50" : currentStep > step ? "bg-blue-600 border-2 border-blue-600" : "bg-slate-200 border-2 border-slate-200")}>
@@ -361,7 +352,6 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
           </div>
         </div>
 
-        {/* Right Workspace Form */}
         <div className="flex-1 flex flex-col justify-between bg-white">
           <div className="p-6 md:p-8 border-b border-slate-50 relative">
             <button onClick={handleClose} className="absolute right-6 top-6 p-1 text-slate-400 hover:text-slate-600 hover:bg-slate-50 rounded-lg">
@@ -375,17 +365,16 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
           </div>
 
           <div className="p-6 md:p-8 flex-1 space-y-5 overflow-y-auto max-h-[calc(90vh-160px)]">
-            {/* Phase 1 */}
             {currentStep === 1 && (
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="block text-[10px] font-bold text-slate-400 uppercase">First Name</label>
-                    <input type="text" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} placeholder="e.g. Marcus" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                    <input type="text" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} placeholder="Marcus" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
                   </div>
                   <div className="space-y-1.5">
                     <label className="block text-[10px] font-bold text-slate-400 uppercase">Last Name</label>
-                    <input type="text" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} placeholder="e.g. Chen" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                    <input type="text" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} placeholder="Chen" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -395,13 +384,12 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
                   </div>
                   <div className="space-y-1.5">
                     <label className="block text-[10px] font-bold text-slate-400 uppercase">Mobile Number</label>
-                    <input type="text" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} placeholder="+234 (000) 000-0000" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                    <input type="text" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} placeholder="+234..." className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
                   </div>
                 </div>
               </div>
             )}
 
-            {/* Phase 2 */}
             {currentStep === 2 && (
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -411,13 +399,13 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
                   </div>
                   <div className="space-y-1.5">
                     <label className="block text-[10px] font-bold text-slate-400 uppercase">Official Role Title</label>
-                    <input type="text" value={formData.jobTitle} onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })} placeholder="e.g. Lead Architect" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                    <input type="text" value={formData.jobTitle} onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })} placeholder="Lead Architect" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
                   </div>
                 </div>
                 <div className="space-y-1.5">
                   <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Employment Classification</label>
                   <div className="grid grid-cols-3 gap-3">
-                    {(["FULL_TIME", "CONTRACT", "INTERN"]).map((type) => (
+                    {["FULL_TIME", "CONTRACT", "INTERN"].map((type) => (
                       <button
                         key={type}
                         type="button"
@@ -432,7 +420,6 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
               </div>
             )}
 
-            {/* Phase 3 */}
             {currentStep === 3 && (
               <div className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -452,9 +439,7 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
                   <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                   <div>
                     <p className="text-[11px] font-bold text-amber-800 uppercase tracking-wide">Ready for Provisioning</p>
-                    <p className="text-xs text-amber-700 mt-0.5 leading-normal">
-                      Submitting will execute the API POST request and create the employee record in the database.
-                    </p>
+                    <p className="text-xs text-amber-700 mt-0.5 leading-normal">Submitting will execute the API POST request to save the workforce record.</p>
                   </div>
                 </div>
               </div>
@@ -462,13 +447,11 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
           </div>
 
           <div className="p-4 md:px-8 md:py-5 bg-white border-t border-slate-100 flex items-center justify-between">
-            <button type="button" onClick={handleBack} disabled={currentStep === 1} className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-slate-500 hover:text-slate-800 disabled:opacity-30">
+            <button type="button" onClick={() => setCurrentStep(p => Math.max(1, p - 1) as 1 | 2 | 3)} disabled={currentStep === 1} className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-slate-500 hover:text-slate-800 disabled:opacity-30">
               <ArrowLeft className="w-3.5 h-3.5" /> Back Step
             </button>
             <div className="flex items-center gap-3">
-              <button type="button" onClick={handleClose} className="px-4 py-2 text-xs font-bold text-slate-500 hover:text-slate-700">
-                Cancel
-              </button>
+              <button type="button" onClick={handleClose} className="px-4 py-2 text-xs font-bold text-slate-500 hover:text-slate-700">Cancel</button>
               <button type="button" onClick={handleNext} disabled={createMutation.isPending} className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-xs font-bold disabled:opacity-50">
                 {createMutation.isPending ? "Processing..." : currentStep === 3 ? "Complete Registration" : "Next Phase"}
                 {!createMutation.isPending && <ArrowRight className="w-3.5 h-3.5" />}
@@ -481,8 +464,6 @@ function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
   );
 }
 
-
-// ---------- right-rail metric card ----------
 function MetricCard({ label, value, trend, trendTone = "positive" }: { label: string; value: string; trend: string; trendTone?: "positive" | "muted" }) {
   return (
     <div className="bg-white border border-slate-200 rounded-xl p-5">
@@ -497,7 +478,6 @@ function MetricCard({ label, value, trend, trendTone = "positive" }: { label: st
   );
 }
 
-// ---------- Business Unit / Department popover ----------
 function DeptPopover({ onClose }: { onClose: () => void }) {
   const [active, setActive] = useState(0);
   const [selected, setSelected] = useState<string[]>(["Engineering"]);
@@ -537,7 +517,6 @@ function DeptPopover({ onClose }: { onClose: () => void }) {
   );
 }
 
-// ---------- Advanced Filter Drawer ----------
 function FilterDrawer({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50">
@@ -548,9 +527,8 @@ function FilterDrawer({ onClose }: { onClose: () => void }) {
             <h2 className="text-xl font-semibold text-slate-900">Filter Settings</h2>
             <p className="text-sm text-slate-500 mt-1">Refine your directory view</p>
           </div>
-          <button onClick={onClose} aria-label="Close" className="p-1 text-slate-400 hover:text-slate-700"><X className="w-5 h-5" /></button>
+          <button onClick={onClose} className="p-1 text-slate-400 hover:text-slate-700"><X className="w-5 h-5" /></button>
         </header>
-
         <div className="flex-1 overflow-y-auto p-6 space-y-8">
           <section>
             <h3 className="text-xs uppercase tracking-wider text-slate-500 mb-3">Employment Type</h3>
@@ -572,24 +550,18 @@ function FilterDrawer({ onClose }: { onClose: () => void }) {
   );
 }
 
-// ---------- View Profile Drawer (CONNECTED) ----------
 function ViewProfileDrawer({ employee, onClose, onEdit }: { employee: any; onClose: () => void; onEdit: () => void }) {
-  const perf = [40, 55, 60, 75, 100];
-
   return (
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/30" onClick={onClose} />
       <aside className="absolute right-0 top-0 h-full w-[560px] bg-white shadow-2xl flex flex-col">
         <header className="p-6 flex items-center justify-between">
-          <button onClick={onClose} aria-label="Close" className="text-slate-400 hover:text-slate-700">
-            <X className="w-5 h-5" />
-          </button>
+          <button onClick={onClose} className="text-slate-400 hover:text-slate-700"><X className="w-5 h-5" /></button>
           <div className="flex items-center gap-2">
             <button onClick={onEdit} className="px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Edit Profile</button>
             <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium">Download CV</button>
           </div>
         </header>
-
         <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-6">
           <div className="flex items-start gap-4">
             <div className="relative">
@@ -608,7 +580,6 @@ function ViewProfileDrawer({ employee, onClose, onEdit }: { employee: any; onClo
               </div>
             </div>
           </div>
-
           <div className="grid grid-cols-2 gap-6">
             <div>
               <h3 className="text-xs uppercase tracking-wider text-slate-500 mt-6 mb-3">Direct Contact</h3>
@@ -624,8 +595,7 @@ function ViewProfileDrawer({ employee, onClose, onEdit }: { employee: any; onClo
   );
 }
 
-// ---------- Edit Employee Modal (CONNECTED) ----------
-function EditEmployeeModal({ employee, onClose }: { employee: any; onClose: () => void }) {
+function EditEmployeeModal({ employee, onClose, onSuccess }: { employee: any; onClose: () => void; onSuccess: () => void }) {
   const [formData, setFormData] = useState({
     firstName: employee.firstName || "",
     lastName: employee.lastName || "",
@@ -638,11 +608,10 @@ function EditEmployeeModal({ employee, onClose }: { employee: any; onClose: () =
     mutationFn: (data: any) => employeeApi.update(employee.id, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["employees"] });
+      onSuccess();
       onClose();
     }
   });
-
-  const tabs = [{ label: "Basic Info", icon: User, active: true }, { label: "Job Details", icon: Briefcase }];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
@@ -651,20 +620,16 @@ function EditEmployeeModal({ employee, onClose }: { employee: any; onClose: () =
         <header className="p-6 border-b border-slate-100 flex items-start justify-between">
           <div>
             <h2 className="text-xl font-semibold text-slate-900">Edit Employee Record</h2>
-            <p className="text-sm text-slate-500 mt-1">Update details for {employee.firstName} {employee.lastName} • {employee.id}</p>
+            <p className="text-sm text-slate-500 mt-1">Update details for {employee.firstName} {employee.lastName}</p>
           </div>
-          <button onClick={onClose} aria-label="Close" className="text-slate-400 hover:text-slate-700"><X className="w-5 h-5" /></button>
+          <button onClick={onClose} className="text-slate-400 hover:text-slate-700"><X className="w-5 h-5" /></button>
         </header>
-
         <div className="flex-1 overflow-y-auto flex">
           <nav className="w-56 bg-slate-50 p-4 space-y-1 border-r border-slate-100">
-            {tabs.map((t) => (
-              <button key={t.label} className={cn("w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm", t.active ? "bg-white text-blue-600 font-medium shadow-sm" : "text-slate-700 hover:bg-white/60")}>
-                <t.icon className="w-4 h-4" /> {t.label}
-              </button>
-            ))}
+            <button className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm bg-white text-blue-600 font-medium shadow-sm">
+              <User className="w-4 h-4" /> Basic Info
+            </button>
           </nav>
-
           <div className="flex-1 p-6 space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <div>
@@ -689,7 +654,6 @@ function EditEmployeeModal({ employee, onClose }: { employee: any; onClose: () =
             </div>
           </div>
         </div>
-
         <footer className="p-6 border-t border-slate-100 flex items-center justify-end bg-slate-50">
           <div className="flex items-center gap-3">
             <button onClick={onClose} className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Cancel</button>
@@ -707,13 +671,13 @@ function EditEmployeeModal({ employee, onClose }: { employee: any; onClose: () =
   );
 }
 
-// ---------- Delete Confirm Modal (CONNECTED) ----------
-function DeleteConfirmModal({ employee, onClose }: { employee: any; onClose: () => void }) {
+function DeleteConfirmModal({ employee, onClose, onSuccess }: { employee: any; onClose: () => void; onSuccess: () => void }) {
   const queryClient = useQueryClient();
   const deleteMutation = useMutation({
     mutationFn: (id: string) => employeeApi.delete(id),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["employees"] });
+      onSuccess();
       onClose();
     }
   });

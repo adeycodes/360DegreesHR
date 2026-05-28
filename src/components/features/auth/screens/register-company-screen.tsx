@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Building2, Eye, UserRound } from "lucide-react";
+import { Building2, Eye } from "lucide-react";
 import { useState } from "react";
 
 import { AuthSplitLayout } from "@/components/shared/auth/auth-split-layout";
@@ -12,7 +12,7 @@ import { routes } from "@/config/routes";
 import { toUserMessage } from "@/lib/api/errors";
 import { authApi } from "@/lib/api/endpoints/auth";
 import { fieldErrorsFromZod } from "@/lib/forms/zod-field-errors";
-import { setAccessToken, clearAccessToken } from "@/lib/auth/session"; // ✅ import token helpers
+import { clearAccessToken } from "@/lib/auth/session"; // ✅ import token helpers
 import {
   registerCompanySchema,
   type RegisterCompanyInput,
@@ -65,18 +65,22 @@ export function RegisterCompanyScreen() {
       const registerResult = await authApi.registerCompany(parsed.data);
       const { token, user } = registerResult;
 
-      // 2. Build the session object (user from response already matches AuthUser type)
+      // 2. Map and align properties to match what setSession expects
       const session = {
         token,
-        user,
+        user: {
+          userid: user.id, // Fixed: Maps 'id' from the API to 'userid' required by store
+          role: user.role,
+          name: user.name,
+          email: user.email,
+        },
       };
 
-      // 3. Store token and session (auth hydration will refresh full profile on load)
+      // 3. Store token and session
       setSession(session);
       toast.success("Registration successful! Welcome to your dashboard.");
       router.push(routes.app.dashboard);
     } catch (err) {
-      // Log full error for debugging
       console.error("Registration error:", err);
       const msg = toUserMessage(err);
       setError(msg);

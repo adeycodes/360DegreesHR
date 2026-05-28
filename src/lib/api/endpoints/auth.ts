@@ -5,12 +5,12 @@ import {
   authSessionSchema,
   registerResponseSchema,
   authUserSchema,
-  meResponseSchema,
   messageResponseSchema,
   type ForgotPasswordInput,
   type LoginInput,
   type RegisterCompanyInput,
   type ResetPasswordInput,
+  loginResponseSchema,
 } from "@/lib/validations/auth";
 
 export const authApi = {
@@ -21,19 +21,19 @@ export const authApi = {
   /** Login with email & password → returns session */
   login: (input: LoginInput) =>
     post(apiPaths.auth.login, authSessionSchema, {
-      userEmail: input.email,
+      userEmail: input.userEmail,
       password: input.password,
     }),
 
   /** Get the currently logged-in user (needs token) */
   me: () =>
-    get(apiPaths.auth.me, meResponseSchema, { headers: getAuthHeader() }),
+    get(apiPaths.auth.me, authUserSchema, { headers: getAuthHeader() }),
 
   /** Request a password-reset email */
   forgotPassword: (input: ForgotPasswordInput) =>
     post(apiPaths.auth.forgotPassword, messageResponseSchema, input),
 
   /** Set new password using the reset token */
-  resetPassword: (input: ResetPasswordInput) =>
-    post(apiPaths.auth.resetPassword, messageResponseSchema, input),
+  resetPassword: (input: ResetPasswordInput, token: string) =>
+    post(apiPaths.auth.resetPassword(token), messageResponseSchema, input),
 };

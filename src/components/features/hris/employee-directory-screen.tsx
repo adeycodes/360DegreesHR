@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
   ChevronDown,
   Download,
@@ -20,20 +21,25 @@ import {
   Briefcase,
   DollarSign,
   Users as UsersIcon,
+  Calendar,
+  ArrowLeft,
+  ArrowRight,
+  Info,
+  Hourglass,
+  Rocket,
 } from "lucide-react";
 
-import { cn } from "@/lib/utils";
+import { employeeApi } from "@/lib/api/endpoints/employee";
 
-// ---------- mock data ----------
-const employees = Array.from({ length: 3 }).map((_, i) => ({
-  id: `EMP-902${i + 1}`,
-  name: "Marcus Chen",
-  email: "m.chen@360hr.com",
-  department: "ENGINEERING",
-  role: "Senior Developer",
-  status: "Active" as const,
-  avatar: "/avatars/marcus.jpg",
-}));
+// Simple custom utility fallback to replace local dependency lib if needed
+const cn = (...classes: any[]) => classes.filter(Boolean).join(" ");
+
+// ---------- Real Avatar Mappings for Data UI ----------
+const avatarUrls = [
+  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80", // Female
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80", // Male
+  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+];
 
 const businessUnits = ["Product & Eng", "Growth & Mktg", "Operations", "Human Resources", "Finance & Legal"];
 const departments = ["Engineering", "Design & UX", "Product Mgmt", "Data Science", "DevOps", "Security"];
@@ -42,23 +48,42 @@ const departments = ["Engineering", "Design & UX", "Product Mgmt", "Data Science
 export function EmployeeDirectoryScreen() {
   const [openFilter, setOpenFilter] = useState(false);
   const [openDeptPopover, setOpenDeptPopover] = useState(false);
-  const [openView, setOpenView] = useState(false);
-  const [openEdit, setOpenEdit] = useState(false);
-  const [openDelete, setOpenDelete] = useState(false);
+  const [openAddWizard, setOpenAddWizard] = useState(false);
+
+  // States to hold the specific employee selected for actions
+  const [viewEmployee, setViewEmployee] = useState<any>(null);
+  const [editEmployee, setEditEmployee] = useState<any>(null);
+  const [deleteEmployee, setDeleteEmployee] = useState<any>(null);
+
+  // API Integration States
+  const [page, setPage] = useState(1);
+  const [search, setSearch] = useState("");
+
+  // 1. Fetch Real Data
+  const { data, isLoading } = useQuery({
+    queryKey: ["employees", page, search],
+    queryFn: () => employeeApi.getAll(page, 10, search),
+  });
+
+  const apiEmployees = data?.employees || [];
+  const totalRecords = data?.pagination?.total || 0;
 
   return (
     <div className="p-8 space-y-6">
       {/* Header */}
       <div className="flex items-start justify-between">
         <div>
-          <h1 className="text-3xl font-semibold text-grey-900">Employee Directory</h1>
-          <p className="text-sm text-grey-500 mt-1">128 active workforce records</p>
+          <h1 className="text-3xl font-semibold text-slate-900">Employee Directory</h1>
+          <p className="text-sm text-slate-500 mt-1">{totalRecords} active workforce records</p>
         </div>
         <div className="flex items-center gap-3">
-          <button className="inline-flex items-center gap-2 px-4 py-2.5 border border-grey-200 rounded-lg text-sm font-medium text-grey-700 hover:bg-grey-50">
+          <button className="inline-flex items-center gap-2 px-4 py-2.5 border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">
             <Download className="w-4 h-4" /> Export
           </button>
-          <button className="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium">
+          <button
+            onClick={() => setOpenAddWizard(true)}
+            className="inline-flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors"
+          >
             <Plus className="w-4 h-4" /> Add Employee
           </button>
         </div>
@@ -68,56 +93,58 @@ export function EmployeeDirectoryScreen() {
         {/* Main column */}
         <div className="col-span-12 lg:col-span-9 space-y-4">
           {/* Search + filters bar */}
-          <div className="bg-white border border-grey-200 rounded-xl p-4 space-y-4">
+          <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-4">
             <div className="flex items-center gap-3">
               <div className="relative flex-1">
-                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-grey-400" />
+                <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
                 <input
                   placeholder="Search by name, ID, or email..."
-                  className="w-full pl-10 pr-3 py-2.5 bg-grey-50 border border-grey-200 rounded-lg text-sm focus:outline-none focus:border-blue-500"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="w-full pl-10 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-blue-500"
                 />
               </div>
               <div className="relative">
                 <button
                   onClick={() => setOpenDeptPopover((v) => !v)}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 border border-grey-200 rounded-lg text-sm text-grey-700 hover:bg-grey-50"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 border border-slate-200 rounded-lg text-sm text-slate-700 hover:bg-slate-50"
                 >
                   Business Unit <ChevronDown className="w-4 h-4" />
                 </button>
                 {openDeptPopover && <DeptPopover onClose={() => setOpenDeptPopover(false)} />}
               </div>
-              <button className="inline-flex items-center gap-2 px-4 py-2.5 border border-grey-200 rounded-lg text-sm text-grey-700 hover:bg-grey-50">
+              <button className="inline-flex items-center gap-2 px-4 py-2.5 border border-slate-200 rounded-lg text-sm text-slate-700 hover:bg-slate-50">
                 Team / Dept <ChevronDown className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setOpenFilter(true)}
-                className="p-2.5 border border-grey-200 rounded-lg hover:bg-grey-50"
+                className="p-2.5 border border-slate-200 rounded-lg hover:bg-slate-50"
                 aria-label="Advanced filters"
               >
-                <SlidersHorizontal className="w-4 h-4 text-grey-700" />
+                <SlidersHorizontal className="w-4 h-4 text-slate-700" />
               </button>
             </div>
 
             {/* Quick chips */}
             <div className="flex items-center gap-4 text-sm">
-              <label className="flex items-center gap-2 text-grey-700">
-                <input type="checkbox" className="rounded border-grey-300" /> Active Only
+              <label className="flex items-center gap-2 text-slate-700 cursor-pointer">
+                <input type="checkbox" className="rounded border-slate-300" /> Active Only
               </label>
-              <label className="flex items-center gap-2 text-grey-700">
-                <input type="checkbox" className="rounded border-grey-300" /> Remote Only
+              <label className="flex items-center gap-2 text-slate-700 cursor-pointer">
+                <input type="checkbox" className="rounded border-slate-300" /> Remote Only
               </label>
-              <span className="text-xs uppercase tracking-wider text-grey-400 ml-2">Employment:</span>
+              <span className="text-xs uppercase tracking-wider text-slate-400 ml-2">Employment:</span>
               {["Contract", "Intern", "Terminated"].map((t) => (
-                <span key={t} className="px-3 py-1 rounded-full bg-grey-100 text-xs text-grey-700">{t}</span>
+                <span key={t} className="px-3 py-1 rounded-full bg-slate-100 text-xs text-slate-700">{t}</span>
               ))}
             </div>
           </div>
 
           {/* Table */}
-          <div className="bg-white border border-grey-200 rounded-xl overflow-hidden">
+          <div className="bg-white border border-slate-200 rounded-xl overflow-hidden">
             <table className="w-full">
-              <thead className="bg-grey-50">
-                <tr className="text-left text-xs uppercase tracking-wider text-grey-500">
+              <thead className="bg-slate-50">
+                <tr className="text-left text-xs uppercase tracking-wider text-slate-500">
                   <th className="px-6 py-3 font-medium">Employee</th>
                   <th className="px-6 py-3 font-medium">Department</th>
                   <th className="px-6 py-3 font-medium">Role</th>
@@ -125,58 +152,79 @@ export function EmployeeDirectoryScreen() {
                   <th className="px-6 py-3 font-medium">Actions</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-grey-100">
-                {employees.map((e) => (
-                  <tr key={e.id} className="hover:bg-grey-50/50">
-                    <td className="px-6 py-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-grey-200 flex items-center justify-center text-xs font-medium text-grey-600">
-                          MC
-                        </div>
-                        <div>
-                          <div className="text-sm font-medium text-grey-900">{e.name}</div>
-                          <div className="text-xs text-grey-500">{e.email}</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 text-xs font-semibold text-blue-600 tracking-wider">{e.department}</td>
-                    <td className="px-6 py-4 text-sm text-grey-700">{e.role}</td>
-                    <td className="px-6 py-4">
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-xs font-medium text-blue-600">
-                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500" /> ACTIVE
-                      </span>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="flex items-center gap-1 text-grey-500">
-                        <button onClick={() => setOpenView(true)} className="p-2 hover:bg-grey-100 rounded-lg" aria-label="View">
-                          <Eye className="w-4 h-4" />
-                        </button>
-                        <button onClick={() => setOpenEdit(true)} className="p-2 hover:bg-grey-100 rounded-lg" aria-label="Edit">
-                          <Pencil className="w-4 h-4" />
-                        </button>
-                        <button onClick={() => setOpenDelete(true)} className="p-2 hover:bg-grey-100 rounded-lg" aria-label="Delete">
-                          <Trash2 className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
+              <tbody className="divide-y divide-slate-100">
+                {isLoading ? (
+                  <tr><td colSpan={5} className="p-8 text-center text-slate-500">Loading directory...</td></tr>
+                ) : apiEmployees.length === 0 ? (
+                  <tr><td colSpan={5} className="p-8 text-center text-slate-500">No employees found.</td></tr>
+                ) : (
+                  apiEmployees.map((e: any) => {
+                    const isActive = e.employmentStatus === "ACTIVE";
+                    return (
+                      <tr key={e.id} className="hover:bg-slate-50/50">
+                        <td className="px-6 py-4">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-700">
+                              {e.firstName?.[0] || ""}{e.lastName?.[0] || ""}
+                            </div>
+                            <div>
+                              <div className="text-sm font-medium text-slate-900">{e.firstName} {e.lastName}</div>
+                              <div className="text-xs text-slate-500">{e.email}</div>
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 text-xs font-semibold text-blue-600 tracking-wider">
+                          {e.department?.name || "N/A"}
+                        </td>
+                        <td className="px-6 py-4 text-sm text-slate-700">{e.jobTitle || "Unassigned"}</td>
+                        <td className="px-6 py-4">
+                          <span className={cn(
+                            "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium",
+                            isActive ? "bg-blue-50 text-blue-600" : "bg-slate-100 text-slate-600"
+                          )}>
+                            <span className={cn("w-1.5 h-1.5 rounded-full", isActive ? "bg-blue-500" : "bg-slate-400")} />
+                            {e.employmentStatus}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="flex items-center gap-1 text-slate-500">
+                            <button onClick={() => setViewEmployee(e)} className="p-2 hover:bg-slate-100 rounded-lg" aria-label="View">
+                              <Eye className="w-4 h-4" />
+                            </button>
+                            <button onClick={() => setEditEmployee(e)} className="p-2 hover:bg-slate-100 rounded-lg" aria-label="Edit">
+                              <Pencil className="w-4 h-4" />
+                            </button>
+                            <button onClick={() => setDeleteEmployee(e)} className="p-2 hover:bg-slate-100 rounded-lg" aria-label="Delete">
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })
+                )}
               </tbody>
             </table>
 
-            {/* Pagination */}
-            <div className="flex items-center justify-between px-6 py-4 border-t border-grey-100">
-              <span className="text-sm text-grey-500">
-                Showing <span className="font-medium text-grey-700">1-10</span> of <span className="font-medium text-grey-700">128</span> employees
+            {/* Pagination Controls */}
+            <div className="flex items-center justify-between px-6 py-4 border-t border-slate-100">
+              <span className="text-sm text-slate-500">
+                Page <span className="font-medium text-slate-700">{page}</span>
               </span>
               <div className="flex items-center gap-1">
-                <button className="px-3 py-1.5 text-sm text-grey-500 hover:bg-grey-100 rounded-md">‹</button>
-                <button className="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-md">1</button>
-                <button className="px-3 py-1.5 text-sm text-grey-700 hover:bg-grey-100 rounded-md">2</button>
-                <button className="px-3 py-1.5 text-sm text-grey-700 hover:bg-grey-100 rounded-md">3</button>
-                <span className="px-2 text-grey-400">…</span>
-                <button className="px-3 py-1.5 text-sm text-grey-700 hover:bg-grey-100 rounded-md">13</button>
-                <button className="px-3 py-1.5 text-sm text-grey-500 hover:bg-grey-100 rounded-md">›</button>
+                <button
+                  onClick={() => setPage(p => Math.max(1, p - 1))}
+                  disabled={page === 1}
+                  className="px-3 py-1.5 text-sm text-slate-500 hover:bg-slate-100 rounded-md disabled:opacity-50"
+                >
+                  ‹ Prev
+                </button>
+                <button
+                  onClick={() => setPage(p => p + 1)}
+                  className="px-3 py-1.5 text-sm text-slate-500 hover:bg-slate-100 rounded-md"
+                >
+                  Next ›
+                </button>
               </div>
             </div>
           </div>
@@ -186,33 +234,262 @@ export function EmployeeDirectoryScreen() {
         <aside className="col-span-12 lg:col-span-3 space-y-4">
           <MetricCard label="Retention Rate" value="94.2%" trend="+2%" />
           <MetricCard label="Open Roles" value="12" trend="Hiring Active" trendTone="muted" />
-          <div className="bg-white border border-grey-200 rounded-xl p-5">
-            <div className="text-xs uppercase tracking-wider text-grey-500">Health Index</div>
+          <div className="bg-white border border-slate-200 rounded-xl p-5">
+            <div className="text-xs uppercase tracking-wider text-slate-500">Health Index</div>
             <div className="flex items-center gap-2 mt-2">
-              <span className="text-3xl font-semibold text-grey-900">4.8</span>
+              <span className="text-3xl font-semibold text-slate-900">4.8</span>
               <span className="text-yellow-500">★★★★★</span>
             </div>
           </div>
         </aside>
       </div>
 
-      {/* Overlays */}
+      {/* Overlays / Modals connected to API state */}
       {openFilter && <FilterDrawer onClose={() => setOpenFilter(false)} />}
-      {openView && <ViewProfileDrawer onClose={() => setOpenView(false)} onEdit={() => { setOpenView(false); setOpenEdit(true); }} />}
-      {openEdit && <EditEmployeeModal onClose={() => setOpenEdit(false)} />}
-      {openDelete && <DeleteConfirmModal onClose={() => setOpenDelete(false)} />}
+
+      {viewEmployee && (
+        <ViewProfileDrawer
+          employee={viewEmployee}
+          onClose={() => setViewEmployee(null)}
+          onEdit={() => { setViewEmployee(null); setEditEmployee(viewEmployee); }}
+        />
+      )}
+
+      {editEmployee && (
+        <EditEmployeeModal
+          employee={editEmployee}
+          onClose={() => setEditEmployee(null)}
+        />
+      )}
+
+      {deleteEmployee && (
+        <DeleteConfirmModal
+          employee={deleteEmployee}
+          onClose={() => setDeleteEmployee(null)}
+        />
+      )}
+
+      {/* Interactive Multi-Step Onboarding Form Wizard Component */}
+      <AddEmployeeModal isOpen={openAddWizard} onClose={() => setOpenAddWizard(false)} />
     </div>
   );
 }
 
+// ---------- MULTI-STEP ADD EMPLOYEE WIZARD (CONNECTED) ----------
+interface AddEmployeeModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+function AddEmployeeModal({ isOpen, onClose }: AddEmployeeModalProps) {
+  const [currentStep, setCurrentStep] = useState<1 | 2 | 3>(1);
+  const [formData, setFormData] = useState({
+    firstName: "", lastName: "", email: "", phone: "", gender: "MALE",
+    jobTitle: "", departmentId: "", employmentType: "FULL_TIME",
+    salary: "", currency: "USD"
+  });
+
+  const queryClient = useQueryClient();
+  const createMutation = useMutation({
+    mutationFn: (data: any) => employeeApi.create(data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["employees"] });
+      alert("Employee Provisioned Successfully.");
+      handleClose();
+    }
+  });
+
+  if (!isOpen) return null;
+
+  const handleClose = () => {
+    setCurrentStep(1);
+    setFormData({ firstName: "", lastName: "", email: "", phone: "", gender: "MALE", jobTitle: "", departmentId: "", employmentType: "FULL_TIME", salary: "", currency: "USD" });
+    onClose();
+  };
+
+
+  const handleNext = () => {
+    if (currentStep < 3) {
+      setCurrentStep((prev) => (prev + 1) as 1 | 2 | 3);
+    } else {
+      createMutation.mutate({
+        ...formData,
+        password: "DefaultPassword123!",
+        dateOfBirth: new Date("1990-01-01").toISOString(),
+        hireDate: new Date().toISOString(),
+      });
+      // No headers needed here, they are injected by the service!
+    }
+  };
+
+  const handleBack = () => {
+    if (currentStep > 1) setCurrentStep((prev) => (prev - 1) as 1 | 2 | 3);
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
+      <div className="absolute inset-0" onClick={handleClose} />
+
+      <div className="relative w-full max-w-[860px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px] border border-slate-100 z-10">
+
+        {/* Left Track Panel */}
+        <div className="w-full md:w-[260px] bg-[#F8FAFC] border-r border-slate-100 p-6 flex flex-col justify-between shrink-0">
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-lg font-bold text-[#1E3A8A] tracking-tight">360DegreesHR</h2>
+              <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider mt-0.5">Onboarding System</p>
+            </div>
+
+            <div className="relative flex flex-col gap-6 pl-2">
+              <div className="absolute left-[15px] top-2 bottom-2 w-[2px] bg-slate-200" />
+              {/* Steps indicators kept identical to your UI */}
+              {[1, 2, 3].map((step) => (
+                <div key={step} className="relative flex items-center gap-3">
+                  <div className={cn("w-4 h-4 rounded-full flex items-center justify-center z-10 transition-all", currentStep === step ? "bg-white border-2 border-blue-600 ring-4 ring-blue-50" : currentStep > step ? "bg-blue-600 border-2 border-blue-600" : "bg-slate-200 border-2 border-slate-200")}>
+                    {currentStep > step && <div className="w-1.5 h-1.5 bg-white rounded-full" />}
+                    {currentStep === step && <div className="w-1.5 h-1.5 bg-blue-600 rounded-full" />}
+                  </div>
+                  <div>
+                    <p className={cn("text-[10px] font-bold uppercase tracking-wide leading-none", currentStep === step ? "text-blue-600" : "text-slate-400")}>Step 0{step}</p>
+                    <p className={cn("text-xs mt-0.5", currentStep === step ? "font-bold text-blue-900" : "font-semibold text-slate-500")}>
+                      {step === 1 ? "Personal Info" : step === 2 ? "Job Details" : "Payroll & Benefits"}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Right Workspace Form */}
+        <div className="flex-1 flex flex-col justify-between bg-white">
+          <div className="p-6 md:p-8 border-b border-slate-50 relative">
+            <button onClick={handleClose} className="absolute right-6 top-6 p-1 text-slate-400 hover:text-slate-600 hover:bg-slate-50 rounded-lg">
+              <X className="w-4 h-4" />
+            </button>
+            <h3 className="text-lg font-bold text-slate-900">
+              {currentStep === 1 && "Personal Information"}
+              {currentStep === 2 && "Job Assignment Framework"}
+              {currentStep === 3 && "Financial Payroll & Perks"}
+            </h3>
+          </div>
+
+          <div className="p-6 md:p-8 flex-1 space-y-5 overflow-y-auto max-h-[calc(90vh-160px)]">
+            {/* Phase 1 */}
+            {currentStep === 1 && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase">First Name</label>
+                    <input type="text" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} placeholder="e.g. Marcus" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase">Last Name</label>
+                    <input type="text" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} placeholder="e.g. Chen" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase">Corporate Email</label>
+                    <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="m.chen@360hr.com" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase">Mobile Number</label>
+                    <input type="text" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} placeholder="+234 (000) 000-0000" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Phase 2 */}
+            {currentStep === 2 && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase">Department ID (UUID)</label>
+                    <input type="text" value={formData.departmentId} onChange={(e) => setFormData({ ...formData, departmentId: e.target.value })} placeholder="e.g. 7e1f9d..." className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase">Official Role Title</label>
+                    <input type="text" value={formData.jobTitle} onChange={(e) => setFormData({ ...formData, jobTitle: e.target.value })} placeholder="e.g. Lead Architect" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                  </div>
+                </div>
+                <div className="space-y-1.5">
+                  <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">Employment Classification</label>
+                  <div className="grid grid-cols-3 gap-3">
+                    {(["FULL_TIME", "CONTRACT", "INTERN"]).map((type) => (
+                      <button
+                        key={type}
+                        type="button"
+                        onClick={() => setFormData({ ...formData, employmentType: type })}
+                        className={cn("flex flex-col items-center justify-center p-3.5 rounded-xl border text-center transition-all gap-1.5", formData.employmentType === type ? "border-blue-600 bg-blue-50 text-blue-600 ring-1 ring-blue-600" : "border-slate-200 bg-slate-50 text-slate-500 hover:bg-slate-100")}
+                      >
+                        <span className="text-xs font-bold">{type.replace("_", " ")}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Phase 3 */}
+            {currentStep === 3 && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase">Base Salary Value</label>
+                    <input type="number" value={formData.salary} onChange={(e) => setFormData({ ...formData, salary: e.target.value })} placeholder="85000" className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs" />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-[10px] font-bold text-slate-400 uppercase">Currency</label>
+                    <select value={formData.currency} onChange={(e) => setFormData({ ...formData, currency: e.target.value })} className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs">
+                      <option value="USD">USD ($)</option>
+                      <option value="NGN">NGN (₦)</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 flex gap-3">
+                  <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-[11px] font-bold text-amber-800 uppercase tracking-wide">Ready for Provisioning</p>
+                    <p className="text-xs text-amber-700 mt-0.5 leading-normal">
+                      Submitting will execute the API POST request and create the employee record in the database.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="p-4 md:px-8 md:py-5 bg-white border-t border-slate-100 flex items-center justify-between">
+            <button type="button" onClick={handleBack} disabled={currentStep === 1} className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-slate-500 hover:text-slate-800 disabled:opacity-30">
+              <ArrowLeft className="w-3.5 h-3.5" /> Back Step
+            </button>
+            <div className="flex items-center gap-3">
+              <button type="button" onClick={handleClose} className="px-4 py-2 text-xs font-bold text-slate-500 hover:text-slate-700">
+                Cancel
+              </button>
+              <button type="button" onClick={handleNext} disabled={createMutation.isPending} className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-xs font-bold disabled:opacity-50">
+                {createMutation.isPending ? "Processing..." : currentStep === 3 ? "Complete Registration" : "Next Phase"}
+                {!createMutation.isPending && <ArrowRight className="w-3.5 h-3.5" />}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 // ---------- right-rail metric card ----------
 function MetricCard({ label, value, trend, trendTone = "positive" }: { label: string; value: string; trend: string; trendTone?: "positive" | "muted" }) {
   return (
-    <div className="bg-white border border-grey-200 rounded-xl p-5">
-      <div className="text-xs uppercase tracking-wider text-grey-500">{label}</div>
+    <div className="bg-white border border-slate-200 rounded-xl p-5">
+      <div className="text-xs uppercase tracking-wider text-slate-500">{label}</div>
       <div className="flex items-baseline gap-2 mt-2">
-        <span className="text-3xl font-semibold text-grey-900">{value}</span>
-        <span className={cn("text-xs font-medium", trendTone === "positive" ? "text-teal-600" : "text-grey-500")}>
+        <span className="text-3xl font-semibold text-slate-900">{value}</span>
+        <span className={cn("text-xs font-medium", trendTone === "positive" ? "text-teal-600" : "text-slate-500")}>
           {trendTone === "positive" && "↗ "}{trend}
         </span>
       </div>
@@ -225,40 +502,35 @@ function DeptPopover({ onClose }: { onClose: () => void }) {
   const [active, setActive] = useState(0);
   const [selected, setSelected] = useState<string[]>(["Engineering"]);
   return (
-    <div className="absolute top-full right-0 mt-2 w-[480px] bg-white border border-grey-200 rounded-xl shadow-xl z-50">
-      <div className="p-4 border-b border-grey-100">
+    <div className="absolute top-full right-0 mt-2 w-[480px] bg-white border border-slate-200 rounded-xl shadow-xl z-50">
+      <div className="p-4 border-b border-slate-100">
         <div className="relative">
-          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-grey-400" />
-          <input placeholder="Search units or departments..." className="w-full pl-10 pr-3 py-2 bg-grey-50 border border-grey-200 rounded-lg text-sm focus:outline-none" />
+          <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <input placeholder="Search units or departments..." className="w-full pl-10 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none" />
         </div>
       </div>
       <div className="grid grid-cols-2 max-h-72">
-        <ul className="border-r border-grey-100 py-2 overflow-y-auto">
+        <ul className="border-r border-slate-100 py-2 overflow-y-auto">
           {businessUnits.map((u, i) => (
             <li key={u}>
-              <button onClick={() => setActive(i)} className={cn("w-full text-left px-4 py-2.5 text-sm", active === i ? "bg-blue-50 text-blue-600 font-medium" : "text-grey-700 hover:bg-grey-50")}>
+              <button onClick={() => setActive(i)} className={cn("w-full text-left px-4 py-2.5 text-sm", active === i ? "bg-blue-50 text-blue-600 font-medium" : "text-slate-700 hover:bg-slate-50")}>
                 {u}
               </button>
             </li>
           ))}
         </ul>
         <div className="py-2 overflow-y-auto">
-          <div className="px-4 py-2 text-xs uppercase tracking-wider text-grey-400">Departments</div>
+          <div className="px-4 py-2 text-xs uppercase tracking-wider text-slate-400">Departments</div>
           {departments.map((d) => (
-            <label key={d} className="flex items-center gap-3 px-4 py-2 text-sm text-grey-700 hover:bg-grey-50 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={selected.includes(d)}
-                onChange={(e) => setSelected((prev) => e.target.checked ? [...prev, d] : prev.filter((x) => x !== d))}
-                className="rounded border-grey-300"
-              />
+            <label key={d} className="flex items-center gap-3 px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 cursor-pointer">
+              <input type="checkbox" checked={selected.includes(d)} onChange={(e) => setSelected((prev) => e.target.checked ? [...prev, d] : prev.filter((x) => x !== d))} className="rounded border-slate-300" />
               {d}
             </label>
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-between p-4 border-t border-grey-100">
-        <button onClick={() => setSelected([])} className="text-sm font-medium text-grey-600 hover:text-grey-900">Clear All</button>
+      <div className="flex items-center justify-between p-4 border-t border-slate-100">
+        <button onClick={() => setSelected([])} className="text-sm font-medium text-slate-600 hover:text-slate-900">Clear All</button>
         <button onClick={onClose} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium">Apply Filter</button>
       </div>
     </div>
@@ -271,68 +543,28 @@ function FilterDrawer({ onClose }: { onClose: () => void }) {
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/30" onClick={onClose} />
       <aside className="absolute right-0 top-0 h-full w-[440px] bg-white shadow-2xl flex flex-col">
-        <header className="p-6 border-b border-grey-100 flex items-start justify-between">
+        <header className="p-6 border-b border-slate-100 flex items-start justify-between">
           <div>
-            <h2 className="text-xl font-semibold text-grey-900">Filter Settings</h2>
-            <p className="text-sm text-grey-500 mt-1">Refine your directory view</p>
+            <h2 className="text-xl font-semibold text-slate-900">Filter Settings</h2>
+            <p className="text-sm text-slate-500 mt-1">Refine your directory view</p>
           </div>
-          <button onClick={onClose} aria-label="Close" className="p-1 text-grey-400 hover:text-grey-700">
-            <X className="w-5 h-5" />
-          </button>
+          <button onClick={onClose} aria-label="Close" className="p-1 text-slate-400 hover:text-slate-700"><X className="w-5 h-5" /></button>
         </header>
 
         <div className="flex-1 overflow-y-auto p-6 space-y-8">
           <section>
-            <h3 className="text-xs uppercase tracking-wider text-grey-500 mb-3">Employment Type</h3>
+            <h3 className="text-xs uppercase tracking-wider text-slate-500 mb-3">Employment Type</h3>
             <div className="space-y-2">
-              {[
-                { label: "Full-time", checked: true },
-                { label: "Contract", checked: false },
-                { label: "Intern", checked: false },
-              ].map((o) => (
-                <label key={o.label} className="flex items-center gap-3 text-sm text-grey-700">
-                  <input type="checkbox" defaultChecked={o.checked} className="rounded border-grey-300" />
-                  {o.label}
+              {[{ label: "Full-time", checked: true }, { label: "Contract", checked: false }, { label: "Intern", checked: false }].map((o) => (
+                <label key={o.label} className="flex items-center gap-3 text-sm text-slate-700 cursor-pointer">
+                  <input type="checkbox" defaultChecked={o.checked} className="rounded border-slate-300" /> {o.label}
                 </label>
               ))}
             </div>
           </section>
-
-          <section>
-            <h3 className="text-xs uppercase tracking-wider text-grey-500 mb-3">Department</h3>
-            <button className="w-full flex items-center justify-between px-4 py-2.5 border border-grey-200 rounded-lg text-sm text-grey-700">
-              All Departments <ChevronDown className="w-4 h-4" />
-            </button>
-          </section>
-
-          <section>
-            <h3 className="text-xs uppercase tracking-wider text-grey-500 mb-3">Location</h3>
-            <div className="flex flex-wrap items-center gap-2">
-              {["San Francisco", "New York"].map((loc) => (
-                <span key={loc} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 text-sm text-blue-700">
-                  {loc} <X className="w-3 h-3 cursor-pointer" />
-                </span>
-              ))}
-              <button className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full border border-dashed border-grey-300 text-sm text-grey-600">
-                <Plus className="w-3 h-3" /> Add Location
-              </button>
-            </div>
-          </section>
-
-          <section>
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-xs uppercase tracking-wider text-grey-500">Tenure Range</h3>
-              <span className="px-2 py-0.5 rounded-full bg-blue-50 text-xs text-blue-700">0 - 10+ Years</span>
-            </div>
-            <input type="range" defaultValue={100} className="w-full accent-blue-600" />
-            <div className="flex justify-between text-[10px] uppercase tracking-wider text-grey-400 mt-1">
-              <span>New Joiner</span><span>Expert</span>
-            </div>
-          </section>
         </div>
-
-        <footer className="p-6 border-t border-grey-100 flex items-center justify-between bg-grey-50">
-          <button className="text-sm font-medium text-grey-700 hover:text-grey-900">Reset</button>
+        <footer className="p-6 border-t border-slate-100 flex items-center justify-between bg-slate-50">
+          <button className="text-sm font-medium text-slate-700 hover:text-slate-900">Reset</button>
           <button onClick={onClose} className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium">Apply Filters</button>
         </footer>
       </aside>
@@ -340,105 +572,51 @@ function FilterDrawer({ onClose }: { onClose: () => void }) {
   );
 }
 
-// ---------- View Profile Drawer ----------
-function ViewProfileDrawer({ onClose, onEdit }: { onClose: () => void; onEdit: () => void }) {
+// ---------- View Profile Drawer (CONNECTED) ----------
+function ViewProfileDrawer({ employee, onClose, onEdit }: { employee: any; onClose: () => void; onEdit: () => void }) {
   const perf = [40, 55, 60, 75, 100];
-  const history = [
-    { role: "Senior Technical Architect", period: "Jan 2021 — Present", active: true },
-    { role: "Systems Engineer IV", period: "May 2019 — Dec 2020" },
-    { role: "Full Stack Developer", period: "Jan 2018 — Apr 2019" },
-  ];
+
   return (
     <div className="fixed inset-0 z-50">
       <div className="absolute inset-0 bg-black/30" onClick={onClose} />
       <aside className="absolute right-0 top-0 h-full w-[560px] bg-white shadow-2xl flex flex-col">
         <header className="p-6 flex items-center justify-between">
-          <button onClick={onClose} aria-label="Close" className="text-grey-400 hover:text-grey-700">
+          <button onClick={onClose} aria-label="Close" className="text-slate-400 hover:text-slate-700">
             <X className="w-5 h-5" />
           </button>
           <div className="flex items-center gap-2">
-            <button onClick={onEdit} className="px-4 py-2 border border-grey-200 rounded-lg text-sm font-medium text-grey-700 hover:bg-grey-50">Edit Profile</button>
+            <button onClick={onEdit} className="px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50">Edit Profile</button>
             <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium">Download CV</button>
           </div>
         </header>
 
         <div className="flex-1 overflow-y-auto px-6 pb-6 space-y-6">
-          {/* Identity */}
           <div className="flex items-start gap-4">
             <div className="relative">
-              <div className="w-24 h-24 rounded-xl bg-grey-200" />
-              <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-blue-600 text-white text-[10px] font-semibold tracking-wider">ACTIVE</span>
+              <div className="w-24 h-24 rounded-xl bg-blue-100 flex items-center justify-center text-3xl font-bold text-blue-700">
+                {employee.firstName?.[0]}{employee.lastName?.[0]}
+              </div>
+              <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-blue-600 text-white text-[10px] font-semibold tracking-wider">
+                {employee.employmentStatus || "ACTIVE"}
+              </span>
             </div>
             <div className="pt-1">
-              <h2 className="text-2xl font-semibold text-grey-900">Marcus Chen</h2>
-              <p className="text-blue-600 font-medium">Senior Technical Architect</p>
-              <div className="flex items-center gap-4 text-xs text-grey-500 mt-2">
-                <span className="inline-flex items-center gap-1"><MapPin className="w-3 h-3" /> Lagos, HQ</span>
-                <span className="inline-flex items-center gap-1"><Clock className="w-3 h-3" /> 4.5 Years Tenured</span>
+              <h2 className="text-2xl font-semibold text-slate-900">{employee.firstName} {employee.lastName}</h2>
+              <p className="text-blue-600 font-medium">{employee.jobTitle || "No title set"}</p>
+              <div className="flex items-center gap-4 text-xs text-slate-500 mt-2">
+                <span className="inline-flex items-center gap-1"><MapPin className="w-3 h-3" /> Dept: {employee.department?.name || "N/A"}</span>
               </div>
             </div>
           </div>
 
-          {/* Performance */}
-          <div className="bg-grey-50 border border-grey-100 rounded-xl p-5">
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs uppercase tracking-wider text-grey-500">Recent Performance</span>
-              <span className="text-sm font-semibold text-blue-600">Exceeds Expectations</span>
-            </div>
-            <div className="flex items-end gap-2 h-24">
-              {perf.map((h, i) => (
-                <div key={i} className={cn("flex-1 rounded-t-md", i === perf.length - 1 ? "bg-blue-600" : "bg-blue-200")} style={{ height: `${h}%` }} />
-              ))}
-            </div>
-            <p className="text-xs text-grey-600 mt-3 italic">
-              "Marcus successfully led the Q3 Infrastructure Migration, reducing latency by 42% across core services while maintaining 99.99% uptime."
-            </p>
-          </div>
-
-          {/* History + competencies */}
           <div className="grid grid-cols-2 gap-6">
             <div>
-              <h3 className="text-xs uppercase tracking-wider text-grey-500 mb-3">Employment History</h3>
-              <ul className="space-y-4">
-                {history.map((h) => (
-                  <li key={h.role} className="flex gap-3">
-                    <span className={cn("mt-1.5 w-2 h-2 rounded-full shrink-0", h.active ? "bg-blue-600" : "bg-grey-300")} />
-                    <div>
-                      <div className="text-sm font-medium text-grey-900">{h.role}</div>
-                      <div className="text-xs text-grey-500">{h.period}</div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xs uppercase tracking-wider text-grey-500 mb-3">Core Competencies</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Cloud Architecture", "React & Node.js", "DevOps", "Security Governance", "Graphé L", "Team Leadership"].map((c) => (
-                  <span key={c} className="px-2.5 py-1 rounded-md border border-grey-200 text-xs text-grey-700">{c}</span>
-                ))}
-              </div>
-
-              <h3 className="text-xs uppercase tracking-wider text-grey-500 mt-6 mb-3">Direct Contact</h3>
-              <div className="space-y-2 text-sm text-grey-700">
-                <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-grey-400" /> m.chen@360hr.com</div>
-                <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-grey-400" /> +1 (415) 555-0192</div>
+              <h3 className="text-xs uppercase tracking-wider text-slate-500 mt-6 mb-3">Direct Contact</h3>
+              <div className="space-y-2 text-sm text-slate-700">
+                <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-slate-400" /> {employee.email}</div>
+                <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-slate-400" /> {employee.phone || "No phone provided"}</div>
               </div>
             </div>
-          </div>
-
-          {/* Stats */}
-          <div className="bg-grey-50 border border-grey-100 rounded-xl grid grid-cols-3 divide-x divide-grey-200">
-            {[
-              { label: "Reports", value: "12" },
-              { label: "Projects", value: "48" },
-              { label: "Impact Score", value: "9.8" },
-            ].map((s) => (
-              <div key={s.label} className="p-5 text-center">
-                <div className="text-xs uppercase tracking-wider text-grey-500">{s.label}</div>
-                <div className="text-2xl font-semibold text-blue-600 mt-1">{s.value}</div>
-              </div>
-            ))}
           </div>
         </div>
       </aside>
@@ -446,89 +624,82 @@ function ViewProfileDrawer({ onClose, onEdit }: { onClose: () => void; onEdit: (
   );
 }
 
-// ---------- Edit Employee Modal ----------
-function EditEmployeeModal({ onClose }: { onClose: () => void }) {
-  const tabs = [
-    { label: "Basic Info", icon: User, active: true },
-    { label: "Job Details", icon: Briefcase },
-    { label: "Compensation", icon: DollarSign },
-    { label: "Emergency Contacts", icon: UsersIcon },
-  ];
+// ---------- Edit Employee Modal (CONNECTED) ----------
+function EditEmployeeModal({ employee, onClose }: { employee: any; onClose: () => void }) {
+  const [formData, setFormData] = useState({
+    firstName: employee.firstName || "",
+    lastName: employee.lastName || "",
+    jobTitle: employee.jobTitle || "",
+    employmentStatus: employee.employmentStatus || "ACTIVE"
+  });
+
+  const queryClient = useQueryClient();
+  const updateMutation = useMutation({
+    mutationFn: (data: any) => employeeApi.update(employee.id, data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["employees"] });
+      onClose();
+    }
+  });
+
+  const tabs = [{ label: "Basic Info", icon: User, active: true }, { label: "Job Details", icon: Briefcase }];
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col">
-        <header className="p-6 border-b border-grey-100 flex items-start justify-between">
+        <header className="p-6 border-b border-slate-100 flex items-start justify-between">
           <div>
-            <h2 className="text-xl font-semibold text-grey-900">Edit Employee Record</h2>
-            <p className="text-sm text-grey-500 mt-1">Update details for Marcus Sterling • EMP-9021</p>
+            <h2 className="text-xl font-semibold text-slate-900">Edit Employee Record</h2>
+            <p className="text-sm text-slate-500 mt-1">Update details for {employee.firstName} {employee.lastName} • {employee.id}</p>
           </div>
-          <button onClick={onClose} aria-label="Close" className="text-grey-400 hover:text-grey-700">
-            <X className="w-5 h-5" />
-          </button>
+          <button onClick={onClose} aria-label="Close" className="text-slate-400 hover:text-slate-700"><X className="w-5 h-5" /></button>
         </header>
 
         <div className="flex-1 overflow-y-auto flex">
-          {/* Tabs */}
-          <nav className="w-56 bg-grey-50 p-4 space-y-1 border-r border-grey-100">
+          <nav className="w-56 bg-slate-50 p-4 space-y-1 border-r border-slate-100">
             {tabs.map((t) => (
-              <button
-                key={t.label}
-                className={cn(
-                  "w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm",
-                  t.active ? "bg-white text-blue-600 font-medium shadow-sm" : "text-grey-700 hover:bg-white/60",
-                )}
-              >
+              <button key={t.label} className={cn("w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm", t.active ? "bg-white text-blue-600 font-medium shadow-sm" : "text-slate-700 hover:bg-white/60")}>
                 <t.icon className="w-4 h-4" /> {t.label}
               </button>
             ))}
           </nav>
 
-          {/* Body */}
           <div className="flex-1 p-6 space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="w-20 h-20 rounded-xl bg-grey-200" />
-              <div>
-                <h3 className="font-semibold text-grey-900">Personal Identity</h3>
-                <p className="text-sm text-grey-500">Upload a high-resolution photo for the corporate directory.</p>
-                <button className="text-sm font-medium text-blue-600 mt-1">Replace profile image</button>
-              </div>
-            </div>
-
             <div className="grid grid-cols-2 gap-4">
-              <Field label="First Name" defaultValue="Marcus" />
-              <Field label="Last Name" defaultValue="Sterling" />
-              <Field label="Work Email" defaultValue="m.sterling@360hr.com" />
-              <Field label="Personal Mobile" defaultValue="+234 012-9984" />
-            </div>
-
-            <Field label="Primary Office Location" defaultValue="Lagos HQ - Architectural Row" select />
-
-            <div>
-              <label className="block text-xs uppercase tracking-wider text-grey-500 mb-2">Bio & Specializations</label>
-              <textarea
-                rows={3}
-                defaultValue="Senior Structural Architect with over 12 years of experience in sustainable urban curation. Lead designer for the Sky Garden Initiative."
-                className="w-full px-3 py-2 border border-grey-200 rounded-lg text-sm text-grey-700 focus:outline-none focus:border-blue-500"
-              />
-            </div>
-
-            <div className="bg-blue-50 border border-blue-100 rounded-lg p-4 flex gap-3">
-              <div className="w-5 h-5 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs shrink-0 mt-0.5">i</div>
-              <p className="text-sm text-blue-700">
-                <strong>Identity Verification:</strong> Updating the official legal name will trigger a secondary verification request from the compliance department.
-              </p>
+              <div>
+                <label className="block text-xs uppercase tracking-wider text-slate-500 mb-2">First Name</label>
+                <input value={formData.firstName} onChange={e => setFormData({ ...formData, firstName: e.target.value })} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm" />
+              </div>
+              <div>
+                <label className="block text-xs uppercase tracking-wider text-slate-500 mb-2">Last Name</label>
+                <input value={formData.lastName} onChange={e => setFormData({ ...formData, lastName: e.target.value })} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm" />
+              </div>
+              <div>
+                <label className="block text-xs uppercase tracking-wider text-slate-500 mb-2">Job Title</label>
+                <input value={formData.jobTitle} onChange={e => setFormData({ ...formData, jobTitle: e.target.value })} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm" />
+              </div>
+              <div>
+                <label className="block text-xs uppercase tracking-wider text-slate-500 mb-2">Status</label>
+                <select value={formData.employmentStatus} onChange={e => setFormData({ ...formData, employmentStatus: e.target.value })} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm">
+                  <option value="ACTIVE">Active</option>
+                  <option value="TERMINATED">Terminated</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
 
-        <footer className="p-6 border-t border-grey-100 flex items-center justify-between bg-grey-50">
-          <span className="text-xs text-grey-500 inline-flex items-center gap-1.5">
-            <Clock className="w-3 h-3" /> Last edited 2 days ago by Sarah Femi
-          </span>
+        <footer className="p-6 border-t border-slate-100 flex items-center justify-end bg-slate-50">
           <div className="flex items-center gap-3">
-            <button onClick={onClose} className="px-4 py-2 text-sm font-medium text-grey-700 hover:text-grey-900">Cancel</button>
-            <button onClick={onClose} className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium">Save Changes</button>
+            <button onClick={onClose} className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Cancel</button>
+            <button
+              onClick={() => updateMutation.mutate(formData)}
+              disabled={updateMutation.isPending}
+              className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium disabled:opacity-50"
+            >
+              {updateMutation.isPending ? "Saving..." : "Save Changes"}
+            </button>
           </div>
         </footer>
       </div>
@@ -536,44 +707,39 @@ function EditEmployeeModal({ onClose }: { onClose: () => void }) {
   );
 }
 
-function Field({ label, defaultValue, select }: { label: string; defaultValue: string; select?: boolean }) {
-  return (
-    <div>
-      <label className="block text-xs uppercase tracking-wider text-grey-500 mb-2">{label}</label>
-      <div className="relative">
-        <input
-          defaultValue={defaultValue}
-          className="w-full px-3 py-2 border border-grey-200 rounded-lg text-sm text-grey-800 focus:outline-none focus:border-blue-500"
-        />
-        {select && <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-grey-400 pointer-events-none" />}
-      </div>
-    </div>
-  );
-}
+// ---------- Delete Confirm Modal (CONNECTED) ----------
+function DeleteConfirmModal({ employee, onClose }: { employee: any; onClose: () => void }) {
+  const queryClient = useQueryClient();
+  const deleteMutation = useMutation({
+    mutationFn: (id: string) => employeeApi.delete(id),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["employees"] });
+      onClose();
+    }
+  });
 
-// ---------- Delete Confirm Modal ----------
-function DeleteConfirmModal({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
       <div className="absolute inset-0 bg-black/40" onClick={onClose} />
-      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 text-center">
+      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-6 text-center z-10">
         <div className="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center mx-auto mb-4">
           <AlertTriangle className="w-7 h-7 text-red-500" />
         </div>
-        <h3 className="text-lg font-semibold text-grey-900">Delete Employee Record</h3>
-        <p className="text-sm text-grey-500 mt-2">
-          Are you sure you want to delete <strong>Marcus Chen's</strong> record? This action will archive all historical data and cannot be undone.
+        <h3 className="text-lg font-semibold text-slate-900 tracking-tight">Delete Employee Record</h3>
+        <p className="text-sm text-slate-500 mt-2 leading-relaxed">
+          Are you sure you want to delete <strong>{employee.firstName} {employee.lastName}'s</strong> record? This action will archive all historical data and cannot be undone.
         </p>
         <div className="mt-6 space-y-2">
-          <button onClick={onClose} className="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-semibold">
-            Confirm Delete
+          <button
+            onClick={() => deleteMutation.mutate(employee.id)}
+            disabled={deleteMutation.isPending}
+            className="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-semibold transition-colors shadow-sm disabled:opacity-50"
+          >
+            {deleteMutation.isPending ? "Processing..." : "Confirm Delete"}
           </button>
-          <button onClick={onClose} className="w-full py-2.5 text-sm font-medium text-grey-700 hover:bg-grey-50 rounded-lg">
+          <button onClick={onClose} className="w-full py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 border border-slate-200 rounded-lg transition-colors bg-white">
             Cancel
           </button>
-        </div>
-        <div className="mt-4 pt-4 border-t border-grey-100 text-[11px] uppercase tracking-wider text-grey-400 inline-flex items-center gap-1.5">
-          <AlertTriangle className="w-3 h-3" /> Administrative Action
         </div>
       </div>
     </div>

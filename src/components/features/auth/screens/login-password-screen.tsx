@@ -22,7 +22,7 @@ import { useAuthStore } from "@/stores/auth-store";
 export function LoginPasswordScreen() {
   const router = useRouter();
   const setSession = useAuthStore((s) => s.setSession);
-  const [form, setForm] = useState<LoginInput>({ email: "", password: "" });
+  const [form, setForm] = useState<LoginInput>({ userEmail: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
   const [remember, setRemember] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof LoginInput, string>>>({});
@@ -32,6 +32,7 @@ export function LoginPasswordScreen() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
+    console.log("debugging why the login isn't working", form);
     const parsed = loginSchema.safeParse(form);
     if (!parsed.success) {
       setFieldErrors(fieldErrorsFromZod<keyof LoginInput>(parsed.error.issues));
@@ -56,20 +57,20 @@ export function LoginPasswordScreen() {
 
   return (
     <AuthSplitLayout
-  variant="login-building"
-  hero={
-    <div
-      
-    >
-      {/* Hero content sits on top of the background */}
-      <div style={{ position: "absolute", top:50, bottom: 50, zIndex: 1, height: "100%" }}>
-        <LoginBuildingHero
-          title="Excellence in Human Capital."
-          description="The architectural curator of workforce intelligence. Managing your global talent with precision, clarity, and institutional trust."
-        />
-      </div>
-    </div>
-  }
+      variant="login-building"
+      hero={
+        <div
+
+        >
+          {/* Hero content sits on top of the background */}
+          <div style={{ position: "absolute", top: 50, bottom: 50, zIndex: 1, height: "100%" }}>
+            <LoginBuildingHero
+              title="Excellence in Human Capital."
+              description="The architectural curator of workforce intelligence. Managing your global talent with precision, clarity, and institutional trust."
+            />
+          </div>
+        </div>
+      }
     >
       <div className="space-y-8">
         <div>
@@ -82,18 +83,17 @@ export function LoginPasswordScreen() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          <AuthField label="Email address" htmlFor="email" error={fieldErrors.email}>
+          <AuthField label="Email address" htmlFor="userEmail" error={fieldErrors.userEmail}>
             <input
-              id="email"
+              id="userEmail"
               type="email"
               autoComplete="email"
               placeholder="name@company.com"
-              value={form.email}
-              onChange={(e) => setForm((f) => ({ ...f, email: e.target.value }))}
+              value={form.userEmail}
+              onChange={(e) => setForm((f) => ({ ...f, userEmail: e.target.value }))}
               className={authInputClassName()}
             />
           </AuthField>
-
           <AuthField
             label="Password"
             htmlFor="password"

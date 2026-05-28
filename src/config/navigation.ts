@@ -10,10 +10,9 @@ export type NavItem = {
 };
 
 const hrisChildren = [
-  { title: "Employees", href: routes.hris.employees },
-  { title: "Departments", href: routes.hris.departments },
-  { title: "Documents", href: routes.hris.documents },
-  { title: "Disciplinary", href: routes.hris.disciplinary },
+  { title: "Employees Directory", href: routes.hris.employees },
+  { title: "Organization Structure", href: routes.hris.organization_structure },
+  { title: "Reports", href: routes.hris.reports },
 ];
 
 export function getSidebarNav(role: UserRole): NavItem[] {

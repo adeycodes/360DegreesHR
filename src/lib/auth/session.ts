@@ -7,10 +7,11 @@ function getTokenFromCookie(): string | null {
   return match ? decodeURIComponent(match[1]) : null;
 }
 
-/** Read token for API client (client-side) */
 export function getAccessToken(): string | null {
   if (typeof window === "undefined") return null;
-  return sessionStorage.getItem(TOKEN_STORAGE_KEY) ?? getTokenFromCookie();
+  // Prioritize sessionStorage as it's more reliable for SPA auth
+  const token = sessionStorage.getItem(TOKEN_STORAGE_KEY) ?? getTokenFromCookie();
+  return token;
 }
 
 export function setAccessToken(token: string): void {
@@ -28,6 +29,14 @@ export function clearAccessToken(): void {
 
 export function getAuthHeader(): HeadersInit {
   const token = getAccessToken();
-  if (!token) return {};
-  return { Authorization: `Bearer ${token}` };
+
+  if (!token) {
+    console.warn("[Auth] No access token found in session or cookies.");
+    return {};
+  }
+
+  // Return the header explicitly
+  return {
+    Authorization: `Bearer ${token}`
+  };
 }

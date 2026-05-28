@@ -41,7 +41,7 @@ export class ValidationError extends Error {
 }
 
 function defaultMessageForStatus(status: number): string {
-  if (status === 401) return "Please sign in to continue.";
+  if (status === 401) return "Failed to Sign in, Invalid Credentials.";
   if (status === 403) return "You do not have permission to do that.";
   if (status === 404) return "The requested resource was not found.";
   if (status >= 500) return "Our servers are unavailable. Please try again later.";

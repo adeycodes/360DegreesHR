@@ -12,11 +12,11 @@ type BrandLogoProps = {
 };
 
 const logoConfig: Record<LogoContext, { width: number; height: number; className: string }> = {
-  splash:           { width: 240, height: 80,  className: "w-[240px] h-auto" },
-  signin:           { width: 160, height: 53,  className: "w-[160px] h-auto" },
-  "forgot-password":{ width: 140, height: 46,  className: "w-[140px] h-auto" },
-  sso:              { width: 140, height: 46,  className: "w-[140px] h-auto" },
-  default:          { width: 120, height: 40,  className: "w-[120px] h-auto" },
+  splash: { width: 300, height: 150, className: "w-[240px] h-auto" },
+  signin: { width: 240, height: 120, className: "w-[160px] h-auto" },
+  "forgot-password": { width: 200, height: 100, className: "w-[140px] h-auto" },
+  sso: { width: 140, height: 46, className: "w-[140px] h-auto" },
+  default: { width: 120, height: 40, className: "w-[120px] h-auto" },
 };
 
 export function BrandLogo({

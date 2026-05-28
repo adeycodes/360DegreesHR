@@ -4,6 +4,7 @@ import { Manrope, Open_Sans } from "next/font/google";
 import { AuthHydration } from "@/components/providers/auth-hydration";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { ToastProvider } from "@/components/providers/toast-provider";
+import { QueryProvider } from "@/components/providers/query-provider"; // Ensure this is created in your providers folder
 import { siteConfig } from "@/config/site";
 
 import "./globals.css";
@@ -61,10 +62,12 @@ export default function RootLayout({
       className={`${manrope.variable} ${openSans.variable} h-full antialiased`}
     >
       <body className="min-h-full font-sans">
-        <ThemeProvider>
-          <AuthHydration>{children}</AuthHydration>
-          <ToastProvider />
-        </ThemeProvider>
+        <QueryProvider>
+          <ThemeProvider>
+            <AuthHydration>{children}</AuthHydration>
+            <ToastProvider />
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );

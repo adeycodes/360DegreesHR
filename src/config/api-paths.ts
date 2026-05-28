@@ -10,10 +10,17 @@ export const apiPaths = {
     /** Current authenticated user */
     me: "/auth/me",
     forgotPassword: "/auth/forgot-password",
-    resetPassword: "/auth/reset-password",
+    resetPassword: (token: string) => `/auth/reset-password?token=${token}`,
   },
   dashboard: {
-    /** HRIS module 1 — admin overview (adjust per backend) */
     overview: "/dashboard",
+    hris: {
+      // CHANGE THESE to match the backend docs (/employees)
+      employee_directory: "/employees",
+      // This will now correctly resolve to /employees/{id}
+      employee: (id: string) => `/employees/${id}`,
+      organization_structure: "/hris/organization_structure",
+      reports: "/hris/reports",
+    },
   },
 } as const;

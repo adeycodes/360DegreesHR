@@ -20,12 +20,13 @@ export const routes = {
 
   hris: {
     root: "/hris",
-    employees: "/hris/employees",
-    employee: (id: string) => `/hris/employees/${id}`,
-    departments: "/hris/departments",
-    documents: "/hris/documents",
-    disciplinary: "/hris/disciplinary",
+    employees: "/hris/employees_directory",
+    organization_structure: "/hris/organization_structure",
+    reports: "/hris/reports",
   },
+
+
+
 } as const;
 
 /** Unauthenticated access allowed (prefix match except `/` which is exact only) */

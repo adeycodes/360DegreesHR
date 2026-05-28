@@ -57,7 +57,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
   const [profileOpen, setProfileOpen] = useState(false);
   const profileRef = useRef<HTMLDivElement>(null);
 
-  const displayName = user?.name ?? "Admirra Bisi";
+  const displayName = user?.name;
 
   useEffect(() => {
     if (isHydrated && !isAuthenticated) {
@@ -77,7 +77,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
 
   const handleLogout = () => {
     clearSession();
-    window.location.href = routes.auth.login;
+    window.location.href = routes.auth.loginPassword;
   };
 
   const navLinks = (
@@ -172,7 +172,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
               <input
                 type="search"
                 placeholder="Search employees, documents, or tasks..."
-                className="h-10 w-full rounded-lg border border-grey-200 bg-grey-50 pr-14 pl-10 text-[14px] outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-500/20"
+                className="h-10 w-full n border-1 bg-grey-50 pr-14 pl-10 text-[14px] outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-500/20"
               />
               <kbd className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 rounded border border-grey-200 bg-white px-1.5 py-0.5 font-sans text-[11px] text-grey-500">
                 ⌘ /

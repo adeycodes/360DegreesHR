@@ -41,7 +41,8 @@ export function ResetPasswordScreen() {
     setFieldErrors({});
     setIsLoading(true);
     try {
-      const res = await authApi.resetPassword(parsed.data);
+      const res = await authApi.resetPassword(parsed.data, tokenFromUrl);
+      console.log("the paresed data ", parsed.data)
       toast.success(res.message || "Password reset successfully! Please sign in with your new password.");
       router.push(routes.auth.loginPassword);
     } catch (err) {

@@ -1,11 +1,7 @@
 import type { ZodType } from "zod";
-
 import { env } from "@/lib/env";
 import { parseApiResponse } from "@/lib/validations/parse";
-
 import { ApiError } from "./errors";
-
-// ─── Options ────────────────────────────────────────────────────────
 
 export type RequestOptions = {
   headers?: HeadersInit;
@@ -15,8 +11,6 @@ export type RequestOptions = {
 
 const TIMEOUT = 30_000;
 
-// ─── Core fetch wrapper (private) ───────────────────────────────────
-
 async function send<T>(
   method: string,
   path: string,
@@ -25,37 +19,35 @@ async function send<T>(
   options: RequestOptions = {},
 ): Promise<T> {
   const base = env.NEXT_PUBLIC_API_URL;
-  if (!base) {
-    throw new ApiError({
-      message: "NEXT_PUBLIC_API_URL is not configured",
-      status: 0,
-      userMessage: "Application is not configured to reach the server.",
-    });
-  }
+  if (!base) throw new ApiError({ message: "API URL not configured", status: 0 });
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), options.timeoutMs ?? TIMEOUT);
 
   try {
+    // Construct headers using the Headers API for reliable merging
+    const headers = new Headers(options.headers || {});
+    headers.set("Content-Type", "application/json");
+    headers.set("Accept", "application/json");
+
     const response = await fetch(`${base}${path}`, {
       method,
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json",
-        ...options.headers,
+        "Accept": "application/json",
+        ...(options.headers || {}), // Ensure custom headers are merged
       },
       body: body ? JSON.stringify(body) : undefined,
       signal: controller.signal,
       cache: options.cache ?? "no-store",
     });
 
-    // Let the backend tell us what went wrong
     if (!response.ok) {
       let serverMessage: string | undefined;
       try {
-        const json = (await response.json()) as { message?: string };
+        const json = await response.json().catch(() => ({}));
         serverMessage = json.message;
-      } catch { /* non-JSON body */ }
+      } catch { /* ignore */ }
 
       throw new ApiError({
         message: serverMessage ?? response.statusText,
@@ -63,52 +55,21 @@ async function send<T>(
       });
     }
 
-    // Parse JSON → unwrap envelope → validate with Zod
     return parseApiResponse(response, schema);
   } catch (error) {
     if (error instanceof ApiError) throw error;
-
-    if (error instanceof Error && error.name === "AbortError") {
-      throw new ApiError({
-        message: "Request timeout",
-        status: 408,
-        userMessage: "The request took too long. Please try again.",
-      });
-    }
-
     throw new ApiError({
       message: error instanceof Error ? error.message : "Network error",
       status: 0,
-      userMessage: "Unable to reach the server. Check your connection.",
+      userMessage: "Unable to reach the server.",
     });
   } finally {
     clearTimeout(timer);
   }
 }
 
-// ─── Public helpers — use these in endpoint files ───────────────────
-
-/** GET request — validates the response with a Zod schema */
-export function get<T>(path: string, schema: ZodType<T>, options?: RequestOptions) {
-  return send("GET", path, schema, undefined, options);
-}
-
-/** POST request — validates the response with a Zod schema */
-export function post<T>(path: string, schema: ZodType<T>, body: unknown, options?: RequestOptions) {
-  return send("POST", path, schema, body, options);
-}
-
-/** PUT request — validates the response with a Zod schema */
-export function put<T>(path: string, schema: ZodType<T>, body: unknown, options?: RequestOptions) {
-  return send("PUT", path, schema, body, options);
-}
-
-/** PATCH request — validates the response with a Zod schema */
-export function patch<T>(path: string, schema: ZodType<T>, body: unknown, options?: RequestOptions) {
-  return send("PATCH", path, schema, body, options);
-}
-
-/** DELETE request — validates the response with a Zod schema */
-export function del<T>(path: string, schema: ZodType<T>, options?: RequestOptions) {
-  return send("DELETE", path, schema, undefined, options);
-}
+export const get = <T>(p: string, s: ZodType<T>, o?: RequestOptions) => send("GET", p, s, undefined, o);
+export const post = <T>(p: string, s: ZodType<T>, b: unknown, o?: RequestOptions) => send("POST", p, s, b, o);
+export const put = <T>(p: string, s: ZodType<T>, b: unknown, o?: RequestOptions) => send("PUT", p, s, b, o);
+export const patch = <T>(p: string, s: ZodType<T>, b: unknown, o?: RequestOptions) => send("PATCH", p, s, b, o);
+export const del = <T>(p: string, s: ZodType<T>, o?: RequestOptions) => send("DELETE", p, s, undefined, o);

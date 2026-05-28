@@ -9,4 +9,14 @@ export const dashboardApi = {
     get(apiPaths.dashboard.overview, dashboardOverviewSchema, {
       headers: getAuthHeader(),
     }),
+
+  getHrisEmployees: () =>
+    get(apiPaths.dashboard.hris.employee_directory, dashboardOverviewSchema, {
+      headers: getAuthHeader(),
+    }),
+
+
+
 };
+
+

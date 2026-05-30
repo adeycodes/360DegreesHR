@@ -29,8 +29,11 @@ export function clearAccessToken(): void {
 
 export function getAuthHeader(): HeadersInit {
   const token = getAccessToken();
+  console.log("[Auth] Retrieved token:", token);
 
   if (!token) {
+    console.log("[Auth] No access token found in session or cookies.");
+
     console.warn("[Auth] No access token found in session or cookies.");
     return {};
   }

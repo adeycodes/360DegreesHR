@@ -25,18 +25,16 @@ async function send<T>(
   const timer = setTimeout(() => controller.abort(), options.timeoutMs ?? TIMEOUT);
 
   try {
-    // Construct headers using the Headers API for reliable merging
+    // Correctly initialize Headers with passed options
     const headers = new Headers(options.headers || {});
-    headers.set("Content-Type", "application/json");
-    headers.set("Accept", "application/json");
+
+    // Set defaults only if they aren't already set
+    if (!headers.has("Content-Type")) headers.set("Content-Type", "application/json");
+    if (!headers.has("Accept")) headers.set("Accept", "application/json");
 
     const response = await fetch(`${base}${path}`, {
       method,
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        ...(options.headers || {}), // Ensure custom headers are merged
-      },
+      headers, // Use the Headers instance
       body: body ? JSON.stringify(body) : undefined,
       signal: controller.signal,
       cache: options.cache ?? "no-store",
@@ -71,5 +69,4 @@ async function send<T>(
 export const get = <T>(p: string, s: ZodType<T>, o?: RequestOptions) => send("GET", p, s, undefined, o);
 export const post = <T>(p: string, s: ZodType<T>, b: unknown, o?: RequestOptions) => send("POST", p, s, b, o);
 export const put = <T>(p: string, s: ZodType<T>, b: unknown, o?: RequestOptions) => send("PUT", p, s, b, o);
-export const patch = <T>(p: string, s: ZodType<T>, b: unknown, o?: RequestOptions) => send("PATCH", p, s, b, o);
 export const del = <T>(p: string, s: ZodType<T>, o?: RequestOptions) => send("DELETE", p, s, undefined, o);

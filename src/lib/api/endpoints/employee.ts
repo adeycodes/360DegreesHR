@@ -5,14 +5,17 @@ import { getAuthHeader } from "@/lib/auth/session";
 import { employeeListSchema, singleEmployeeSchema } from "@/lib/validations/employee";
 
 export const employeeApi = {
-    getAll: (page = 1, limit = 10, name?: string) => {
+    getAll: async (page = 1, limit = 10, name?: string) => {
         const query = new URLSearchParams({
             page: page.toString(),
             limit: limit.toString(),
             ...(name && { name }),
         }).toString();
 
-        return get(`${apiPaths.dashboard.hris.employee_directory}?${query}`, employeeListSchema, {
+        // Append the query string to the path
+        const url = `${apiPaths.dashboard.hris.employee_directory}?${query}`;
+
+        return get(url, employeeListSchema, {
             headers: getAuthHeader(),
         });
     },
@@ -22,7 +25,6 @@ export const employeeApi = {
             headers: getAuthHeader()
         }),
 
-    // FIXED: Ensure headers are passed as the 4th argument (options)
     create: (data: unknown) =>
         post(apiPaths.dashboard.hris.employee_directory, singleEmployeeSchema, data, {
             headers: getAuthHeader()
@@ -37,4 +39,25 @@ export const employeeApi = {
         del(apiPaths.dashboard.hris.employee(id), z.object({ success: z.boolean() }), {
             headers: getAuthHeader()
         }),
+
+
+    getAllEmployees: async (token: string) => {
+        try {
+            const data = await fetch("https://three60degreeshr-iewp.onrender.com/api/v1/employees", {
+                method: "Get",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                }
+            })
+
+            const resultData = await data.json();
+
+            return resultData.data
+        }
+        catch (error) {
+        }
+
+    }
+
 };

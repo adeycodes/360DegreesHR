@@ -57,6 +57,7 @@ export function EmployeeDirectoryScreen({
 
   const totalRecords = pagination?.total || 128;
   const currentPage = pagination?.page || 1;
+  console.log(employees);
 
   return (
     <div className="p-4 md:p-8 space-y-6 max-w-[1600px] mx-auto bg-white min-h-screen">

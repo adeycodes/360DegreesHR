@@ -16,7 +16,7 @@ const brandMap = {
   apple: BrandAppleIcon,
 } as const;
 
-export function BrandIcon({ name, size = 24, className }: BrandIconProps) {
+export function BrandIcon({ name, size = 32, className }: BrandIconProps) {
   const Component = brandMap[name];
   return <Component size={size} className={className} />;
 }

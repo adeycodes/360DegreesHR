@@ -1,11 +1,11 @@
 "use client";
-
+import React, { ComponentType } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import {
-  Briefcase,
+
   Calendar,
   TrendingUp,
-  UserPlus,
   Users,
 } from "lucide-react";
 import {
@@ -17,13 +17,57 @@ import {
   Pie,
   PieChart,
   ResponsiveContainer,
+  Sector,
   Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
 
 import { cn } from "@/lib/utils";
+import { AddIcon, MultipleUserStat, RecentActivityIconFirst, RecentActivityIconSecond, RecentActivityIconThird } from "@/components/design-system/icons/dashboard_overview_icons";
 
+interface DepartmentData {
+  name: string;
+  value: number;
+  color: string;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const renderActiveShape = (props: any) => {
+  const {
+    cx,
+    cy,
+    innerRadius,
+    outerRadius,
+    startAngle,
+    endAngle,
+    fill,
+    midAngle,
+  } = props;
+
+  const RADIAN = Math.PI / 180;
+  const offset = 12;
+
+  const x = cx + offset * Math.cos(-midAngle * RADIAN);
+  const y = cy + offset * Math.sin(-midAngle * RADIAN);
+
+  return (
+    <Sector
+      cx={x}
+      cy={y}
+      innerRadius={innerRadius}
+      outerRadius={outerRadius + 10}
+      startAngle={startAngle}
+      endAngle={endAngle}
+      fill={fill}
+      stroke="#FFFFFF"
+      strokeWidth={4}
+      cornerRadius={4}
+    />
+  );
+};
+
+// --- Data Constants ---
 const attendanceData = [
   { day: "Mon", value: 210 },
   { day: "Tue", value: 235 },
@@ -35,9 +79,9 @@ const attendanceData = [
 ];
 
 const departmentData = [
-  { name: "Engineering", value: 37, color: "bg-teal-500" },
-  { name: "Operations", value: 24, color: "bg-grey-400" },
-  { name: "Designs", value: 22, color: "bg-grey-300" },
+  { name: "ENGINEERING", value: 37, color: "#00E5BE" },
+  { name: "OPERATIONS", value: 39, color: "#A0AEC0" },
+  { name: "DESIGNS", value: 24, color: "#CBD5E1" },
 ];
 
 const retentionData = [
@@ -87,37 +131,45 @@ const recentActivity = [
   {
     text: "Aria Montgomery signed her offer...",
     meta: "2 hours ago • HR Operations",
-    color: "bg-blue-500",
+    icon: RecentActivityIconFirst,
+    bg: "bg-red-200",
+    IconColor: "text-red-700",
   },
   {
     text: "Marcus Chen requested sick leave...",
     meta: "5 hours ago • Engineering",
-    color: "bg-error-500",
+    icon: RecentActivityIconSecond,
+    bg: "bg-gray-300",
+    IconColor: "text-gray-700"
   },
   {
     text: "Monthly payroll finalized...",
     meta: "Yesterday • Finance",
-    color: "bg-teal-500",
+    icon: RecentActivityIconThird,
+    bg: "bg-blue-200",
+    IconColor: "text-blue-700"
   },
 ];
 
+// --- Sub Components ---
 function StatCard({
   title,
   value,
   badge,
   badgeVariant,
-  icon: Icon,
+  icon: IconComponent,
 }: {
   title: string;
   value: string;
   badge: string;
   badgeVariant: "blue" | "red";
-  icon: typeof Users;
+  icon: React.FC<any>;
+
 }) {
   return (
     <div className="rounded-xl border border-grey-200 bg-white p-5">
       <div className="mb-4 flex size-9 items-center justify-center rounded-lg bg-blue-50">
-        <Icon className="size-[18px] text-blue-500" strokeWidth={1.75} />
+        <IconComponent className="size-4.5 text-blue-500" strokeWidth={1.75} />
       </div>
       <p className="text-[13px] font-medium text-grey-500">{title}</p>
       <p className="mt-1 font-heading text-[28px] font-bold tracking-tight text-grey-900">
@@ -128,7 +180,7 @@ function StatCard({
           "mt-2 inline-block rounded-full px-2.5 py-0.5 text-[12px] font-medium",
           badgeVariant === "blue"
             ? "bg-blue-50 text-blue-600"
-            : "bg-grey-100 text-grey-700",
+            : "bg-grey-100 text-grey-700"
         )}
       >
         {badge}
@@ -144,7 +196,7 @@ function StatusBadge({ status }: { status: "Approved" | "Pending" }) {
         "inline-flex rounded-full px-2.5 py-0.5 text-[12px] font-medium",
         status === "Approved"
           ? "bg-blue-50 text-blue-600"
-          : "bg-grey-100 text-grey-700",
+          : "bg-grey-100 text-grey-700"
       )}
     >
       {status}
@@ -152,9 +204,13 @@ function StatusBadge({ status }: { status: "Approved" | "Pending" }) {
   );
 }
 
+// --- Main Screen Component ---
 export function HrisDashboardScreen() {
+
+  const [hoveredBarIndex, setHoveredBarIndex] = useState<number | null>(null);
   return (
     <div className="space-y-6">
+
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="font-heading text-[28px] font-bold tracking-tight text-grey-900">
@@ -164,29 +220,45 @@ export function HrisDashboardScreen() {
             Welcome back, Admin. Here is what&apos;s happening today.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-6">
+
           <Link
             href="#"
-            className="flex items-center gap-3 rounded-xl border border-grey-200 bg-white px-4 py-3 shadow-sm transition-shadow hover:shadow-md"
+            className="flex items-center rounded-xl border border-grey-200 bg-white shadow-sm transition-shadow hover:shadow-md"
           >
-            <span className="flex size-10 items-center justify-center rounded-lg bg-blue-50">
-              <UserPlus className="size-5 text-blue-500" />
+            <span className="flex size-15 rounded-left px-2 py-2 items-center justify-center bg-blue-50">
+              <AddIcon className="size-5 text-blue-700" />
             </span>
-            <span>
-              <span className="block text-[14px] font-semibold text-grey-900">Add Employee</span>
+            <span className="px-4 py-1">
+              <span className="block text-[14px] font-semibold text-grey-900">Add Employee </span>
               <span className="text-[12px] text-grey-500">Onboard talents</span>
             </span>
           </Link>
+
           <Link
             href="#"
-            className="flex items-center gap-3 rounded-xl border border-grey-200 bg-white px-4 py-3 shadow-sm transition-shadow hover:shadow-md"
+            className="flex items-center rounded-xl border border-grey-200 bg-white shadow-sm transition-shadow hover:shadow-md"
           >
-            <span className="flex size-10 items-center justify-center rounded-lg bg-blue-50">
-              <Briefcase className="size-5 text-blue-700" />
+            <span className="flex size-15 rounded-left px-2 py-2 items-center justify-center bg-blue-50">
+              <AddIcon className="size-5 text-blue-700" />
             </span>
-            <span>
-              <span className="block text-[14px] font-semibold text-grey-900">Post Job</span>
+            <span className="px-4 py-1">
+              <span className="block text-[14px] font-semibold text-grey-900">Post Job </span>
               <span className="text-[12px] text-grey-500">Open requisitions</span>
+            </span>
+          </Link>
+
+
+          <Link
+            href="#"
+            className="flex items-center rounded-xl border border-grey-200 bg-white shadow-sm transition-shadow hover:shadow-md"
+          >
+            <span className="flex size-15 rounded-left px-2 py-2 items-center justify-center bg-blue-50">
+              <AddIcon className="size-5 text-blue-700" />
+            </span>
+            <span className="px-4 py-1">
+              <span className="block text-[14px] font-semibold text-grey-900">Run Payroll </span>
+              <span className="text-[12px] text-grey-500">Monthly Cycle</span>
             </span>
           </Link>
         </div>
@@ -198,28 +270,28 @@ export function HrisDashboardScreen() {
           value="1,248"
           badge="+12% vs Last Year"
           badgeVariant="blue"
-          icon={Users}
+          icon={MultipleUserStat}
         />
         <StatCard
           title="New Hires"
           value="34"
           badge="5 Joined Today"
           badgeVariant="blue"
-          icon={UserPlus}
+          icon={MultipleUserStat}
         />
         <StatCard
           title="Pending Leave Requests"
           value="22"
           badge="Action Required"
           badgeVariant="red"
-          icon={Calendar}
+          icon={MultipleUserStat}
         />
         <StatCard
           title="Active Openings"
           value="22"
           badge="5 Priority"
           badgeVariant="red"
-          icon={Briefcase}
+          icon={MultipleUserStat}
         />
       </div>
 
@@ -233,33 +305,52 @@ export function HrisDashboardScreen() {
               <option>Last 7 Days</option>
             </select>
           </div>
-          <div className="h-[260px] w-full">
+          <div className="h-65 w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={attendanceData} margin={{ top: 8, right: 8, left: -16, bottom: 0 }}>
+              <BarChart
+                data={attendanceData}
+                margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
+                barGap={0}
+                barCategoryGap={0}
+                barSize={100}
+              >
                 <YAxis
-                  axisLine={false}
-                  tickLine={false}
+                  axisLine={true}
+                  tickLine={true}
                   tick={{ fill: "#cbd5e0", fontSize: 12 }}
+                  tickMargin={10}
                   domain={[0, 260]}
                 />
                 <XAxis
                   dataKey="day"
-                  axisLine={false}
-                  tickLine={false}
+                  axisLine={true}
+                  tickLine={true}
                   tick={{ fill: "#6b7588", fontSize: 12 }}
+                  dy={10}
                 />
                 <Tooltip
+                  cursor={{ fill: "transparent" }}
                   contentStyle={{
                     borderRadius: 8,
                     border: "1px solid #f1f2f4",
                     fontSize: 13,
                   }}
                 />
-                <Bar dataKey="value" radius={[4, 4, 0, 0]} maxBarSize={40}>
-                  {attendanceData.map((entry) => (
+                <Bar
+                  dataKey="value"
+                  radius={[4, 4, 0, 0]} // Applies border radius of 4px to top-left and top-right only
+                  onMouseEnter={(_, index) => setHoveredBarIndex(index)}
+                  onMouseLeave={() => setHoveredBarIndex(null)}
+                >
+                  {attendanceData.map((entry, index) => (
                     <Cell
-                      key={entry.day}
-                      fill={entry.highlight ? "#274376" : "#a0aec0"}
+                      key={`cell-${index}`}
+                      fill={
+                        hoveredBarIndex === null || hoveredBarIndex === index
+                          ? "#2563EB" // Solid corporate blue (Default or Hovered state)
+                          : "rgba(37, 99, 235, 0.15)" // 15% opacity blue (Faded out state)
+                      }
+                      style={{ transition: "fill 0.2s ease-in-out" }} // Adds a smooth fade transition
                     />
                   ))}
                 </Bar>
@@ -308,7 +399,7 @@ export function HrisDashboardScreen() {
               </Link>
             </div>
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[480px] text-left text-[14px]">
+              <table className="w-full min-w-120 text-left text-[14px]">
                 <thead>
                   <tr className="border-b border-grey-100 text-[12px] font-semibold tracking-wide text-grey-500 uppercase">
                     <th className="pb-3 font-semibold">Name</th>
@@ -347,9 +438,19 @@ export function HrisDashboardScreen() {
             <ul className="space-y-4">
               {recentActivity.map((item) => (
                 <li key={item.text} className="flex gap-3">
-                  <span
-                    className={cn("mt-1.5 size-2 shrink-0 rounded-full", item.color)}
-                  />
+                  <span className="mt-1.5 w-10 h-8 shrink-0 flex items-center justify-center rounded-lg relative">
+                    <span
+                      className={cn(
+                        "absolute inset-0 rounded-lg opacity-20",
+                        item.bg ?? ""
+                      )}
+                    />
+                    {item.icon && (
+                      <item.icon
+                        className={cn("w-5 h-5 relative z-10", item.IconColor ?? "text-white")}
+                      />
+                    )}
+                  </span>
                   <div>
                     <p className="text-[14px] font-medium text-grey-900">{item.text}</p>
                     <p className="text-[13px] text-grey-500">{item.meta}</p>
@@ -361,42 +462,78 @@ export function HrisDashboardScreen() {
         </div>
 
         <div className="space-y-4">
-          <div className="rounded-xl border border-grey-200 bg-white p-5">
+
+          <div className="rounded-xl border border-grey-200 bg-white p-5 shadow-sm">
             <h2 className="mb-4 font-heading text-[16px] font-semibold text-grey-900">
               Employee Distribution by Department
             </h2>
-            <div className="relative mx-auto h-[200px] w-full max-w-[220px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={departmentData}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={55}
-                    outerRadius={80}
-                    paddingAngle={2}
-                    dataKey="value"
-                  >
-                    {departmentData.map((entry) => (
-                      <Cell key={entry.name} fill={entry.color} />
-                    ))}
-                  </Pie>
-                </PieChart>
-              </ResponsiveContainer>
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <span className="font-heading text-[22px] font-bold text-grey-900">37%</span>
+
+            <div className="flex flex-col bg-white rounded-[20px] shadow-[0_2px_15px_rgba(0,0,0,0.04)] border border-gray-50 p-7 w-85 mx-auto font-sans">
+              <div className="mb-6">
+                <h2 className="text-[19px] font-semibold text-[#475569] leading-[1.3] tracking-tight">
+                  Employee Distribution <br />
+                  by Department
+                </h2>
               </div>
-            </div>
-            <div className="mt-4 flex flex-wrap justify-center gap-4 text-[11px] font-semibold tracking-wide text-grey-500 uppercase">
-              {departmentData.map((d) => (
-                <span key={d.name} className="flex items-center gap-1.5">
-                  <span
-                    className="size-2 rounded-full"
-                    style={{ backgroundColor: d.color }}
-                  />
-                  {d.name} ({d.value}%)
-                </span>
-              ))}
+
+              <div className="relative mx-auto mt-6 h-60 w-60">
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={departmentData}
+                      dataKey="value"
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={42}
+                      outerRadius={82}
+                      activeShape={renderActiveShape}
+                      startAngle={90}
+                      endAngle={-270}
+                      paddingAngle={2}
+                      stroke="#FFFFFF"
+                      strokeWidth={4}
+                      isAnimationActive
+                      animationBegin={0}
+                      animationDuration={1400}
+                      animationEasing="ease-out"
+                    >
+                      {departmentData.map((entry, index) => (
+                        <Cell key={index} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Tooltip defaultIndex={0} content={() => null} cursor={false} />
+                  </PieChart>
+                </ResponsiveContainer>
+
+                <div className="absolute right-5 top-23.75">
+                  <span className="rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-slate-500 shadow">
+                    37%
+                  </span>
+                </div>
+
+                <div className="absolute left-2.5 top-13.75">
+                  <span className="rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-slate-500 shadow">
+                    22%
+                  </span>
+                </div>
+
+                <div className="absolute bottom-1.25 left-1/2 -translate-x-1/2">
+                  <span className="rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-slate-500 shadow">
+                    24%
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-8 flex items-center justify-center gap-2">
+                {['ENGINEERING', 'OPERATIONS', 'DESIGNS'].map((dept) => (
+                  <div
+                    key={dept}
+                    className="px-2.5 py-1.5 border border-[#F1F5F9] rounded-md text-[10px] font-medium text-[#64748B] bg-white shadow-sm tracking-wide"
+                  >
+                    {dept}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -410,7 +547,7 @@ export function HrisDashboardScreen() {
                 <TrendingUp className="size-4" />
               </span>
             </div>
-            <div className="h-[160px] w-full">
+            <div className="h-40 w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <AreaChart data={retentionData} margin={{ top: 8, right: 8, left: -20, bottom: 0 }}>
                   <defs>

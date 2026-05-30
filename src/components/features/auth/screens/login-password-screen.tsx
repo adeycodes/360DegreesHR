@@ -143,7 +143,7 @@ export function LoginPasswordScreen() {
           <button
             type="submit"
             disabled={isLoading}
-            className="h-[48px] w-full rounded-lg bg-primary-500 text-[15px] font-medium text-white transition-colors hover:bg-primary-600 disabled:opacity-70"
+            className="h-12 w-full rounded-lg bg-primary-500 text-[15px] font-medium text-white transition-colors hover:bg-primary-600 disabled:opacity-70"
           >
             {isLoading ? "Signing in…" : "Sign In"}
           </button>
@@ -161,7 +161,7 @@ export function LoginPasswordScreen() {
 
         <div className="space-y-5 border-t border-grey-200 pt-6">
           <div className="flex gap-3">
-            <Shield className="mt-0.5 size-[18px] shrink-0 text-grey-500" />
+            <Shield className="mt-0.5 size-4.5 shrink-0 text-grey-500" />
             <div>
               <p className="text-[14px] font-semibold text-grey-900">Admin or Manager?</p>
               <p className="mt-0.5 text-[13px] leading-relaxed text-grey-600">
@@ -170,7 +170,7 @@ export function LoginPasswordScreen() {
             </div>
           </div>
           <div className="flex gap-3">
-            <KeyRound className="mt-0.5 size-[18px] shrink-0 text-grey-500" />
+            <KeyRound className="mt-0.5 size-4.5 shrink-0 text-grey-500" />
             <div>
               <p className="text-[14px] font-semibold text-grey-900">Employee?</p>
               <p className="mt-0.5 text-[13px] leading-relaxed text-grey-600">

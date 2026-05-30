@@ -247,7 +247,7 @@ export function RegisterCompanyScreen() {
           <button
             type="submit"
             disabled={isLoading}
-            className="h-[48px] w-full rounded-lg bg-primary-500 text-[15px] font-medium text-white transition-colors hover:bg-primary-600 disabled:opacity-70"
+            className="h-12 w-full rounded-lg bg-primary-500 text-[15px] font-medium text-white transition-colors hover:bg-primary-600 disabled:opacity-70"
           >
             {isLoading ? "Creating account…" : "Create company account"}
           </button>

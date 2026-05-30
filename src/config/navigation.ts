@@ -20,25 +20,30 @@ export function getSidebarNav(role: UserRole): NavItem[] {
     return [
       { title: "Dashboard", href: routes.app.dashboard, icon: "layout-dashboard" },
       { title: "My profile", href: routes.hris.employees, icon: "user" },
-      { title: "Leave Management", icon: "calendar", comingSoon: true },
+      // Changed "calendar" to "leave-management"
+      { title: "Leave Management", icon: "leave-management", comingSoon: true },
     ];
   }
 
   if (role === "manager") {
     return [
       { title: "Dashboard", href: routes.app.dashboard, icon: "layout-dashboard" },
-      { title: "HRIS", icon: "users", children: hrisChildren },
-      { title: "Leave Management", icon: "calendar", comingSoon: true },
+      // Changed "users" to "hris"
+      { title: "HRIS", icon: "hris", children: hrisChildren },
+      // Changed "calendar" to "leave-management"
+      { title: "Leave Management", icon: "leave-management", comingSoon: true },
     ];
   }
 
+  // Admin / Default Role
   return [
     { title: "Dashboard", href: routes.app.dashboard, icon: "layout-dashboard" },
-    { title: "HRIS", icon: "users", children: hrisChildren },
-    { title: "Recruitment", icon: "briefcase", comingSoon: true },
-    { title: "Onboarding", icon: "user-plus", comingSoon: true },
-    { title: "Payroll", icon: "wallet", comingSoon: true },
-    { title: "Leave Management", icon: "calendar", comingSoon: true },
-    { title: "Time & Attendance", icon: "clock", comingSoon: true },
+    // Changed all of these to match your custom iconMap keys
+    { title: "HRIS", icon: "hris", children: hrisChildren },
+    { title: "Recruitment", icon: "recruitment", comingSoon: true },
+    { title: "Onboarding", icon: "onboarding", comingSoon: true },
+    { title: "Payroll", icon: "payroll", comingSoon: true },
+    { title: "Leave Management", icon: "leave-management", comingSoon: true },
+    { title: "Time & Attendance", icon: "time-attendance", comingSoon: true },
   ];
 }

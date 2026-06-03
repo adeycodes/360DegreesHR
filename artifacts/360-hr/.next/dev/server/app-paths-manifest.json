@@ -1,5 +1,6 @@
 {
   "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(protected)/dashboard/page": "app/(protected)/dashboard/page.js",
   "/(protected)/hris/[section]/page": "app/(protected)/hris/[section]/page.js",
   "/(protected)/hris/audit_logs/page": "app/(protected)/hris/audit_logs/page.js",
   "/splash/page": "app/splash/page.js"

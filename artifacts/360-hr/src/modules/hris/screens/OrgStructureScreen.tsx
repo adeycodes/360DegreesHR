@@ -153,7 +153,8 @@ export default function OrgStructureScreen() {
     });
 
     // ── Transform API → internal Department shape ──────────────────────────
-    const transformDepartments = (depts: any[]): Department[] =>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const transformDepartments = (depts: Record<string, any>[]): Department[] =>
         depts.map((dept) => ({
             id: dept.id,
             name: dept.name,
@@ -175,13 +176,15 @@ export default function OrgStructureScreen() {
         }));
 
     // ── Resolve the list: real data → mock on error/empty ─────────────────
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const apiRows = Array.isArray(apiData) ? (apiData as Record<string, any>[]) : [];
     const units: Department[] = (() => {
         if (isLoading) return [];
-        if (isError || !apiData || apiData.length === 0) return MOCK_DEPARTMENTS;
-        return transformDepartments(apiData);
+        if (isError || apiRows.length === 0) return MOCK_DEPARTMENTS;
+        return transformDepartments(apiRows);
     })();
 
-    const isMockData = isError || !apiData || apiData?.length === 0;
+    const isMockData = isError || apiRows.length === 0;
 
     // ── UI state ───────────────────────────────────────────────────────────
     const [selectedId, setSelectedId] = useState<string>("");

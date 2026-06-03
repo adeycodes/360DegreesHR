@@ -294,12 +294,12 @@ const AGENDA = [
 function WelcomeScreen() {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
-    const session = (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$stores$2f$auth$2d$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"])({
-        "WelcomeScreen.useAuthStore[session]": (s)=>s.session
-    }["WelcomeScreen.useAuthStore[session]"]);
+    const user = (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$stores$2f$auth$2d$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"])({
+        "WelcomeScreen.useAuthStore[user]": (s)=>s.user
+    }["WelcomeScreen.useAuthStore[user]"]);
     const [countdown, setCountdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(REDIRECT_SECONDS);
-    const firstName = session?.user?.name?.split(" ")[0] ?? "there";
-    const fullName = session?.user?.name ?? "Segun Thorne";
+    const firstName = user?.name?.split(" ")[0] ?? "there";
+    const fullName = user?.name ?? "Segun Thorne";
     const role = "Senior Product Designer";
     const today = new Date().toLocaleDateString("en-US", {
         weekday: "long",
@@ -725,7 +725,7 @@ function WelcomeScreen() {
         columnNumber: 5
     }, this);
 }
-_s(WelcomeScreen, "nss9VPcxGSHcF4BCXoTzUKXcfGg=", false, function() {
+_s(WelcomeScreen, "TvYiJBI5yrlgih+Q+NP+dzXHqhQ=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
         __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$stores$2f$auth$2d$store$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useAuthStore"]

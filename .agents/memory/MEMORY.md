@@ -1,0 +1,2 @@
+- [360HR API shape quirks](360hr-api-quirks.md) — registerCompany returns `user.id` (not `userid`); AuthUser uses `userid` — map at call site
+- [360HR auth store shape](360hr-auth-store.md) — AuthState has `user: AuthUser | null`, not a `session` object; use `s.user` not `s.session`

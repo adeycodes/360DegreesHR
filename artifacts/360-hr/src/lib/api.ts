@@ -119,10 +119,12 @@ export const authApi = {
     }),
 
   registerCompany: (input: RegisterCompanyInput) =>
-    post<{ token: string; user: { id: string; name?: string; email?: string; role: string }; company?: { id: string; name: string } }>(
-      "/auth/register",
-      input,
-    ),
+    post<{
+      token: string;
+      // The API returns `id` (not `userid`) — register-company-screen maps it to AuthUser.userid
+      user: { id: string; name?: string; email?: string; role: string };
+      company?: { id: string; name: string };
+    }>("/auth/register", input),
 
   me: () =>
     get<AuthUser>("/auth/me", authHeaders()),
@@ -130,11 +132,10 @@ export const authApi = {
   forgotPassword: (input: ForgotPasswordInput) =>
     post<{ success: boolean; message: string }>("/auth/forgot-password", input),
 
-  resetPassword: (input: ResetPasswordInput, token: string) =>
-    post<{ success: boolean; message: string }>(
-      `/auth/reset-password?token=${token}`,
-      input,
-    ),
+  // Token is sent in the request body, not the URL, to avoid leaking it in
+  // server logs or browser history.
+  resetPassword: (input: ResetPasswordInput) =>
+    post<{ success: boolean; message: string }>("/auth/reset-password", input, authHeaders()),
 };
 
 // ─── Employee API ─────────────────────────────────────────────────────────────
@@ -149,25 +150,13 @@ export const employeeApi = {
     return get<EmployeeList>(`/employees?${query}`, authHeaders());
   },
 
-  getAllEmployees: async (token: string): Promise<EmployeeList> => {
-    const res = await fetch(`${API_BASE}/employees`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    const json = await res.json();
-    return json.data ?? json;
-  },
-
   getById: (id: string) =>
     get<Employee>(`/employees/${id}`, authHeaders()),
 
-  create: (data: unknown) =>
+  create: (data: Record<string, unknown>) =>
     post<Employee>("/employees", data, authHeaders()),
 
-  update: (id: string, data: unknown) =>
+  update: (id: string, data: Record<string, unknown>) =>
     put<Employee>(`/employees/${id}`, data, authHeaders()),
 
   delete: (id: string) =>
@@ -186,14 +175,21 @@ export const dashboardApi = {
 
 // ─── Department API ───────────────────────────────────────────────────────────
 
+export type DepartmentInput = {
+  name: string;
+  description: string;
+  parentDepartmentId?: string;
+  headEmployeeId?: string;
+};
+
 export const departmentApi = {
-  create: (data: { name: string; description: string; parentDepartmentId?: string; headEmployeeId?: string }) =>
+  create: (data: DepartmentInput) =>
     post<unknown>("/departments", data, authHeaders()),
 
   getTree: () =>
     get<unknown>("/departments/company/tree", authHeaders()),
 
-  update: (id: string, data: unknown) =>
+  update: (id: string, data: Partial<DepartmentInput>) =>
     put<unknown>(`/departments/${id}`, data, authHeaders()),
 
   delete: (id: string) =>

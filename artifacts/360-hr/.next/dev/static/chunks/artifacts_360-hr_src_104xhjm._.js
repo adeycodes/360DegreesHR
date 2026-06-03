@@ -26,6 +26,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lu
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$1$2e$17$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$user$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__User$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@1.17.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/user.mjs [app-client] (ecmascript) <export default as User>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$1$2e$17$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$left$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowLeft$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@1.17.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/arrow-left.mjs [app-client] (ecmascript) <export default as ArrowLeft>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$1$2e$17$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@1.17.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/arrow-right.mjs [app-client] (ecmascript) <export default as ArrowRight>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/artifacts/360-hr/src/lib/utils.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/artifacts/360-hr/src/lib/api.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature(), _s2 = __turbopack_context__.k.signature(), _s3 = __turbopack_context__.k.signature(), _s4 = __turbopack_context__.k.signature();
@@ -34,7 +35,7 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 ;
 ;
-const cn = (...classes)=>classes.filter(Boolean).join(" ");
+;
 const businessUnits = [
     "Product & Eng",
     "Growth & Mktg",
@@ -58,9 +59,8 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
     const [viewEmployee, setViewEmployee] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [editEmployee, setEditEmployee] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const [deleteEmployee, setDeleteEmployee] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const totalRecords = pagination?.total || 128;
-    const currentPage = pagination?.page || 1;
-    console.log(employees);
+    const totalRecords = pagination?.total ?? 128;
+    const currentPage = pagination?.page ?? 1;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "p-4 md:p-8 space-y-6 max-w-[1600px] mx-auto bg-white min-h-screen",
         children: [
@@ -74,7 +74,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                 children: "Employee Directory"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 67,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -85,13 +85,13 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 68,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 66,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -104,14 +104,14 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                         className: "w-4 h-4"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 72,
+                                        lineNumber: 78,
                                         columnNumber: 13
                                     }, this),
                                     " Export"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 71,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -122,26 +122,26 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                         className: "w-4 h-4"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 78,
+                                        lineNumber: 84,
                                         columnNumber: 13
                                     }, this),
                                     " Add Employee"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 74,
+                                lineNumber: 80,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 70,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 65,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -149,7 +149,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                 children: error
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 84,
+                lineNumber: 90,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -171,7 +171,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         className: "w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 101,
+                                                        lineNumber: 106,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -180,13 +180,13 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         className: "w-full pl-9 pr-3 py-2 bg-slate-50/50 border border-slate-200 rounded-md text-sm focus:outline-none focus:border-blue-500 transition-all placeholder:text-slate-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 102,
+                                                        lineNumber: 107,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 100,
+                                                lineNumber: 105,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -204,26 +204,26 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                         className: "w-4 h-4 text-slate-400"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                        lineNumber: 115,
+                                                                        lineNumber: 120,
                                                                         columnNumber: 35
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 111,
+                                                                lineNumber: 116,
                                                                 columnNumber: 19
                                                             }, this),
                                                             openDeptPopover && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DeptPopover, {
                                                                 onClose: ()=>setOpenDeptPopover(false)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 117,
+                                                                lineNumber: 122,
                                                                 columnNumber: 39
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 110,
+                                                        lineNumber: 115,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -234,13 +234,13 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                 className: "w-4 h-4 text-slate-400"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 120,
+                                                                lineNumber: 125,
                                                                 columnNumber: 31
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 119,
+                                                        lineNumber: 124,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -251,24 +251,24 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                             className: "w-[18px] h-[18px]"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 127,
+                                                            lineNumber: 132,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 122,
+                                                        lineNumber: 127,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 109,
+                                                lineNumber: 114,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 104,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -282,14 +282,14 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         className: "rounded border-slate-300 w-3.5 h-3.5 text-blue-600 focus:ring-blue-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 135,
+                                                        lineNumber: 140,
                                                         columnNumber: 17
                                                     }, this),
                                                     " Active Only"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 134,
+                                                lineNumber: 139,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -300,21 +300,21 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         className: "rounded border-slate-300 w-3.5 h-3.5 text-blue-600 focus:ring-blue-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 138,
+                                                        lineNumber: 143,
                                                         columnNumber: 17
                                                     }, this),
                                                     " Remote Only"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 137,
+                                                lineNumber: 142,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "hidden sm:block w-px h-4 bg-slate-200 mx-1"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 141,
+                                                lineNumber: 146,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -325,7 +325,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         children: "Employment:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 144,
+                                                        lineNumber: 149,
                                                         columnNumber: 17
                                                     }, this),
                                                     [
@@ -337,25 +337,25 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                             children: t
                                                         }, t, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 146,
+                                                            lineNumber: 151,
                                                             columnNumber: 19
                                                         }, this))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 143,
+                                                lineNumber: 148,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 138,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 96,
+                                lineNumber: 102,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -376,7 +376,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                 children: "Employee"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 160,
+                                                                lineNumber: 165,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -384,7 +384,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                 children: "Department"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 161,
+                                                                lineNumber: 166,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -392,7 +392,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                 children: "Role"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 162,
+                                                                lineNumber: 167,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -400,7 +400,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                 children: "Status"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 163,
+                                                                lineNumber: 168,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -408,18 +408,18 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                 children: "Actions"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 164,
+                                                                lineNumber: 169,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 159,
+                                                        lineNumber: 164,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                    lineNumber: 158,
+                                                    lineNumber: 163,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -431,12 +431,12 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                             children: "Loading directory..."
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 169,
+                                                            lineNumber: 174,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 169,
+                                                        lineNumber: 174,
                                                         columnNumber: 21
                                                     }, this) : employees.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -445,12 +445,12 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                             children: "No employees found."
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 171,
+                                                            lineNumber: 176,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 171,
+                                                        lineNumber: 176,
                                                         columnNumber: 21
                                                     }, this) : employees.map((e)=>{
                                                         const isActive = e.employmentStatus === "ACTIVE";
@@ -468,12 +468,12 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                                     className: "w-5 h-5 text-slate-300"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                    lineNumber: 180,
+                                                                                    lineNumber: 185,
                                                                                     columnNumber: 33
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                lineNumber: 179,
+                                                                                lineNumber: 184,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -488,7 +488,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                                         ]
                                                                                     }, void 0, true, {
                                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                        lineNumber: 183,
+                                                                                        lineNumber: 188,
                                                                                         columnNumber: 33
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -496,46 +496,31 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                                         children: e.email
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                        lineNumber: 184,
+                                                                                        lineNumber: 189,
                                                                                         columnNumber: 33
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                lineNumber: 182,
+                                                                                lineNumber: 187,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                        lineNumber: 178,
+                                                                        lineNumber: 183,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                    lineNumber: 177,
+                                                                    lineNumber: 182,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                     className: "px-6 py-4",
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                         className: "text-[12px] font-bold text-blue-600/90 tracking-wide uppercase",
-                                                                        children: e.department?.name || "ENGINEERING"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                        lineNumber: 189,
-                                                                        columnNumber: 29
-                                                                    }, this)
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                    lineNumber: 188,
-                                                                    columnNumber: 27
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
-                                                                    className: "px-6 py-4",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: "text-[14px] text-slate-600",
-                                                                        children: e.jobTitle || "Senior Developer"
+                                                                        children: e.department?.name ?? "ENGINEERING"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
                                                                         lineNumber: 194,
@@ -549,18 +534,9 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
                                                                     className: "px-6 py-4",
                                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                        className: cn("inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase", isActive ? "bg-blue-50 text-blue-700" : "bg-slate-100 text-slate-600"),
-                                                                        children: [
-                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                                className: cn("w-1.5 h-1.5 rounded-full", isActive ? "bg-blue-600" : "bg-slate-400")
-                                                                            }, void 0, false, {
-                                                                                fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                lineNumber: 203,
-                                                                                columnNumber: 31
-                                                                            }, this),
-                                                                            e.employmentStatus || "ACTIVE"
-                                                                        ]
-                                                                    }, void 0, true, {
+                                                                        className: "text-[14px] text-slate-600",
+                                                                        children: e.jobTitle ?? "Senior Developer"
+                                                                    }, void 0, false, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
                                                                         lineNumber: 199,
                                                                         columnNumber: 29
@@ -568,6 +544,30 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
                                                                     lineNumber: 198,
+                                                                    columnNumber: 27
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                                    className: "px-6 py-4",
+                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wide uppercase", isActive ? "bg-blue-50 text-blue-700" : "bg-slate-100 text-slate-600"),
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-1.5 h-1.5 rounded-full", isActive ? "bg-blue-600" : "bg-slate-400")
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
+                                                                                lineNumber: 208,
+                                                                                columnNumber: 31
+                                                                            }, this),
+                                                                            e.employmentStatus ?? "ACTIVE"
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
+                                                                        lineNumber: 204,
+                                                                        columnNumber: 29
+                                                                    }, this)
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
+                                                                    lineNumber: 203,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -583,12 +583,12 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                                     className: "w-[18px] h-[18px]"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                    lineNumber: 210,
+                                                                                    lineNumber: 215,
                                                                                     columnNumber: 33
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                lineNumber: 209,
+                                                                                lineNumber: 214,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -599,12 +599,12 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                                     className: "w-[18px] h-[18px]"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                    lineNumber: 213,
+                                                                                    lineNumber: 218,
                                                                                     columnNumber: 33
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                lineNumber: 212,
+                                                                                lineNumber: 217,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -615,46 +615,46 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                                                     className: "w-[18px] h-[18px]"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                    lineNumber: 216,
+                                                                                    lineNumber: 221,
                                                                                     columnNumber: 33
                                                                                 }, this)
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                                lineNumber: 215,
+                                                                                lineNumber: 220,
                                                                                 columnNumber: 31
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                        lineNumber: 208,
+                                                                        lineNumber: 213,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                    lineNumber: 207,
+                                                                    lineNumber: 212,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, e.id, true, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 176,
+                                                            lineNumber: 181,
                                                             columnNumber: 25
                                                         }, this);
                                                     })
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                    lineNumber: 167,
+                                                    lineNumber: 172,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 157,
+                                            lineNumber: 162,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 156,
+                                        lineNumber: 161,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -669,7 +669,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 230,
+                                                lineNumber: 235,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -683,12 +683,12 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                             className: "w-4 h-4 rotate-90"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 240,
+                                                            lineNumber: 245,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 235,
+                                                        lineNumber: 240,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -696,7 +696,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         children: "1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 243,
+                                                        lineNumber: 248,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -704,7 +704,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         children: "2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 244,
+                                                        lineNumber: 249,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -712,7 +712,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         children: "3"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 245,
+                                                        lineNumber: 250,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -720,7 +720,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         children: "..."
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 246,
+                                                        lineNumber: 251,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -728,7 +728,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                         children: "13"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 247,
+                                                        lineNumber: 252,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -739,36 +739,36 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                             className: "w-4 h-4 -rotate-90"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 254,
+                                                            lineNumber: 259,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 249,
+                                                        lineNumber: 254,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 234,
+                                                lineNumber: 239,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 229,
+                                        lineNumber: 234,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 155,
+                                lineNumber: 160,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 93,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -780,14 +780,14 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                 trend: "+2%"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 263,
+                                lineNumber: 268,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "h-px w-full bg-slate-100"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 264,
+                                lineNumber: 269,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(MetricCard, {
@@ -797,14 +797,14 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                 trendTone: "muted"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 265,
+                                lineNumber: 270,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "h-px w-full bg-slate-100"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 266,
+                                lineNumber: 271,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -815,7 +815,7 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                         children: "HEALTH INDEX"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 269,
+                                        lineNumber: 274,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -826,135 +826,75 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                                                 children: "4.8"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 271,
+                                                lineNumber: 276,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex text-[#1C4ED8]",
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                    ...Array(5)
+                                                ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                                         className: "w-4 h-4 fill-current",
                                                         viewBox: "0 0 20 20",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
                                                             d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 273,
-                                                            columnNumber: 75
+                                                            lineNumber: 280,
+                                                            columnNumber: 21
                                                         }, this)
-                                                    }, void 0, false, {
+                                                    }, i, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 273,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                        className: "w-4 h-4 fill-current",
-                                                        viewBox: "0 0 20 20",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                            d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 274,
-                                                            columnNumber: 75
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 274,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                        className: "w-4 h-4 fill-current",
-                                                        viewBox: "0 0 20 20",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                            d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 275,
-                                                            columnNumber: 75
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 275,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                        className: "w-4 h-4 fill-current",
-                                                        viewBox: "0 0 20 20",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                            d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 276,
-                                                            columnNumber: 75
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 276,
-                                                        columnNumber: 17
-                                                    }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                        className: "w-4 h-4 fill-current",
-                                                        viewBox: "0 0 20 20",
-                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                            d: "M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 277,
-                                                            columnNumber: 75
-                                                        }, this)
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 277,
-                                                        columnNumber: 17
-                                                    }, this)
-                                                ]
-                                            }, void 0, true, {
+                                                        lineNumber: 279,
+                                                        columnNumber: 19
+                                                    }, this))
+                                            }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 272,
+                                                lineNumber: 277,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 270,
+                                        lineNumber: 275,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 268,
+                                lineNumber: 273,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 262,
+                        lineNumber: 267,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 90,
+                lineNumber: 96,
                 columnNumber: 7
             }, this),
             openFilter && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FilterDrawer, {
                 onClose: ()=>setOpenFilter(false)
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 284,
+                lineNumber: 289,
                 columnNumber: 22
             }, this),
             viewEmployee && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ViewProfileDrawer, {
                 employee: viewEmployee,
                 onClose: ()=>setViewEmployee(null),
                 onEdit: ()=>{
-                    setViewEmployee(null);
                     setEditEmployee(viewEmployee);
+                    setViewEmployee(null);
                 }
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 285,
-                columnNumber: 24
+                lineNumber: 291,
+                columnNumber: 9
             }, this),
             editEmployee && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(EditEmployeeModal, {
                 employee: editEmployee,
@@ -962,8 +902,8 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                 onSuccess: onRefresh
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 286,
-                columnNumber: 24
+                lineNumber: 298,
+                columnNumber: 9
             }, this),
             deleteEmployee && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DeleteConfirmModal, {
                 employee: deleteEmployee,
@@ -971,8 +911,8 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                 onSuccess: onRefresh
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 287,
-                columnNumber: 26
+                lineNumber: 305,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AddEmployeeModal, {
                 isOpen: openAddWizard,
@@ -980,13 +920,13 @@ function EmployeeDirectoryScreen({ employees, pagination, isLoading, error, onPa
                 onSuccess: onRefresh
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 288,
+                lineNumber: 311,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-        lineNumber: 63,
+        lineNumber: 69,
         columnNumber: 5
     }, this);
 }
@@ -1004,7 +944,7 @@ function MetricCard({ label, value, trend, trendTone = "positive" }) {
                 children: label
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 300,
+                lineNumber: 333,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1015,49 +955,50 @@ function MetricCard({ label, value, trend, trendTone = "positive" }) {
                         children: value
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 302,
+                        lineNumber: 335,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: cn("text-[12px] font-semibold mb-1", trendTone === "positive" ? "text-[#1C4ED8]" : "text-slate-400 font-medium"),
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-[12px] font-semibold mb-1", trendTone === "positive" ? "text-[#1C4ED8]" : "text-slate-400 font-medium"),
                         children: [
                             trendTone === "positive" && "↗ ",
                             trend
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 303,
+                        lineNumber: 336,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 301,
+                lineNumber: 334,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-        lineNumber: 299,
+        lineNumber: 332,
         columnNumber: 5
     }, this);
 }
 _c1 = MetricCard;
+const EMPTY_FORM = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    gender: "MALE",
+    jobTitle: "",
+    departmentId: "",
+    employmentType: "FULL_TIME",
+    salary: "",
+    currency: "USD"
+};
 function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
     _s1();
     const [currentStep, setCurrentStep] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
-    const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        gender: "MALE",
-        jobTitle: "",
-        departmentId: "",
-        employmentType: "FULL_TIME",
-        salary: "",
-        currency: "USD"
-    });
+    const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(EMPTY_FORM);
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"])();
     const createMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMutation"])({
         mutationFn: {
@@ -1078,18 +1019,7 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
     if (!isOpen) return null;
     const handleClose = ()=>{
         setCurrentStep(1);
-        setFormData({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phone: "",
-            gender: "MALE",
-            jobTitle: "",
-            departmentId: "",
-            employmentType: "FULL_TIME",
-            salary: "",
-            currency: "USD"
-        });
+        setFormData(EMPTY_FORM);
         onClose();
     };
     const handleNext = ()=>{
@@ -1104,6 +1034,13 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
             });
         }
     };
+    const field = (key)=>({
+            value: formData[key],
+            onChange: (e)=>setFormData((prev)=>({
+                        ...prev,
+                        [key]: e.target.value
+                    }))
+        });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4",
         children: [
@@ -1112,7 +1049,7 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                 onClick: handleClose
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 358,
+                lineNumber: 417,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1130,7 +1067,7 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                             children: "360DegreesHR"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 363,
+                                            lineNumber: 422,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1138,13 +1075,13 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                             children: "Onboarding System"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 364,
+                                            lineNumber: 423,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 362,
+                                    lineNumber: 421,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1154,7 +1091,7 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                             className: "absolute left-[15px] top-2 bottom-2 w-[2px] bg-slate-200"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 367,
+                                            lineNumber: 426,
                                             columnNumber: 15
                                         }, this),
                                         [
@@ -1165,76 +1102,76 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                 className: "relative flex items-center gap-3",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: cn("w-4 h-4 rounded-full flex items-center justify-center z-10 transition-all", currentStep === step ? "bg-white border-2 border-blue-600 ring-4 ring-blue-50" : currentStep > step ? "bg-blue-600 border-2 border-blue-600" : "bg-slate-200 border-2 border-slate-200"),
+                                                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-4 h-4 rounded-full flex items-center justify-center z-10 transition-all", currentStep === step ? "bg-white border-2 border-blue-600 ring-4 ring-blue-50" : currentStep > step ? "bg-blue-600 border-2 border-blue-600" : "bg-slate-200 border-2 border-slate-200"),
                                                         children: [
                                                             currentStep > step && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-1.5 h-1.5 bg-white rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 371,
+                                                                lineNumber: 437,
                                                                 columnNumber: 44
                                                             }, this),
                                                             currentStep === step && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                                 className: "w-1.5 h-1.5 bg-blue-600 rounded-full"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 372,
+                                                                lineNumber: 438,
                                                                 columnNumber: 46
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 370,
+                                                        lineNumber: 429,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: cn("text-[10px] font-bold uppercase tracking-wide leading-none", currentStep === step ? "text-blue-600" : "text-slate-400"),
+                                                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-[10px] font-bold uppercase tracking-wide leading-none", currentStep === step ? "text-blue-600" : "text-slate-400"),
                                                                 children: [
                                                                     "Step 0",
                                                                     step
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 375,
+                                                                lineNumber: 441,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: cn("text-xs mt-0.5", currentStep === step ? "font-bold text-blue-900" : "font-semibold text-slate-500"),
+                                                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-xs mt-0.5", currentStep === step ? "font-bold text-blue-900" : "font-semibold text-slate-500"),
                                                                 children: step === 1 ? "Personal Info" : step === 2 ? "Job Details" : "Payroll & Benefits"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 376,
+                                                                lineNumber: 442,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 374,
+                                                        lineNumber: 440,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, step, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 369,
+                                                lineNumber: 428,
                                                 columnNumber: 17
                                             }, this))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 366,
+                                    lineNumber: 425,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                            lineNumber: 361,
+                            lineNumber: 420,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 360,
+                        lineNumber: 419,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1250,12 +1187,12 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                             className: "w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 389,
+                                            lineNumber: 455,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 388,
+                                        lineNumber: 454,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1267,13 +1204,13 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 391,
+                                        lineNumber: 457,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 387,
+                                lineNumber: 453,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1293,27 +1230,23 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "First Name"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 403,
+                                                                lineNumber: 469,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                                 type: "text",
-                                                                value: formData.firstName,
-                                                                onChange: (e)=>setFormData({
-                                                                        ...formData,
-                                                                        firstName: e.target.value
-                                                                    }),
+                                                                ...field("firstName"),
                                                                 placeholder: "Marcus",
                                                                 className: "w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 404,
+                                                                lineNumber: 470,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 402,
+                                                        lineNumber: 468,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1324,33 +1257,29 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "Last Name"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 407,
+                                                                lineNumber: 473,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                                 type: "text",
-                                                                value: formData.lastName,
-                                                                onChange: (e)=>setFormData({
-                                                                        ...formData,
-                                                                        lastName: e.target.value
-                                                                    }),
+                                                                ...field("lastName"),
                                                                 placeholder: "Chen",
                                                                 className: "w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 408,
+                                                                lineNumber: 474,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 406,
+                                                        lineNumber: 472,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 401,
+                                                lineNumber: 467,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1364,27 +1293,23 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "Corporate Email"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 413,
+                                                                lineNumber: 479,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                                 type: "email",
-                                                                value: formData.email,
-                                                                onChange: (e)=>setFormData({
-                                                                        ...formData,
-                                                                        email: e.target.value
-                                                                    }),
+                                                                ...field("email"),
                                                                 placeholder: "m.chen@360hr.com",
                                                                 className: "w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 414,
+                                                                lineNumber: 480,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 412,
+                                                        lineNumber: 478,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1395,39 +1320,35 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "Mobile Number"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 417,
+                                                                lineNumber: 483,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                                 type: "text",
-                                                                value: formData.phone,
-                                                                onChange: (e)=>setFormData({
-                                                                        ...formData,
-                                                                        phone: e.target.value
-                                                                    }),
+                                                                ...field("phone"),
                                                                 placeholder: "+234...",
                                                                 className: "w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 418,
+                                                                lineNumber: 484,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 416,
+                                                        lineNumber: 482,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 411,
+                                                lineNumber: 477,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 400,
+                                        lineNumber: 466,
                                         columnNumber: 15
                                     }, this),
                                     currentStep === 2 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1444,27 +1365,23 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "Department ID (UUID)"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 428,
+                                                                lineNumber: 494,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                                 type: "text",
-                                                                value: formData.departmentId,
-                                                                onChange: (e)=>setFormData({
-                                                                        ...formData,
-                                                                        departmentId: e.target.value
-                                                                    }),
+                                                                ...field("departmentId"),
                                                                 placeholder: "e.g. 7e1f9d...",
                                                                 className: "w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 429,
+                                                                lineNumber: 495,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 427,
+                                                        lineNumber: 493,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1475,33 +1392,29 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "Official Role Title"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 432,
+                                                                lineNumber: 498,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                                 type: "text",
-                                                                value: formData.jobTitle,
-                                                                onChange: (e)=>setFormData({
-                                                                        ...formData,
-                                                                        jobTitle: e.target.value
-                                                                    }),
+                                                                ...field("jobTitle"),
                                                                 placeholder: "Lead Architect",
                                                                 className: "w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 433,
+                                                                lineNumber: 499,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 431,
+                                                        lineNumber: 497,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 426,
+                                                lineNumber: 492,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1512,7 +1425,7 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                         children: "Employment Classification"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 437,
+                                                        lineNumber: 503,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1523,39 +1436,39 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                             "INTERN"
                                                         ].map((type)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                                 type: "button",
-                                                                onClick: ()=>setFormData({
-                                                                        ...formData,
-                                                                        employmentType: type
-                                                                    }),
-                                                                className: cn("flex flex-col items-center justify-center p-3.5 rounded-xl border text-center transition-all gap-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500", formData.employmentType === type ? "border-blue-600 bg-blue-50 text-blue-600 ring-1 ring-blue-600" : "border-slate-200 bg-slate-50 text-slate-500 hover:bg-slate-100"),
+                                                                onClick: ()=>setFormData((prev)=>({
+                                                                            ...prev,
+                                                                            employmentType: type
+                                                                        })),
+                                                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("flex flex-col items-center justify-center p-3.5 rounded-xl border text-center transition-all gap-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500", formData.employmentType === type ? "border-blue-600 bg-blue-50 text-blue-600 ring-1 ring-blue-600" : "border-slate-200 bg-slate-50 text-slate-500 hover:bg-slate-100"),
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                     className: "text-xs font-bold",
                                                                     children: type.replace("_", " ")
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                    lineNumber: 446,
+                                                                    lineNumber: 517,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             }, type, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 440,
+                                                                lineNumber: 506,
                                                                 columnNumber: 23
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 438,
+                                                        lineNumber: 504,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 436,
+                                                lineNumber: 502,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 425,
+                                        lineNumber: 491,
                                         columnNumber: 15
                                     }, this),
                                     currentStep === 3 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1572,27 +1485,23 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "Base Salary Value"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 458,
+                                                                lineNumber: 529,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                                 type: "number",
-                                                                value: formData.salary,
-                                                                onChange: (e)=>setFormData({
-                                                                        ...formData,
-                                                                        salary: e.target.value
-                                                                    }),
+                                                                ...field("salary"),
                                                                 placeholder: "85000",
                                                                 className: "w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 459,
+                                                                lineNumber: 530,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 457,
+                                                        lineNumber: 528,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1603,15 +1512,11 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "Currency"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 462,
+                                                                lineNumber: 533,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
-                                                                value: formData.currency,
-                                                                onChange: (e)=>setFormData({
-                                                                        ...formData,
-                                                                        currency: e.target.value
-                                                                    }),
+                                                                ...field("currency"),
                                                                 className: "w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs focus:outline-none focus:ring-2 focus:ring-blue-500",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1619,7 +1524,7 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                         children: "USD ($)"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                        lineNumber: 464,
+                                                                        lineNumber: 535,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -1627,25 +1532,25 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                         children: "NGN (₦)"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                        lineNumber: 465,
+                                                                        lineNumber: 536,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 463,
+                                                                lineNumber: 534,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 461,
+                                                        lineNumber: 532,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 456,
+                                                lineNumber: 527,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1655,7 +1560,7 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                         className: "w-4 h-4 text-amber-600 shrink-0 mt-0.5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 470,
+                                                        lineNumber: 541,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1665,7 +1570,7 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "Ready for Provisioning"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 472,
+                                                                lineNumber: 543,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1673,31 +1578,31 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                                 children: "Submitting will execute the API POST request to save the workforce record."
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 473,
+                                                                lineNumber: 544,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 471,
+                                                        lineNumber: 542,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 469,
+                                                lineNumber: 540,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 455,
+                                        lineNumber: 526,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 398,
+                                lineNumber: 464,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1713,14 +1618,14 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                 className: "w-3.5 h-3.5"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 482,
+                                                lineNumber: 558,
                                                 columnNumber: 15
                                             }, this),
                                             " Back Step"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 481,
+                                        lineNumber: 552,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1733,7 +1638,7 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 485,
+                                                lineNumber: 561,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1747,53 +1652,54 @@ function AddEmployeeModal({ isOpen, onClose, onSuccess }) {
                                                         className: "w-3.5 h-3.5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 488,
+                                                        lineNumber: 569,
                                                         columnNumber: 47
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 486,
+                                                lineNumber: 562,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 484,
+                                        lineNumber: 560,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 480,
+                                lineNumber: 551,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 386,
+                        lineNumber: 452,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 359,
+                lineNumber: 418,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-        lineNumber: 357,
+        lineNumber: 416,
         columnNumber: 5
     }, this);
 }
-_s1(AddEmployeeModal, "8TtOiB8BQ1LbpAAlUebCFBdZv78=", false, function() {
+_s1(AddEmployeeModal, "Bhhadrpt+v0t5AbE/EQtGXhYX44=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMutation"]
     ];
 });
 _c2 = AddEmployeeModal;
+// ─── Department Popover ───────────────────────────────────────────────────────
 function DeptPopover({ onClose }) {
     _s2();
     const [active, setActive] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
@@ -1812,7 +1718,7 @@ function DeptPopover({ onClose }) {
                             className: "w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                            lineNumber: 505,
+                            lineNumber: 588,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1820,18 +1726,18 @@ function DeptPopover({ onClose }) {
                             className: "w-full pl-10 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                            lineNumber: 506,
+                            lineNumber: 589,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                    lineNumber: 504,
+                    lineNumber: 587,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 503,
+                lineNumber: 586,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1842,21 +1748,21 @@ function DeptPopover({ onClose }) {
                         children: businessUnits.map((u, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: ()=>setActive(i),
-                                    className: cn("w-full text-left px-4 py-2.5 text-sm", active === i ? "bg-blue-50 text-blue-600 font-medium" : "text-slate-700 hover:bg-slate-50"),
+                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-full text-left px-4 py-2.5 text-sm", active === i ? "bg-blue-50 text-blue-600 font-medium" : "text-slate-700 hover:bg-slate-50"),
                                     children: u
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 513,
+                                    lineNumber: 596,
                                     columnNumber: 15
                                 }, this)
                             }, u, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 512,
+                                lineNumber: 595,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 510,
+                        lineNumber: 593,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1867,7 +1773,7 @@ function DeptPopover({ onClose }) {
                                 children: "Departments"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 520,
+                                lineNumber: 603,
                                 columnNumber: 11
                             }, this),
                             departments.map((d)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -1883,26 +1789,26 @@ function DeptPopover({ onClose }) {
                                             className: "rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 523,
+                                            lineNumber: 606,
                                             columnNumber: 15
                                         }, this),
                                         d
                                     ]
                                 }, d, true, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 522,
+                                    lineNumber: 605,
                                     columnNumber: 13
                                 }, this))
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 519,
+                        lineNumber: 602,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 509,
+                lineNumber: 592,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1914,7 +1820,7 @@ function DeptPopover({ onClose }) {
                         children: "Clear All"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 530,
+                        lineNumber: 618,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1923,24 +1829,25 @@ function DeptPopover({ onClose }) {
                         children: "Apply Filter"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 531,
+                        lineNumber: 619,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 529,
+                lineNumber: 617,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-        lineNumber: 502,
+        lineNumber: 585,
         columnNumber: 5
     }, this);
 }
 _s2(DeptPopover, "Helf5aU7EC33S0r+FeLXWHz8z+8=");
 _c3 = DeptPopover;
+// ─── Filter Drawer ────────────────────────────────────────────────────────────
 function FilterDrawer({ onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 z-50",
@@ -1950,7 +1857,7 @@ function FilterDrawer({ onClose }) {
                 onClick: onClose
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 540,
+                lineNumber: 630,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -1966,7 +1873,7 @@ function FilterDrawer({ onClose }) {
                                         children: "Filter Settings"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 544,
+                                        lineNumber: 634,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1974,13 +1881,13 @@ function FilterDrawer({ onClose }) {
                                         children: "Refine your directory view"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 545,
+                                        lineNumber: 635,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 543,
+                                lineNumber: 633,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1990,18 +1897,18 @@ function FilterDrawer({ onClose }) {
                                     className: "w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 547,
+                                    lineNumber: 637,
                                     columnNumber: 89
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 547,
+                                lineNumber: 637,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 542,
+                        lineNumber: 632,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2013,7 +1920,7 @@ function FilterDrawer({ onClose }) {
                                     children: "Employment Type"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 551,
+                                    lineNumber: 641,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2040,7 +1947,7 @@ function FilterDrawer({ onClose }) {
                                                     className: "rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                    lineNumber: 555,
+                                                    lineNumber: 645,
                                                     columnNumber: 19
                                                 }, this),
                                                 " ",
@@ -2048,23 +1955,23 @@ function FilterDrawer({ onClose }) {
                                             ]
                                         }, o.label, true, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 554,
+                                            lineNumber: 644,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 552,
+                                    lineNumber: 642,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                            lineNumber: 550,
+                            lineNumber: 640,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 549,
+                        lineNumber: 639,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -2075,7 +1982,7 @@ function FilterDrawer({ onClose }) {
                                 children: "Reset"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 562,
+                                lineNumber: 652,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2084,29 +1991,30 @@ function FilterDrawer({ onClose }) {
                                 children: "Apply Filters"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 563,
+                                lineNumber: 653,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 561,
+                        lineNumber: 651,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 541,
+                lineNumber: 631,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-        lineNumber: 539,
+        lineNumber: 629,
         columnNumber: 5
     }, this);
 }
 _c4 = FilterDrawer;
+// ─── View Profile Drawer ──────────────────────────────────────────────────────
 function ViewProfileDrawer({ employee, onClose, onEdit }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 z-50",
@@ -2116,7 +2024,7 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                 onClick: onClose
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 573,
+                lineNumber: 673,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -2132,12 +2040,12 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                     className: "w-5 h-5"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 576,
+                                    lineNumber: 676,
                                     columnNumber: 85
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 576,
+                                lineNumber: 676,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2149,7 +2057,7 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                         children: "Edit Profile"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 578,
+                                        lineNumber: 678,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2157,19 +2065,19 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                         children: "Download CV"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 579,
+                                        lineNumber: 679,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 577,
+                                lineNumber: 677,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 575,
+                        lineNumber: 675,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2189,21 +2097,21 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 585,
+                                                lineNumber: 685,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-blue-600 text-white text-[10px] font-semibold tracking-wider uppercase",
-                                                children: employee.employmentStatus || "ACTIVE"
+                                                children: employee.employmentStatus ?? "ACTIVE"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 588,
+                                                lineNumber: 688,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 584,
+                                        lineNumber: 684,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2218,15 +2126,15 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 593,
+                                                lineNumber: 693,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-blue-600 font-medium",
-                                                children: employee.jobTitle || "No title set"
+                                                children: employee.jobTitle ?? "No title set"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 594,
+                                                lineNumber: 694,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2238,32 +2146,32 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                                             className: "w-3 h-3"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 596,
-                                                            columnNumber: 66
+                                                            lineNumber: 697,
+                                                            columnNumber: 19
                                                         }, this),
                                                         " Dept: ",
-                                                        employee.department?.name || "N/A"
+                                                        employee.department?.name ?? "N/A"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                    lineNumber: 596,
+                                                    lineNumber: 696,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 595,
+                                                lineNumber: 695,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 592,
+                                        lineNumber: 692,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 583,
+                                lineNumber: 683,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2275,7 +2183,7 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                             children: "Direct Contact"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 602,
+                                            lineNumber: 704,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2288,7 +2196,7 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                                             className: "w-4 h-4 text-slate-400"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 604,
+                                                            lineNumber: 706,
                                                             columnNumber: 58
                                                         }, this),
                                                         " ",
@@ -2296,7 +2204,7 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                    lineNumber: 604,
+                                                    lineNumber: 706,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2306,61 +2214,62 @@ function ViewProfileDrawer({ employee, onClose, onEdit }) {
                                                             className: "w-4 h-4 text-slate-400"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                            lineNumber: 605,
+                                                            lineNumber: 707,
                                                             columnNumber: 58
                                                         }, this),
                                                         " ",
-                                                        employee.phone || "No phone provided"
+                                                        employee.phone ?? "No phone provided"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                    lineNumber: 605,
+                                                    lineNumber: 707,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 603,
+                                            lineNumber: 705,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 601,
+                                    lineNumber: 703,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 600,
+                                lineNumber: 702,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 582,
+                        lineNumber: 682,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 574,
+                lineNumber: 674,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-        lineNumber: 572,
+        lineNumber: 672,
         columnNumber: 5
     }, this);
 }
 _c5 = ViewProfileDrawer;
+// ─── Edit Employee Modal ──────────────────────────────────────────────────────
 function EditEmployeeModal({ employee, onClose, onSuccess }) {
     _s3();
     const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
-        firstName: employee.firstName || "",
-        lastName: employee.lastName || "",
-        jobTitle: employee.jobTitle || "",
-        employmentStatus: employee.employmentStatus || "ACTIVE"
+        firstName: employee.firstName,
+        lastName: employee.lastName,
+        jobTitle: employee.jobTitle ?? "",
+        employmentStatus: employee.employmentStatus
     });
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"])();
     const updateMutation = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMutation"])({
@@ -2387,7 +2296,7 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                 onClick: onClose
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 635,
+                lineNumber: 747,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2404,19 +2313,19 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                         className: "w-4 h-4"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 640,
+                                        lineNumber: 752,
                                         columnNumber: 15
                                     }, this),
                                     " Basic Info"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 639,
+                                lineNumber: 751,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                            lineNumber: 638,
+                            lineNumber: 750,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2432,7 +2341,7 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                     children: "Edit Employee Record"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                    lineNumber: 646,
+                                                    lineNumber: 758,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2445,13 +2354,13 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                    lineNumber: 647,
+                                                    lineNumber: 759,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 645,
+                                            lineNumber: 757,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2461,18 +2370,18 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                 className: "w-5 h-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 649,
+                                                lineNumber: 761,
                                                 columnNumber: 89
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                            lineNumber: 649,
+                                            lineNumber: 761,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 644,
+                                    lineNumber: 756,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2487,25 +2396,25 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                         children: "First Name"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 654,
+                                                        lineNumber: 766,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                         value: formData.firstName,
-                                                        onChange: (e)=>setFormData({
-                                                                ...formData,
-                                                                firstName: e.target.value
-                                                            }),
+                                                        onChange: (e)=>setFormData((prev)=>({
+                                                                    ...prev,
+                                                                    firstName: e.target.value
+                                                                })),
                                                         className: "w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 655,
+                                                        lineNumber: 767,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 653,
+                                                lineNumber: 765,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2515,25 +2424,25 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                         children: "Last Name"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 658,
+                                                        lineNumber: 774,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                         value: formData.lastName,
-                                                        onChange: (e)=>setFormData({
-                                                                ...formData,
-                                                                lastName: e.target.value
-                                                            }),
+                                                        onChange: (e)=>setFormData((prev)=>({
+                                                                    ...prev,
+                                                                    lastName: e.target.value
+                                                                })),
                                                         className: "w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 659,
+                                                        lineNumber: 775,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 657,
+                                                lineNumber: 773,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2543,25 +2452,25 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                         children: "Job Title"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 662,
+                                                        lineNumber: 782,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                         value: formData.jobTitle,
-                                                        onChange: (e)=>setFormData({
-                                                                ...formData,
-                                                                jobTitle: e.target.value
-                                                            }),
+                                                        onChange: (e)=>setFormData((prev)=>({
+                                                                    ...prev,
+                                                                    jobTitle: e.target.value
+                                                                })),
                                                         className: "w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 663,
+                                                        lineNumber: 783,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 661,
+                                                lineNumber: 781,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2571,15 +2480,15 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                         children: "Status"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 666,
+                                                        lineNumber: 790,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                         value: formData.employmentStatus,
-                                                        onChange: (e)=>setFormData({
-                                                                ...formData,
-                                                                employmentStatus: e.target.value
-                                                            }),
+                                                        onChange: (e)=>setFormData((prev)=>({
+                                                                    ...prev,
+                                                                    employmentStatus: e.target.value
+                                                                })),
                                                         className: "w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2587,7 +2496,7 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                                 children: "Active"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 668,
+                                                                lineNumber: 796,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -2595,30 +2504,30 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                                 children: "Terminated"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                                lineNumber: 669,
+                                                                lineNumber: 797,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                        lineNumber: 667,
+                                                        lineNumber: 791,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 665,
+                                                lineNumber: 789,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 652,
+                                        lineNumber: 764,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 651,
+                                    lineNumber: 763,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -2632,7 +2541,7 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                 children: "Cancel"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 676,
+                                                lineNumber: 804,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2642,51 +2551,52 @@ function EditEmployeeModal({ employee, onClose, onSuccess }) {
                                                 children: updateMutation.isPending ? "Saving..." : "Save Changes"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                                lineNumber: 677,
+                                                lineNumber: 805,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                        lineNumber: 675,
+                                        lineNumber: 803,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                    lineNumber: 674,
+                                    lineNumber: 802,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                            lineNumber: 643,
+                            lineNumber: 755,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                    lineNumber: 637,
+                    lineNumber: 749,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 636,
+                lineNumber: 748,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-        lineNumber: 634,
+        lineNumber: 746,
         columnNumber: 5
     }, this);
 }
-_s3(EditEmployeeModal, "NWRW8hO9cfPU7iQwxuzmUU8i1Kw=", false, function() {
+_s3(EditEmployeeModal, "QkM8WnzcqOZLIX6caxFTfRvrWZE=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useMutation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMutation"]
     ];
 });
 _c6 = EditEmployeeModal;
+// ─── Delete Confirm Modal ─────────────────────────────────────────────────────
 function DeleteConfirmModal({ employee, onClose, onSuccess }) {
     _s4();
     const queryClient = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$QueryClientProvider$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQueryClient"])();
@@ -2714,7 +2624,7 @@ function DeleteConfirmModal({ employee, onClose, onSuccess }) {
                 onClick: onClose
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 706,
+                lineNumber: 844,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2726,12 +2636,12 @@ function DeleteConfirmModal({ employee, onClose, onSuccess }) {
                             className: "w-7 h-7 text-red-500"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                            lineNumber: 709,
+                            lineNumber: 847,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 708,
+                        lineNumber: 846,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2739,7 +2649,7 @@ function DeleteConfirmModal({ employee, onClose, onSuccess }) {
                         children: "Delete Employee Record"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 711,
+                        lineNumber: 849,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2755,14 +2665,14 @@ function DeleteConfirmModal({ employee, onClose, onSuccess }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 713,
+                                lineNumber: 851,
                                 columnNumber: 43
                             }, this),
                             " record? This action will archive all historical data and cannot be undone."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 712,
+                        lineNumber: 850,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2775,7 +2685,7 @@ function DeleteConfirmModal({ employee, onClose, onSuccess }) {
                                 children: deleteMutation.isPending ? "Processing..." : "Confirm Delete"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 716,
+                                lineNumber: 854,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2784,25 +2694,25 @@ function DeleteConfirmModal({ employee, onClose, onSuccess }) {
                                 children: "Cancel"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                                lineNumber: 723,
+                                lineNumber: 861,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                        lineNumber: 715,
+                        lineNumber: 853,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-                lineNumber: 707,
+                lineNumber: 845,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx",
-        lineNumber: 705,
+        lineNumber: 843,
         columnNumber: 5
     }, this);
 }
@@ -2837,7 +2747,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$ne
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/@tanstack+react-query@5.100.14_react@19.2.4/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/artifacts/360-hr/src/lib/api.ts [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$session$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/artifacts/360-hr/src/lib/session.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$modules$2f$hris$2f$screens$2f$employee$2d$directory$2d$screen$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/artifacts/360-hr/src/modules/hris/screens/employee-directory-screen.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
@@ -2846,44 +2755,35 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-;
 function EmployeeDirectoryPage() {
     _s();
     const [page, setPage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
     const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const [token, setToken] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "EmployeeDirectoryPage.useEffect": ()=>{
-            setToken((0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$session$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getAccessToken"])());
-        }
-    }["EmployeeDirectoryPage.useEffect"], []);
     const { data, isLoading, isError, refetch } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
         queryKey: [
             "employees",
             page,
-            search,
-            token
+            search
         ],
-        enabled: !!token,
         queryFn: {
-            "EmployeeDirectoryPage.useQuery": ()=>__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["employeeApi"].getAllEmployees(token)
+            "EmployeeDirectoryPage.useQuery": ()=>__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["employeeApi"].getAll(page, 10, search || undefined)
         }["EmployeeDirectoryPage.useQuery"]
     });
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$modules$2f$hris$2f$screens$2f$employee$2d$directory$2d$screen$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["EmployeeDirectoryScreen"], {
-        employees: data?.employees || [],
-        pagination: data?.pagination,
+        employees: data?.employees ?? [],
+        pagination: data?.pagination ?? null,
         isLoading: isLoading,
         error: isError ? "Failed to load directory data. Please try again." : null,
         onPageChange: setPage,
         onSearch: setSearch,
-        onRefresh: ()=>{}
+        onRefresh: ()=>refetch()
     }, void 0, false, {
         fileName: "[project]/artifacts/360-hr/src/app/(protected)/hris/employee_directory/page.tsx",
-        lineNumber: 29,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
-_s(EmployeeDirectoryPage, "Uj2KlaQf8Bb4zHJ5D2HJ2jJ5A1c=", false, function() {
+_s(EmployeeDirectoryPage, "RQoc/RJWAHt1if6IwUGUg4JV++o=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"]
     ];
@@ -3077,6 +2977,7 @@ function OrgStructureScreen() {
         retry: 1
     });
     // ── Transform API → internal Department shape ──────────────────────────
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const transformDepartments = (depts)=>depts.map((dept)=>({
                 id: dept.id,
                 name: dept.name,
@@ -3095,12 +2996,14 @@ function OrgStructureScreen() {
                 openRoles: dept.openRoles
             }));
     // ── Resolve the list: real data → mock on error/empty ─────────────────
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const apiRows = Array.isArray(apiData) ? apiData : [];
     const units = (()=>{
         if (isLoading) return [];
-        if (isError || !apiData || apiData.length === 0) return MOCK_DEPARTMENTS;
-        return transformDepartments(apiData);
+        if (isError || apiRows.length === 0) return MOCK_DEPARTMENTS;
+        return transformDepartments(apiRows);
     })();
-    const isMockData = isError || !apiData || apiData?.length === 0;
+    const isMockData = isError || apiRows.length === 0;
     // ── UI state ───────────────────────────────────────────────────────────
     const [selectedId, setSelectedId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [sidebarOpen, setSidebarOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
@@ -3251,7 +3154,7 @@ function OrgStructureScreen() {
                         className: "mx-auto mb-4 h-8 w-8 animate-spin rounded-full border-4 border-indigo-200 border-t-indigo-600"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                        lineNumber: 308,
+                        lineNumber: 311,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3259,18 +3162,18 @@ function OrgStructureScreen() {
                         children: "Loading organisational structure…"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                        lineNumber: 309,
+                        lineNumber: 312,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                lineNumber: 307,
+                lineNumber: 310,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-            lineNumber: 306,
+            lineNumber: 309,
             columnNumber: 13
         }, this);
     }
@@ -3288,7 +3191,7 @@ function OrgStructureScreen() {
                                 className: "h-4 w-4 flex-shrink-0 text-amber-500"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 323,
+                                lineNumber: 326,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3298,20 +3201,20 @@ function OrgStructureScreen() {
                                         children: "demo data"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 325,
+                                        lineNumber: 328,
                                         columnNumber: 63
                                     }, this),
                                     ". Live data will load automatically once the connection is restored."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 324,
+                                lineNumber: 327,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                        lineNumber: 322,
+                        lineNumber: 325,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3324,7 +3227,7 @@ function OrgStructureScreen() {
                                         children: "Org Structure"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 333,
+                                        lineNumber: 336,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3332,13 +3235,13 @@ function OrgStructureScreen() {
                                         children: "Institutional hierarchy and operational layout"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 334,
+                                        lineNumber: 337,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 332,
+                                lineNumber: 335,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3352,14 +3255,14 @@ function OrgStructureScreen() {
                                                 className: "h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 343,
+                                                lineNumber: 346,
                                                 columnNumber: 29
                                             }, this),
                                             " Add Department"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 339,
+                                        lineNumber: 342,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3370,24 +3273,24 @@ function OrgStructureScreen() {
                                                 children: t
                                             }, t, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 347,
+                                                lineNumber: 350,
                                                 columnNumber: 33
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 345,
+                                        lineNumber: 348,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 338,
+                                lineNumber: 341,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                        lineNumber: 331,
+                        lineNumber: 334,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3423,7 +3326,7 @@ function OrgStructureScreen() {
                                         children: m.l
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 392,
+                                        lineNumber: 395,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3431,7 +3334,7 @@ function OrgStructureScreen() {
                                         children: m.v
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 395,
+                                        lineNumber: 398,
                                         columnNumber: 29
                                     }, this),
                                     m.trend ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3442,32 +3345,32 @@ function OrgStructureScreen() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 397,
+                                        lineNumber: 400,
                                         columnNumber: 33
                                     }, this) : m.pill ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "mt-3 inline-block rounded-full bg-rose-100 px-2.5 py-1 text-xs font-medium text-rose-700",
                                         children: m.s
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 399,
+                                        lineNumber: 402,
                                         columnNumber: 33
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         className: "mt-3 text-xs text-slate-500",
                                         children: m.s
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 403,
+                                        lineNumber: 406,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, m.l, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 388,
+                                lineNumber: 391,
                                 columnNumber: 25
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                        lineNumber: 363,
+                        lineNumber: 366,
                         columnNumber: 17
                     }, this),
                     activeTab === "Tree View" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3503,12 +3406,12 @@ function OrgStructureScreen() {
                                                                     className: "h-full w-full object-cover"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                    lineNumber: 436,
+                                                                    lineNumber: 439,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                lineNumber: 435,
+                                                                lineNumber: 438,
                                                                 columnNumber: 45
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3518,7 +3421,7 @@ function OrgStructureScreen() {
                                                                         children: "Marcus Sterling"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                        lineNumber: 443,
+                                                                        lineNumber: 446,
                                                                         columnNumber: 49
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3526,33 +3429,33 @@ function OrgStructureScreen() {
                                                                         children: "Chief Executive Officer"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                        lineNumber: 446,
+                                                                        lineNumber: 449,
                                                                         columnNumber: 49
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                lineNumber: 442,
+                                                                lineNumber: 445,
                                                                 columnNumber: 45
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 434,
+                                                        lineNumber: 437,
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "h-8 w-px bg-slate-300"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 451,
+                                                        lineNumber: 454,
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "h-px w-2/3 bg-slate-300"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 452,
+                                                        lineNumber: 455,
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3566,7 +3469,7 @@ function OrgStructureScreen() {
                                                                         className: "h-8 w-px bg-slate-300"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                        lineNumber: 461,
+                                                                        lineNumber: 464,
                                                                         columnNumber: 57
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3581,7 +3484,7 @@ function OrgStructureScreen() {
                                                                                 children: ICONS[u.iconKey ?? getIconKey(u.name)]
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                                lineNumber: 472,
+                                                                                lineNumber: 475,
                                                                                 columnNumber: 61
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3591,7 +3494,7 @@ function OrgStructureScreen() {
                                                                                         children: u.name
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                                        lineNumber: 481,
+                                                                                        lineNumber: 484,
                                                                                         columnNumber: 65
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3599,19 +3502,19 @@ function OrgStructureScreen() {
                                                                                         children: u.type
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                                        lineNumber: 484,
+                                                                                        lineNumber: 487,
                                                                                         columnNumber: 65
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                                lineNumber: 480,
+                                                                                lineNumber: 483,
                                                                                 columnNumber: 61
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                        lineNumber: 462,
+                                                                        lineNumber: 465,
                                                                         columnNumber: 57
                                                                     }, this),
                                                                     u.child && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -3620,7 +3523,7 @@ function OrgStructureScreen() {
                                                                                 className: "h-8 w-px bg-slate-300"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                                lineNumber: 491,
+                                                                                lineNumber: 494,
                                                                                 columnNumber: 65
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3631,7 +3534,7 @@ function OrgStructureScreen() {
                                                                                         children: u.child.name
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                                        lineNumber: 493,
+                                                                                        lineNumber: 496,
                                                                                         columnNumber: 69
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3639,13 +3542,13 @@ function OrgStructureScreen() {
                                                                                         children: u.child.members
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                                        lineNumber: 496,
+                                                                                        lineNumber: 499,
                                                                                         columnNumber: 69
                                                                                     }, this)
                                                                                 ]
                                                                             }, void 0, true, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                                lineNumber: 492,
+                                                                                lineNumber: 495,
                                                                                 columnNumber: 65
                                                                             }, this)
                                                                         ]
@@ -3653,24 +3556,24 @@ function OrgStructureScreen() {
                                                                 ]
                                                             }, u.id, true, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                lineNumber: 457,
+                                                                lineNumber: 460,
                                                                 columnNumber: 53
                                                             }, this);
                                                         })
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 453,
+                                                        lineNumber: 456,
                                                         columnNumber: 41
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 432,
+                                                lineNumber: 435,
                                                 columnNumber: 37
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                            lineNumber: 425,
+                                            lineNumber: 428,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3684,12 +3587,12 @@ function OrgStructureScreen() {
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 516,
+                                                        lineNumber: 519,
                                                         columnNumber: 41
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 511,
+                                                    lineNumber: 514,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3700,12 +3603,12 @@ function OrgStructureScreen() {
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 523,
+                                                        lineNumber: 526,
                                                         columnNumber: 41
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 518,
+                                                    lineNumber: 521,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3716,14 +3619,14 @@ function OrgStructureScreen() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 525,
+                                                    lineNumber: 528,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "h-5 w-px bg-slate-200"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 528,
+                                                    lineNumber: 531,
                                                     columnNumber: 37
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3734,18 +3637,18 @@ function OrgStructureScreen() {
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 534,
+                                                        lineNumber: 537,
                                                         columnNumber: 41
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 529,
+                                                    lineNumber: 532,
                                                     columnNumber: 37
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                            lineNumber: 510,
+                                            lineNumber: 513,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3755,25 +3658,25 @@ function OrgStructureScreen() {
                                                     className: "h-3.5 w-3.5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 538,
+                                                    lineNumber: 541,
                                                     columnNumber: 37
                                                 }, this),
                                                 " Drag to pan"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                            lineNumber: 537,
+                                            lineNumber: 540,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 416,
+                                    lineNumber: 419,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 415,
+                                lineNumber: 418,
                                 columnNumber: 25
                             }, this),
                             sidebarOpen && selected && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -3787,7 +3690,7 @@ function OrgStructureScreen() {
                                                 children: selected.type
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 546,
+                                                lineNumber: 549,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -3797,18 +3700,18 @@ function OrgStructureScreen() {
                                                     className: "h-5 w-5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 553,
+                                                    lineNumber: 556,
                                                     columnNumber: 41
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 549,
+                                                lineNumber: 552,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 545,
+                                        lineNumber: 548,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -3816,7 +3719,7 @@ function OrgStructureScreen() {
                                         children: selected.name
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 556,
+                                        lineNumber: 559,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3827,7 +3730,7 @@ function OrgStructureScreen() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 559,
+                                        lineNumber: 562,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3835,7 +3738,7 @@ function OrgStructureScreen() {
                                         children: "POSITION DETAILS"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 563,
+                                        lineNumber: 566,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3849,7 +3752,7 @@ function OrgStructureScreen() {
                                                         children: "Job Grade"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 568,
+                                                        lineNumber: 571,
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3857,13 +3760,13 @@ function OrgStructureScreen() {
                                                         children: selected.jobGrade ?? "L8 - Executive"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 571,
+                                                        lineNumber: 574,
                                                         columnNumber: 41
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 567,
+                                                lineNumber: 570,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3874,7 +3777,7 @@ function OrgStructureScreen() {
                                                         children: "Budget Cap"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 576,
+                                                        lineNumber: 579,
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3882,19 +3785,19 @@ function OrgStructureScreen() {
                                                         children: selected.budgetCap ?? "$480k/yr"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 579,
+                                                        lineNumber: 582,
                                                         columnNumber: 41
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 575,
+                                                lineNumber: 578,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 566,
+                                        lineNumber: 569,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3902,7 +3805,7 @@ function OrgStructureScreen() {
                                         children: "REPORTING LINE"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 585,
+                                        lineNumber: 588,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3914,12 +3817,12 @@ function OrgStructureScreen() {
                                                     className: "h-4 w-4 text-slate-600"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 590,
+                                                    lineNumber: 593,
                                                     columnNumber: 41
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 589,
+                                                lineNumber: 592,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3929,7 +3832,7 @@ function OrgStructureScreen() {
                                                         children: "Marcus Sterling"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 593,
+                                                        lineNumber: 596,
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3937,19 +3840,19 @@ function OrgStructureScreen() {
                                                         children: "Chief Executive Officer"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 596,
+                                                        lineNumber: 599,
                                                         columnNumber: 41
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 592,
+                                                lineNumber: 595,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 588,
+                                        lineNumber: 591,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3960,7 +3863,7 @@ function OrgStructureScreen() {
                                                 children: "CURRENT OCCUPANT"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 601,
+                                                lineNumber: 604,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3968,13 +3871,13 @@ function OrgStructureScreen() {
                                                 children: "Active"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 604,
+                                                lineNumber: 607,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 600,
+                                        lineNumber: 603,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3989,7 +3892,7 @@ function OrgStructureScreen() {
                                                         className: "h-10 w-10 rounded-full object-cover"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 610,
+                                                        lineNumber: 613,
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3999,7 +3902,7 @@ function OrgStructureScreen() {
                                                                 children: selected.headOfUnit ?? "Elena Vance"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                lineNumber: 619,
+                                                                lineNumber: 622,
                                                                 columnNumber: 45
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4007,19 +3910,19 @@ function OrgStructureScreen() {
                                                                 children: "Joined Jan 2021"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                lineNumber: 622,
+                                                                lineNumber: 625,
                                                                 columnNumber: 45
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 618,
+                                                        lineNumber: 621,
                                                         columnNumber: 41
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 609,
+                                                lineNumber: 612,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4028,18 +3931,18 @@ function OrgStructureScreen() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 626,
+                                                    lineNumber: 629,
                                                     columnNumber: 41
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 625,
+                                                lineNumber: 628,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 608,
+                                        lineNumber: 611,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4053,14 +3956,14 @@ function OrgStructureScreen() {
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 635,
+                                                        lineNumber: 638,
                                                         columnNumber: 41
                                                     }, this),
                                                     " Edit"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 631,
+                                                lineNumber: 634,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4071,20 +3974,20 @@ function OrgStructureScreen() {
                                                         className: "h-4 w-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 641,
+                                                        lineNumber: 644,
                                                         columnNumber: 41
                                                     }, this),
                                                     " Delete"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 637,
+                                                lineNumber: 640,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 630,
+                                        lineNumber: 633,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4092,19 +3995,19 @@ function OrgStructureScreen() {
                                         children: "View Unit Strategy →"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 644,
+                                        lineNumber: 647,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 544,
+                                lineNumber: 547,
                                 columnNumber: 29
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                        lineNumber: 411,
+                        lineNumber: 414,
                         columnNumber: 21
                     }, this),
                     activeTab === "List View (Hierarchy)" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4117,39 +4020,39 @@ function OrgStructureScreen() {
                                         children: "Unit / Department"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 656,
+                                        lineNumber: 659,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         children: "Head"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 657,
+                                        lineNumber: 660,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         children: "Members"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 658,
+                                        lineNumber: 661,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         children: "Status"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 659,
+                                        lineNumber: 662,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {}, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 660,
+                                        lineNumber: 663,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 655,
+                                lineNumber: 658,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4167,7 +4070,7 @@ function OrgStructureScreen() {
                                                         alt: ""
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 666,
+                                                        lineNumber: 669,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4177,7 +4080,7 @@ function OrgStructureScreen() {
                                                                 children: "Executive Office"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                lineNumber: 672,
+                                                                lineNumber: 675,
                                                                 columnNumber: 41
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4185,19 +4088,19 @@ function OrgStructureScreen() {
                                                                 children: "Top level"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                lineNumber: 675,
+                                                                lineNumber: 678,
                                                                 columnNumber: 41
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 671,
+                                                        lineNumber: 674,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 665,
+                                                lineNumber: 668,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4205,7 +4108,7 @@ function OrgStructureScreen() {
                                                 children: "Marcus Sterling"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 678,
+                                                lineNumber: 681,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4213,7 +4116,7 @@ function OrgStructureScreen() {
                                                 children: totalHeadcount
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 679,
+                                                lineNumber: 682,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4221,7 +4124,7 @@ function OrgStructureScreen() {
                                                 children: "Active"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 680,
+                                                lineNumber: 683,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4230,18 +4133,18 @@ function OrgStructureScreen() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 684,
+                                                    lineNumber: 687,
                                                     columnNumber: 37
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 683,
+                                                lineNumber: 686,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 664,
+                                        lineNumber: 667,
                                         columnNumber: 29
                                     }, this),
                                     units.map((u)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4257,7 +4160,7 @@ function OrgStructureScreen() {
                                                                     children: ICONS[u.iconKey ?? getIconKey(u.name)]
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                    lineNumber: 692,
+                                                                    lineNumber: 695,
                                                                     columnNumber: 45
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4267,7 +4170,7 @@ function OrgStructureScreen() {
                                                                             children: u.name
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                            lineNumber: 696,
+                                                                            lineNumber: 699,
                                                                             columnNumber: 49
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4275,19 +4178,19 @@ function OrgStructureScreen() {
                                                                             children: u.type
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                            lineNumber: 699,
+                                                                            lineNumber: 702,
                                                                             columnNumber: 49
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                    lineNumber: 695,
+                                                                    lineNumber: 698,
                                                                     columnNumber: 45
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 691,
+                                                            lineNumber: 694,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4295,7 +4198,7 @@ function OrgStructureScreen() {
                                                             children: u.headOfUnit ?? "—"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 702,
+                                                            lineNumber: 705,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4303,7 +4206,7 @@ function OrgStructureScreen() {
                                                             children: u.memberCount ?? 0
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 705,
+                                                            lineNumber: 708,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4311,7 +4214,7 @@ function OrgStructureScreen() {
                                                             children: "Active"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 708,
+                                                            lineNumber: 711,
                                                             columnNumber: 41
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4325,18 +4228,18 @@ function OrgStructureScreen() {
                                                                 className: "h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                lineNumber: 719,
+                                                                lineNumber: 722,
                                                                 columnNumber: 45
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 711,
+                                                            lineNumber: 714,
                                                             columnNumber: 41
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 690,
+                                                    lineNumber: 693,
                                                     columnNumber: 37
                                                 }, this),
                                                 u.child && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4349,7 +4252,7 @@ function OrgStructureScreen() {
                                                                     children: u.child.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                    lineNumber: 725,
+                                                                    lineNumber: 728,
                                                                     columnNumber: 49
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4357,13 +4260,13 @@ function OrgStructureScreen() {
                                                                     children: "Department"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                    lineNumber: 728,
+                                                                    lineNumber: 731,
                                                                     columnNumber: 49
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 724,
+                                                            lineNumber: 727,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4371,7 +4274,7 @@ function OrgStructureScreen() {
                                                             children: "—"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 730,
+                                                            lineNumber: 733,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4379,7 +4282,7 @@ function OrgStructureScreen() {
                                                             children: u.child.members
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 731,
+                                                            lineNumber: 734,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4387,7 +4290,7 @@ function OrgStructureScreen() {
                                                             children: "Open roles"
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 734,
+                                                            lineNumber: 737,
                                                             columnNumber: 45
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4396,36 +4299,36 @@ function OrgStructureScreen() {
                                                                 className: "h-4 w-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                                lineNumber: 738,
+                                                                lineNumber: 741,
                                                                 columnNumber: 49
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                            lineNumber: 737,
+                                                            lineNumber: 740,
                                                             columnNumber: 45
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                    lineNumber: 723,
+                                                    lineNumber: 726,
                                                     columnNumber: 41
                                                 }, this)
                                             ]
                                         }, u.id, true, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                            lineNumber: 689,
+                                            lineNumber: 692,
                                             columnNumber: 33
                                         }, this))
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 662,
+                                lineNumber: 665,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                        lineNumber: 654,
+                        lineNumber: 657,
                         columnNumber: 21
                     }, this),
                     activeTab === "Business Units Overview" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4441,7 +4344,7 @@ function OrgStructureScreen() {
                                                 children: ICONS[u.iconKey ?? getIconKey(u.name)]
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 757,
+                                                lineNumber: 760,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4449,13 +4352,13 @@ function OrgStructureScreen() {
                                                 children: "Active"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 760,
+                                                lineNumber: 763,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 756,
+                                        lineNumber: 759,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -4463,7 +4366,7 @@ function OrgStructureScreen() {
                                         children: u.name
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 764,
+                                        lineNumber: 767,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4474,7 +4377,7 @@ function OrgStructureScreen() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 765,
+                                        lineNumber: 768,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4488,7 +4391,7 @@ function OrgStructureScreen() {
                                                         children: "Members"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 770,
+                                                        lineNumber: 773,
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4496,13 +4399,13 @@ function OrgStructureScreen() {
                                                         children: u.memberCount ?? 0
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 773,
+                                                        lineNumber: 776,
                                                         columnNumber: 41
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 769,
+                                                lineNumber: 772,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4513,7 +4416,7 @@ function OrgStructureScreen() {
                                                         children: "Budget"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 778,
+                                                        lineNumber: 781,
                                                         columnNumber: 41
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4521,19 +4424,19 @@ function OrgStructureScreen() {
                                                         children: u.budgetCap ?? "$480k/yr"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                        lineNumber: 781,
+                                                        lineNumber: 784,
                                                         columnNumber: 41
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 777,
+                                                lineNumber: 780,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 768,
+                                        lineNumber: 771,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4544,7 +4447,7 @@ function OrgStructureScreen() {
                                                 children: "Open roles"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 787,
+                                                lineNumber: 790,
                                                 columnNumber: 37
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -4552,13 +4455,13 @@ function OrgStructureScreen() {
                                                 children: u.openRoles ?? 0
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 788,
+                                                lineNumber: 791,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 786,
+                                        lineNumber: 789,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4574,30 +4477,30 @@ function OrgStructureScreen() {
                                                 className: "h-4 w-4"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                                lineNumber: 800,
+                                                lineNumber: 803,
                                                 columnNumber: 47
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                        lineNumber: 792,
+                                        lineNumber: 795,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, u.id, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 752,
+                                lineNumber: 755,
                                 columnNumber: 29
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                        lineNumber: 750,
+                        lineNumber: 753,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                lineNumber: 318,
+                lineNumber: 321,
                 columnNumber: 13
             }, this),
             addOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DepartmentModal, {
@@ -4608,7 +4511,7 @@ function OrgStructureScreen() {
                 onSubmit: handleAdd
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                lineNumber: 810,
+                lineNumber: 813,
                 columnNumber: 17
             }, this),
             editOpen && selected && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DepartmentModal, {
@@ -4621,7 +4524,7 @@ function OrgStructureScreen() {
                 onSubmit: handleEdit
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                lineNumber: 819,
+                lineNumber: 822,
                 columnNumber: 17
             }, this),
             deleteOpen && selected && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ConfirmDeleteModal, {
@@ -4630,13 +4533,13 @@ function OrgStructureScreen() {
                 onConfirm: handleDelete
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                lineNumber: 830,
+                lineNumber: 833,
                 columnNumber: 17
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-        lineNumber: 317,
+        lineNumber: 320,
         columnNumber: 9
     }, this);
 }
@@ -4673,7 +4576,7 @@ function DepartmentModal(props) {
                                     children: props.title
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 865,
+                                    lineNumber: 868,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4681,13 +4584,13 @@ function DepartmentModal(props) {
                                     children: props.subtitle
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 866,
+                                    lineNumber: 869,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 864,
+                            lineNumber: 867,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4697,18 +4600,18 @@ function DepartmentModal(props) {
                                 className: "h-5 w-5"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 869,
+                                lineNumber: 872,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 868,
+                            lineNumber: 871,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                    lineNumber: 863,
+                    lineNumber: 866,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4721,7 +4624,7 @@ function DepartmentModal(props) {
                                     children: "Name"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 874,
+                                    lineNumber: 877,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -4731,13 +4634,13 @@ function DepartmentModal(props) {
                                     className: "mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 877,
+                                    lineNumber: 880,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 873,
+                            lineNumber: 876,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4747,7 +4650,7 @@ function DepartmentModal(props) {
                                     children: "Type"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 885,
+                                    lineNumber: 888,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -4759,33 +4662,33 @@ function DepartmentModal(props) {
                                             children: "Business Unit"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                            lineNumber: 893,
+                                            lineNumber: 896,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                             children: "Department"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                            lineNumber: 894,
+                                            lineNumber: 897,
                                             columnNumber: 29
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                             children: "Team"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                            lineNumber: 895,
+                                            lineNumber: 898,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 888,
+                                    lineNumber: 891,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 884,
+                            lineNumber: 887,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4795,7 +4698,7 @@ function DepartmentModal(props) {
                                     children: "Head of Unit"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 899,
+                                    lineNumber: 902,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -4805,19 +4708,19 @@ function DepartmentModal(props) {
                                     className: "mt-1.5 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-sm outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 902,
+                                    lineNumber: 905,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 898,
+                            lineNumber: 901,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                    lineNumber: 872,
+                    lineNumber: 875,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4829,7 +4732,7 @@ function DepartmentModal(props) {
                             children: "Cancel"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 911,
+                            lineNumber: 914,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4839,24 +4742,24 @@ function DepartmentModal(props) {
                             children: props.submitLabel
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 917,
+                            lineNumber: 920,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                    lineNumber: 910,
+                    lineNumber: 913,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-            lineNumber: 859,
+            lineNumber: 862,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-        lineNumber: 855,
+        lineNumber: 858,
         columnNumber: 9
     }, this);
 }
@@ -4880,12 +4783,12 @@ function ConfirmDeleteModal(props) {
                                 className: "h-5 w-5 text-rose-600"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 947,
+                                lineNumber: 950,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 946,
+                            lineNumber: 949,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4900,7 +4803,7 @@ function ConfirmDeleteModal(props) {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 950,
+                                    lineNumber: 953,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -4908,13 +4811,13 @@ function ConfirmDeleteModal(props) {
                                     children: "This will permanently remove the department and unassign its members. This action cannot be undone."
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                    lineNumber: 953,
+                                    lineNumber: 956,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 949,
+                            lineNumber: 952,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4924,18 +4827,18 @@ function ConfirmDeleteModal(props) {
                                 className: "h-5 w-5"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                                lineNumber: 959,
+                                lineNumber: 962,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 958,
+                            lineNumber: 961,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                    lineNumber: 945,
+                    lineNumber: 948,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -4947,7 +4850,7 @@ function ConfirmDeleteModal(props) {
                             children: "Cancel"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 963,
+                            lineNumber: 966,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -4956,24 +4859,24 @@ function ConfirmDeleteModal(props) {
                             children: "Delete Department"
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                            lineNumber: 969,
+                            lineNumber: 972,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-                    lineNumber: 962,
+                    lineNumber: 965,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-            lineNumber: 941,
+            lineNumber: 944,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/artifacts/360-hr/src/modules/hris/screens/OrgStructureScreen.tsx",
-        lineNumber: 937,
+        lineNumber: 940,
         columnNumber: 9
     }, this);
 }

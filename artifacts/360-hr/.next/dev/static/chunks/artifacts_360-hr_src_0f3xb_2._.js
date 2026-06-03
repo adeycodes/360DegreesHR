@@ -148,7 +148,9 @@ const authApi = {
     registerCompany: (input)=>post("/auth/register", input),
     me: ()=>get("/auth/me", authHeaders()),
     forgotPassword: (input)=>post("/auth/forgot-password", input),
-    resetPassword: (input, token)=>post(`/auth/reset-password?token=${token}`, input)
+    // Token is sent in the request body, not the URL, to avoid leaking it in
+    // server logs or browser history.
+    resetPassword: (input)=>post("/auth/reset-password", input, authHeaders())
 };
 const employeeApi = {
     getAll: (page = 1, limit = 10, name)=>{
@@ -160,17 +162,6 @@ const employeeApi = {
             }
         }).toString();
         return get(`/employees?${query}`, authHeaders());
-    },
-    getAllEmployees: async (token)=>{
-        const res = await fetch(`${API_BASE}/employees`, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`
-            }
-        });
-        const json = await res.json();
-        return json.data ?? json;
     },
     getById: (id)=>get(`/employees/${id}`, authHeaders()),
     create: (data)=>post("/employees", data, authHeaders()),

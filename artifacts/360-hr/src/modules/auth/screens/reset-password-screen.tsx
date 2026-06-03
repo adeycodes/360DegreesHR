@@ -39,7 +39,7 @@ export function ResetPasswordScreen() {
 
     setIsLoading(true);
     try {
-      const res = await authApi.resetPassword({ token: tokenFromUrl, password }, tokenFromUrl);
+      const res = await authApi.resetPassword({ token: tokenFromUrl, password });
       toast.success(res.message || "Password reset successfully! Please sign in with your new password.");
       router.push(routes.auth.loginPassword);
     } catch (err) {

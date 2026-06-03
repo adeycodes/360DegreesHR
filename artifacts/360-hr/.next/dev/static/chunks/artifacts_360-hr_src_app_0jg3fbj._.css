@@ -2248,16 +2248,6 @@
     background-color: var(--ds-primary-500);
   }
 
-  .bg-primary-500\/88 {
-    background-color: var(--ds-primary-500);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-primary-500\/88 {
-      background-color: color-mix(in oklab, var(--ds-primary-500) 88%, transparent);
-    }
-  }
-
   .bg-red-50 {
     background-color: var(--color-red-50);
   }

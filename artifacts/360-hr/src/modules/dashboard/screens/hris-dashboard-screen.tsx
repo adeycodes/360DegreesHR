@@ -32,17 +32,27 @@ interface DepartmentData {
   color: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const renderActiveShape = (props: any) => {
+interface PieSectorProps {
+  cx?: number;
+  cy?: number;
+  innerRadius?: number;
+  outerRadius?: number;
+  startAngle?: number;
+  endAngle?: number;
+  fill?: string;
+  midAngle?: number;
+}
+
+const renderActiveShape = (props: PieSectorProps) => {
   const {
-    cx,
-    cy,
-    innerRadius,
-    outerRadius,
-    startAngle,
-    endAngle,
-    fill,
-    midAngle,
+    cx = 0,
+    cy = 0,
+    innerRadius = 0,
+    outerRadius = 0,
+    startAngle = 0,
+    endAngle = 0,
+    fill = "#ccc",
+    midAngle = 0,
   } = props;
 
   const RADIAN = Math.PI / 180;
@@ -163,8 +173,7 @@ function StatCard({
   value: string;
   badge: string;
   badgeVariant: "blue" | "red";
-  icon: React.FC<any>;
-
+  icon: React.ComponentType<{ className?: string; strokeWidth?: number }>;
 }) {
   return (
     <div className="rounded-xl border border-grey-200 bg-white p-5">
@@ -469,14 +478,7 @@ export function HrisDashboardScreen() {
             </h2>
 
             <div className="flex flex-col bg-white rounded-[20px] shadow-[0_2px_15px_rgba(0,0,0,0.04)] border border-gray-50 p-7 w-85 mx-auto font-sans">
-              <div className="mb-6">
-                <h2 className="text-[19px] font-semibold text-[#475569] leading-[1.3] tracking-tight">
-                  Employee Distribution <br />
-                  by Department
-                </h2>
-              </div>
-
-              <div className="relative mx-auto mt-6 h-60 w-60">
+              <div className="relative mx-auto mt-2 h-60 w-60">
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie

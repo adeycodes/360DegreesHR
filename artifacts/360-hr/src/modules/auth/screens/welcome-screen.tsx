@@ -19,11 +19,11 @@ const AGENDA = [
 
 export function WelcomeScreen() {
   const router = useRouter();
-  const session = useAuthStore((s) => s.session);
+  const user = useAuthStore((s) => s.user);
   const [countdown, setCountdown] = useState(REDIRECT_SECONDS);
 
-  const firstName = session?.user?.name?.split(" ")[0] ?? "there";
-  const fullName = session?.user?.name ?? "Segun Thorne";
+  const firstName = user?.name?.split(" ")[0] ?? "there";
+  const fullName = user?.name ?? "Segun Thorne";
   const role = "Senior Product Designer";
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long",

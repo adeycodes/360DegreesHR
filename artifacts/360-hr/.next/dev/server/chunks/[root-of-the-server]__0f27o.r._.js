@@ -152,28 +152,24 @@ function isPublicPath(pathname) {
 function isAuthEntryPath(pathname) {
     return authEntryPaths.some((path)=>pathname === path || path !== __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].home && pathname.startsWith(`${path}/`));
 }
-function isProtectedAppPath(pathname) {
-    return pathname === __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].app.dashboard || pathname.startsWith(`${__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].app.dashboard}/`) || pathname === __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].hris.root || pathname.startsWith(`${__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].hris.root}/`);
-}
 function proxy(request) {
     const { pathname } = request.nextUrl;
     const token = request.cookies.get(AUTH_COOKIE)?.value;
     const isAuthenticated = Boolean(token);
+    // Root: send authenticated users to the dashboard, everyone else to splash
     if (pathname === __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].home) {
         const target = isAuthenticated ? __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].app.dashboard : __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].splash;
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$server$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].redirect(new URL(target, request.url));
     }
+    // Public paths: allow through, but redirect already-authenticated users
+    // away from login/register entry points
     if (isPublicPath(pathname)) {
         if (isAuthenticated && isAuthEntryPath(pathname)) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$server$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].redirect(new URL(__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].app.dashboard, request.url));
         }
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$server$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].next();
     }
-    if (!isAuthenticated && isProtectedAppPath(pathname)) {
-        const loginUrl = new URL(__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].auth.login, request.url);
-        loginUrl.searchParams.set("from", pathname);
-        return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$server$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["NextResponse"].redirect(loginUrl);
-    }
+    // Everything else is a protected route — require a valid token
     if (!isAuthenticated) {
         const loginUrl = new URL(__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$middleware$5d$__$28$ecmascript$29$__["routes"].auth.login, request.url);
         loginUrl.searchParams.set("from", pathname);

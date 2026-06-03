@@ -27,25 +27,19 @@ function isAuthEntryPath(pathname: string): boolean {
   );
 }
 
-function isProtectedAppPath(pathname: string): boolean {
-  return (
-    pathname === routes.app.dashboard ||
-    pathname.startsWith(`${routes.app.dashboard}/`) ||
-    pathname === routes.hris.root ||
-    pathname.startsWith(`${routes.hris.root}/`)
-  );
-}
-
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const token = request.cookies.get(AUTH_COOKIE)?.value;
   const isAuthenticated = Boolean(token);
 
+  // Root: send authenticated users to the dashboard, everyone else to splash
   if (pathname === routes.home) {
     const target = isAuthenticated ? routes.app.dashboard : routes.splash;
     return NextResponse.redirect(new URL(target, request.url));
   }
 
+  // Public paths: allow through, but redirect already-authenticated users
+  // away from login/register entry points
   if (isPublicPath(pathname)) {
     if (isAuthenticated && isAuthEntryPath(pathname)) {
       return NextResponse.redirect(new URL(routes.app.dashboard, request.url));
@@ -53,12 +47,7 @@ export function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  if (!isAuthenticated && isProtectedAppPath(pathname)) {
-    const loginUrl = new URL(routes.auth.login, request.url);
-    loginUrl.searchParams.set("from", pathname);
-    return NextResponse.redirect(loginUrl);
-  }
-
+  // Everything else is a protected route — require a valid token
   if (!isAuthenticated) {
     const loginUrl = new URL(routes.auth.login, request.url);
     loginUrl.searchParams.set("from", pathname);

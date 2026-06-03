@@ -6,8 +6,11 @@ import { useQuery } from "@tanstack/react-query";
 import {
 
   Calendar,
+  ChevronLeft,
+  ChevronRight,
   TrendingUp,
   Users,
+  X,
 } from "lucide-react";
 
 import { dashboardApi } from "@/lib/api";
@@ -125,6 +128,25 @@ const comingUp = [
   },
 ];
 
+const MONTH_NAMES = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+const MONTH_ABBR_TO_IDX: Record<string, number> = {
+  JAN: 0, FEB: 1, MAR: 2, APR: 3, MAY: 4, JUN: 5,
+  JUL: 6, AUG: 7, SEP: 8, OCT: 9, NOV: 10, DEC: 11,
+};
+const WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+type CalendarEvent = { month: number; day: number; title: string; subtitle: string };
+
+const calendarEvents: CalendarEvent[] = comingUp.map((e) => ({
+  month: MONTH_ABBR_TO_IDX[e.date.toUpperCase()] ?? 0,
+  day: parseInt(e.day, 10),
+  title: e.title,
+  subtitle: e.subtitle,
+}));
+
 const onLeave = [
   {
     name: "Tiger Nixon",
@@ -229,6 +251,7 @@ function StatusBadge({ status }: { status: "Approved" | "Pending" }) {
 export function HrisDashboardScreen() {
 
   const [hoveredBarIndex, setHoveredBarIndex] = useState<number | null>(null);
+  const [showCalendar, setShowCalendar] = useState(false);
 
   const { data: employeeData } = useQuery({
     queryKey: ["dashboard-employees"],
@@ -419,9 +442,13 @@ export function HrisDashboardScreen() {
         <div className="rounded-xl border border-grey-200 bg-white p-5">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="font-heading text-[16px] font-semibold text-grey-900">Coming Up</h2>
-            <Link href="#" className="text-[13px] font-medium text-[#2563EB]">
+            <button
+              type="button"
+              onClick={() => setShowCalendar(true)}
+              className="text-[13px] font-medium text-[#2563EB] hover:underline"
+            >
               View Calendar
-            </Link>
+            </button>
           </div>
           <ul className="space-y-4">
             {comingUp.map((item) => (
@@ -625,6 +652,157 @@ export function HrisDashboardScreen() {
               </ResponsiveContainer>
             </div>
           </div>
+        </div>
+      </div>
+
+      {showCalendar && <CalendarModal onClose={() => setShowCalendar(false)} />}
+    </div>
+  );
+}
+
+// --- Calendar Modal ---
+function CalendarModal({ onClose }: { onClose: () => void }) {
+  const today = new Date();
+  const initial = calendarEvents[0];
+  const [viewMonth, setViewMonth] = useState(initial ? initial.month : today.getMonth());
+  const [viewYear, setViewYear] = useState(today.getFullYear());
+
+  const firstWeekday = new Date(viewYear, viewMonth, 1).getDay();
+  const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+  const cells: (number | null)[] = [
+    ...Array(firstWeekday).fill(null),
+    ...Array.from({ length: daysInMonth }, (_, i) => i + 1),
+  ];
+
+  const monthEvents = calendarEvents.filter((e) => e.month === viewMonth);
+  const eventDays = new Set(monthEvents.map((e) => e.day));
+
+  const goPrev = () => {
+    if (viewMonth === 0) {
+      setViewMonth(11);
+      setViewYear((y) => y - 1);
+    } else {
+      setViewMonth((m) => m - 1);
+    }
+  };
+  const goNext = () => {
+    if (viewMonth === 11) {
+      setViewMonth(0);
+      setViewYear((y) => y + 1);
+    } else {
+      setViewMonth((m) => m + 1);
+    }
+  };
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4"
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-md rounded-xl border border-grey-200 bg-white p-5 shadow-xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="mb-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Calendar className="size-5 text-[#2563EB]" />
+            <h2 className="font-heading text-[16px] font-semibold text-grey-900">Calendar</h2>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-md p-1 text-grey-500 hover:bg-grey-100"
+            aria-label="Close calendar"
+          >
+            <X className="size-4" />
+          </button>
+        </div>
+
+        <div className="mb-3 flex items-center justify-between">
+          <button
+            type="button"
+            onClick={goPrev}
+            className="rounded-md p-1.5 text-grey-600 hover:bg-grey-100"
+            aria-label="Previous month"
+          >
+            <ChevronLeft className="size-4" />
+          </button>
+          <span className="font-heading text-[15px] font-semibold text-grey-900">
+            {MONTH_NAMES[viewMonth]} {viewYear}
+          </span>
+          <button
+            type="button"
+            onClick={goNext}
+            className="rounded-md p-1.5 text-grey-600 hover:bg-grey-100"
+            aria-label="Next month"
+          >
+            <ChevronRight className="size-4" />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-7 gap-1 text-center">
+          {WEEKDAYS.map((d) => (
+            <div key={d} className="py-1 text-[11px] font-semibold text-grey-500">
+              {d}
+            </div>
+          ))}
+          {cells.map((day, i) => {
+            if (day === null) return <div key={`blank-${i}`} />;
+            const isToday =
+              day === today.getDate() &&
+              viewMonth === today.getMonth() &&
+              viewYear === today.getFullYear();
+            const hasEvent = eventDays.has(day);
+            return (
+              <div
+                key={`day-${day}`}
+                className={cn(
+                  "relative flex aspect-square items-center justify-center rounded-md text-[13px]",
+                  isToday
+                    ? "bg-[#2563EB] font-semibold text-white"
+                    : hasEvent
+                      ? "bg-blue-50 font-medium text-[#2563EB]"
+                      : "text-grey-700",
+                )}
+              >
+                {day}
+                {hasEvent && !isToday && (
+                  <span className="absolute bottom-1 size-1 rounded-full bg-[#2563EB]" />
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-5 border-t border-grey-100 pt-4">
+          <h3 className="mb-3 text-[13px] font-semibold text-grey-900">
+            Events in {MONTH_NAMES[viewMonth]}
+          </h3>
+          {monthEvents.length > 0 ? (
+            <ul className="space-y-3">
+              {monthEvents
+                .slice()
+                .sort((a, b) => a.day - b.day)
+                .map((e) => (
+                  <li key={e.day + e.title} className="flex gap-3">
+                    <div className="flex w-10 shrink-0 flex-col items-center rounded-lg border border-grey-200 bg-[#F9FAFB] py-1.5 text-center">
+                      <span className="text-[9px] font-semibold tracking-wide text-grey-500">
+                        {MONTH_NAMES[viewMonth].slice(0, 3).toUpperCase()}
+                      </span>
+                      <span className="font-heading text-[16px] font-bold text-grey-900">
+                        {e.day}
+                      </span>
+                    </div>
+                    <div className="min-w-0 pt-0.5">
+                      <p className="text-[14px] font-semibold text-grey-900">{e.title}</p>
+                      <p className="text-[13px] text-grey-500">{e.subtitle}</p>
+                    </div>
+                  </li>
+                ))}
+            </ul>
+          ) : (
+            <p className="text-[13px] text-grey-500">No events this month.</p>
+          )}
         </div>
       </div>
     </div>

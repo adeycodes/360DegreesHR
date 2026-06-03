@@ -1,1 +1,3 @@
 - [360HR backend API](360hr-backend-api.md) — live HRIS backend has only 5 tags / 21 endpoints; no dashboard or reports endpoint, plus an auth field-name inconsistency.
+- [360HR API shape quirks](360hr-api-quirks.md) — registerCompany returns `user.id` but internal AuthUser uses `userid`; keep the inline mapping at the call site.
+- [360HR auth store shape](360hr-auth-store.md) — Zustand auth store exposes a flat `user` field (no `session`); select via `useAuthStore((s) => s.user)`.

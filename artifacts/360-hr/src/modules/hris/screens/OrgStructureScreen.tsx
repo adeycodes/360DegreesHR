@@ -106,7 +106,7 @@ export default function OrgStructureScreen() {
     const { data: apiData, isLoading } = useQuery({
         queryKey: ["department-tree"],
         queryFn: () => departmentApi.getTree(),
-        retry: 1,
+        retry: false,
     });
 
     const isMockData = !apiData || !Array.isArray(apiData) || apiData.length === 0;

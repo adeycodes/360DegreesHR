@@ -254,7 +254,7 @@ export function EmployeeDirectoryScreen({
                     </tr>
                   ) : (
                     employees.map((e, idx) => {
-                      const isActive = e.employmentStatus === "ACTIVE";
+                      const isActive = (e.status ?? e.employmentStatus ?? "Active") === "Active" || (e.status ?? e.employmentStatus ?? "Active") === "ACTIVE";
                       const colorClass = avatarColors[idx % avatarColors.length];
                       return (
                         <tr
@@ -283,7 +283,7 @@ export function EmployeeDirectoryScreen({
                           </td>
                           <td className="px-5 py-4">
                             <span className="text-[11px] font-bold text-[#1C4ED8] tracking-wide uppercase bg-blue-50 px-2 py-0.5 rounded">
-                              {e.department?.name ?? "ENGINEERING"}
+                              {e.department ?? "ENGINEERING"}
                             </span>
                           </td>
                           <td className="px-5 py-4 text-[14px] text-slate-600">
@@ -306,7 +306,7 @@ export function EmployeeDirectoryScreen({
                               />
                               {isActive
                                 ? "ACTIVE"
-                                : e.employmentStatus ?? "Inactive"}
+                                : (e.status ?? e.employmentStatus ?? "Inactive")}
                             </span>
                           </td>
                           <td className="px-5 py-4">

@@ -112,11 +112,26 @@ const del = <T>(path: string, headers?: HeadersInit) =>
 // ─── Auth API ─────────────────────────────────────────────────────────────────
 
 export const authApi = {
-  login: (input: LoginInput) =>
-    post<AuthSession>("/auth/login", {
+  login: async (input: LoginInput): Promise<AuthSession> => {
+    const raw = await post<{
+      token: string;
+      user: { id: string; name?: string; email?: string; role: string };
+      company?: { id: string; name: string };
+    }>("/auth/login", {
       userEmail: input.userEmail,
       password: input.password,
-    }),
+    });
+    return {
+      token: raw.token,
+      user: {
+        userid: raw.user.id,
+        name: raw.user.name,
+        email: raw.user.email,
+        role: raw.user.role as "hr_admin" | "manager" | "employee",
+      },
+      company: raw.company,
+    };
+  },
 
   registerCompany: (input: RegisterCompanyInput) =>
     post<{
@@ -126,8 +141,22 @@ export const authApi = {
       company?: { id: string; name: string };
     }>("/auth/register", input),
 
-  me: () =>
-    get<AuthUser>("/auth/me", authHeaders()),
+  me: async (): Promise<AuthUser> => {
+    const raw = await get<{
+      id: string;
+      name?: string;
+      email?: string;
+      role: string;
+      companyId?: string;
+    }>("/auth/me", authHeaders());
+    return {
+      userid: raw.id,
+      name: raw.name,
+      email: raw.email,
+      role: raw.role as "hr_admin" | "manager" | "employee",
+      companyId: raw.companyId,
+    };
+  },
 
   forgotPassword: (input: ForgotPasswordInput) =>
     post<{ success: boolean; message: string }>("/auth/forgot-password", input),

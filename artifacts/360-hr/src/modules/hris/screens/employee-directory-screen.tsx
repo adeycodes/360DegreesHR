@@ -255,7 +255,7 @@ export function EmployeeDirectoryScreen({
                     </tr>
                   ) : (
                     employees.map((e, idx) => {
-                      const isActive = (e.status ?? e.employmentStatus ?? "Active") === "Active" || (e.status ?? e.employmentStatus ?? "Active") === "ACTIVE";
+                      const isActive = ["ACTIVE", "Active", "active"].includes(e.employmentStatus ?? "");
                       const colorClass = avatarColors[idx % avatarColors.length];
                       return (
                         <tr
@@ -277,18 +277,18 @@ export function EmployeeDirectoryScreen({
                                   {e.firstName} {e.lastName}
                                 </div>
                                 <div className="text-[12px] text-slate-500 truncate">
-                                  {e.email}
+                                  {e.user?.email ?? e.email}
                                 </div>
                               </div>
                             </div>
                           </td>
                           <td className="px-5 py-4">
                             <span className="text-[11px] font-bold text-[#1C4ED8] tracking-wide uppercase bg-blue-50 px-2 py-0.5 rounded">
-                              {e.department ?? "ENGINEERING"}
+                              {e.department?.name ?? "—"}
                             </span>
                           </td>
                           <td className="px-5 py-4 text-[14px] text-slate-600">
-                            {e.jobTitle ?? "Senior Developer"}
+                            {e.jobTitle ?? "—"}
                           </td>
                           <td className="px-5 py-4">
                             <span
@@ -305,9 +305,7 @@ export function EmployeeDirectoryScreen({
                                   isActive ? "bg-[#1C4ED8]" : "bg-slate-400"
                                 )}
                               />
-                              {isActive
-                                ? "ACTIVE"
-                                : (e.status ?? e.employmentStatus ?? "Inactive")}
+                              {isActive ? "ACTIVE" : (e.employmentStatus ?? "INACTIVE")}
                             </span>
                           </td>
                           <td className="px-5 py-4">
@@ -975,11 +973,11 @@ function ViewProfileDrawer({
             </p>
             <div className="space-y-2">
               <a
-                href={`mailto:${employee.email}`}
+                href={`mailto:${employee.user?.email ?? employee.email}`}
                 className="flex items-center gap-2 text-[13px] text-[#1C4ED8] hover:underline"
               >
                 <Mail className="w-3.5 h-3.5" />
-                {employee.email}
+                {employee.user?.email ?? employee.email}
               </a>
               <p className="flex items-center gap-2 text-[13px] text-slate-600">
                 <Phone className="w-3.5 h-3.5 text-slate-400" />
@@ -1052,7 +1050,7 @@ function EditEmployeeModal({
   const [form, setForm] = useState({
     firstName: employee.firstName ?? "",
     lastName: employee.lastName ?? "",
-    email: employee.email ?? "",
+    email: employee.user?.email ?? employee.email ?? "",
     phone: "+234 012-9984",
     location: "Lagos HQ - Architectural Row",
     bio: "Senior Structural Architect with over 12 years of experience in sustainable urban curation. Lead designer for the Sky Garden Initiative.",

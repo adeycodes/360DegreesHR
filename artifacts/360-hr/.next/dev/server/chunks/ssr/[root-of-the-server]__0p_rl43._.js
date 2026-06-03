@@ -141,12 +141,33 @@ const post = (path, body, headers)=>request("POST", path, body, headers);
 const put = (path, body, headers)=>request("PUT", path, body, headers);
 const del = (path, headers)=>request("DELETE", path, undefined, headers);
 const authApi = {
-    login: (input)=>post("/auth/login", {
+    login: async (input)=>{
+        const raw = await post("/auth/login", {
             userEmail: input.userEmail,
             password: input.password
-        }),
+        });
+        return {
+            token: raw.token,
+            user: {
+                userid: raw.user.id,
+                name: raw.user.name,
+                email: raw.user.email,
+                role: raw.user.role
+            },
+            company: raw.company
+        };
+    },
     registerCompany: (input)=>post("/auth/register", input),
-    me: ()=>get("/auth/me", authHeaders()),
+    me: async ()=>{
+        const raw = await get("/auth/me", authHeaders());
+        return {
+            userid: raw.id,
+            name: raw.name,
+            email: raw.email,
+            role: raw.role,
+            companyId: raw.companyId
+        };
+    },
     forgotPassword: (input)=>post("/auth/forgot-password", input),
     // Token is sent in the request body, not the URL, to avoid leaking it in
     // server logs or browser history.

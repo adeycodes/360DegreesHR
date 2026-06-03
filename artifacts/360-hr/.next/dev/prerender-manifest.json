@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/hris/employees_directory":{},"/hris/organization_structure":{},"/hris/audit_logs":{},"/hris/reports":{}},"dynamicRoutes":{"/hris/[section]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/hris/[section]","routeRegex":"^\\/hris\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"5d57dd85610c083e30a60d1be6469e3f","previewModeSigningKey":"53c6c925ba4173860fe5942f749499765d7a09590bba5e204197f80129a67375","previewModeEncryptionKey":"f499a1a8d9cff95362fb964967219540891058b2cbb3b82c6dca2dc53193e388"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "57ec5c057daaed0482b790060fdeffde",
+    "previewModeSigningKey": "88287cead448aa96a09b31ab777a1e834d411c6d719f3c3377f616414f9892e5",
+    "previewModeEncryptionKey": "4c6d2b8fc7201b0998635c62aa7badb08d047bf24e1ce101a97412a8549fc845"
+  }
+}

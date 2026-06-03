@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "56443b9309e0b4d47aa06b2fad518f6d",
-    "previewModeSigningKey": "280b82cfcaae55757f52358a9306d5aac7d89039b0303cdd1ef6fcd2f61f8279",
-    "previewModeEncryptionKey": "d9e32a7de517f1fd926e68f31b50fc74dfeea9a597a3258445d445b3becd7774"
-  }
-}
+{"version":4,"routes":{"/hris/employees_directory":{},"/hris/organization_structure":{},"/hris/reports":{}},"dynamicRoutes":{"/hris/[section]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/hris/[section]","routeRegex":"^\\/hris\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"56443b9309e0b4d47aa06b2fad518f6d","previewModeSigningKey":"280b82cfcaae55757f52358a9306d5aac7d89039b0303cdd1ef6fcd2f61f8279","previewModeEncryptionKey":"d9e32a7de517f1fd926e68f31b50fc74dfeea9a597a3258445d445b3becd7774"}}

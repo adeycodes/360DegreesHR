@@ -309,6 +309,7 @@ const routes = {
         root: "/hris",
         employees: "/hris/employees_directory",
         organization_structure: "/hris/organization_structure",
+        audit_logs: "/hris/audit_logs",
         reports: "/hris/reports"
     }
 };

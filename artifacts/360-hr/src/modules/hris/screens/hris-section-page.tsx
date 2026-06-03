@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 import { ModulePlaceholder } from "@/modules/hris/screens/module-placeholder";
 
-// ✅ 1. Import your main Page container instead of the presentation Screen
 import EmployeeDirectoryPage from "@/app/(protected)/hris/employee_directory/page";
 import OrgStructureScreen from "@/modules/hris/screens/OrgStructureScreen";
+import AuditLogsScreen from "@/modules/hris/screens/audit-logs-screen";
 import { hrisPages, isHrisPageSection, type HrisPageSection } from "@/config/hris-pages";
 
 type HrisSectionPageProps = {
@@ -17,11 +17,10 @@ export function HrisSectionPage({ section }: HrisSectionPageProps) {
 
   const page = hrisPages[section as HrisPageSection];
 
-  // ✅ 2. Change the value from EmployeeDirectoryScreen to EmployeeDirectoryPage. 
-  // It matches React.ComponentType perfectly because it takes no props {}
   const realComponents: Record<string, React.ComponentType> = {
     "employees_directory": EmployeeDirectoryPage,
     "organization_structure": OrgStructureScreen,
+    "audit_logs": AuditLogsScreen,
   };
 
   const Component = realComponents[section];

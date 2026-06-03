@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///home/runner/workspace/artifacts/360-hr/src/app/favicon.ico.mjs%20%28structured%20image%20object%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 256, height: 256 }\n"],"names":["src","width","height"],"mappings":";;;;AAAA;;uCACe;IAAEA,KAAAA,oKAAG;IAAEC,OAAO;IAAKC,QAAQ;AAAI"}},
+    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///home/runner/workspace/artifacts/360-hr/src/app/%28protected%29/hris/%5Bsection%5D/page.tsx"],"sourcesContent":["import { HrisSectionPage, getHrisStaticParams } from \"@/components/features/hris/hris-section-page\";\n\ntype PageProps = {\n  params: Promise<{ section: string }>;\n};\n\n// Ensure generateStaticParams is handled as a standard export\nexport async function generateStaticParams() {\n  return await getHrisStaticParams();\n}\n\nexport default async function Page({ params }: PageProps) {\n  // Await the params before accessing the property\n  const { section } = await params;\n\n  return <HrisSectionPage section={section} />;\n}"],"names":["generateStaticParams","getHrisStaticParams","Page","params","section","HrisSectionPage"],"mappings":";;;;;;;;;;;;;;AAOO,eAAeA;IACpB,OAAO,MAAMC;AACf;AAEe,eAAeC,KAAK,EAAEC,MAAM,EAAa;IACtD,iDAAiD;IACjD,MAAM,EAAEC,OAAO,EAAE,GAAG,MAAMD;IAE1B,qBAAO,6WAACE;QAAgBD,SAASA;;;;;;AACnC"}}]
+}

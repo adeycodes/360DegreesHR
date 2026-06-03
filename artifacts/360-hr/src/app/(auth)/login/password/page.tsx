@@ -1,4 +1,4 @@
-import { LoginPasswordScreen } from "@/components/features/auth/screens/login-password-screen";
+import { LoginPasswordScreen } from "@/modules/auth/screens/login-password-screen";
 
 export default function LoginPasswordPage() {
   return <LoginPasswordScreen />;

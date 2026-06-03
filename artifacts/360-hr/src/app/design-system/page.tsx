@@ -4,11 +4,11 @@ import {
   AdditionalSwatch,
   ColorScaleDisplay,
   GreyscaleSwatch,
-} from "@/components/design-system/color-scale";
-import { Icon } from "@/components/design-system/icon";
-import { BrandIcon } from "@/components/design-system/icons/brand-icon";
-import { Heading, Quote, Text } from "@/components/design-system/typography";
-import { Separator } from "@/components/ui/separator";
+} from "@/shared/colors/color-scale";
+import { Icon } from "@/shared/icons/icon";
+import { BrandIcon } from "@/shared/icons/brand-icon";
+import { Heading, Quote, Text } from "@/shared/colors/typography";
+import { Separator } from "@/shared/ui/separator";
 import {
   additionalColors,
   alertColors,

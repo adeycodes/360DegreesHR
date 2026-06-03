@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local"; // ✅ Replaced next/font/google with local font loader
 
-import { AuthHydration } from "@/components/providers/auth-hydration";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import { ToastProvider } from "@/components/providers/toast-provider";
-import { QueryProvider } from "@/components/providers/query-provider";
+import { AuthHydration } from "@/shared/providers/auth-hydration";
+import { ThemeProvider } from "@/shared/providers/theme-provider";
+import { ToastProvider } from "@/shared/providers/toast-provider";
+import { QueryProvider } from "@/shared/providers/query-provider";
 import { siteConfig } from "@/config/site";
 
 import "./globals.css";

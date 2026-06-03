@@ -1,4 +1,4 @@
-import { HrisDashboardScreen } from "@/components/features/dashboard/hris-dashboard-screen";
+import { HrisDashboardScreen } from "@/modules/dashboard/screens/hris-dashboard-screen";
 
 export default function DashboardPage() {
   return <HrisDashboardScreen />;

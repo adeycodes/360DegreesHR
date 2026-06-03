@@ -3,21 +3,22 @@
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { employeeApi } from "@/lib/api";
-import { EmployeeDirectoryScreen } from "@/components/features/hris/employee-directory-screen";
+import { getAccessToken } from "@/lib/session";
+import { EmployeeDirectoryScreen } from "@/modules/hris/screens/employee-directory-screen";
 
 export default function EmployeeDirectoryPage() {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
-  const token = sessionStorage.getItem("auth_token");
+  const [token, setToken] = useState<string | null>(null);
 
-  if (!token) {
-    throw new Error("No auth token found. User might not be authenticated.");
-  }
-
+  useEffect(() => {
+    setToken(getAccessToken());
+  }, []);
 
   const { data, isLoading, isError, refetch } = useQuery({
-    queryKey: ["employees", page, search],
-    queryFn: () => employeeApi.getAllEmployees(token), // Call the API client function to fetch employees
+    queryKey: ["employees", page, search, token],
+    enabled: !!token,
+    queryFn: () => employeeApi.getAllEmployees(token!),
   });
 
 

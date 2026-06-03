@@ -1,4 +1,4 @@
-import { HrisSectionPage, getHrisStaticParams } from "@/components/features/hris/hris-section-page";
+import { HrisSectionPage, getHrisStaticParams } from "@/modules/hris/screens/hris-section-page";
 
 type PageProps = {
   params: Promise<{ section: string }>;

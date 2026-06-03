@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-import { ForgotPasswordSuccessScreen } from "@/components/features/auth/screens/forgot-password-success-screen";
+import { ForgotPasswordSuccessScreen } from "@/modules/auth/screens/forgot-password-success-screen";
 
 export default function ForgotPasswordSentPage() {
   return (

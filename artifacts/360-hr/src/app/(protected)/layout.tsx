@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 
-import { AnimatedSplashScreen } from "@/components/features/splash/animated-splash-screen";
-import { DashboardShell } from "@/components/shared/dashboard-shell";
+import { AnimatedSplashScreen } from "@/modules/splash/screens/animated-splash-screen";
+import { DashboardShell } from "@/shared/components/dashboard-shell";
 import { useAuthStore } from "@/stores/auth-store";
 
 export default function AppRouteLayout({

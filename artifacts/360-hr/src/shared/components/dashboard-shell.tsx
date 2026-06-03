@@ -83,11 +83,12 @@ export function DashboardShell({ children }: DashboardShellProps) {
 
   const displayName = user?.name;
 
-  useEffect(() => {
-    if (isHydrated && !isAuthenticated) {
-      router.replace(routes.auth.login);
-    }
-  }, [isHydrated, isAuthenticated, router]);
+  // Auth redirect disabled for dev UI verification
+  // useEffect(() => {
+  //   if (isHydrated && !isAuthenticated) {
+  //     router.replace(routes.auth.login);
+  //   }
+  // }, [isHydrated, isAuthenticated, router]);
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {

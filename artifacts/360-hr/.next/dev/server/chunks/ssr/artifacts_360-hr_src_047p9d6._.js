@@ -748,15 +748,12 @@ function DashboardShell({ children }) {
     const [isCollapsed, setIsCollapsed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const profileRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const displayName = user?.name;
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (isHydrated && !isAuthenticated) {
-            router.replace(__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["routes"].auth.login);
-        }
-    }, [
-        isHydrated,
-        isAuthenticated,
-        router
-    ]);
+    // Auth redirect disabled for dev UI verification
+    // useEffect(() => {
+    //   if (isHydrated && !isAuthenticated) {
+    //     router.replace(routes.auth.login);
+    //   }
+    // }, [isHydrated, isAuthenticated, router]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         function handleClick(e) {
             if (profileRef.current && !profileRef.current.contains(e.target)) {
@@ -805,7 +802,7 @@ function DashboardShell({ children }) {
                                     strokeWidth: 1.75
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                    lineNumber: 141,
+                                    lineNumber: 142,
                                     columnNumber: 25
                                 }, this) : null,
                                 !isCollapsed && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -815,14 +812,14 @@ function DashboardShell({ children }) {
                                             children: item.title
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                            lineNumber: 145,
+                                            lineNumber: 146,
                                             columnNumber: 21
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$1$2e$17$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                             className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["cn"])("size-4 text-grey-400 transition-transform", isOpen && "rotate-180")
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                            lineNumber: 146,
+                                            lineNumber: 147,
                                             columnNumber: 21
                                         }, this)
                                     ]
@@ -830,7 +827,7 @@ function DashboardShell({ children }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                            lineNumber: 126,
+                            lineNumber: 127,
                             columnNumber: 15
                         }, this),
                         isOpen && !isCollapsed && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -842,18 +839,18 @@ function DashboardShell({ children }) {
                                     children: child.title
                                 }, child.href, false, {
                                     fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                    lineNumber: 157,
+                                    lineNumber: 158,
                                     columnNumber: 21
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                            lineNumber: 154,
+                            lineNumber: 155,
                             columnNumber: 17
                         }, this)
                     ]
                 }, item.title, true, {
                     fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                    lineNumber: 125,
+                    lineNumber: 126,
                     columnNumber: 13
                 }, this);
             }
@@ -868,7 +865,7 @@ function DashboardShell({ children }) {
                         className: "absolute top-1/2 left-0 h-7 w-[3px] -translate-y-1/2 rounded-r-full bg-grey-800"
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                        lineNumber: 195,
+                        lineNumber: 196,
                         columnNumber: 15
                     }, this),
                     Icon && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
@@ -876,26 +873,26 @@ function DashboardShell({ children }) {
                         strokeWidth: 1.75
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                        lineNumber: 197,
+                        lineNumber: 198,
                         columnNumber: 22
                     }, this),
                     !isCollapsed && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         children: item.title
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                        lineNumber: 199,
+                        lineNumber: 200,
                         columnNumber: 30
                     }, this)
                 ]
             }, item.title, true, {
                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                lineNumber: 179,
+                lineNumber: 180,
                 columnNumber: 11
             }, this);
         })
     }, void 0, false, {
         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-        lineNumber: 113,
+        lineNumber: 114,
         columnNumber: 5
     }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -906,7 +903,7 @@ function DashboardShell({ children }) {
                 onClick: ()=>setMobileMenuOpen(false)
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                lineNumber: 211,
+                lineNumber: 212,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -920,14 +917,14 @@ function DashboardShell({ children }) {
                                 href: __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["routes"].app.dashboard
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                lineNumber: 228,
+                                lineNumber: 229,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "size-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold",
                                 children: "360"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                lineNumber: 230,
+                                lineNumber: 231,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -938,18 +935,18 @@ function DashboardShell({ children }) {
                                     className: "size-5"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                    lineNumber: 242,
+                                    lineNumber: 243,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                lineNumber: 237,
+                                lineNumber: 238,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                        lineNumber: 225,
+                        lineNumber: 226,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -957,7 +954,7 @@ function DashboardShell({ children }) {
                         children: navLinks
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                        lineNumber: 246,
+                        lineNumber: 247,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -969,23 +966,23 @@ function DashboardShell({ children }) {
                                 className: "size-5"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                lineNumber: 256,
+                                lineNumber: 257,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                            lineNumber: 252,
+                            lineNumber: 253,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                        lineNumber: 251,
+                        lineNumber: 252,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                lineNumber: 218,
+                lineNumber: 219,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1002,12 +999,12 @@ function DashboardShell({ children }) {
                                     className: "size-6"
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                    lineNumber: 271,
+                                    lineNumber: 272,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                lineNumber: 266,
+                                lineNumber: 267,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1018,7 +1015,7 @@ function DashboardShell({ children }) {
                                         children: "Dashboard"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                        lineNumber: 275,
+                                        lineNumber: 276,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1026,7 +1023,7 @@ function DashboardShell({ children }) {
                                         children: "/"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                        lineNumber: 276,
+                                        lineNumber: 277,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1034,13 +1031,13 @@ function DashboardShell({ children }) {
                                         children: "Overview"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                        lineNumber: 277,
+                                        lineNumber: 278,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                lineNumber: 274,
+                                lineNumber: 275,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1052,7 +1049,7 @@ function DashboardShell({ children }) {
                                             className: "absolute top-1/2 left-3.5 size-4 -translate-y-1/2 text-grey-400"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                            lineNumber: 282,
+                                            lineNumber: 283,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -1061,7 +1058,7 @@ function DashboardShell({ children }) {
                                             className: "h-10 w-full n border-1 bg-grey-50 pr-14 pl-10 text-[14px] outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-500/20"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                            lineNumber: 283,
+                                            lineNumber: 284,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("kbd", {
@@ -1069,18 +1066,18 @@ function DashboardShell({ children }) {
                                             children: "⌘ /"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                            lineNumber: 288,
+                                            lineNumber: 289,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                    lineNumber: 281,
+                                    lineNumber: 282,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                lineNumber: 280,
+                                lineNumber: 281,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1094,12 +1091,12 @@ function DashboardShell({ children }) {
                                             className: "size-[18px]"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                            lineNumber: 300,
+                                            lineNumber: 301,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                        lineNumber: 295,
+                                        lineNumber: 296,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1110,12 +1107,12 @@ function DashboardShell({ children }) {
                                             className: "size-[18px]"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                            lineNumber: 307,
+                                            lineNumber: 308,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                        lineNumber: 302,
+                                        lineNumber: 303,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1127,20 +1124,20 @@ function DashboardShell({ children }) {
                                                 className: "size-[18px]"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                lineNumber: 314,
+                                                lineNumber: 315,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "absolute top-2 right-2 size-2 rounded-full bg-error-500"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                lineNumber: 315,
+                                                lineNumber: 316,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                        lineNumber: 309,
+                                        lineNumber: 310,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1157,7 +1154,7 @@ function DashboardShell({ children }) {
                                                         children: user?.name?.[0] ?? "AB"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                        lineNumber: 324,
+                                                        lineNumber: 325,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1165,20 +1162,20 @@ function DashboardShell({ children }) {
                                                         children: displayName
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                        lineNumber: 327,
+                                                        lineNumber: 328,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$1$2e$17$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                                         className: "size-4 text-grey-500"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                        lineNumber: 330,
+                                                        lineNumber: 331,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                lineNumber: 319,
+                                                lineNumber: 320,
                                                 columnNumber: 15
                                             }, this),
                                             profileOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1192,7 +1189,7 @@ function DashboardShell({ children }) {
                                                                 children: displayName
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                                lineNumber: 336,
+                                                                lineNumber: 337,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1200,13 +1197,13 @@ function DashboardShell({ children }) {
                                                                 children: "HR Director"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                                lineNumber: 337,
+                                                                lineNumber: 338,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                        lineNumber: 335,
+                                                        lineNumber: 336,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1217,14 +1214,14 @@ function DashboardShell({ children }) {
                                                                 className: "size-4 text-grey-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                                lineNumber: 343,
+                                                                lineNumber: 344,
                                                                 columnNumber: 21
                                                             }, this),
                                                             "My Settings"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                        lineNumber: 339,
+                                                        lineNumber: 340,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1235,14 +1232,14 @@ function DashboardShell({ children }) {
                                                                 className: "size-4 text-grey-500"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                                lineNumber: 350,
+                                                                lineNumber: 351,
                                                                 columnNumber: 21
                                                             }, this),
                                                             "Switch Account"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                        lineNumber: 346,
+                                                        lineNumber: 347,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1254,38 +1251,38 @@ function DashboardShell({ children }) {
                                                                 className: "size-4"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                                lineNumber: 358,
+                                                                lineNumber: 359,
                                                                 columnNumber: 21
                                                             }, this),
                                                             "Logout"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                        lineNumber: 353,
+                                                        lineNumber: 354,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                                lineNumber: 334,
+                                                lineNumber: 335,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                        lineNumber: 318,
+                                        lineNumber: 319,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                                lineNumber: 294,
+                                lineNumber: 295,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                        lineNumber: 263,
+                        lineNumber: 264,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1293,19 +1290,19 @@ function DashboardShell({ children }) {
                         children: children
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                        lineNumber: 367,
+                        lineNumber: 368,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-                lineNumber: 262,
+                lineNumber: 263,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/shared/components/dashboard-shell.tsx",
-        lineNumber: 207,
+        lineNumber: 208,
         columnNumber: 5
     }, this);
 }

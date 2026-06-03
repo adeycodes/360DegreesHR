@@ -1,0 +1,26 @@
+/* [project]/artifacts/360-hr/src/app/manrope_2f80910a.module.css [app-client] (css) */
+@font-face {
+  font-family: manrope;
+  src: url("../media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 100 800;
+}
+
+@font-face {
+  font-family: manrope Fallback;
+  src: local(Arial);
+  ascent-override: 106.45%;
+  descent-override: 29.96%;
+  line-gap-override: 0.0%;
+  size-adjust: 100.14%;
+}
+
+.manrope_2f80910a-module__gFdaOW__className {
+  font-family: manrope, manrope Fallback;
+}
+
+.manrope_2f80910a-module__gFdaOW__variable {
+  --font-manrope: "manrope", "manrope Fallback";
+}
+
+/*# sourceMappingURL=artifacts_360-hr_src_app_manrope_2f80910a_module_css_0w3-wzy._.single.css.map*/

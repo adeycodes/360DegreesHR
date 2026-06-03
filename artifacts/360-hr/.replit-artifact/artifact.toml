@@ -1,0 +1,25 @@
+kind = "web"
+previewPath = "/"
+title = "360HR"
+version = "1.0.0"
+id = "artifacts/360-hr"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23871
+
+[services.development]
+run = "pnpm --filter @workspace/360-hr run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/360-hr", "run", "build" ]
+
+[services.env]
+PORT = "23871"
+BASE_PATH = "/"

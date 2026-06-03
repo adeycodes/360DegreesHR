@@ -1,0 +1,26 @@
+/* [project]/artifacts/360-hr/src/app/opensans_18a06bb0.module.css [app-client] (css) */
+@font-face {
+  font-family: openSans;
+  src: url("../media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 300 800;
+}
+
+@font-face {
+  font-family: openSans Fallback;
+  src: local(Arial);
+  ascent-override: 101.58%;
+  descent-override: 27.84%;
+  line-gap-override: 0.0%;
+  size-adjust: 105.22%;
+}
+
+.opensans_18a06bb0-module__wSpubq__className {
+  font-family: openSans, openSans Fallback;
+}
+
+.opensans_18a06bb0-module__wSpubq__variable {
+  --font-open-sans: "openSans", "openSans Fallback";
+}
+
+/*# sourceMappingURL=artifacts_360-hr_src_app_opensans_18a06bb0_module_css_0w3-wzy._.single.css.map*/

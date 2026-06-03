@@ -1743,7 +1743,7 @@ const EMPTY: AddFormData = {
   manager: "",
 };
 
-function AddEmployeeModal({
+export function AddEmployeeModal({
   isOpen,
   onClose,
   onSuccess,

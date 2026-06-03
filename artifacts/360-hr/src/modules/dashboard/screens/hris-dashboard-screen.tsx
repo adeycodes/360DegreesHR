@@ -2,7 +2,7 @@
 import React, { ComponentType } from "react";
 import Link from "next/link";
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
 
   Calendar,
@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import { dashboardApi } from "@/lib/api";
+import { AddEmployeeModal } from "@/modules/hris/screens/employee-directory-screen";
 import type { DepartmentTree } from "@/types";
 import {
   Area,
@@ -252,6 +253,8 @@ export function HrisDashboardScreen() {
 
   const [hoveredBarIndex, setHoveredBarIndex] = useState<number | null>(null);
   const [showCalendar, setShowCalendar] = useState(false);
+  const [showAddEmployee, setShowAddEmployee] = useState(false);
+  const queryClient = useQueryClient();
 
   const { data: employeeData } = useQuery({
     queryKey: ["dashboard-employees"],
@@ -302,9 +305,10 @@ export function HrisDashboardScreen() {
         </div>
         <div className="flex flex-wrap gap-6">
 
-          <Link
-            href="#"
-            className="flex items-center rounded-xl border border-grey-200 bg-white shadow-sm transition-shadow hover:shadow-md"
+          <button
+            type="button"
+            onClick={() => setShowAddEmployee(true)}
+            className="flex items-center rounded-xl border border-grey-200 bg-white text-left shadow-sm transition-shadow hover:shadow-md"
           >
             <span className="flex size-15 rounded-left px-2 py-2 items-center justify-center bg-blue-50">
               <AddIcon className="size-5 text-blue-700" />
@@ -313,7 +317,7 @@ export function HrisDashboardScreen() {
               <span className="block text-[14px] font-semibold text-grey-900">Add Employee </span>
               <span className="text-[12px] text-grey-500">Onboard talents</span>
             </span>
-          </Link>
+          </button>
 
           <Link
             href="#"
@@ -656,6 +660,14 @@ export function HrisDashboardScreen() {
       </div>
 
       {showCalendar && <CalendarModal onClose={() => setShowCalendar(false)} />}
+
+      <AddEmployeeModal
+        isOpen={showAddEmployee}
+        onClose={() => setShowAddEmployee(false)}
+        onSuccess={() => {
+          queryClient.invalidateQueries({ queryKey: ["dashboard-employees"] });
+        }}
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   Briefcase,
   ChevronDown,
@@ -44,7 +44,7 @@ import {
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { employeeApi } from "@/lib/api";
+import { employeeApi, departmentApi } from "@/lib/api";
 import type { Employee } from "@/types";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -1702,11 +1702,22 @@ function DeleteConfirmModal({
 }
 
 // ─── AddEmployeeModal ─────────────────────────────────────────────────────────
+// Generate a unique, reasonably strong temporary password (>= 8 chars, mixed
+// case + digit + symbol) so each created employee gets distinct credentials.
+function generateTempPassword(): string {
+  const rand = Math.random().toString(36).slice(2, 8);
+  const RAND = Math.random().toString(36).slice(2, 6).toUpperCase();
+  const num = Math.floor(1000 + Math.random() * 9000);
+  return `Hr${RAND}${rand}${num}!`;
+}
+
 type AddFormData = {
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
+  gender: string;
+  password: string;
   departmentId: string;
   jobTitle: string;
   employmentType: string;
@@ -1721,6 +1732,8 @@ const EMPTY: AddFormData = {
   lastName: "",
   email: "",
   phone: "",
+  gender: "MALE",
+  password: "",
   departmentId: "",
   jobTitle: "",
   employmentType: "FULL_TIME",
@@ -1742,6 +1755,12 @@ function AddEmployeeModal({
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [form, setForm] = useState<AddFormData>(EMPTY);
   const queryClient = useQueryClient();
+
+  const { data: realDepartments } = useQuery({
+    queryKey: ["departments"],
+    queryFn: () => departmentApi.getAll(),
+    retry: false,
+  });
 
   const mutation = useMutation({
     mutationFn: (data: Record<string, unknown>) => employeeApi.create(data),
@@ -1770,14 +1789,28 @@ function AddEmployeeModal({
   });
 
   const handleNext = () => {
-    if (step < 3) setStep((p) => (p + 1) as 1 | 2 | 3);
-    else
-      mutation.mutate({
-        ...form,
-        password: "DefaultPassword123!",
-        dateOfBirth: new Date("1990-01-01").toISOString(),
-        hireDate: new Date().toISOString(),
-      });
+    if (step < 3) {
+      setStep((p) => (p + 1) as 1 | 2 | 3);
+      return;
+    }
+    // Use the admin-supplied password, or generate a unique temporary one so we
+    // never ship a shared/predictable credential. The employee resets it later.
+    const password = form.password.trim() || generateTempPassword();
+    // Build a payload matching the backend CreateEmployeeRequest schema.
+    const payload: Record<string, unknown> = {
+      firstName: form.firstName,
+      lastName: form.lastName,
+      email: form.email,
+      password,
+      gender: form.gender,
+      employmentType: form.employmentType,
+      dateOfBirth: new Date("1990-01-01").toISOString(),
+    };
+    if (form.phone) payload.phone = form.phone;
+    if (form.jobTitle) payload.jobTitle = form.jobTitle;
+    // Only send departmentId when a real department UUID was selected.
+    if (form.departmentId) payload.departmentId = form.departmentId;
+    mutation.mutate(payload);
   };
 
   return (
@@ -1924,6 +1957,25 @@ function AddEmployeeModal({
                     />
                   </FieldWrap>
                 </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <FieldWrap label="Gender">
+                    <div className="relative">
+                      <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
+                      <select {...f("gender")} className={inputCls}>
+                        <option value="MALE">Male</option>
+                        <option value="FEMALE">Female</option>
+                      </select>
+                    </div>
+                  </FieldWrap>
+                  <FieldWrap label="Temporary Password">
+                    <input
+                      type="text"
+                      {...f("password")}
+                      placeholder="Auto-generated if left blank"
+                      className={inputCls}
+                    />
+                  </FieldWrap>
+                </div>
               </div>
             )}
 
@@ -1935,10 +1987,9 @@ function AddEmployeeModal({
                       <ChevronDown className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
                       <select {...f("departmentId")} className={inputCls}>
                         <option value="">Select Department</option>
-                        <option value="Product Design">Product Design</option>
-                        {departments.map((d) => (
-                          <option key={d} value={d}>
-                            {d}
+                        {(realDepartments ?? []).map((d) => (
+                          <option key={d.id} value={d.id}>
+                            {d.name}
                           </option>
                         ))}
                       </select>

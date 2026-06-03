@@ -151,7 +151,9 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/next@16.2.6_react-dom@19.2.4_react@19.2.4__react@19.2.4/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/@tanstack+react-query@5.100.14_react@19.2.4/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$lucide$2d$react$40$1$2e$17$2e$0_react$40$19$2e$2$2e$4$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/lucide-react@1.17.0_react@19.2.4/node_modules/lucide-react/dist/esm/icons/trending-up.mjs [app-client] (ecmascript) <export default as TrendingUp>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/artifacts/360-hr/src/lib/api.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Area$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/recharts@3.8.1_@types+react@19.2.14_react-dom@19.2.4_react@19.2.4__react-is@18.3.1_react@19.2.4_redux@5.0.1/node_modules/recharts/es6/cartesian/Area.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$chart$2f$AreaChart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/recharts@3.8.1_@types+react@19.2.14_react-dom@19.2.4_react@19.2.4__react-is@18.3.1_react@19.2.4_redux@5.0.1/node_modules/recharts/es6/chart/AreaChart.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Bar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/.pnpm/recharts@3.8.1_@types+react@19.2.14_react-dom@19.2.4_react@19.2.4__react-is@18.3.1_react@19.2.4_redux@5.0.1/node_modules/recharts/es6/cartesian/Bar.js [app-client] (ecmascript)");
@@ -169,6 +171,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$sr
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
+;
 ;
 ;
 ;
@@ -194,7 +198,7 @@ const renderActiveShape = (props)=>{
         cornerRadius: 4
     }, void 0, false, {
         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-        lineNumber: 65,
+        lineNumber: 69,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -247,6 +251,19 @@ const departmentData = [
         color: "#CBD5E1"
     }
 ];
+const DEPT_COLORS = [
+    "#00E5BE",
+    "#A0AEC0",
+    "#CBD5E1",
+    "#93C5FD",
+    "#FBBF24",
+    "#F472B6"
+];
+function countTreeMembers(node) {
+    const own = node.employees?.length ?? 0;
+    const nested = (node.children ?? []).reduce((s, c)=>s + countTreeMembers(c), 0);
+    return own + nested;
+}
 const retentionData = [
     {
         month: "Jan",
@@ -347,12 +364,12 @@ function StatCard({ title, value, badge, badgeVariant, icon: IconComponent }) {
                     strokeWidth: 1.75
                 }, void 0, false, {
                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                    lineNumber: 181,
+                    lineNumber: 193,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                lineNumber: 180,
+                lineNumber: 192,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -360,7 +377,7 @@ function StatCard({ title, value, badge, badgeVariant, icon: IconComponent }) {
                 children: title
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                lineNumber: 183,
+                lineNumber: 195,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -368,7 +385,7 @@ function StatCard({ title, value, badge, badgeVariant, icon: IconComponent }) {
                 children: value
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                lineNumber: 184,
+                lineNumber: 196,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -376,13 +393,13 @@ function StatCard({ title, value, badge, badgeVariant, icon: IconComponent }) {
                 children: badge
             }, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                lineNumber: 187,
+                lineNumber: 199,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-        lineNumber: 179,
+        lineNumber: 191,
         columnNumber: 5
     }, this);
 }
@@ -393,7 +410,7 @@ function StatusBadge({ status }) {
         children: status
     }, void 0, false, {
         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-        lineNumber: 203,
+        lineNumber: 215,
         columnNumber: 5
     }, this);
 }
@@ -401,6 +418,39 @@ _c1 = StatusBadge;
 function HrisDashboardScreen() {
     _s();
     const [hoveredBarIndex, setHoveredBarIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const { data: employeeData } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
+        queryKey: [
+            "dashboard-employees"
+        ],
+        queryFn: {
+            "HrisDashboardScreen.useQuery": ()=>__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["dashboardApi"].getEmployees(1, 100)
+        }["HrisDashboardScreen.useQuery"],
+        retry: false
+    });
+    const { data: deptTree } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])({
+        queryKey: [
+            "dashboard-dept-tree"
+        ],
+        queryFn: {
+            "HrisDashboardScreen.useQuery": ()=>__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["dashboardApi"].getDepartmentTree()
+        }["HrisDashboardScreen.useQuery"],
+        retry: false
+    });
+    // Total employees — real count when the company has data, otherwise demo figure.
+    const realTotal = employeeData?.pagination?.total ?? 0;
+    const totalEmployees = realTotal > 0 ? realTotal.toLocaleString() : "1,248";
+    // Department distribution — derived from the live department tree, falling back
+    // to demo data when the company has no departments yet.
+    const liveDeptData = Array.isArray(deptTree) && deptTree.length > 0 ? deptTree.map((node, i)=>({
+            name: node.name.toUpperCase(),
+            value: countTreeMembers(node),
+            color: DEPT_COLORS[i % DEPT_COLORS.length]
+        })).filter((d)=>d.value > 0) : [];
+    const chartDeptData = liveDeptData.length > 0 ? liveDeptData : departmentData;
+    // Percentages derived from the live (or fallback) distribution so the overlay
+    // labels stay consistent with the rendered segments.
+    const deptTotal = chartDeptData.reduce((sum, d)=>sum + d.value, 0) || 1;
+    const deptPct = chartDeptData.map((d)=>Math.round(d.value / deptTotal * 100));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "space-y-6",
         children: [
@@ -414,7 +464,7 @@ function HrisDashboardScreen() {
                                 children: "Overview"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 225,
+                                lineNumber: 273,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -422,13 +472,13 @@ function HrisDashboardScreen() {
                                 children: "Welcome back, Admin. Here is what's happening today."
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 228,
+                                lineNumber: 276,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 224,
+                        lineNumber: 272,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -444,12 +494,12 @@ function HrisDashboardScreen() {
                                             className: "size-5 text-blue-700"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                            lineNumber: 239,
+                                            lineNumber: 287,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 238,
+                                        lineNumber: 286,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -460,7 +510,7 @@ function HrisDashboardScreen() {
                                                 children: "Add Employee "
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 242,
+                                                lineNumber: 290,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -468,19 +518,19 @@ function HrisDashboardScreen() {
                                                 children: "Onboard talents"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 243,
+                                                lineNumber: 291,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 241,
+                                        lineNumber: 289,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 234,
+                                lineNumber: 282,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -493,12 +543,12 @@ function HrisDashboardScreen() {
                                             className: "size-5 text-blue-700"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                            lineNumber: 252,
+                                            lineNumber: 300,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 251,
+                                        lineNumber: 299,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -509,7 +559,7 @@ function HrisDashboardScreen() {
                                                 children: "Post Job "
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 255,
+                                                lineNumber: 303,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -517,19 +567,19 @@ function HrisDashboardScreen() {
                                                 children: "Open requisitions"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 256,
+                                                lineNumber: 304,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 254,
+                                        lineNumber: 302,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 247,
+                                lineNumber: 295,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -542,12 +592,12 @@ function HrisDashboardScreen() {
                                             className: "size-5 text-blue-700"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                            lineNumber: 266,
+                                            lineNumber: 314,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 265,
+                                        lineNumber: 313,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -558,7 +608,7 @@ function HrisDashboardScreen() {
                                                 children: "Run Payroll "
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 269,
+                                                lineNumber: 317,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -566,31 +616,31 @@ function HrisDashboardScreen() {
                                                 children: "Monthly Cycle"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 270,
+                                                lineNumber: 318,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 268,
+                                        lineNumber: 316,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 261,
+                                lineNumber: 309,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 232,
+                        lineNumber: 280,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                lineNumber: 223,
+                lineNumber: 271,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -598,13 +648,13 @@ function HrisDashboardScreen() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
                         title: "Total Employees",
-                        value: "1,248",
+                        value: totalEmployees,
                         badge: "+12% vs Last Year",
                         badgeVariant: "blue",
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$shared$2f$icons$2f$dashboard_overview_icons$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MultipleUserStat"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 277,
+                        lineNumber: 325,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -615,7 +665,7 @@ function HrisDashboardScreen() {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$shared$2f$icons$2f$dashboard_overview_icons$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MultipleUserStat"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 284,
+                        lineNumber: 332,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -626,7 +676,7 @@ function HrisDashboardScreen() {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$shared$2f$icons$2f$dashboard_overview_icons$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MultipleUserStat"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 291,
+                        lineNumber: 339,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(StatCard, {
@@ -637,13 +687,13 @@ function HrisDashboardScreen() {
                         icon: __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$shared$2f$icons$2f$dashboard_overview_icons$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["MultipleUserStat"]
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 298,
+                        lineNumber: 346,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                lineNumber: 276,
+                lineNumber: 324,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -660,7 +710,7 @@ function HrisDashboardScreen() {
                                         children: "Attendance Overview"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 310,
+                                        lineNumber: 358,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -669,18 +719,18 @@ function HrisDashboardScreen() {
                                             children: "Last 7 Days"
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                            lineNumber: 314,
+                                            lineNumber: 362,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 313,
+                                        lineNumber: 361,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 309,
+                                lineNumber: 357,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -714,7 +764,7 @@ function HrisDashboardScreen() {
                                                 ]
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 326,
+                                                lineNumber: 374,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["XAxis"], {
@@ -728,7 +778,7 @@ function HrisDashboardScreen() {
                                                 dy: 10
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 333,
+                                                lineNumber: 381,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -742,7 +792,7 @@ function HrisDashboardScreen() {
                                                 }
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 340,
+                                                lineNumber: 388,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Bar$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Bar"], {
@@ -764,34 +814,34 @@ function HrisDashboardScreen() {
                                                         }
                                                     }, `cell-${index}`, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 355,
+                                                        lineNumber: 403,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 348,
+                                                lineNumber: 396,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 319,
+                                        lineNumber: 367,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                    lineNumber: 318,
+                                    lineNumber: 366,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 317,
+                                lineNumber: 365,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 308,
+                        lineNumber: 356,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -805,7 +855,7 @@ function HrisDashboardScreen() {
                                         children: "Coming Up"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 373,
+                                        lineNumber: 421,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -814,13 +864,13 @@ function HrisDashboardScreen() {
                                         children: "View Calendar"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 374,
+                                        lineNumber: 422,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 372,
+                                lineNumber: 420,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -836,7 +886,7 @@ function HrisDashboardScreen() {
                                                         children: item.date
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 382,
+                                                        lineNumber: 430,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -844,13 +894,13 @@ function HrisDashboardScreen() {
                                                         children: item.day
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 385,
+                                                        lineNumber: 433,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 381,
+                                                lineNumber: 429,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -861,7 +911,7 @@ function HrisDashboardScreen() {
                                                         children: item.title
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 390,
+                                                        lineNumber: 438,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -869,36 +919,36 @@ function HrisDashboardScreen() {
                                                         children: item.subtitle
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 391,
+                                                        lineNumber: 439,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 389,
+                                                lineNumber: 437,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, item.day + item.title, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 380,
+                                        lineNumber: 428,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 378,
+                                lineNumber: 426,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 371,
+                        lineNumber: 419,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                lineNumber: 307,
+                lineNumber: 355,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -918,7 +968,7 @@ function HrisDashboardScreen() {
                                                 children: "Employees on Leave"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 403,
+                                                lineNumber: 451,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -927,13 +977,13 @@ function HrisDashboardScreen() {
                                                 children: "View All"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 406,
+                                                lineNumber: 454,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 402,
+                                        lineNumber: 450,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -950,7 +1000,7 @@ function HrisDashboardScreen() {
                                                                 children: "Name"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                lineNumber: 414,
+                                                                lineNumber: 462,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -958,7 +1008,7 @@ function HrisDashboardScreen() {
                                                                 children: "Type"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                lineNumber: 415,
+                                                                lineNumber: 463,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -966,7 +1016,7 @@ function HrisDashboardScreen() {
                                                                 children: "Date"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                lineNumber: 416,
+                                                                lineNumber: 464,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -974,18 +1024,18 @@ function HrisDashboardScreen() {
                                                                 children: "Status"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                lineNumber: 417,
+                                                                lineNumber: 465,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 413,
+                                                        lineNumber: 461,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                    lineNumber: 412,
+                                                    lineNumber: 460,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -1002,7 +1052,7 @@ function HrisDashboardScreen() {
                                                                                 children: row.initials
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                                lineNumber: 425,
+                                                                                lineNumber: 473,
                                                                                 columnNumber: 27
                                                                             }, this),
                                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1010,18 +1060,18 @@ function HrisDashboardScreen() {
                                                                                 children: row.name
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                                lineNumber: 428,
+                                                                                lineNumber: 476,
                                                                                 columnNumber: 27
                                                                             }, this)
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                        lineNumber: 424,
+                                                                        lineNumber: 472,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                    lineNumber: 423,
+                                                                    lineNumber: 471,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1029,7 +1079,7 @@ function HrisDashboardScreen() {
                                                                     children: row.type
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                    lineNumber: 431,
+                                                                    lineNumber: 479,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1037,7 +1087,7 @@ function HrisDashboardScreen() {
                                                                     children: row.dates
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                    lineNumber: 432,
+                                                                    lineNumber: 480,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -1046,40 +1096,40 @@ function HrisDashboardScreen() {
                                                                         status: row.status
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                        lineNumber: 434,
+                                                                        lineNumber: 482,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                    lineNumber: 433,
+                                                                    lineNumber: 481,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, row.name, true, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                            lineNumber: 422,
+                                                            lineNumber: 470,
                                                             columnNumber: 21
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                    lineNumber: 420,
+                                                    lineNumber: 468,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                            lineNumber: 411,
+                                            lineNumber: 459,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 410,
+                                        lineNumber: 458,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 401,
+                                lineNumber: 449,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1090,7 +1140,7 @@ function HrisDashboardScreen() {
                                         children: "Recent Activity"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 444,
+                                        lineNumber: 492,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1105,20 +1155,20 @@ function HrisDashboardScreen() {
                                                                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("absolute inset-0 rounded-lg opacity-20", item.bg ?? "")
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                lineNumber: 451,
+                                                                lineNumber: 499,
                                                                 columnNumber: 21
                                                             }, this),
                                                             item.icon && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(item.icon, {
                                                                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("w-5 h-5 relative z-10", item.IconColor ?? "text-white")
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                lineNumber: 458,
+                                                                lineNumber: 506,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 450,
+                                                        lineNumber: 498,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1128,7 +1178,7 @@ function HrisDashboardScreen() {
                                                                 children: item.text
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                lineNumber: 464,
+                                                                lineNumber: 512,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1136,36 +1186,36 @@ function HrisDashboardScreen() {
                                                                 children: item.meta
                                                             }, void 0, false, {
                                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                lineNumber: 465,
+                                                                lineNumber: 513,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 463,
+                                                        lineNumber: 511,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, item.text, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 449,
+                                                lineNumber: 497,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 447,
+                                        lineNumber: 495,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 443,
+                                lineNumber: 491,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 400,
+                        lineNumber: 448,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1179,7 +1229,7 @@ function HrisDashboardScreen() {
                                         children: "Employee Distribution by Department"
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 476,
+                                        lineNumber: 524,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1194,7 +1244,7 @@ function HrisDashboardScreen() {
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$chart$2f$PieChart$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PieChart"], {
                                                             children: [
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$polar$2f$Pie$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Pie"], {
-                                                                    data: departmentData,
+                                                                    data: chartDeptData,
                                                                     dataKey: "value",
                                                                     cx: "50%",
                                                                     cy: "50%",
@@ -1210,16 +1260,16 @@ function HrisDashboardScreen() {
                                                                     animationBegin: 0,
                                                                     animationDuration: 1400,
                                                                     animationEasing: "ease-out",
-                                                                    children: departmentData.map((entry, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Cell$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Cell"], {
+                                                                    children: chartDeptData.map((entry, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Cell$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Cell"], {
                                                                             fill: entry.color
                                                                         }, index, false, {
                                                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                            lineNumber: 503,
+                                                                            lineNumber: 551,
                                                                             columnNumber: 25
                                                                         }, this))
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                    lineNumber: 484,
+                                                                    lineNumber: 532,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {
@@ -1228,100 +1278,105 @@ function HrisDashboardScreen() {
                                                                     cursor: false
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                    lineNumber: 506,
+                                                                    lineNumber: 554,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                            lineNumber: 483,
+                                                            lineNumber: 531,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 482,
+                                                        lineNumber: 530,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute right-5 top-23.75",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-slate-500 shadow",
-                                                            children: "37%"
-                                                        }, void 0, false, {
+                                                            children: [
+                                                                deptPct[0] ?? 0,
+                                                                "%"
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                            lineNumber: 511,
+                                                            lineNumber: 559,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 510,
+                                                        lineNumber: 558,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute left-2.5 top-13.75",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-slate-500 shadow",
-                                                            children: "22%"
-                                                        }, void 0, false, {
+                                                            children: [
+                                                                deptPct[1] ?? 0,
+                                                                "%"
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                            lineNumber: 517,
+                                                            lineNumber: 565,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 516,
+                                                        lineNumber: 564,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "absolute bottom-1.25 left-1/2 -translate-x-1/2",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-slate-500 shadow",
-                                                            children: "24%"
-                                                        }, void 0, false, {
+                                                            children: [
+                                                                deptPct[2] ?? 0,
+                                                                "%"
+                                                            ]
+                                                        }, void 0, true, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                            lineNumber: 523,
+                                                            lineNumber: 571,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 522,
+                                                        lineNumber: 570,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 481,
+                                                lineNumber: 529,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "mt-8 flex items-center justify-center gap-2",
-                                                children: [
-                                                    'ENGINEERING',
-                                                    'OPERATIONS',
-                                                    'DESIGNS'
-                                                ].map((dept)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                children: chartDeptData.slice(0, 3).map((dept)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "px-2.5 py-1.5 border border-[#F1F5F9] rounded-md text-[10px] font-medium text-[#64748B] bg-white shadow-sm tracking-wide",
-                                                        children: dept
-                                                    }, dept, false, {
+                                                        children: dept.name
+                                                    }, dept.name, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 531,
+                                                        lineNumber: 579,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 529,
+                                                lineNumber: 577,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 480,
+                                        lineNumber: 528,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 475,
+                                lineNumber: 523,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1335,7 +1390,7 @@ function HrisDashboardScreen() {
                                                 children: "Retention Trend"
                                             }, void 0, false, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 544,
+                                                lineNumber: 592,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1346,19 +1401,19 @@ function HrisDashboardScreen() {
                                                         className: "size-4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 549,
+                                                        lineNumber: 597,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 547,
+                                                lineNumber: 595,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 543,
+                                        lineNumber: 591,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1389,7 +1444,7 @@ function HrisDashboardScreen() {
                                                                     stopOpacity: 0.4
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                    lineNumber: 557,
+                                                                    lineNumber: 605,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
@@ -1398,18 +1453,18 @@ function HrisDashboardScreen() {
                                                                     stopOpacity: 0
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                                    lineNumber: 558,
+                                                                    lineNumber: 606,
                                                                     columnNumber: 23
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                            lineNumber: 556,
+                                                            lineNumber: 604,
                                                             columnNumber: 21
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 555,
+                                                        lineNumber: 603,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$XAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["XAxis"], {
@@ -1422,7 +1477,7 @@ function HrisDashboardScreen() {
                                                         }
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 561,
+                                                        lineNumber: 609,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$YAxis$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["YAxis"], {
@@ -1433,12 +1488,12 @@ function HrisDashboardScreen() {
                                                         ]
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 567,
+                                                        lineNumber: 615,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$component$2f$Tooltip$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Tooltip"], {}, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 568,
+                                                        lineNumber: 616,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$recharts$40$3$2e$8$2e$1_$40$types$2b$react$40$19$2e$2$2e$14_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$2d$is$40$18$2e$3$2e$1_react$40$19$2e$2$2e$4_redux$40$5$2e$0$2e$1$2f$node_modules$2f$recharts$2f$es6$2f$cartesian$2f$Area$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Area"], {
@@ -1449,51 +1504,56 @@ function HrisDashboardScreen() {
                                                         fill: "url(#retentionFill)"
                                                     }, void 0, false, {
                                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                        lineNumber: 569,
+                                                        lineNumber: 617,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                                lineNumber: 554,
+                                                lineNumber: 602,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                            lineNumber: 553,
+                                            lineNumber: 601,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                        lineNumber: 552,
+                                        lineNumber: 600,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                                lineNumber: 542,
+                                lineNumber: 590,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                        lineNumber: 473,
+                        lineNumber: 521,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-                lineNumber: 399,
+                lineNumber: 447,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/modules/dashboard/screens/hris-dashboard-screen.tsx",
-        lineNumber: 221,
+        lineNumber: 269,
         columnNumber: 5
     }, this);
 }
-_s(HrisDashboardScreen, "T4CtUG7mIbWL4UhvrAiS+Bkd9oM=");
+_s(HrisDashboardScreen, "VMyGWVrPyiq7sCnFKr2ZUJeR1ro=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f40$tanstack$2b$react$2d$query$40$5$2e$100$2e$14_react$40$19$2e$2$2e$4$2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"]
+    ];
+});
 _c2 = HrisDashboardScreen;
 var _c, _c1, _c2;
 __turbopack_context__.k.register(_c, "StatCard");

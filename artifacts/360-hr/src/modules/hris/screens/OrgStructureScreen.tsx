@@ -41,6 +41,7 @@ import {
 } from "lucide-react";
 
 import { departmentApi } from "@/lib/api";
+import type { DepartmentTree } from "@/types";
 import { cn } from "@/lib/utils";
 
 // ─── Types ─────────────────────────────────────────────────────────────────────
@@ -82,6 +83,34 @@ const MOCK_DEPARTMENTS: Department[] = [
 
 const TABS = ["Tree View", "List View (Hierarchy)", "Business Units Overview"] as const;
 
+// ─── API → UI mapping ────────────────────────────────────────────────────────────
+const ICON_KEYS: Department["iconKey"][] = ["eng", "ops", "sales"];
+
+function countMembers(node: DepartmentTree): number {
+    const own = node.employees?.length ?? 0;
+    const nested = (node.children ?? []).reduce((sum, c) => sum + countMembers(c), 0);
+    return own + nested;
+}
+
+function mapTreeToUnits(tree: DepartmentTree[]): Department[] {
+    return tree.map((node, idx) => {
+        const firstChild = node.children?.[0];
+        const headEmp = node.employees?.[0];
+        return {
+            id: node.id,
+            name: node.name,
+            type: node.parentDepartmentId ? "Department" : "Business Unit",
+            iconKey: ICON_KEYS[idx % ICON_KEYS.length],
+            child: firstChild
+                ? { name: firstChild.name, members: `${countMembers(firstChild)} Members` }
+                : undefined,
+            headOfUnit: headEmp ? `${headEmp.firstName} ${headEmp.lastName}` : undefined,
+            memberCount: countMembers(node),
+            openRoles: 0,
+        };
+    });
+}
+
 // ─── Helpers ───────────────────────────────────────────────────────────────────
 const ICONS: Record<string, React.ReactNode> = {
     eng: <SlidersHorizontal className="h-4 w-4 text-[#1C4ED8]" />,
@@ -110,7 +139,9 @@ export default function OrgStructureScreen() {
     });
 
     const isMockData = !apiData || !Array.isArray(apiData) || apiData.length === 0;
-    const units: Department[] = isMockData ? MOCK_DEPARTMENTS : (apiData as Department[]);
+    const units: Department[] = isMockData
+        ? MOCK_DEPARTMENTS
+        : mapTreeToUnits(apiData as DepartmentTree[]);
     const selected = units.find((u) => u.id === selectedId) ?? units[0];
 
     // Pan handlers

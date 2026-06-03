@@ -8,7 +8,12 @@ import type {
   ResetPasswordInput,
   Employee,
   EmployeeList,
-  DashboardOverview,
+  Department,
+  DepartmentTree,
+  DisciplinaryRecord,
+  CreateDisciplinaryInput,
+  EmploymentHistory,
+  CreateEmploymentHistoryInput,
 } from "@/types";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "";
@@ -192,13 +197,18 @@ export const employeeApi = {
 };
 
 // ─── Dashboard API ────────────────────────────────────────────────────────────
+//
+// The backend exposes no `/dashboard` endpoint — dashboard figures are derived
+// client-side from the employees and department-tree endpoints.
 
 export const dashboardApi = {
-  getOverview: () =>
-    get<DashboardOverview>("/dashboard", authHeaders()),
+  getEmployees: (page = 1, limit = 100) => {
+    const query = new URLSearchParams({ page: String(page), limit: String(limit) }).toString();
+    return get<EmployeeList>(`/employees?${query}`, authHeaders());
+  },
 
-  getHrisEmployees: () =>
-    get<EmployeeList>("/employees", authHeaders()),
+  getDepartmentTree: () =>
+    get<DepartmentTree[]>("/departments/company/tree", authHeaders()),
 };
 
 // ─── Department API ───────────────────────────────────────────────────────────
@@ -211,18 +221,49 @@ export type DepartmentInput = {
 };
 
 export const departmentApi = {
+  getAll: () =>
+    get<Department[]>("/departments", authHeaders()),
+
   create: (data: DepartmentInput) =>
-    post<unknown>("/departments", data, authHeaders()),
+    post<Department>("/departments", data, authHeaders()),
 
   getTree: () =>
-    get<unknown>("/departments/company/tree", authHeaders()),
+    get<DepartmentTree[]>("/departments/company/tree", authHeaders()),
 
   update: (id: string, data: Partial<DepartmentInput>) =>
-    put<unknown>(`/departments/${id}`, data, authHeaders()),
+    put<Department>(`/departments/${id}`, data, authHeaders()),
 
   delete: (id: string) =>
-    del<unknown>(`/departments/${id}`, authHeaders()),
+    del<{ success: boolean }>(`/departments/${id}`, authHeaders()),
 
   getById: (id: string) =>
-    get<unknown>(`/departments/${id}`, authHeaders()),
+    get<Department>(`/departments/${id}`, authHeaders()),
+};
+
+// ─── Disciplinary Records API ───────────────────────────────────────────────────
+
+export const disciplinaryApi = {
+  getByEmployee: (employeeId: string) =>
+    get<DisciplinaryRecord[]>(`/disciplinary/employees/${employeeId}`, authHeaders()),
+
+  create: (employeeId: string, data: CreateDisciplinaryInput) =>
+    post<DisciplinaryRecord>(`/disciplinary/employees/${employeeId}`, data, authHeaders()),
+
+  resolve: (disciplinaryId: string, resolutionNotes: string) =>
+    request<DisciplinaryRecord>(
+      "PATCH",
+      `/disciplinary/employees/${disciplinaryId}`,
+      { resolutionNotes },
+      authHeaders(),
+    ),
+};
+
+// ─── Employment History API ─────────────────────────────────────────────────────
+
+export const employmentHistoryApi = {
+  getByEmployee: (employeeId: string) =>
+    get<EmploymentHistory[]>(`/employment-history/employees/${employeeId}`, authHeaders()),
+
+  create: (employeeId: string, data: CreateEmploymentHistoryInput) =>
+    post<EmploymentHistory>(`/employment-history/employees/${employeeId}`, data, authHeaders()),
 };

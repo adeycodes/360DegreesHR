@@ -2,12 +2,16 @@
 import React, { ComponentType } from "react";
 import Link from "next/link";
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import {
 
   Calendar,
   TrendingUp,
   Users,
 } from "lucide-react";
+
+import { dashboardApi } from "@/lib/api";
+import type { DepartmentTree } from "@/types";
 import {
   Area,
   AreaChart,
@@ -93,6 +97,14 @@ const departmentData = [
   { name: "OPERATIONS", value: 39, color: "#A0AEC0" },
   { name: "DESIGNS", value: 24, color: "#CBD5E1" },
 ];
+
+const DEPT_COLORS = ["#00E5BE", "#A0AEC0", "#CBD5E1", "#93C5FD", "#FBBF24", "#F472B6"];
+
+function countTreeMembers(node: DepartmentTree): number {
+  const own = node.employees?.length ?? 0;
+  const nested = (node.children ?? []).reduce((s, c) => s + countTreeMembers(c), 0);
+  return own + nested;
+}
 
 const retentionData = [
   { month: "Jan", value: 88 },
@@ -217,6 +229,42 @@ function StatusBadge({ status }: { status: "Approved" | "Pending" }) {
 export function HrisDashboardScreen() {
 
   const [hoveredBarIndex, setHoveredBarIndex] = useState<number | null>(null);
+
+  const { data: employeeData } = useQuery({
+    queryKey: ["dashboard-employees"],
+    queryFn: () => dashboardApi.getEmployees(1, 100),
+    retry: false,
+  });
+
+  const { data: deptTree } = useQuery({
+    queryKey: ["dashboard-dept-tree"],
+    queryFn: () => dashboardApi.getDepartmentTree(),
+    retry: false,
+  });
+
+  // Total employees — real count when the company has data, otherwise demo figure.
+  const realTotal = employeeData?.pagination?.total ?? 0;
+  const totalEmployees = realTotal > 0 ? realTotal.toLocaleString() : "1,248";
+
+  // Department distribution — derived from the live department tree, falling back
+  // to demo data when the company has no departments yet.
+  const liveDeptData =
+    Array.isArray(deptTree) && deptTree.length > 0
+      ? deptTree
+          .map((node, i) => ({
+            name: node.name.toUpperCase(),
+            value: countTreeMembers(node),
+            color: DEPT_COLORS[i % DEPT_COLORS.length],
+          }))
+          .filter((d) => d.value > 0)
+      : [];
+  const chartDeptData = liveDeptData.length > 0 ? liveDeptData : departmentData;
+
+  // Percentages derived from the live (or fallback) distribution so the overlay
+  // labels stay consistent with the rendered segments.
+  const deptTotal = chartDeptData.reduce((sum, d) => sum + d.value, 0) || 1;
+  const deptPct = chartDeptData.map((d) => Math.round((d.value / deptTotal) * 100));
+
   return (
     <div className="space-y-6">
 
@@ -276,7 +324,7 @@ export function HrisDashboardScreen() {
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <StatCard
           title="Total Employees"
-          value="1,248"
+          value={totalEmployees}
           badge="+12% vs Last Year"
           badgeVariant="blue"
           icon={MultipleUserStat}
@@ -482,7 +530,7 @@ export function HrisDashboardScreen() {
                 <ResponsiveContainer width="100%" height="100%">
                   <PieChart>
                     <Pie
-                      data={departmentData}
+                      data={chartDeptData}
                       dataKey="value"
                       cx="50%"
                       cy="50%"
@@ -499,7 +547,7 @@ export function HrisDashboardScreen() {
                       animationDuration={1400}
                       animationEasing="ease-out"
                     >
-                      {departmentData.map((entry, index) => (
+                      {chartDeptData.map((entry, index) => (
                         <Cell key={index} fill={entry.color} />
                       ))}
                     </Pie>
@@ -509,30 +557,30 @@ export function HrisDashboardScreen() {
 
                 <div className="absolute right-5 top-23.75">
                   <span className="rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-slate-500 shadow">
-                    37%
+                    {deptPct[0] ?? 0}%
                   </span>
                 </div>
 
                 <div className="absolute left-2.5 top-13.75">
                   <span className="rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-slate-500 shadow">
-                    22%
+                    {deptPct[1] ?? 0}%
                   </span>
                 </div>
 
                 <div className="absolute bottom-1.25 left-1/2 -translate-x-1/2">
                   <span className="rounded-full bg-white px-2 py-1 text-[11px] font-semibold text-slate-500 shadow">
-                    24%
+                    {deptPct[2] ?? 0}%
                   </span>
                 </div>
               </div>
 
               <div className="mt-8 flex items-center justify-center gap-2">
-                {['ENGINEERING', 'OPERATIONS', 'DESIGNS'].map((dept) => (
+                {chartDeptData.slice(0, 3).map((dept) => (
                   <div
-                    key={dept}
+                    key={dept.name}
                     className="px-2.5 py-1.5 border border-[#F1F5F9] rounded-md text-[10px] font-medium text-[#64748B] bg-white shadow-sm tracking-wide"
                   >
-                    {dept}
+                    {dept.name}
                   </div>
                 ))}
               </div>

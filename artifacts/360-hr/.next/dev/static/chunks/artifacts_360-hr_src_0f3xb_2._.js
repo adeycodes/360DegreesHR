@@ -60,8 +60,12 @@ __turbopack_context__.s([
     ()=>dashboardApi,
     "departmentApi",
     ()=>departmentApi,
+    "disciplinaryApi",
+    ()=>disciplinaryApi,
     "employeeApi",
     ()=>employeeApi,
+    "employmentHistoryApi",
+    ()=>employmentHistoryApi,
     "toUserMessage",
     ()=>toUserMessage
 ]);
@@ -189,15 +193,33 @@ const employeeApi = {
     delete: (id)=>del(`/employees/${id}`, authHeaders())
 };
 const dashboardApi = {
-    getOverview: ()=>get("/dashboard", authHeaders()),
-    getHrisEmployees: ()=>get("/employees", authHeaders())
+    getEmployees: (page = 1, limit = 100)=>{
+        const query = new URLSearchParams({
+            page: String(page),
+            limit: String(limit)
+        }).toString();
+        return get(`/employees?${query}`, authHeaders());
+    },
+    getDepartmentTree: ()=>get("/departments/company/tree", authHeaders())
 };
 const departmentApi = {
+    getAll: ()=>get("/departments", authHeaders()),
     create: (data)=>post("/departments", data, authHeaders()),
     getTree: ()=>get("/departments/company/tree", authHeaders()),
     update: (id, data)=>put(`/departments/${id}`, data, authHeaders()),
     delete: (id)=>del(`/departments/${id}`, authHeaders()),
     getById: (id)=>get(`/departments/${id}`, authHeaders())
+};
+const disciplinaryApi = {
+    getByEmployee: (employeeId)=>get(`/disciplinary/employees/${employeeId}`, authHeaders()),
+    create: (employeeId, data)=>post(`/disciplinary/employees/${employeeId}`, data, authHeaders()),
+    resolve: (disciplinaryId, resolutionNotes)=>request("PATCH", `/disciplinary/employees/${disciplinaryId}`, {
+            resolutionNotes
+        }, authHeaders())
+};
+const employmentHistoryApi = {
+    getByEmployee: (employeeId)=>get(`/employment-history/employees/${employeeId}`, authHeaders()),
+    create: (employeeId, data)=>post(`/employment-history/employees/${employeeId}`, data, authHeaders())
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);

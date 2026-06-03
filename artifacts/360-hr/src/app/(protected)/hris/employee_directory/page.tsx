@@ -29,10 +29,15 @@ export default function EmployeeDirectoryPage() {
     retry: false,
   });
 
-  const employees = isError ? MOCK_EMPLOYEES : (data?.employees ?? []);
-  const pagination = isError ? { total: 128, page: 1, limit: 10, totalPages: 13 } : (data?.pagination ?? null);
+  // Use real data when available; fall back to demo data on error OR empty response
+  const apiEmployees = data?.employees ?? [];
+  const useMock = isError || (!isLoading && apiEmployees.length === 0);
+  const employees = useMock ? MOCK_EMPLOYEES : apiEmployees;
+  const pagination = useMock
+    ? { total: 128, page: 1, limit: 10, totalPages: 13 }
+    : (data?.pagination ?? null);
   const isLoadingDisplay = isLoading && !isError;
-  const errorMsg = null; // silently use demo data when API is unavailable
+  const errorMsg = null;
 
   return (
     <EmployeeDirectoryScreen

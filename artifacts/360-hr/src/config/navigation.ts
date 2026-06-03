@@ -10,8 +10,8 @@ export type NavItem = {
 };
 
 const hrisChildren = [
-  { title: "Employees Directory", href: routes.hris.employees },
-  { title: "Organization Structure", href: routes.hris.organization_structure },
+  { title: "Employee Directory", href: routes.hris.employees },
+  { title: "Organization Chart", href: routes.hris.organization_structure },
   { title: "Reports", href: routes.hris.reports },
 ];
 

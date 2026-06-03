@@ -40,6 +40,7 @@ import {
   MoreVertical,
   Wallet,
   Users,
+  RefreshCw,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -1540,12 +1541,10 @@ function EditEmployeeModal({
         <div className="flex items-center justify-between px-6 py-4 border-t border-slate-100 bg-[#F8FAFC]">
           <div className="flex items-center gap-4 text-[11px] text-slate-500">
             <span className="flex items-center gap-1.5">
-              <Pencil className="w-3 h-3 text-[#1C4ED8]" /> Last edited 2 days
-              ago by Sarah Femi
+              <Pencil className="w-3 h-3 text-[#1C4ED8]" /> Last edited 2 days ago by Sarah Femi
             </span>
             <span className="flex items-center gap-1.5">
-              <Clock className="w-3 h-3 text-[#1C4ED8]" /> Role History
-              Promoted Oct 2023
+              <Clock className="w-3 h-3 text-[#1C4ED8]" /> Role History Promoted Oct 2023
             </span>
           </div>
           <div className="flex gap-3">
@@ -1957,21 +1956,15 @@ function AddEmployeeModal({
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <FieldWrap label="Direct Manager">
-                    <div className="relative">
-                      <div className="flex items-center gap-2.5 px-3 py-2.5 bg-white border border-slate-200 rounded-lg cursor-pointer hover:border-slate-300">
-                        <div className="w-6 h-6 rounded-full bg-slate-300 flex items-center justify-center text-white text-[10px] font-bold">
-                          JS
-                        </div>
-                        <div className="text-left">
-                          <p className="text-[12px] font-semibold text-slate-800">
-                            Jordan Smith
-                          </p>
-                          <p className="text-[10px] text-slate-400">
-                            Head of Design
-                          </p>
-                        </div>
-                        <ChevronDown className="w-3.5 h-3.5 text-slate-400 ml-auto" />
+                    <div className="flex items-center gap-2.5 px-3 py-2.5 bg-white border border-slate-200 rounded-lg cursor-pointer hover:border-slate-300">
+                      <div className="w-7 h-7 rounded-full bg-amber-500 flex items-center justify-center text-white text-[10px] font-bold shrink-0">
+                        JS
                       </div>
+                      <div className="text-left flex-1">
+                        <p className="text-[13px] font-semibold text-slate-800">Jordan Smith</p>
+                        <p className="text-[10px] text-slate-400">Head of Design</p>
+                      </div>
+                      <RefreshCw className="w-3.5 h-3.5 text-slate-400" />
                     </div>
                   </FieldWrap>
                   <FieldWrap label="Start Date">
@@ -2032,13 +2025,17 @@ function AddEmployeeModal({
                     ))}
                   </div>
                 </div>
-                <FieldWrap label="Internal Context">
+                <div>
+                  <div className="flex items-center gap-2 mb-2 px-3 py-2 bg-blue-50 rounded-t-lg border border-blue-100 border-b-0">
+                    <Info className="w-3.5 h-3.5 text-[#1C4ED8] shrink-0" />
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-[#1C4ED8]">Internal Context</p>
+                  </div>
                   <textarea
                     placeholder="Mention specific equipment needs or specialized onboarding requirements..."
                     rows={3}
-                    className={cn(inputCls, "resize-none")}
+                    className={cn(inputCls, "resize-none rounded-t-none border-blue-100")}
                   />
-                </FieldWrap>
+                </div>
               </div>
             )}
 

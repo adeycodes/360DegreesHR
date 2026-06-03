@@ -619,11 +619,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$sr
 ;
 const hrisChildren = [
     {
-        title: "Employees Directory",
+        title: "Employee Directory",
         href: __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["routes"].hris.employees
     },
     {
-        title: "Organization Structure",
+        title: "Organization Chart",
         href: __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$config$2f$routes$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["routes"].hris.organization_structure
     },
     {

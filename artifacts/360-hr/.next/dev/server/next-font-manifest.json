@@ -4,6 +4,18 @@
       "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
       "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
     ],
+    "[project]/artifacts/360-hr/src/app/(auth)/login/password/page": [
+      "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
+      "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
+    ],
+    "[project]/artifacts/360-hr/src/app/(auth)/signing-in/page": [
+      "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
+      "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
+    ],
+    "[project]/artifacts/360-hr/src/app/(auth)/welcome/page": [
+      "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
+      "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
+    ],
     "[project]/artifacts/360-hr/src/app/(protected)/dashboard/page": [
       "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
       "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
@@ -13,6 +25,10 @@
       "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
     ],
     "[project]/artifacts/360-hr/src/app/(protected)/hris/audit_logs/page": [
+      "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
+      "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
+    ],
+    "[project]/artifacts/360-hr/src/app/(protected)/hris/employee_directory/page": [
       "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
       "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
     ],

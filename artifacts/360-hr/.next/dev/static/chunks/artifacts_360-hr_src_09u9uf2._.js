@@ -123,8 +123,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$sr
 const heroImages = {
     "sso-office": "/images/sso_hero_image.png",
     "login-building": "/images/login_hero_image.png",
-    "forgot-building": "/images/figma/auth/forgot-hero.png",
-    "forgot-success-blue": "/images/figma/auth/forgot-success-hero.png"
+    "forgot-building": "/images/login_hero_image.png",
+    "forgot-success-blue": "/images/login_hero_image.png",
+    "otp-dark": "/images/login_hero_image.png",
+    "lockout-blue": "/images/sso_hero_image.png"
 };
 function AuthSplitLayout({ children, hero, variant, rightClassName, hideFooter }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -145,14 +147,14 @@ function AuthSplitLayout({ children, hero, variant, rightClassName, hideFooter }
                                 sizes: "50vw"
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/auth/auth-split-layout.tsx",
-                                lineNumber: 38,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("absolute inset-0", variant === "forgot-success-blue" ? "bg-primary-500/88" : variant === "sso-office" ? "bg-white/30" : "bg-black/15")
+                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("absolute inset-0", variant === "forgot-success-blue" || variant === "lockout-blue" ? "bg-primary-600/90" : variant === "sso-office" ? "bg-white/30" : variant === "otp-dark" ? "bg-black/60" : "bg-black/15")
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/auth/auth-split-layout.tsx",
-                                lineNumber: 46,
+                                lineNumber: 50,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -160,13 +162,13 @@ function AuthSplitLayout({ children, hero, variant, rightClassName, hideFooter }
                                 children: hero
                             }, void 0, false, {
                                 fileName: "[project]/artifacts/360-hr/src/shared/auth/auth-split-layout.tsx",
-                                lineNumber: 56,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/artifacts/360-hr/src/shared/auth/auth-split-layout.tsx",
-                        lineNumber: 37,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -176,29 +178,29 @@ function AuthSplitLayout({ children, hero, variant, rightClassName, hideFooter }
                             children: children
                         }, void 0, false, {
                             fileName: "[project]/artifacts/360-hr/src/shared/auth/auth-split-layout.tsx",
-                            lineNumber: 67,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/artifacts/360-hr/src/shared/auth/auth-split-layout.tsx",
-                        lineNumber: 61,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/artifacts/360-hr/src/shared/auth/auth-split-layout.tsx",
-                lineNumber: 36,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             !hideFooter && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$2$2e$6_react$2d$dom$40$19$2e$2$2e$4_react$40$19$2e$2$2e$4_$5f$react$40$19$2e$2$2e$4$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$shared$2f$auth$2f$auth$2d$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AuthFooter"], {}, void 0, false, {
                 fileName: "[project]/artifacts/360-hr/src/shared/auth/auth-split-layout.tsx",
-                lineNumber: 70,
+                lineNumber: 76,
                 columnNumber: 23
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/artifacts/360-hr/src/shared/auth/auth-split-layout.tsx",
-        lineNumber: 35,
+        lineNumber: 39,
         columnNumber: 5
     }, this);
 }
@@ -375,7 +377,11 @@ const routes = {
         register: "/register",
         forgotPassword: "/forgot-password",
         forgotPasswordSent: "/forgot-password/sent",
-        resetPassword: "/reset-password"
+        resetPassword: "/reset-password",
+        verifyOtp: "/verify-otp",
+        accountLocked: "/account-locked",
+        signingIn: "/signing-in",
+        welcome: "/welcome"
     },
     app: {
         dashboard: "/dashboard"
@@ -395,7 +401,11 @@ const publicPaths = [
     routes.auth.loginPassword,
     routes.auth.register,
     routes.auth.forgotPassword,
-    routes.auth.resetPassword
+    routes.auth.resetPassword,
+    routes.auth.verifyOtp,
+    routes.auth.accountLocked,
+    routes.auth.signingIn,
+    routes.auth.welcome
 ];
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);

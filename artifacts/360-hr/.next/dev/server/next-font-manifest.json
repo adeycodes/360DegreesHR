@@ -1,5 +1,9 @@
 {
   "app": {
+    "[project]/artifacts/360-hr/src/app/(auth)/account-locked/page": [
+      "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
+      "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
+    ],
     "[project]/artifacts/360-hr/src/app/(auth)/login/page": [
       "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
       "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
@@ -8,11 +12,19 @@
       "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
       "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
     ],
-    "[project]/artifacts/360-hr/src/app/(protected)/dashboard/page": [
+    "[project]/artifacts/360-hr/src/app/(auth)/signing-in/page": [
       "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
       "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
     ],
-    "[project]/artifacts/360-hr/src/app/(protected)/hris/[section]/page": [
+    "[project]/artifacts/360-hr/src/app/(auth)/verify-otp/page": [
+      "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
+      "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
+    ],
+    "[project]/artifacts/360-hr/src/app/(auth)/welcome/page": [
+      "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
+      "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
+    ],
+    "[project]/artifacts/360-hr/src/app/(protected)/dashboard/page": [
       "static/media/Manrope_VariableFont_wght-s.p.0~d_srehqwuk6.ttf",
       "static/media/OpenSans_VariableFont_wdth,wght-s.p.041pwgl0yz-0b.ttf"
     ],

@@ -7,13 +7,17 @@ export type AuthHeroVariant =
   | "sso-office"
   | "login-building"
   | "forgot-building"
-  | "forgot-success-blue";
+  | "forgot-success-blue"
+  | "otp-dark"
+  | "lockout-blue";
 
 const heroImages: Record<AuthHeroVariant, string> = {
   "sso-office": "/images/sso_hero_image.png",
   "login-building": "/images/login_hero_image.png",
-  "forgot-building": "/images/figma/auth/forgot-hero.png",
-  "forgot-success-blue": "/images/figma/auth/forgot-success-hero.png",
+  "forgot-building": "/images/login_hero_image.png",
+  "forgot-success-blue": "/images/login_hero_image.png",
+  "otp-dark": "/images/login_hero_image.png",
+  "lockout-blue": "/images/sso_hero_image.png",
 };
 
 type AuthSplitLayoutProps = {
@@ -46,11 +50,13 @@ export function AuthSplitLayout({
           <div
             className={cn(
               "absolute inset-0",
-              variant === "forgot-success-blue"
-                ? "bg-primary-500/88"
+              variant === "forgot-success-blue" || variant === "lockout-blue"
+                ? "bg-primary-600/90"
                 : variant === "sso-office"
                   ? "bg-white/30"
-                  : "bg-black/15",
+                  : variant === "otp-dark"
+                    ? "bg-black/60"
+                    : "bg-black/15",
             )}
           />
           <div className="relative z-10 flex h-full flex-col p-10 xl:p-12">

@@ -530,7 +530,11 @@ const routes = {
         register: "/register",
         forgotPassword: "/forgot-password",
         forgotPasswordSent: "/forgot-password/sent",
-        resetPassword: "/reset-password"
+        resetPassword: "/reset-password",
+        verifyOtp: "/verify-otp",
+        accountLocked: "/account-locked",
+        signingIn: "/signing-in",
+        welcome: "/welcome"
     },
     app: {
         dashboard: "/dashboard"
@@ -550,7 +554,11 @@ const publicPaths = [
     routes.auth.loginPassword,
     routes.auth.register,
     routes.auth.forgotPassword,
-    routes.auth.resetPassword
+    routes.auth.resetPassword,
+    routes.auth.verifyOtp,
+    routes.auth.accountLocked,
+    routes.auth.signingIn,
+    routes.auth.welcome
 ];
 }),
 "[project]/artifacts/360-hr/src/config/navigation.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {

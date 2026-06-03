@@ -6,13 +6,16 @@ export const routes = {
   designSystem: "/design-system",
 
   auth: {
-
     login: "/login",
     loginPassword: "/login/password",
     register: "/register",
     forgotPassword: "/forgot-password",
     forgotPasswordSent: "/forgot-password/sent",
     resetPassword: "/reset-password",
+    verifyOtp: "/verify-otp",
+    accountLocked: "/account-locked",
+    signingIn: "/signing-in",
+    welcome: "/welcome",
   },
 
   app: {
@@ -40,4 +43,8 @@ export const publicPaths = [
   routes.auth.register,
   routes.auth.forgotPassword,
   routes.auth.resetPassword,
+  routes.auth.verifyOtp,
+  routes.auth.accountLocked,
+  routes.auth.signingIn,
+  routes.auth.welcome,
 ] as const;

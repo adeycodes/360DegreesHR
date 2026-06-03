@@ -43,17 +43,18 @@ export const employeeApi = {
 
     getAllEmployees: async (token: string) => {
         try {
-            const data = await fetch("https://three60degreeshr-iewp.onrender.com/api/v1/employees", {
-                method: "Get",
+            const base = process.env.NEXT_PUBLIC_API_URL ?? "https://three60degreeshr-iewp.onrender.com/api/v1";
+            const data = await fetch(`${base}/employees`, {
+                method: "GET",
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`
                 }
-            })
+            });
 
             const resultData = await data.json();
 
-            return resultData.data
+            return resultData.data;
         }
         catch (error) {
         }

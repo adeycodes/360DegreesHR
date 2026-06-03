@@ -57,7 +57,7 @@ const envSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2
 const env = envSchema.parse({
     NODE_ENV: ("TURBOPACK compile-time value", "development"),
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || process.env.BACKEND_URL
+    NEXT_PUBLIC_API_URL: ("TURBOPACK compile-time value", "https://three60degreeshr-iewp.onrender.com/api/v1") || process.env.BACKEND_URL
 });
 }),
 "[project]/artifacts/360-hr/src/lib/api/errors.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {

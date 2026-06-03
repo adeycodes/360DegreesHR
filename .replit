@@ -22,3 +22,8 @@ timeoutMs = 20000
 [[ports]]
 localPort = 23871
 externalPort = 80
+
+[userenv]
+
+[userenv.shared]
+NEXT_PUBLIC_API_URL = "https://three60degreeshr-iewp.onrender.com/api/v1"

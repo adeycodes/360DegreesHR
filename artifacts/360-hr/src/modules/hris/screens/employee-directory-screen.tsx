@@ -41,10 +41,13 @@ import {
   Wallet,
   Users,
   RefreshCw,
+  CheckCircle2,
+  Copy,
+  KeyRound,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { employeeApi, departmentApi } from "@/lib/api";
+import { employeeApi, departmentApi, toUserMessage } from "@/lib/api";
 import type { Employee } from "@/types";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -1762,12 +1765,21 @@ export function AddEmployeeModal({
     retry: false,
   });
 
+  // Captures what was submitted so the success screen can confirm the details
+  // (and surface the generated temp password) instead of closing silently.
+  const [created, setCreated] = useState<{
+    name: string;
+    email: string;
+    password: string;
+  } | null>(null);
+  const [copied, setCopied] = useState(false);
+
   const mutation = useMutation({
     mutationFn: (data: Record<string, unknown>) => employeeApi.create(data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["employees"] });
       onSuccess();
-      reset();
+      // Keep the modal open and show a success confirmation instead of closing.
     },
   });
 
@@ -1776,6 +1788,9 @@ export function AddEmployeeModal({
   const reset = () => {
     setStep(1);
     setForm(EMPTY);
+    setCreated(null);
+    setCopied(false);
+    mutation.reset();
     onClose();
   };
 
@@ -1810,12 +1825,96 @@ export function AddEmployeeModal({
     if (form.jobTitle) payload.jobTitle = form.jobTitle;
     // Only send departmentId when a real department UUID was selected.
     if (form.departmentId) payload.departmentId = form.departmentId;
+    setCreated({
+      name: `${form.firstName} ${form.lastName}`.trim(),
+      email: form.email,
+      password,
+    });
     mutation.mutate(payload);
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 backdrop-blur-sm p-4">
       <div className="absolute inset-0" onClick={reset} />
+      {mutation.isSuccess && created ? (
+        <div className="relative z-10 w-full max-w-[460px] bg-white rounded-2xl shadow-2xl border border-slate-100 p-8 text-center">
+          <div className="mx-auto flex size-14 items-center justify-center rounded-full bg-green-50">
+            <CheckCircle2 className="size-8 text-green-600" />
+          </div>
+          <h2 className="mt-4 font-heading text-[20px] font-bold text-slate-900">
+            Employee created
+          </h2>
+          <p className="mt-1 text-[14px] text-slate-500">
+            <span className="font-semibold text-slate-700">{created.name}</span> has
+            been added to your workforce in the backend.
+          </p>
+
+          <div className="mt-6 rounded-xl border border-slate-200 bg-[#F8FAFC] p-4 text-left">
+            <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-slate-500">
+              <KeyRound className="size-3.5" /> Login credentials
+            </div>
+            <div className="mt-3 space-y-2 text-[13px]">
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-slate-500">Email</span>
+                <span className="font-medium text-slate-800 truncate">{created.email}</span>
+              </div>
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-slate-500">Temp password</span>
+                <span className="font-mono font-medium text-slate-800">{created.password}</span>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                navigator.clipboard
+                  ?.writeText(`Email: ${created.email}\nPassword: ${created.password}`)
+                  .then(() => {
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  })
+                  .catch(() => {});
+              }}
+              className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white py-2 text-[13px] font-semibold text-slate-700 hover:bg-slate-50"
+            >
+              {copied ? (
+                <>
+                  <Check className="size-4 text-green-600" /> Copied
+                </>
+              ) : (
+                <>
+                  <Copy className="size-4" /> Copy credentials
+                </>
+              )}
+            </button>
+            <p className="mt-2 text-[11px] leading-relaxed text-slate-400">
+              Share these with the new employee so they can sign in and reset their password.
+            </p>
+          </div>
+
+          <div className="mt-6 flex gap-3">
+            <button
+              type="button"
+              onClick={() => {
+                setStep(1);
+                setForm(EMPTY);
+                setCreated(null);
+                setCopied(false);
+                mutation.reset();
+              }}
+              className="flex-1 rounded-lg border border-slate-200 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-slate-50"
+            >
+              Add another
+            </button>
+            <button
+              type="button"
+              onClick={reset}
+              className="flex-1 rounded-lg bg-[#1C4ED8] py-2.5 text-[13px] font-semibold text-white hover:bg-[#1a3eb8]"
+            >
+              Done
+            </button>
+          </div>
+        </div>
+      ) : (
       <div className="relative w-full max-w-[860px] bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row min-h-[580px] border border-slate-100 z-10 overflow-hidden">
         {/* Sidebar */}
         <div className="w-full md:w-[260px] bg-[#F8FAFC] border-r border-slate-100 p-6 flex flex-col gap-8 shrink-0">
@@ -2126,6 +2225,15 @@ export function AddEmployeeModal({
             )}
           </div>
 
+          {mutation.isError && (
+            <div className="mx-8 mb-1 flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-4 py-3">
+              <AlertTriangle className="mt-0.5 size-4 shrink-0 text-red-500" />
+              <p className="text-[13px] text-red-700">
+                Couldn&apos;t create employee: {toUserMessage(mutation.error)}
+              </p>
+            </div>
+          )}
+
           <div className="flex items-center justify-between px-8 py-5 border-t border-slate-100">
             <button
               onClick={() =>
@@ -2169,6 +2277,7 @@ export function AddEmployeeModal({
           </div>
         </div>
       </div>
+      )}
     </div>
   );
 }

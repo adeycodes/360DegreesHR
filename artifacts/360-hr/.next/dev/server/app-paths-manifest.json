@@ -1,4 +1,7 @@
 {
+  "/(auth)/forgot-password/page": "app/(auth)/forgot-password/page.js",
   "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/(auth)/verify-otp/page": "app/(auth)/verify-otp/page.js"
+  "/(auth)/login/password/page": "app/(auth)/login/password/page.js",
+  "/(auth)/verify-otp/page": "app/(auth)/verify-otp/page.js",
+  "/splash/page": "app/splash/page.js"
 }

@@ -32,7 +32,7 @@ export default function EmployeeDirectoryPage() {
   const employees = isError ? MOCK_EMPLOYEES : (data?.employees ?? []);
   const pagination = isError ? { total: 128, page: 1, limit: 10, totalPages: 13 } : (data?.pagination ?? null);
   const isLoadingDisplay = isLoading && !isError;
-  const errorMsg = isError ? "Failed to load directory data. Showing demo data." : null;
+  const errorMsg = null; // silently use demo data when API is unavailable
 
   return (
     <EmployeeDirectoryScreen

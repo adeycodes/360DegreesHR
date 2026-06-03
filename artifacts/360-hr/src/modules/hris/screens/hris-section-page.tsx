@@ -21,6 +21,7 @@ export function HrisSectionPage({ section }: HrisSectionPageProps) {
     "employees_directory": EmployeeDirectoryPage,
     "organization_structure": OrgStructureScreen,
     "audit_logs": AuditLogsScreen,
+    "reports": AuditLogsScreen,
   };
 
   const Component = realComponents[section];

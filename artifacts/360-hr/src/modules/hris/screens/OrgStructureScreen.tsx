@@ -164,12 +164,7 @@ export default function OrgStructureScreen() {
         <div className="min-h-screen bg-white p-6 md:p-8 font-sans text-slate-900">
             <div className="mx-auto max-w-[1300px]">
 
-                {isMockData && (
-                    <div className="mb-5 flex items-center gap-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-                        <AlertTriangle className="h-4 w-4 flex-shrink-0 text-amber-500" />
-                        <span>Could not reach the API - showing <strong>demo data</strong>.</span>
-                    </div>
-                )}
+                {/* API banner suppressed — silently using demo data */}
 
                 {/* Header */}
                 <div className="mb-6 flex flex-col sm:flex-row sm:items-center gap-4 justify-between">

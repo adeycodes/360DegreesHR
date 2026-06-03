@@ -273,9 +273,27 @@ export function DashboardShell({ children }: DashboardShellProps) {
           </button>
 
           <p className="hidden shrink-0 text-[14px] text-grey-600 sm:block">
-            <span className="text-grey-500">Dashboard</span>
-            <span className="mx-2 text-grey-400">/</span>
-            <span className="font-medium text-grey-900">Overview</span>
+            {(() => {
+              const breadcrumbMap: Record<string, { section: string; page: string }> = {
+                "/hris/employee_directory":    { section: "HRIS", page: "Employee Directory" },
+                "/hris/employees_directory":   { section: "HRIS", page: "Employee Directory" },
+                "/hris/organization_structure":{ section: "HRIS", page: "Organization Chart" },
+                "/hris/organizational_structure":{ section: "HRIS", page: "Organization Chart" },
+                "/hris/audit_logs":            { section: "HRIS", page: "Reports" },
+                "/hris/reports":               { section: "HRIS", page: "Reports" },
+                "/dashboard":                  { section: "Dashboard", page: "Overview" },
+              };
+              const crumb = Object.entries(breadcrumbMap).find(([path]) =>
+                pathname === path || pathname.startsWith(path + "/")
+              )?.[1] ?? { section: "Dashboard", page: "Overview" };
+              return (
+                <>
+                  <span className="text-grey-500">{crumb.section}</span>
+                  <span className="mx-2 text-grey-400">/</span>
+                  <span className="font-medium text-grey-900">{crumb.page}</span>
+                </>
+              );
+            })()}
           </p>
 
           <div className="mx-auto hidden max-w-xl flex-1 px-4 lg:flex">

@@ -221,7 +221,7 @@ export function EmployeeDirectoryScreen({
           {/* Table */}
           <div className="border border-slate-100 rounded-xl overflow-hidden shadow-sm">
             <div className="overflow-x-auto">
-              <table className="w-full min-w-[780px]">
+              <table className="w-full min-w-[640px]">
                 <thead className="bg-[#F8FAFC]">
                   <tr className="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-100">
                     <th className="px-5 py-3">Employee</th>

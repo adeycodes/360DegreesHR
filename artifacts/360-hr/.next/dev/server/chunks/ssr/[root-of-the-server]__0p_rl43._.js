@@ -149,10 +149,9 @@ const authApi = {
         return {
             token: raw.token,
             user: {
-                userid: raw.user.id,
-                name: raw.user.name,
-                email: raw.user.email,
-                role: raw.user.role
+                userid: raw.user.userId,
+                role: raw.user.role.toLowerCase(),
+                companyId: raw.user.companyId
             },
             company: raw.company
         };
@@ -161,10 +160,10 @@ const authApi = {
     me: async ()=>{
         const raw = await get("/auth/me", authHeaders());
         return {
-            userid: raw.id,
+            userid: raw.userId,
             name: raw.name,
             email: raw.email,
-            role: raw.role,
+            role: raw.role.toLowerCase(),
             companyId: raw.companyId
         };
     },

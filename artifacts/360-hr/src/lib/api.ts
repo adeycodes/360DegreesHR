@@ -115,7 +115,7 @@ export const authApi = {
   login: async (input: LoginInput): Promise<AuthSession> => {
     const raw = await post<{
       token: string;
-      user: { id: string; name?: string; email?: string; role: string };
+      user: { userId: string; role: string; companyId?: string };
       company?: { id: string; name: string };
     }>("/auth/login", {
       userEmail: input.userEmail,
@@ -124,10 +124,9 @@ export const authApi = {
     return {
       token: raw.token,
       user: {
-        userid: raw.user.id,
-        name: raw.user.name,
-        email: raw.user.email,
-        role: raw.user.role as "hr_admin" | "manager" | "employee",
+        userid: raw.user.userId,
+        role: raw.user.role.toLowerCase() as "hr_admin" | "manager" | "employee",
+        companyId: raw.user.companyId,
       },
       company: raw.company,
     };
@@ -143,17 +142,17 @@ export const authApi = {
 
   me: async (): Promise<AuthUser> => {
     const raw = await get<{
-      id: string;
+      userId: string;
       name?: string;
       email?: string;
       role: string;
       companyId?: string;
     }>("/auth/me", authHeaders());
     return {
-      userid: raw.id,
+      userid: raw.userId,
       name: raw.name,
       email: raw.email,
-      role: raw.role as "hr_admin" | "manager" | "employee",
+      role: raw.role.toLowerCase() as "hr_admin" | "manager" | "employee",
       companyId: raw.companyId,
     };
   },

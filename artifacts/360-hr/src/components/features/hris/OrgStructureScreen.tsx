@@ -20,7 +20,7 @@ import {
     Move,
 } from "lucide-react";
 
-import { departmentApi } from "@/lib/api/endpoints/department";
+import { departmentApi } from "@/lib/api";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Department = {

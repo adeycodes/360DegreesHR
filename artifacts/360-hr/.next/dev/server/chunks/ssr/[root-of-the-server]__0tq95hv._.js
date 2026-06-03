@@ -166,74 +166,11 @@ function parseData(schema, data) {
     return result.data;
 }
 }),
-"[project]/artifacts/360-hr/src/lib/api/client.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
+"[project]/artifacts/360-hr/src/lib/api/client.ts [app-ssr] (ecmascript)", ((__turbopack_context__, module, exports) => {
 
-__turbopack_context__.s([
-    "del",
-    ()=>del,
-    "get",
-    ()=>get,
-    "post",
-    ()=>post,
-    "put",
-    ()=>put
-]);
-var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$env$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/artifacts/360-hr/src/lib/env.ts [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$validations$2f$parse$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/artifacts/360-hr/src/lib/validations/parse.ts [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2f$errors$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/artifacts/360-hr/src/lib/api/errors.ts [app-ssr] (ecmascript)");
-;
-;
-;
-const TIMEOUT = 30_000;
-async function send(method, path, schema, body, options = {}) {
-    const base = __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$env$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["env"].NEXT_PUBLIC_API_URL;
-    if (!base) throw new __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2f$errors$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ApiError"]({
-        message: "API URL not configured",
-        status: 0
-    });
-    const controller = new AbortController();
-    const timer = setTimeout(()=>controller.abort(), options.timeoutMs ?? TIMEOUT);
-    try {
-        // Correctly initialize Headers with passed options
-        const headers = new Headers(options.headers || {});
-        // Set defaults only if they aren't already set
-        if (!headers.has("Content-Type")) headers.set("Content-Type", "application/json");
-        if (!headers.has("Accept")) headers.set("Accept", "application/json");
-        const response = await fetch(`${base}${path}`, {
-            method,
-            headers,
-            body: body ? JSON.stringify(body) : undefined,
-            signal: controller.signal,
-            cache: options.cache ?? "no-store"
-        });
-        if (!response.ok) {
-            let serverMessage;
-            try {
-                const json = await response.json().catch(()=>({}));
-                serverMessage = json.message;
-            } catch  {}
-            throw new __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2f$errors$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ApiError"]({
-                message: serverMessage ?? response.statusText,
-                status: response.status
-            });
-        }
-        return (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$validations$2f$parse$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["parseApiResponse"])(response, schema);
-    } catch (error) {
-        if (error instanceof __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2f$errors$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ApiError"]) throw error;
-        throw new __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$api$2f$errors$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ApiError"]({
-            message: error instanceof Error ? error.message : "Network error",
-            status: 0,
-            userMessage: "Unable to reach the server."
-        });
-    } finally{
-        clearTimeout(timer);
-    }
-}
-const get = (p, s, o)=>send("GET", p, s, undefined, o);
-const post = (p, s, b, o)=>send("POST", p, s, b, o);
-const put = (p, s, b, o)=>send("PUT", p, s, b, o);
-const del = (p, s, o)=>send("DELETE", p, s, undefined, o);
+const e = new Error("Could not parse module '[project]/artifacts/360-hr/src/lib/api/client.ts'\n\nExpected ';', '}' or <eof>");
+e.code = 'MODULE_UNPARSABLE';
+throw e;
 }),
 "[project]/artifacts/360-hr/src/lib/auth/session.ts [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";

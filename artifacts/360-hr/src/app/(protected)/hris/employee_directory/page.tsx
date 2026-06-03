@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { employeeApi } from "@/lib/api/endpoints/employee";
+import { employeeApi } from "@/lib/api";
 import { EmployeeDirectoryScreen } from "@/components/features/hris/employee-directory-screen";
 
 export default function EmployeeDirectoryPage() {

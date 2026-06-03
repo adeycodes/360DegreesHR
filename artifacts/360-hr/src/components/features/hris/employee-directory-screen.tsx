@@ -21,7 +21,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-import { employeeApi } from "@/lib/api/endpoints/employee";
+import { employeeApi } from "@/lib/api";
 
 const cn = (...classes: any[]) => classes.filter(Boolean).join(" ");
 

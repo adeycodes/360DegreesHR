@@ -10,14 +10,9 @@ import { AuthSplitLayout } from "@/components/shared/auth/auth-split-layout";
 import { AuthField, authInputClassName } from "@/components/shared/auth/auth-field";
 import { LoginBuildingHero } from "@/components/shared/auth/login-building-hero";
 import { routes } from "@/config/routes";
-import { toUserMessage } from "@/lib/api/errors";
-import { authApi } from "@/lib/api/endpoints/auth";
-import { fieldErrorsFromZod } from "@/lib/forms/zod-field-errors";
-import { loginSchema, type LoginInput } from "@/lib/validations/auth";
+import { toUserMessage, authApi } from "@/lib/api";
+import type { LoginInput } from "@/types";
 import { useAuthStore } from "@/stores/auth-store";
-
-
-
 
 export function LoginPasswordScreen() {
   const router = useRouter();
@@ -32,18 +27,24 @@ export function LoginPasswordScreen() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
-    console.log("debugging why the login isn't working", form);
-    const parsed = loginSchema.safeParse(form);
-    if (!parsed.success) {
-      setFieldErrors(fieldErrorsFromZod<keyof LoginInput>(parsed.error.issues));
+
+    const errors: Partial<Record<keyof LoginInput, string>> = {};
+    if (!form.userEmail || !/\S+@\S+\.\S+/.test(form.userEmail)) {
+      errors.userEmail = "Enter a valid email address";
+    }
+    if (!form.password) {
+      errors.password = "Password is required";
+    }
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
       return;
     }
     setFieldErrors({});
+
     setIsLoading(true);
     try {
-      const session = await authApi.login(parsed.data);
+      const session = await authApi.login(form);
       setSession(session);
-      // Show success toast
       toast.success("Login successful! Welcome back.");
       router.push(routes.app.dashboard);
     } catch (err) {
@@ -59,10 +60,7 @@ export function LoginPasswordScreen() {
     <AuthSplitLayout
       variant="login-building"
       hero={
-        <div
-
-        >
-          {/* Hero content sits on top of the background */}
+        <div>
           <div style={{ position: "absolute", top: 50, bottom: 50, zIndex: 1, height: "100%" }}>
             <LoginBuildingHero
               title="Excellence in Human Capital."

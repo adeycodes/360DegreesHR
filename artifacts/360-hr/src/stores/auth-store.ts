@@ -1,12 +1,8 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
-import type { AuthSession, AuthUser } from "@/lib/validations/auth";
-import {
-  clearAccessToken,
-  getAccessToken,
-  setAccessToken,
-} from "@/lib/auth/session";
+import type { AuthSession, AuthUser } from "@/types";
+import { clearAccessToken, getAccessToken, setAccessToken } from "@/lib/session";
 
 type AuthState = {
   user: AuthUser | null;
@@ -60,11 +56,8 @@ export const useAuthStore = create<AuthState>()(
       },
 
       setHydrated: (isHydrated) => set({ isHydrated }),
-
       setShowSplash: (showSplash) => set({ showSplash }),
-
       setIsLoading: (isLoading) => set({ isLoading }),
-
       setError: (error) => set({ error }),
     }),
     {

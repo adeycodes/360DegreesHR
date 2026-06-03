@@ -1,4 +1,4 @@
-import type { UserRole } from "@/config/mvp";
+import type { UserRole } from "@/types";
 import { routes } from "@/config/routes";
 
 export type NavItem = {

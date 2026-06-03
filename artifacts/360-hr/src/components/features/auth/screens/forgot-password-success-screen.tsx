@@ -7,9 +7,7 @@ import { useState } from "react";
 
 import { AuthSplitLayout } from "@/components/shared/auth/auth-split-layout";
 import { routes } from "@/config/routes";
-import { toUserMessage } from "@/lib/api/errors";
-import { authApi } from "@/lib/api/endpoints/auth";
-import { forgotPasswordSchema } from "@/lib/validations/auth";
+import { toUserMessage, authApi } from "@/lib/api";
 import { toast } from "@/stores/toast-store";
 
 export function ForgotPasswordSuccessScreen() {
@@ -22,11 +20,10 @@ export function ForgotPasswordSuccessScreen() {
   async function handleResend() {
     setError(null);
     setMessage(null);
-    const parsed = forgotPasswordSchema.safeParse({ email });
-    if (!parsed.success) return;
+    if (!email || !/\S+@\S+\.\S+/.test(email)) return;
     setIsLoading(true);
     try {
-      const res = await authApi.forgotPassword(parsed.data);
+      const res = await authApi.forgotPassword({ email });
       const msg = res.message || "Password reset link resent successfully!";
       setMessage(msg);
       toast.success(msg);

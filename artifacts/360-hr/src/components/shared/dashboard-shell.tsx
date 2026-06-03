@@ -35,7 +35,7 @@ import {
 import { BrandLogo } from "@/components/shared/brand-logo";
 import { getSidebarNav } from "@/config/navigation";
 import { routes } from "@/config/routes";
-import type { UserRole } from "@/config/mvp";
+import type { UserRole } from "@/types";
 import { useAuthStore } from "@/stores/auth-store";
 import { cn } from "@/lib/utils";
 

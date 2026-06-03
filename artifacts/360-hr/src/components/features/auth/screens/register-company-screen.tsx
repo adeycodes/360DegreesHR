@@ -9,14 +9,9 @@ import { AuthSplitLayout } from "@/components/shared/auth/auth-split-layout";
 import { AuthField, authInputClassName } from "@/components/shared/auth/auth-field";
 import { LoginBuildingHero } from "@/components/shared/auth/login-building-hero";
 import { routes } from "@/config/routes";
-import { toUserMessage } from "@/lib/api/errors";
-import { authApi } from "@/lib/api/endpoints/auth";
-import { fieldErrorsFromZod } from "@/lib/forms/zod-field-errors";
-import { clearAccessToken } from "@/lib/auth/session"; // ✅ import token helpers
-import {
-  registerCompanySchema,
-  type RegisterCompanyInput,
-} from "@/lib/validations/auth";
+import { toUserMessage, authApi } from "@/lib/api";
+import { clearAccessToken } from "@/lib/session";
+import type { RegisterCompanyInput } from "@/types";
 import { useAuthStore } from "@/stores/auth-store";
 import { toast } from "@/stores/toast-store";
 
@@ -30,62 +25,64 @@ const initial: RegisterCompanyInput = {
   password: "",
 };
 
+function validate(form: RegisterCompanyInput): Partial<Record<keyof RegisterCompanyInput, string>> {
+  const errors: Partial<Record<keyof RegisterCompanyInput, string>> = {};
+  if (!form.companyName.trim()) errors.companyName = "Company name is required";
+  if (!form.companyEmail || !/\S+@\S+\.\S+/.test(form.companyEmail)) errors.companyEmail = "Enter a valid email";
+  if (!form.companyAddress.trim()) errors.companyAddress = "Company address is required";
+  if (!form.companyPhone.trim()) errors.companyPhone = "Company phone is required";
+  if (!form.adminName.trim()) errors.adminName = "Administrator name is required";
+  if (!form.adminEmail || !/\S+@\S+\.\S+/.test(form.adminEmail)) errors.adminEmail = "Enter a valid email";
+  if (!form.password || form.password.length < 8) errors.password = "Password must be at least 8 characters";
+  return errors;
+}
+
 export function RegisterCompanyScreen() {
   const router = useRouter();
   const setSession = useAuthStore((s) => s.setSession);
   const [form, setForm] = useState<RegisterCompanyInput>(initial);
   const [showPassword, setShowPassword] = useState(false);
-  const [fieldErrors, setFieldErrors] = useState<
-    Partial<Record<keyof RegisterCompanyInput, string>>
-  >({});
+  const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof RegisterCompanyInput, string>>>({});
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  function update<K extends keyof RegisterCompanyInput>(
-    key: K,
-    value: RegisterCompanyInput[K],
-  ) {
+  function update<K extends keyof RegisterCompanyInput>(key: K, value: RegisterCompanyInput[K]) {
     setForm((f) => ({ ...f, [key]: value }));
   }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
-    const parsed = registerCompanySchema.safeParse(form);
-    if (!parsed.success) {
-      setFieldErrors(
-        fieldErrorsFromZod<keyof RegisterCompanyInput>(parsed.error.issues),
-      );
+
+    const errors = validate(form);
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
       return;
     }
     setFieldErrors({});
     setIsLoading(true);
+
     try {
-      // 1. Register the company (returns token + user data)
-      const registerResult = await authApi.registerCompany(parsed.data);
+      const registerResult = await authApi.registerCompany(form);
       const { token, user } = registerResult;
 
-      // 2. Map and align properties to match what setSession expects
       const session = {
         token,
         user: {
-          userid: user.id, // Fixed: Maps 'id' from the API to 'userid' required by store
-          role: user.role,
+          userid: user.id,
+          role: user.role as "hr_admin" | "manager" | "employee",
           name: user.name,
           email: user.email,
         },
       };
 
-      // 3. Store token and session
       setSession(session);
       toast.success("Registration successful! Welcome to your dashboard.");
       router.push(routes.app.dashboard);
     } catch (err) {
-      console.error("Registration error:", err);
       const msg = toUserMessage(err);
       setError(msg);
       toast.error(msg);
-      // Clear any partial token if registration failed
       clearAccessToken();
     } finally {
       setIsLoading(false);
@@ -113,18 +110,13 @@ export function RegisterCompanyScreen() {
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Company details section */}
           <section className="space-y-4">
             <div className="flex items-center gap-2 text-[13px] font-semibold tracking-wide text-grey-700 uppercase">
               <Building2 className="size-4 text-grey-500" />
               Company details
             </div>
 
-            <AuthField
-              label="Company name"
-              htmlFor="companyName"
-              error={fieldErrors.companyName}
-            >
+            <AuthField label="Company name" htmlFor="companyName" error={fieldErrors.companyName}>
               <input
                 id="companyName"
                 type="text"
@@ -136,11 +128,7 @@ export function RegisterCompanyScreen() {
               />
             </AuthField>
 
-            <AuthField
-              label="Company email"
-              htmlFor="companyEmail"
-              error={fieldErrors.companyEmail}
-            >
+            <AuthField label="Company email" htmlFor="companyEmail" error={fieldErrors.companyEmail}>
               <input
                 id="companyEmail"
                 type="email"
@@ -152,11 +140,7 @@ export function RegisterCompanyScreen() {
               />
             </AuthField>
 
-            <AuthField
-              label="Company address"
-              htmlFor="companyAddress"
-              error={fieldErrors.companyAddress}
-            >
+            <AuthField label="Company address" htmlFor="companyAddress" error={fieldErrors.companyAddress}>
               <input
                 id="companyAddress"
                 type="text"
@@ -168,11 +152,7 @@ export function RegisterCompanyScreen() {
               />
             </AuthField>
 
-            <AuthField
-              label="Company phone"
-              htmlFor="companyPhone"
-              error={fieldErrors.companyPhone}
-            >
+            <AuthField label="Company phone" htmlFor="companyPhone" error={fieldErrors.companyPhone}>
               <input
                 id="companyPhone"
                 type="tel"
@@ -185,13 +165,8 @@ export function RegisterCompanyScreen() {
             </AuthField>
           </section>
 
-          {/* Administrator section */}
           <section className="space-y-4 border-t border-grey-200 pt-6">
-            <AuthField
-              label="Administrator name"
-              htmlFor="adminName"
-              error={fieldErrors.adminName}
-            >
+            <AuthField label="Administrator name" htmlFor="adminName" error={fieldErrors.adminName}>
               <input
                 id="adminName"
                 type="text"
@@ -203,11 +178,7 @@ export function RegisterCompanyScreen() {
               />
             </AuthField>
 
-            <AuthField
-              label="Administrator email"
-              htmlFor="adminEmail"
-              error={fieldErrors.adminEmail}
-            >
+            <AuthField label="Administrator email" htmlFor="adminEmail" error={fieldErrors.adminEmail}>
               <input
                 id="adminEmail"
                 type="email"

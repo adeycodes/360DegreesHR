@@ -9,10 +9,7 @@ import { AuthSplitLayout } from "@/components/shared/auth/auth-split-layout";
 import { AuthField, authInputClassName } from "@/components/shared/auth/auth-field";
 import { GlassBrandCard } from "@/components/shared/auth/glass-brand-card";
 import { routes } from "@/config/routes";
-import { toUserMessage } from "@/lib/api/errors";
-import { authApi } from "@/lib/api/endpoints/auth";
-import { fieldErrorsFromZod } from "@/lib/forms/zod-field-errors";
-import { resetPasswordSchema } from "@/lib/validations/auth";
+import { toUserMessage, authApi } from "@/lib/api";
 import { toast } from "@/stores/toast-store";
 
 export function ResetPasswordScreen() {
@@ -29,20 +26,20 @@ export function ResetPasswordScreen() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setError(null);
-    const parsed = resetPasswordSchema.safeParse({
-      token: tokenFromUrl,
-      password,
-      confirmPassword,
-    });
-    if (!parsed.success) {
-      setFieldErrors(fieldErrorsFromZod(parsed.error.issues));
+
+    const errors: Partial<Record<string, string>> = {};
+    if (!password || password.length < 8) errors.password = "Password must be at least 8 characters";
+    if (!confirmPassword) errors.confirmPassword = "Please confirm your password";
+    else if (password !== confirmPassword) errors.confirmPassword = "Passwords do not match";
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
       return;
     }
     setFieldErrors({});
+
     setIsLoading(true);
     try {
-      const res = await authApi.resetPassword(parsed.data, tokenFromUrl);
-      console.log("the paresed data ", parsed.data)
+      const res = await authApi.resetPassword({ token: tokenFromUrl, password }, tokenFromUrl);
       toast.success(res.message || "Password reset successfully! Please sign in with your new password.");
       router.push(routes.auth.loginPassword);
     } catch (err) {

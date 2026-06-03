@@ -2,8 +2,8 @@
 
 import { useEffect } from "react";
 
-import { authApi } from "@/lib/api/endpoints/auth";
-import { getAccessToken } from "@/lib/auth/session";
+import { authApi } from "@/lib/api";
+import { getAccessToken } from "@/lib/session";
 import { useAuthStore } from "@/stores/auth-store";
 
 /**

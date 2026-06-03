@@ -1,3 +1,5 @@
 {
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(auth)/login/password/page": "app/(auth)/login/password/page.js",
   "/splash/page": "app/splash/page.js"
 }

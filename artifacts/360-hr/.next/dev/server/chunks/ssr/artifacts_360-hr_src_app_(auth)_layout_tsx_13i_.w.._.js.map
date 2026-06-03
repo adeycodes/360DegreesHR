@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/runner/workspace/artifacts/360-hr/src/app/%28auth%29/layout.tsx"],"sourcesContent":["export default function AuthRouteLayout({\n  children,\n}: Readonly<{\n  children: React.ReactNode;\n}>) {\n  return children;\n}\n"],"names":["AuthRouteLayout","children"],"mappings":";;;;AAAe,SAASA,gBAAgB,EACtCC,QAAQ,EAGR;IACA,OAAOA;AACT"}}]
+}

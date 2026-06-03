@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   transpilePackages: ['@iconscout/react-unicons'],
-
-  /* config options here */
+  allowedDevOrigins: ['*.riker.replit.dev', '*.replit.dev', '*.repl.co'],
 };
 
 export default nextConfig;

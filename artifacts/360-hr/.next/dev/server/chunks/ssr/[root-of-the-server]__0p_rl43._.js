@@ -144,6 +144,44 @@ const get = (path, headers)=>request("GET", path, undefined, headers);
 const post = (path, body, headers)=>request("POST", path, body, headers);
 const put = (path, body, headers)=>request("PUT", path, body, headers);
 const del = (path, headers)=>request("DELETE", path, undefined, headers);
+// Multipart upload helper for file uploads (FormData, no JSON)
+const upload = (path, formData, headers)=>{
+    const token = (0, __TURBOPACK__imported__module__$5b$project$5d2f$artifacts$2f$360$2d$hr$2f$src$2f$lib$2f$session$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getAccessToken"])();
+    const controller = new AbortController();
+    const timer = setTimeout(()=>controller.abort(), TIMEOUT_MS);
+    return fetch(`${API_BASE}${path}`, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            ...token ? {
+                Authorization: `Bearer ${token}`
+            } : {},
+            ...headers
+        },
+        body: formData,
+        signal: controller.signal,
+        cache: "no-store"
+    }).then(async (res)=>{
+        if (!res.ok) {
+            let message = res.statusText;
+            try {
+                const json = await res.json();
+                if (json?.message) message = json.message;
+            } catch  {}
+            throw new ApiError(message, res.status);
+        }
+        const text = await res.text();
+        if (!text) return {};
+        const json = JSON.parse(text);
+        if (json && typeof json === "object" && "data" in json) {
+            return json.data;
+        }
+        return json;
+    }).catch((err)=>{
+        if (err instanceof ApiError) throw err;
+        throw new ApiError(err instanceof Error ? err.message : "Network error", 0);
+    }).finally(()=>clearTimeout(timer));
+};
 const authApi = {
     login: async (input)=>{
         const raw = await post("/auth/login", {
@@ -190,7 +228,12 @@ const employeeApi = {
     getById: (id)=>get(`/employees/${id}`, authHeaders()),
     create: (data)=>post("/employees", data, authHeaders()),
     update: (id, data)=>put(`/employees/${id}`, data, authHeaders()),
-    delete: (id)=>del(`/employees/${id}`, authHeaders())
+    delete: (id)=>del(`/employees/${id}`, authHeaders()),
+    bulkUpload: (file)=>{
+        const fd = new FormData();
+        fd.append("file", file);
+        return upload("/employees/bulk-uploads", fd);
+    }
 };
 const dashboardApi = {
     getEmployees: (page = 1, limit = 100)=>{

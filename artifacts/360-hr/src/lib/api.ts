@@ -8,6 +8,7 @@ import type {
   ResetPasswordInput,
   Employee,
   EmployeeList,
+  BulkUploadResult,
   Department,
   DepartmentTree,
   DisciplinaryRecord,
@@ -114,6 +115,46 @@ const put = <T>(path: string, body: unknown, headers?: HeadersInit) =>
 const del = <T>(path: string, headers?: HeadersInit) =>
   request<T>("DELETE", path, undefined, headers);
 
+// Multipart upload helper for file uploads (FormData, no JSON)
+const upload = <T>(path: string, formData: FormData, headers?: HeadersInit): Promise<T> => {
+  const token = getAccessToken();
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+  return fetch(`${API_BASE}${path}`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...headers,
+    },
+    body: formData,
+    signal: controller.signal,
+    cache: "no-store",
+  })
+    .then(async (res) => {
+      if (!res.ok) {
+        let message = res.statusText;
+        try {
+          const json = await res.json();
+          if (json?.message) message = json.message;
+        } catch { /* ignore */ }
+        throw new ApiError(message, res.status);
+      }
+      const text = await res.text();
+      if (!text) return {} as T;
+      const json = JSON.parse(text);
+      if (json && typeof json === "object" && "data" in json) {
+        return json.data as T;
+      }
+      return json as T;
+    })
+    .catch((err) => {
+      if (err instanceof ApiError) throw err;
+      throw new ApiError(err instanceof Error ? err.message : "Network error", 0);
+    })
+    .finally(() => clearTimeout(timer));
+};
+
 // ─── Auth API ─────────────────────────────────────────────────────────────────
 
 export const authApi = {
@@ -194,6 +235,12 @@ export const employeeApi = {
 
   delete: (id: string) =>
     del<{ success: boolean }>(`/employees/${id}`, authHeaders()),
+
+  bulkUpload: (file: File) => {
+    const fd = new FormData();
+    fd.append("file", file);
+    return upload<BulkUploadResult>("/employees/bulk-uploads", fd);
+  },
 };
 
 // ─── Dashboard API ────────────────────────────────────────────────────────────

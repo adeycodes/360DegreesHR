@@ -71,6 +71,21 @@ export type EmployeeList = {
   };
 };
 
+export type BulkUploadResult = {
+  totalRows: number;
+  successful: number;
+  failed: number;
+  successfulRows?: Array<{
+    row: number;
+    employeeId: string;
+    email: string;
+  }>;
+  failedRows?: Array<{
+    row: number;
+    reason: string;
+  }>;
+};
+
 // Departments
 export type DepartmentEmployee = {
   id: string;

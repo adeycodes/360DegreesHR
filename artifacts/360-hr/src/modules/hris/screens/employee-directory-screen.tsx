@@ -1,3 +1,1574 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 "use client";
 
 import { useState } from "react";
@@ -44,6 +1615,10 @@ import {
   CheckCircle2,
   Copy,
   KeyRound,
+  FileSpreadsheet,
+  UserPlus,
+  FolderOpen,
+  Filter,
 } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -102,6 +1677,10 @@ export function EmployeeDirectoryScreen({
   const [editEmployee, setEditEmployee] = useState<Employee | null>(null);
   const [deleteEmployee, setDeleteEmployee] = useState<Employee | null>(null);
   const [openAddWizard, setOpenAddWizard] = useState(false);
+  const [addDropdownOpen, setAddDropdownOpen] = useState(false);
+  const [showBulkUpload, setShowBulkUpload] = useState(false);
+  const [showDocumentUpload, setShowDocumentUpload] = useState(false);
+  const [showOpenRecord, setShowOpenRecord] = useState(false);
 
   const totalRecords = pagination?.total ?? 128;
   const currentPage = pagination?.page ?? 1;
@@ -134,12 +1713,70 @@ export function EmployeeDirectoryScreen({
           <button className="inline-flex items-center gap-2 px-4 py-2 border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors">
             <Download className="w-4 h-4" /> Export
           </button>
-          <button
-            onClick={() => setOpenAddWizard(true)}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#1C4ED8] hover:bg-[#1a3eb8] text-white rounded-lg text-sm font-medium transition-colors"
-          >
-            <Plus className="w-4 h-4" /> Add Employee
-          </button>
+          <div className="relative">
+            <button
+              onClick={() => setAddDropdownOpen((v) => !v)}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#1C4ED8] hover:bg-[#1a3eb8] text-white rounded-lg text-sm font-medium transition-colors"
+            >
+              <Plus className="w-4 h-4" /> Add Employee
+            </button>
+            {addDropdownOpen && (
+              <div className="absolute right-0 mt-2 w-56 rounded-xl border border-slate-200 bg-white shadow-xl z-50 overflow-hidden">
+                <button
+                  onClick={() => {
+                    setAddDropdownOpen(false);
+                    setShowDocumentUpload(true);
+                  }}
+                  className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm text-slate-700 hover:bg-slate-50 transition-colors"
+                >
+                  <FolderOpen className="w-4 h-4 text-slate-400" />
+                  <div>
+                    <p className="font-medium">Upload Document</p>
+                    <p className="text-[11px] text-slate-500">NYSC, letter, etc.</p>
+                  </div>
+                </button>
+                <button
+                  onClick={() => {
+                    setAddDropdownOpen(false);
+                    setShowBulkUpload(true);
+                  }}
+                  className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm text-slate-700 hover:bg-slate-50 transition-colors border-t border-slate-100"
+                >
+                  <FileSpreadsheet className="w-4 h-4 text-slate-400" />
+                  <div>
+                    <p className="font-medium">Bulk Upload</p>
+                    <p className="text-[11px] text-slate-500">Import via Excel</p>
+                  </div>
+                </button>
+                <button
+                  onClick={() => {
+                    setAddDropdownOpen(false);
+                    setShowOpenRecord(true);
+                  }}
+                  className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm text-slate-700 hover:bg-slate-50 transition-colors border-t border-slate-100"
+                >
+                  <UserPlus className="w-4 h-4 text-slate-400" />
+                  <div>
+                    <p className="font-medium">Open Employee Record</p>
+                    <p className="text-[11px] text-slate-500">Find and view by ID</p>
+                  </div>
+                </button>
+                <button
+                  onClick={() => {
+                    setAddDropdownOpen(false);
+                    setOpenAddWizard(true);
+                  }}
+                  className="flex w-full items-center gap-3 px-4 py-3 text-left text-sm text-slate-700 hover:bg-slate-50 transition-colors border-t border-slate-100"
+                >
+                  <UserPlus className="w-4 h-4 text-slate-400" />
+                  <div>
+                    <p className="font-medium">Add Manually</p>
+                    <p className="text-[11px] text-slate-500">Create via form</p>
+                  </div>
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -231,7 +1868,12 @@ export function EmployeeDirectoryScreen({
                     <th className="px-5 py-3">Department</th>
                     <th className="px-5 py-3">Role</th>
                     <th className="px-5 py-3">Status</th>
-                    <th className="px-5 py-3">Actions</th>
+                    <th className="px-5 py-3">
+                      <div className="flex items-center gap-1.5">
+                        <Filter className="w-3 h-3" />
+                        Actions
+                      </div>
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-50 bg-white">
@@ -451,6 +2093,24 @@ export function EmployeeDirectoryScreen({
         onClose={() => setOpenAddWizard(false)}
         onSuccess={onRefresh}
       />
+      {showBulkUpload && (
+        <BulkUploadModal
+          onClose={() => setShowBulkUpload(false)}
+          onSuccess={onRefresh}
+        />
+      )}
+      {showDocumentUpload && (
+        <DocumentUploadModal
+          onClose={() => setShowDocumentUpload(false)}
+          onSuccess={onRefresh}
+        />
+      )}
+      {showOpenRecord && (
+        <OpenRecordModal
+          onClose={() => setShowOpenRecord(false)}
+          onSuccess={onRefresh}
+        />
+      )}
     </div>
   );
 }
@@ -2299,6 +3959,333 @@ function FieldWrap({
         {label}
       </label>
       {children}
+    </div>
+  );
+}
+
+// ─── Bulk Upload Modal ─────────────────────────────────────────────────────────────
+function BulkUploadModal({
+  onClose,
+  onSuccess,
+}: {
+  onClose: () => void;
+  onSuccess: () => void;
+}) {
+  const [file, setFile] = useState<File | null>(null);
+  const [drag, setDrag] = useState(false);
+  const mutation = useMutation({
+    mutationFn: (f: File) => employeeApi.bulkUpload(f),
+    onSuccess: (data) => {
+      onSuccess();
+      alert(
+        `Upload complete! ${data.successful} of ${data.totalRows} employees imported. ${data.failed} failed.`,
+      );
+      onClose();
+    },
+  });
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 p-4">
+      <div className="absolute inset-0" onClick={onClose} />
+      <div className="relative z-10 w-full max-w-md rounded-2xl bg-white border border-slate-100 shadow-2xl p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-[16px] font-bold text-slate-900">Bulk Upload</h2>
+          <button onClick={onClose} className="p-1 rounded-md text-slate-500 hover:bg-slate-100">
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+        <div
+          className={cn(
+            "border-2 border-dashed rounded-xl p-6 text-center transition-colors",
+            drag ? "border-[#1C4ED8] bg-blue-50" : "border-slate-200 bg-slate-50",
+          )}
+          onDragOver={(e) => { e.preventDefault(); setDrag(true); }}
+          onDragLeave={() => setDrag(false)}
+          onDrop={(e) => {
+            e.preventDefault();
+            setDrag(false);
+            const f = e.dataTransfer.files[0];
+            if (f) setFile(f);
+          }}
+        >
+          <FileSpreadsheet className="w-8 h-8 mx-auto text-slate-400 mb-2" />
+          <p className="text-[13px] text-slate-600">
+            Drag & drop an Excel file here, or{" "}
+            <label className="text-[#1C4ED8] font-medium cursor-pointer">
+              browse
+              <input
+                type="file"
+                accept=".xlsx,.xls"
+                className="hidden"
+                onChange={(e) => {
+                  const f = e.target.files?.[0];
+                  if (f) setFile(f);
+                }}
+              />
+            </label>
+          </p>
+          <p className="text-[11px] text-slate-400 mt-1">
+            Columns: firstName, lastName, email, gender (optional: phone, jobTitle, departmentId)
+          </p>
+        </div>
+        {file && (
+          <div className="mt-3 flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+            <FileText className="w-4 h-4 text-slate-500" />
+            <span className="text-[13px] text-slate-700 flex-1 truncate">{file.name}</span>
+            <span className="text-[11px] text-slate-400">{Math.round(file.size / 1024)} KB</span>
+          </div>
+        )}
+        {mutation.isError && (
+          <div className="mt-3 flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2">
+            <AlertTriangle className="w-4 h-4 text-red-500 mt-0.5" />
+            <p className="text-[13px] text-red-700">{toUserMessage(mutation.error)}</p>
+          </div>
+        )}
+        <div className="mt-5 flex gap-3">
+          <button onClick={onClose} className="flex-1 py-2.5 border border-slate-200 rounded-lg text-[13px] font-semibold text-slate-700 hover:bg-slate-50">
+            Cancel
+          </button>
+          <button
+            onClick={() => {
+              if (file) mutation.mutate(file);
+            }}
+            disabled={!file || mutation.isPending}
+            className="flex-1 py-2.5 bg-[#1C4ED8] hover:bg-[#1a3eb8] text-white rounded-lg text-[13px] font-semibold disabled:opacity-50"
+          >
+            {mutation.isPending ? "Uploading..." : "Upload Spreadsheet"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Document Upload Modal ─────────────────────────────────────────────────────────────
+function DocumentUploadModal({
+  onClose,
+  onSuccess,
+}: {
+  onClose: () => void;
+  onSuccess: () => void;
+}) {
+  const [file, setFile] = useState<File | null>(null);
+  const [docType, setDocType] = useState("");
+  const [employeeId, setEmployeeId] = useState("");
+  const [drag, setDrag] = useState(false);
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 p-4">
+      <div className="absolute inset-0" onClick={onClose} />
+      <div className="relative z-10 w-full max-w-md rounded-2xl bg-white border border-slate-100 shadow-2xl p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-[16px] font-bold text-slate-900">Upload Document</h2>
+          <button onClick={onClose} className="p-1 rounded-md text-slate-500 hover:bg-slate-100">
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+        <div className="space-y-4">
+          <div className="space-y-1.5">
+            <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-500">Document Type</label>
+            <select
+              value={docType}
+              onChange={(e) => setDocType(e.target.value)}
+              className={inputCls}
+            >
+              <option value="">Select type</option>
+              <option value="NYSC">NYSC Certificate</option>
+              <option value="LOM">Letter of Recommendation</option>
+              <option value="CV">Resume / CV</option>
+              <option value="ID">Government ID</option>
+              <option value="DEGREE">Degree Certificate</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </div>
+          <div className="space-y-1.5">
+            <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-500">Employee ID (optional)</label>
+            <input
+              value={employeeId}
+              onChange={(e) => setEmployeeId(e.target.value)}
+              placeholder="Paste employee ID or leave empty"
+              className={inputCls}
+            />
+          </div>
+          <div
+            className={cn(
+              "border-2 border-dashed rounded-xl p-5 text-center transition-colors",
+              drag ? "border-[#1C4ED8] bg-blue-50" : "border-slate-200 bg-slate-50",
+            )}
+            onDragOver={(e) => { e.preventDefault(); setDrag(true); }}
+            onDragLeave={() => setDrag(false)}
+            onDrop={(e) => {
+              e.preventDefault();
+              setDrag(false);
+              const f = e.dataTransfer.files[0];
+              if (f) setFile(f);
+            }}
+          >
+            <Upload className="w-7 h-7 mx-auto text-slate-400 mb-1" />
+            <p className="text-[13px] text-slate-600">
+              Drag & drop, or{" "}
+              <label className="text-[#1C4ED8] font-medium cursor-pointer">
+                browse
+                <input type="file" className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) setFile(f); }} />
+              </label>
+            </p>
+            <p className="text-[11px] text-slate-400 mt-1">PDF, JPG, PNG (max 5MB)</p>
+          </div>
+          {file && (
+            <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2">
+              <FileText className="w-4 h-4 text-slate-500" />
+              <span className="text-[13px] text-slate-700 flex-1 truncate">{file.name}</span>
+              <span className="text-[11px] text-slate-400">{Math.round(file.size / 1024)} KB</span>
+            </div>
+          )}
+          <div className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2">
+            <p className="text-[12px] text-amber-800">
+              Document storage endpoint is not available on the backend yet. The file will be stored locally for now.
+            </p>
+          </div>
+        </div>
+        <div className="mt-5 flex gap-3">
+          <button onClick={onClose} className="flex-1 py-2.5 border border-slate-200 rounded-lg text-[13px] font-semibold text-slate-700 hover:bg-slate-50">
+            Cancel
+          </button>
+          <button
+            onClick={() => { onSuccess(); onClose(); }}
+            disabled={!file || !docType}
+            className="flex-1 py-2.5 bg-[#1C4ED8] hover:bg-[#1a3eb8] text-white rounded-lg text-[13px] font-semibold disabled:opacity-50"
+          >
+            Upload Document
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ─── Open Employee Record Modal ─────────────────────────────────────────────────────────────
+function OpenRecordModal({
+  onClose,
+  onSuccess,
+}: {
+  onClose: () => void;
+  onSuccess: () => void;
+}) {
+  const [id, setId] = useState("");
+  const [employee, setEmployee] = useState<Employee | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSearch = async () => {
+    if (!id.trim()) return;
+    setLoading(true);
+    setError(null);
+    setEmployee(null);
+    try {
+      const emp = await employeeApi.getById(id.trim());
+      setEmployee(emp);
+    } catch (e) {
+      setError(toUserMessage(e));
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/40 p-4">
+      <div className="absolute inset-0" onClick={onClose} />
+      <div className="relative z-10 w-full max-w-md rounded-2xl bg-white border border-slate-100 shadow-2xl p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-[16px] font-bold text-slate-900">Open Employee Record</h2>
+          <button onClick={onClose} className="p-1 rounded-md text-slate-500 hover:bg-slate-100">
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+        <div className="space-y-4">
+          <div className="space-y-1.5">
+            <label className="block text-[10px] font-bold uppercase tracking-wider text-slate-500">Employee ID</label>
+            <div className="flex gap-2">
+              <input
+                value={id}
+                onChange={(e) => setId(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+                placeholder="Enter employee ID..."
+                className={cn(inputCls, "flex-1")}
+              />
+              <button
+                onClick={handleSearch}
+                disabled={loading || !id.trim()}
+                className="px-4 py-2 bg-[#1C4ED8] hover:bg-[#1a3eb8] text-white rounded-lg text-[13px] font-semibold disabled:opacity-50"
+              >
+                {loading ? "Loading..." : "Search"}
+              </button>
+            </div>
+          </div>
+          {error && (
+            <div className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2">
+              <AlertTriangle className="w-4 h-4 text-red-500 mt-0.5" />
+              <p className="text-[13px] text-red-700">{error}</p>
+            </div>
+          )}
+          {employee && (
+            <div className="rounded-xl border border-slate-200 p-4 space-y-2">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white text-[12px] font-bold">
+                  {(employee.firstName?.[0] ?? "") + (employee.lastName?.[0] ?? "")}
+                </div>
+                <div>
+                  <p className="text-[14px] font-semibold text-slate-900">
+                    {employee.firstName} {employee.lastName}
+                  </p>
+                  <p className="text-[12px] text-slate-500">{employee.email}</p>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-2 text-[13px]">
+                <div>
+                  <span className="text-slate-500">Department:</span>{" "}
+                  <span className="font-medium text-slate-800">{employee.department?.name ?? "—"}</span>
+                </div>
+                <div>
+                  <span className="text-slate-500">Role:</span>{" "}
+                  <span className="font-medium text-slate-800">{employee.jobTitle ?? "—"}</span>
+                </div>
+                <div>
+                  <span className="text-slate-500">Status:</span>{" "}
+                  <span className={cn(
+                    "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-bold",
+                    employee.employmentStatus === "ACTIVE" ? "bg-green-50 text-green-600" : "bg-slate-100 text-slate-600",
+                  )}>
+                    {employee.employmentStatus ?? "Unknown"}
+                  </span>
+                </div>
+                <div>
+                  <span className="text-slate-500">Type:</span>{" "}
+                  <span className="font-medium text-slate-800">{employee.employmentType ?? "—"}</span>
+                </div>
+              </div>
+              <button
+                onClick={() => {
+                  onSuccess();
+                  onClose();
+                }}
+                className="w-full py-2 bg-[#1C4ED8] hover:bg-[#1a3eb8] text-white rounded-lg text-[13px] font-semibold"
+              >
+                View Full Profile
+              </button>
+            </div>
+          )}
+          {!employee && !error && !loading && (
+            <div className="text-center text-[13px] text-slate-400 py-6">
+              <User className="w-8 h-8 mx-auto text-slate-300 mb-2" />
+              Enter an employee ID and click Search to find a record.
+            </div>
+          )}
+        </div>
+        <div className="mt-5 flex gap-3">
+          <button onClick={onClose} className="flex-1 py-2.5 border border-slate-200 rounded-lg text-[13px] font-semibold text-slate-700 hover:bg-slate-50">
+            Close
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

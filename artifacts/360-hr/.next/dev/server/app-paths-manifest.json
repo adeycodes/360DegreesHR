@@ -1,8 +1,4 @@
 {
   "/(auth)/login/page": "app/(auth)/login/page.js",
-  "/(auth)/login/password/page": "app/(auth)/login/password/page.js",
-  "/(auth)/signing-in/page": "app/(auth)/signing-in/page.js",
-  "/(auth)/welcome/page": "app/(auth)/welcome/page.js",
-  "/(protected)/dashboard/page": "app/(protected)/dashboard/page.js",
-  "/(protected)/hris/[section]/page": "app/(protected)/hris/[section]/page.js"
+  "/splash/page": "app/splash/page.js"
 }
